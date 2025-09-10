@@ -8,31 +8,38 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
+import java.util.StringTokenizer;
+import java.util.function.Function;
+
 public class ModBlocks {
     public static final Block TEST_BLOCK = registerBlock("test_block",
-            new Block(AbstractBlock.Settings.create()
+            properties -> new Block(properties
                     .strength(1.5f).resistance(6).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY)));
     public static final Block TEST_BLOCK_STAIRS = registerBlock("test_block_stairs",
-            new StairsBlock(ModBlocks.TEST_BLOCK.getDefaultState(), AbstractBlock.Settings.create()
+            properties -> new StairsBlock(ModBlocks.TEST_BLOCK.getDefaultState(), properties
                     .strength(1.5f).resistance(6).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY)));
     public static final Block TEST_BLOCK_SLAB = registerBlock("test_block_slab",
-            new SlabBlock(AbstractBlock.Settings.create()
+            properties -> new SlabBlock(properties
                     .strength(1.5f).resistance(6).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY)));
     public static final Block TEST_BLOCK_WALL = registerBlock("test_block_wall",
-            new WallBlock(AbstractBlock.Settings.create()
+            properties -> new WallBlock(properties
                     .strength(1.5f).resistance(6).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY)));
 
-    private static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(Chiseled.MOD_ID, name), block);
+    private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
+        Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Chiseled.MOD_ID))));
+        registerBlockItem(name, toRegister);
+        return Registry.register(Registries.BLOCK, Identifier.of(Chiseled.MOD_ID, name), toRegister);
     }
 
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(Chiseled.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+                new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
+                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Chiseled.MOD_ID, name)))));
     }
 
     public static void registerModBlocks() {

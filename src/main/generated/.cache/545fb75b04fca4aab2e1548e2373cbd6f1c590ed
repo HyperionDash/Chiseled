@@ -1,0 +1,5 @@
+// 1.21	2025-09-10T21:51:21.8660523	Chiseled/Block Loot Tables
+8b1b6415c100eba6e41482e92abb753f7cf493a1 data\chiseled\loot_table\blocks\test_block_slab.json
+8cad8c9d8a9d26a1ef1f2c8c81cde813d184e96b data\chiseled\loot_table\blocks\test_block_wall.json
+54969f4b0cf23fc065fecb7d1b30738061241193 data\chiseled\loot_table\blocks\test_block_stairs.json
+54d09667df13a52371f6ade8eacf33f5fbce8b60 data\chiseled\loot_table\blocks\test_block.json

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/test_block_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/test_block"
+    },
+    "type=top": {
+      "model": "chiseled:block/test_block_slab_top"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "chiseled",
+	"version": "${version}",
+	"name": "Chiseled",
+	"description": "CHANGE ME",
+	"authors": [
+		"HyperionDash"
+	],
+	"contact": {
+		"homepage": "CHANGE ME",
+		"sources": "https://github.com/HyperionDash/Chiseled",
+		"issues": "https://github.com/HyperionDash/Chiseled/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/chiseled/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hyper.chiseled.Chiseled"
+		],
+		"fabric-datagen": [
+			"net.hyper.chiseled.ChiseledDataGenerator"
+		],
+		"client": [
+			"net.hyper.chiseled.ChiseledClient"
+		]
+	},
+	"mixins": [
+		"chiseled.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

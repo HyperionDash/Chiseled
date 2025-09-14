@@ -16,12 +16,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.TEST_BLOCK)
                 .add(ModBlocks.TEST_BLOCK_STAIRS)
                 .add(ModBlocks.TEST_BLOCK_SLAB)
                 .add(ModBlocks.TEST_BLOCK_WALL);
-        getOrCreateTagBuilder(BlockTags.WALLS)
+        valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.TEST_BLOCK_WALL);
     }
 }

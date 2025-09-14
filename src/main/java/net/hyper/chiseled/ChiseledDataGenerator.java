@@ -3,7 +3,6 @@ package net.hyper.chiseled;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.hyper.chiseled.datagen.ModBlockTagProvider;
-import net.hyper.chiseled.datagen.ModLootTableProvider;
 import net.hyper.chiseled.datagen.ModModelProvider;
 
 public class ChiseledDataGenerator implements DataGeneratorEntrypoint {
@@ -11,7 +10,6 @@ public class ChiseledDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 		pack.addProvider(ModBlockTagProvider::new);
-		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
 	}
 }

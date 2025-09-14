@@ -23,6 +23,6 @@ public class ModItemGroups {
                     .build());
 
     public static void registerItemGroups() {
-        Chiseled.LOGGER.info("Registering Item Groups for" + Chiseled.MOD_ID);
+        Chiseled.LOGGER.info("Registering Item Groups for " + Chiseled.MOD_ID);
     }
 }

@@ -1,55 +1,68 @@
 package net.hyper.chiseled.block;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.hyper.chiseled.Chiseled;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import java.util.StringTokenizer;
 import java.util.function.Function;
 
 public class ModBlocks {
-    public static final Block TEST_BLOCK = registerBlock("test_block",
-            properties -> new Block(properties
-                    .strength(1.5f).resistance(6).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY)));
-    public static final Block TEST_BLOCK_STAIRS = registerBlock("test_block_stairs",
-            properties -> new StairsBlock(ModBlocks.TEST_BLOCK.getDefaultState(), properties
-                    .strength(1.5f).resistance(6).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY)));
-    public static final Block TEST_BLOCK_SLAB = registerBlock("test_block_slab",
-            properties -> new SlabBlock(properties
-                    .strength(1.5f).resistance(6).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY)));
-    public static final Block TEST_BLOCK_WALL = registerBlock("test_block_wall",
-            properties -> new WallBlock(properties
-                    .strength(1.5f).resistance(6).requiresTool().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY)));
+    private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings) {
+        RegistryKey<Block> blockKey = keyOfBlock(name);
+        Block block = blockFactory.apply(settings.registryKey(blockKey));
 
-    private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
-        Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Chiseled.MOD_ID))));
-        registerBlockItem(name, toRegister);
-        return Registry.register(Registries.BLOCK, Identifier.of(Chiseled.MOD_ID, name), toRegister);
+        RegistryKey<Item> itemKey = keyOfItem(name);
+
+        BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey).useBlockPrefixedTranslationKey());
+        Registry.register(Registries.ITEM, itemKey, blockItem);
+
+        return Registry.register(Registries.BLOCK, blockKey, block);
     }
 
-    private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(Chiseled.MOD_ID, name),
-                new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
-                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Chiseled.MOD_ID, name)))));
+    private static RegistryKey<Block> keyOfBlock(String name) {
+        return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Chiseled.MOD_ID, name));
     }
 
-    public static void registerModBlocks() {
-        Chiseled.LOGGER.info("Registering Mod Blocks for " + Chiseled.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(ModBlocks.TEST_BLOCK);
-            fabricItemGroupEntries.add(ModBlocks.TEST_BLOCK_STAIRS);
-            fabricItemGroupEntries.add(ModBlocks.TEST_BLOCK_SLAB);
-            fabricItemGroupEntries.add(ModBlocks.TEST_BLOCK_WALL);
-        });
+    private static RegistryKey<Item> keyOfItem(String name) {
+        return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Chiseled.MOD_ID, name));
     }
+
+    public static SlabBlock registerSlab(String name, AbstractBlock.Settings settings) {
+        return (SlabBlock) register(name,
+                SlabBlock::new,
+                settings
+        );
+    }
+
+    public static StairsBlock registerStairs(String name, Block baseBlock, AbstractBlock.Settings settings) {
+        return (StairsBlock) register(name,
+                s -> new StairsBlock(baseBlock.getDefaultState(), s),
+                settings
+        );
+    }
+
+    public static WallBlock registerWall(String name, AbstractBlock.Settings settings) {
+        return (WallBlock) register(name,
+                WallBlock::new,
+                settings
+        );
+    }
+
+    public static void initialize() {
+    }
+    public static final Block TEST_BLOCK = register("test_block", Block::new, AbstractBlock.Settings.copy(Blocks.STONE_BRICKS));
+    public static final Block EVIL_TEST_BLOCK = register("evil_test_block", Block::new, AbstractBlock.Settings.copy(Blocks.STONE_BRICKS));
+    public static final SlabBlock TEST_BLOCK_SLAB = registerSlab("test_block_slab", AbstractBlock.Settings.copy(Blocks.STONE_BRICKS));
+    public static final StairsBlock TEST_BLOCK_STAIRS = registerStairs("test_block_stairs", TEST_BLOCK, AbstractBlock.Settings.copy(Blocks.STONE_BRICKS));
+    public static final WallBlock TEST_BLOCK_WALL = registerWall("test_block_wall", AbstractBlock.Settings.copy(Blocks.STONE_BRICKS));
 }

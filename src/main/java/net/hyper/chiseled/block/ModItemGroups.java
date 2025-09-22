@@ -15,6 +15,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.TEST_BLOCK))
                     .displayName(Text.translatable("itemgroup.chiseled.chiseled"))
                     .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.EVIL_TEST_BLOCK);
                         entries.add(ModBlocks.TEST_BLOCK);
                         entries.add(ModBlocks.TEST_BLOCK_STAIRS);
                         entries.add(ModBlocks.TEST_BLOCK_SLAB);
@@ -23,6 +24,5 @@ public class ModItemGroups {
                     .build());
 
     public static void registerItemGroups() {
-        Chiseled.LOGGER.info("Registering Item Groups for " + Chiseled.MOD_ID);
     }
 }

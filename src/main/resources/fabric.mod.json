@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "chiseled",
+	"version": "${version}",
+	"name": "Chiseled",
+	"description": "silly building blocks mods lol :3",
+	"authors": [
+		"HyperionDash",
+		"Wjph"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/R97ceX9b",
+		"sources": "https://github.com/HyperionDash/Chiseled",
+		"issues":  "https://github.com/HyperionDash/Chiseled/issues"
+	},
+		"license": "MIT",
+	"icon": "assets/chiseled/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hyper.chiseled.Chiseled"
+		],
+		"fabric-datagen": [
+			"net.hyper.chiseled.ChiseledDataGenerator"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

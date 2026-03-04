@@ -1,5 +1,16 @@
 {
   "values": [
-    "chiseled:vertical_oak_stairs"
+    "chiseled:vertical_oak_stairs",
+    "chiseled:vertical_spruce_stairs",
+    "chiseled:vertical_birch_stairs",
+    "chiseled:vertical_jungle_stairs",
+    "chiseled:vertical_acacia_stairs",
+    "chiseled:vertical_dark_oak_stairs",
+    "chiseled:vertical_mangrove_stairs",
+    "chiseled:vertical_cherry_stairs",
+    "chiseled:vertical_pale_oak_stairs",
+    "chiseled:vertical_bamboo_stairs",
+    "chiseled:vertical_crimson_stairs",
+    "chiseled:vertical_warped_stairs"
   ]
 }

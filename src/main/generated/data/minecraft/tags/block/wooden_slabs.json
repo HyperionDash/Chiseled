@@ -1,5 +1,16 @@
 {
   "values": [
-    "chiseled:vertical_oak_slab"
+    "chiseled:vertical_oak_slab",
+    "chiseled:vertical_spruce_slab",
+    "chiseled:vertical_birch_slab",
+    "chiseled:vertical_jungle_slab",
+    "chiseled:vertical_acacia_slab",
+    "chiseled:vertical_dark_oak_slab",
+    "chiseled:vertical_mangrove_slab",
+    "chiseled:vertical_cherry_slab",
+    "chiseled:vertical_pale_oak_slab",
+    "chiseled:vertical_bamboo_slab",
+    "chiseled:vertical_crimson_slab",
+    "chiseled:vertical_warped_slab"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/vertical_jungle_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/vertical_jungle_planks"
+    },
+    "type=top": {
+      "model": "chiseled:block/vertical_jungle_slab_top"
+    }
+  }
+}

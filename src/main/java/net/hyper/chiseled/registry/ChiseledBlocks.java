@@ -101,16 +101,16 @@ public class ChiseledBlocks {
                     .mapColor(MapColor.RED).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
     public static final Block CHERRY_TRIM = registerBlock("cherry_trim",
             properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable()));
     public static final Block VERTICAL_CHERRY_PLANKS = registerBlock("vertical_cherry_planks",
             properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable()));
     public static final Block VERTICAL_CHERRY_STAIRS = registerBlock("vertical_cherry_stairs",
             properties -> new StairsBlock(ChiseledBlocks.VERTICAL_CHERRY_PLANKS.getDefaultState(),properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable()));
     public static final Block VERTICAL_CHERRY_SLAB = registerBlock("vertical_cherry_slab",
             properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.CHERRY_WOOD).burnable()));
     public static final Block PALE_OAK_TRIM = registerBlock("pale_oak_trim",
             properties -> new Block(properties
                     .mapColor(MapColor.OFF_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
@@ -125,16 +125,16 @@ public class ChiseledBlocks {
                     .mapColor(MapColor.OFF_WHITE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
     public static final Block BAMBOO_TRIM = registerBlock("bamboo_trim",
             properties -> new Block(properties
-                    .mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+                    .mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.BAMBOO_WOOD).burnable()));
     public static final Block VERTICAL_BAMBOO_PLANKS = registerBlock("vertical_bamboo_planks",
             properties -> new Block(properties
-                    .mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+                    .mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.BAMBOO_WOOD).burnable()));
     public static final Block VERTICAL_BAMBOO_STAIRS = registerBlock("vertical_bamboo_stairs",
             properties -> new StairsBlock(ChiseledBlocks.VERTICAL_BAMBOO_PLANKS.getDefaultState(),properties
-                    .mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+                    .mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.BAMBOO_WOOD).burnable()));
     public static final Block VERTICAL_BAMBOO_SLAB = registerBlock("vertical_bamboo_slab",
             properties -> new SlabBlock(properties
-                    .mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+                    .mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.BAMBOO_WOOD).burnable()));
     public static final Block CRIMSON_TRIM = registerBlock("crimson_trim",
             properties -> new Block(properties
                     .mapColor(MapColor.DULL_PINK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD)));
@@ -159,13 +159,43 @@ public class ChiseledBlocks {
     public static final Block VERTICAL_WARPED_SLAB = registerBlock("vertical_warped_slab",
             properties -> new SlabBlock(properties
                     .mapColor(MapColor.DARK_AQUA).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD)));
-    
+
+    public static final Block STONE_WALL = registerBlock("stone_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block POLISHED_STONE = registerBlock("polished_stone",
+            properties -> new Block(properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block POLISHED_STONE_STAIRS = registerBlock("polished_stone_stairs",
+            properties -> new StairsBlock(ChiseledBlocks.POLISHED_STONE.getDefaultState(),properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block POLISHED_STONE_SLAB = registerBlock("polished_stone_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block POLISHED_STONE_WALL = registerBlock("polished_stone_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block MOSSY_POLISHED_STONE = registerBlock("mossy_polished_stone",
+            properties -> new Block(properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block MOSSY_POLISHED_STONE_STAIRS = registerBlock("mossy_polished_stone_stairs",
+            properties -> new StairsBlock(ChiseledBlocks.MOSSY_POLISHED_STONE.getDefaultState(),properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block MOSSY_POLISHED_STONE_SLAB = registerBlock("mossy_polished_stone_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block MOSSY_POLISHED_STONE_WALL = registerBlock("mossy_polished_stone_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F)));
+    public static final Block SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
+            properties -> new StairsBlock(Blocks.SMOOTH_STONE.getDefaultState(),properties
+                    .mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(2.0F, 6.0F)));
+
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Chiseled.MOD_ID, name))));
         registerBlockItem(name, toRegister);
         return Registry.register(Registries.BLOCK, Identifier.of(Chiseled.MOD_ID, name), toRegister);
     }
-
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(Chiseled.MOD_ID, name),
                 new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()

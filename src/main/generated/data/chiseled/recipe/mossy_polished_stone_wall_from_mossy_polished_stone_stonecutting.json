@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:mossy_polished_stone",
+  "result": {
+    "count": 1,
+    "id": "chiseled:mossy_polished_stone_wall"
+  }
+}

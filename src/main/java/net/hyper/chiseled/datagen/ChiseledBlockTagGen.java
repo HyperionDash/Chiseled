@@ -15,6 +15,18 @@ public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ChiseledBlocks.STONE_WALL)
+                .add(ChiseledBlocks.POLISHED_STONE)
+                .add(ChiseledBlocks.POLISHED_STONE_STAIRS)
+                .add(ChiseledBlocks.POLISHED_STONE_SLAB)
+                .add(ChiseledBlocks.POLISHED_STONE_WALL)
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE)
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS)
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB)
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL)
+                .add(ChiseledBlocks.SMOOTH_STONE_STAIRS);
+
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ChiseledBlocks.OAK_TRIM)
                 .add(ChiseledBlocks.VERTICAL_OAK_PLANKS)
@@ -77,7 +89,10 @@ public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(ChiseledBlocks.VERTICAL_PALE_OAK_STAIRS)
                 .add(ChiseledBlocks.VERTICAL_BAMBOO_STAIRS)
                 .add(ChiseledBlocks.VERTICAL_CRIMSON_STAIRS)
-                .add(ChiseledBlocks.VERTICAL_WARPED_STAIRS);
+                .add(ChiseledBlocks.VERTICAL_WARPED_STAIRS)
+                .add(ChiseledBlocks.POLISHED_STONE_STAIRS)
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS)
+                .add(ChiseledBlocks.SMOOTH_STONE_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_STAIRS)
                 .add(ChiseledBlocks.VERTICAL_OAK_STAIRS)
                 .add(ChiseledBlocks.VERTICAL_SPRUCE_STAIRS)
@@ -104,7 +119,9 @@ public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(ChiseledBlocks.VERTICAL_PALE_OAK_SLAB)
                 .add(ChiseledBlocks.VERTICAL_BAMBOO_SLAB)
                 .add(ChiseledBlocks.VERTICAL_CRIMSON_SLAB)
-                .add(ChiseledBlocks.VERTICAL_WARPED_SLAB);
+                .add(ChiseledBlocks.VERTICAL_WARPED_SLAB)
+                .add(ChiseledBlocks.POLISHED_STONE_SLAB)
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB);
         valueLookupBuilder(BlockTags.WOODEN_SLABS)
                 .add(ChiseledBlocks.VERTICAL_OAK_SLAB)
                 .add(ChiseledBlocks.VERTICAL_SPRUCE_SLAB)
@@ -118,6 +135,11 @@ public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(ChiseledBlocks.VERTICAL_BAMBOO_SLAB)
                 .add(ChiseledBlocks.VERTICAL_CRIMSON_SLAB)
                 .add(ChiseledBlocks.VERTICAL_WARPED_SLAB);
+
+        valueLookupBuilder(BlockTags.WALLS)
+                .add(ChiseledBlocks.STONE_WALL)
+                .add(ChiseledBlocks.POLISHED_STONE_WALL)
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL);
 
         valueLookupBuilder(BlockTags.PLANKS)
                 .add(ChiseledBlocks.VERTICAL_OAK_PLANKS)

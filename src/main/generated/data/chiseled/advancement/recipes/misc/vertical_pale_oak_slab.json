@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "chiseled:vertical_pale_oak_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vertical_pale_oak_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "chiseled:vertical_pale_oak_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vertical_pale_oak_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "chiseled:vertical_pale_oak_slab"
+    ]
+  }
+}

@@ -7,9 +7,19 @@
   "block.chiseled.dark_oak_trim": "Dark Oak Trim",
   "block.chiseled.jungle_trim": "Jungle Trim",
   "block.chiseled.mangrove_trim": "Mangrove Trim",
+  "block.chiseled.mossy_polished_stone": "Mossy Polished Stone",
+  "block.chiseled.mossy_polished_stone_slab": "Mossy Polished Stone Slab",
+  "block.chiseled.mossy_polished_stone_stairs": "Mossy Polished Stone Stairs",
+  "block.chiseled.mossy_polished_stone_wall": "Mossy Polished Stone Wall",
   "block.chiseled.oak_trim": "Oak Trim",
   "block.chiseled.pale_oak_trim": "Pale Oak Trim",
+  "block.chiseled.polished_stone": "Polished Stone",
+  "block.chiseled.polished_stone_slab": "Polished Stone Slab",
+  "block.chiseled.polished_stone_stairs": "Polished Stone Stairs",
+  "block.chiseled.polished_stone_wall": "Polished Stone Wall",
+  "block.chiseled.smooth_stone_stairs": "Smooth Stone Stairs",
   "block.chiseled.spruce_trim": "Spruce Trim",
+  "block.chiseled.stone_wall": "Stone Wall",
   "block.chiseled.vertical_acacia_planks": "Vertical Acacia Planks",
   "block.chiseled.vertical_acacia_slab": "Vertical Acacia Slab",
   "block.chiseled.vertical_acacia_stairs": "Vertical Acacia Stairs",
@@ -47,5 +57,7 @@
   "block.chiseled.vertical_warped_slab": "Vertical Warped Slab",
   "block.chiseled.vertical_warped_stairs": "Vertical Warped Stairs",
   "block.chiseled.warped_trim": "Warped Trim",
-  "itemgroup.chiseled.chiseled": "Chiseled"
+  "itemgroup.chiseled.chiseled": "Chiseled",
+  "text.chiseled.asset_overrides": "Asset Overrides",
+  "text.chiseled.data_overrides": "Data Overrides"
 }

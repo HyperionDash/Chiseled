@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "chiseled:block/vertical_mangrove_planks",
+    "side": "chiseled:block/vertical_mangrove_planks",
+    "top": "chiseled:block/vertical_mangrove_planks"
+  }
+}

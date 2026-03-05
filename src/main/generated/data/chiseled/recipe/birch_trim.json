@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:birch_slab",
+    "0": "minecraft:birch_planks"
+  },
+  "pattern": [
+    " # ",
+    " 0 ",
+    " # "
+  ],
+  "result": {
+    "count": 2,
+    "id": "chiseled:birch_trim"
+  }
+}

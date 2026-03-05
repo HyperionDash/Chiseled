@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/vertical_spruce_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/vertical_spruce_planks"
+    },
+    "type=top": {
+      "model": "chiseled:block/vertical_spruce_slab_top"
+    }
+  }
+}

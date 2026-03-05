@@ -6,6 +6,7 @@ import net.hyper.chiseled.registry.ChiseledBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
+import net.minecraft.data.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -370,6 +371,104 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .input('#', ChiseledBlocks.VERTICAL_WARPED_PLANKS)
                         .criterion(hasItem(ChiseledBlocks.VERTICAL_WARPED_SLAB), conditionsFromItem(ChiseledBlocks.VERTICAL_WARPED_SLAB))
                         .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ChiseledBlocks.STONE_WALL, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', Blocks.STONE)
+                        .criterion(hasItem(ChiseledBlocks.STONE_WALL), conditionsFromItem(ChiseledBlocks.STONE_WALL))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_WALL, Blocks.STONE);
+                createShaped(RecipeCategory.MISC, ChiseledBlocks.POLISHED_STONE, 4)
+                        .pattern("## ")
+                        .pattern("## ")
+                        .pattern("   ")
+                        .input('#', Blocks.STONE)
+                        .criterion(hasItem(ChiseledBlocks.POLISHED_STONE), conditionsFromItem(ChiseledBlocks.POLISHED_STONE))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE, Blocks.STONE);
+                createShaped(RecipeCategory.MISC, ChiseledBlocks.POLISHED_STONE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ChiseledBlocks.POLISHED_STONE)
+                        .criterion(hasItem(ChiseledBlocks.POLISHED_STONE_STAIRS), conditionsFromItem(ChiseledBlocks.POLISHED_STONE_STAIRS))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_STAIRS, Blocks.STONE);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_STAIRS, ChiseledBlocks.POLISHED_STONE);
+                createShaped(RecipeCategory.MISC, ChiseledBlocks.POLISHED_STONE_SLAB, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("   ")
+                        .input('#', ChiseledBlocks.POLISHED_STONE)
+                        .criterion(hasItem(ChiseledBlocks.POLISHED_STONE_SLAB), conditionsFromItem(ChiseledBlocks.POLISHED_STONE_SLAB))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_SLAB, Blocks.STONE,2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_SLAB, ChiseledBlocks.POLISHED_STONE,2);
+                createShaped(RecipeCategory.MISC, ChiseledBlocks.POLISHED_STONE_WALL, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ChiseledBlocks.POLISHED_STONE)
+                        .criterion(hasItem(ChiseledBlocks.POLISHED_STONE_WALL), conditionsFromItem(ChiseledBlocks.POLISHED_STONE_WALL))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_WALL, Blocks.STONE);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_WALL, ChiseledBlocks.POLISHED_STONE);
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE)
+                        .input(ChiseledBlocks.POLISHED_STONE)
+                        .input(Blocks.MOSS_BLOCK)
+                        .criterion(hasItem(ChiseledBlocks.MOSSY_POLISHED_STONE), conditionsFromItem(ChiseledBlocks.MOSSY_POLISHED_STONE))
+                        .offerTo(exporter, "mossy_polished_stone_from_moss");
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE)
+                        .input(ChiseledBlocks.POLISHED_STONE)
+                        .input(Blocks.VINE)
+                        .criterion(hasItem(ChiseledBlocks.MOSSY_POLISHED_STONE), conditionsFromItem(ChiseledBlocks.MOSSY_POLISHED_STONE))
+                        .offerTo(exporter, "mossy_polished_stone_from_vine");
+                createShaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ChiseledBlocks.MOSSY_POLISHED_STONE)
+                        .criterion(hasItem(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS), conditionsFromItem(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS, ChiseledBlocks.MOSSY_POLISHED_STONE);
+                createShaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("   ")
+                        .input('#', ChiseledBlocks.MOSSY_POLISHED_STONE)
+                        .criterion(hasItem(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB), conditionsFromItem(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB, ChiseledBlocks.MOSSY_POLISHED_STONE,2);
+                createShaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_POLISHED_STONE_WALL, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ChiseledBlocks.MOSSY_POLISHED_STONE)
+                        .criterion(hasItem(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL), conditionsFromItem(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE_WALL, ChiseledBlocks.MOSSY_POLISHED_STONE);
+                createShaped(RecipeCategory.MISC, ChiseledBlocks.SMOOTH_STONE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', Blocks.SMOOTH_STONE)
+                        .criterion(hasItem(ChiseledBlocks.SMOOTH_STONE_STAIRS), conditionsFromItem(ChiseledBlocks.SMOOTH_STONE_STAIRS))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
+
+                createShaped(RecipeCategory.MISC, Blocks.STONE_BRICKS, 4)
+                        .pattern("## ")
+                        .pattern("## ")
+                        .pattern("   ")
+                        .input('#', ChiseledBlocks.POLISHED_STONE)
+                        .criterion(hasItem(Blocks.STONE_BRICKS), conditionsFromItem(Blocks.STONE_BRICKS))
+                        .offerTo(exporter);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICKS, ChiseledBlocks.POLISHED_STONE);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_STAIRS, ChiseledBlocks.POLISHED_STONE);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_SLAB, ChiseledBlocks.POLISHED_STONE, 2);
+                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_WALL, ChiseledBlocks.POLISHED_STONE);
             }
         };
     }

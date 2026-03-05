@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "chiseled:block/vertical_jungle_planks",
+    "side": "chiseled:block/vertical_jungle_planks",
+    "top": "chiseled:block/vertical_jungle_planks"
+  }
+}

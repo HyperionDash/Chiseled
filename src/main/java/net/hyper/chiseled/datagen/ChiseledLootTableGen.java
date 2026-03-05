@@ -62,5 +62,16 @@ public class ChiseledLootTableGen extends FabricBlockLootTableProvider {
         addDrop(ChiseledBlocks.VERTICAL_WARPED_PLANKS);
         addDrop(ChiseledBlocks.VERTICAL_WARPED_STAIRS);
         addDrop(ChiseledBlocks.VERTICAL_WARPED_SLAB, slabDrops(ChiseledBlocks.VERTICAL_WARPED_SLAB));
+
+        addDrop(ChiseledBlocks.STONE_WALL);
+        addDrop(ChiseledBlocks.POLISHED_STONE);
+        addDrop(ChiseledBlocks.POLISHED_STONE_STAIRS);
+        addDrop(ChiseledBlocks.POLISHED_STONE_SLAB, slabDrops(ChiseledBlocks.POLISHED_STONE_SLAB));
+        addDrop(ChiseledBlocks.POLISHED_STONE_WALL);
+        addDrop(ChiseledBlocks.MOSSY_POLISHED_STONE);
+        addDrop(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS);
+        addDrop(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB, slabDrops(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB));
+        addDrop(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL);
+        addDrop(ChiseledBlocks.SMOOTH_STONE_STAIRS);
     }
 }

@@ -62,6 +62,19 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.VERTICAL_WARPED_STAIRS, "Vertical Warped Stairs");
         translationBuilder.add(ChiseledBlocks.VERTICAL_WARPED_SLAB, "Vertical Warped Slab");
 
+        translationBuilder.add(ChiseledBlocks.STONE_WALL, "Stone Wall");
+        translationBuilder.add(ChiseledBlocks.POLISHED_STONE, "Polished Stone");
+        translationBuilder.add(ChiseledBlocks.POLISHED_STONE_STAIRS, "Polished Stone Stairs");
+        translationBuilder.add(ChiseledBlocks.POLISHED_STONE_SLAB, "Polished Stone Slab");
+        translationBuilder.add(ChiseledBlocks.POLISHED_STONE_WALL, "Polished Stone Wall");
+        translationBuilder.add(ChiseledBlocks.MOSSY_POLISHED_STONE, "Mossy Polished Stone");
+        translationBuilder.add(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS, "Mossy Polished Stone Stairs");
+        translationBuilder.add(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB, "Mossy Polished Stone Slab");
+        translationBuilder.add(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL, "Mossy Polished Stone Wall");
+        translationBuilder.add(ChiseledBlocks.SMOOTH_STONE_STAIRS, "Smooth Stone Stairs");
+
         translationBuilder.add("itemgroup.chiseled.chiseled", "Chiseled");
+        translationBuilder.add("text.chiseled.asset_overrides", "Asset Overrides");
+        translationBuilder.add("text.chiseled.data_overrides", "Data Overrides");
     }
 }

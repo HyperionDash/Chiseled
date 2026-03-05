@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/vertical_mangrove_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/vertical_mangrove_planks"
+    },
+    "type=top": {
+      "model": "chiseled:block/vertical_mangrove_slab_top"
+    }
+  }
+}

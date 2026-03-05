@@ -11,6 +11,9 @@
     "chiseled:vertical_pale_oak_stairs",
     "chiseled:vertical_bamboo_stairs",
     "chiseled:vertical_crimson_stairs",
-    "chiseled:vertical_warped_stairs"
+    "chiseled:vertical_warped_stairs",
+    "chiseled:polished_stone_stairs",
+    "chiseled:mossy_polished_stone_stairs",
+    "chiseled:smooth_stone_stairs"
   ]
 }

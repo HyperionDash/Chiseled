@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.hyper.chiseled.registry.ChiseledBlocks;
 import net.minecraft.client.data.*;
+import net.minecraft.util.Identifier;
 
 public class ChiseledModelGen extends FabricModelProvider {
     public ChiseledModelGen(FabricDataOutput output) {
@@ -48,6 +49,36 @@ public class ChiseledModelGen extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool verticalWarpedPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ChiseledBlocks.VERTICAL_WARPED_PLANKS);
         verticalWarpedPool.stairs(ChiseledBlocks.VERTICAL_WARPED_STAIRS);
         verticalWarpedPool.slab(ChiseledBlocks.VERTICAL_WARPED_SLAB);
+
+        final TextureMap stoneWall = TextureMap.all(Identifier.ofVanilla("block/stone"));
+        final Identifier stoneWallPost = Models.TEMPLATE_WALL_POST.upload(ChiseledBlocks.STONE_WALL, stoneWall, blockStateModelGenerator.modelCollector);
+        final Identifier stoneWallSide = Models.TEMPLATE_WALL_SIDE.upload(ChiseledBlocks.STONE_WALL, stoneWall, blockStateModelGenerator.modelCollector);
+        final Identifier stoneWallSideTall = Models.TEMPLATE_WALL_SIDE_TALL.upload(ChiseledBlocks.STONE_WALL, stoneWall, blockStateModelGenerator.modelCollector);
+        final Identifier stoneWallInventory = Models.WALL_INVENTORY.upload(ChiseledBlocks.STONE_WALL, stoneWall, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(
+                BlockStateModelGenerator.createWallBlockState(ChiseledBlocks.STONE_WALL,
+                        BlockStateModelGenerator.createWeightedVariant(stoneWallPost),
+                        BlockStateModelGenerator.createWeightedVariant(stoneWallSide),
+                        BlockStateModelGenerator.createWeightedVariant(stoneWallSideTall)));
+        blockStateModelGenerator.registerParentedItemModel(ChiseledBlocks.STONE_WALL, stoneWallInventory);
+        BlockStateModelGenerator.BlockTexturePool polishedStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ChiseledBlocks.POLISHED_STONE);
+        polishedStonePool.stairs(ChiseledBlocks.POLISHED_STONE_STAIRS);
+        polishedStonePool.slab(ChiseledBlocks.POLISHED_STONE_SLAB);
+        polishedStonePool.wall(ChiseledBlocks.POLISHED_STONE_WALL);
+        BlockStateModelGenerator.BlockTexturePool mossyPolishedStonePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ChiseledBlocks.MOSSY_POLISHED_STONE);
+        mossyPolishedStonePool.stairs(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS);
+        mossyPolishedStonePool.slab(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB);
+        mossyPolishedStonePool.wall(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL);
+        final TextureMap smoothStone = TextureMap.all(Identifier.ofVanilla("block/smooth_stone"));
+        final Identifier smoothStoneStairs = Models.STAIRS.upload(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStone, blockStateModelGenerator.modelCollector);
+        final Identifier innerSmoothStoneStairs = Models.INNER_STAIRS.upload(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStone, blockStateModelGenerator.modelCollector);
+        final Identifier outerSmoothStoneStairs = Models.OUTER_STAIRS.upload(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStone, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(
+                BlockStateModelGenerator.createStairsBlockState(ChiseledBlocks.SMOOTH_STONE_STAIRS,
+                        BlockStateModelGenerator.createWeightedVariant(innerSmoothStoneStairs),
+                        BlockStateModelGenerator.createWeightedVariant(smoothStoneStairs),
+                        BlockStateModelGenerator.createWeightedVariant(outerSmoothStoneStairs)));
+        blockStateModelGenerator.registerParentedItemModel(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStoneStairs);
     }
 
     @Override

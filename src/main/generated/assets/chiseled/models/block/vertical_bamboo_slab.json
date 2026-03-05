@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "chiseled:block/vertical_bamboo_planks",
+    "side": "chiseled:block/vertical_bamboo_planks",
+    "top": "chiseled:block/vertical_bamboo_planks"
+  }
+}

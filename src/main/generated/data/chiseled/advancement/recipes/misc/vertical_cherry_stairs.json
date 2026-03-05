@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "chiseled:vertical_cherry_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vertical_cherry_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "chiseled:vertical_cherry_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vertical_cherry_stairs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "chiseled:vertical_cherry_stairs"
+    ]
+  }
+}

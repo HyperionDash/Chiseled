@@ -27,7 +27,10 @@ public class ChiseledItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ChiseledBlocks.VERTICAL_PALE_OAK_STAIRS.asItem())
                 .add(ChiseledBlocks.VERTICAL_BAMBOO_STAIRS.asItem())
                 .add(ChiseledBlocks.VERTICAL_CRIMSON_STAIRS.asItem())
-                .add(ChiseledBlocks.VERTICAL_WARPED_STAIRS.asItem());
+                .add(ChiseledBlocks.VERTICAL_WARPED_STAIRS.asItem())
+                .add(ChiseledBlocks.POLISHED_STONE_STAIRS.asItem())
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS.asItem())
+                .add(ChiseledBlocks.SMOOTH_STONE_STAIRS.asItem());
         valueLookupBuilder(ItemTags.WOODEN_STAIRS)
                 .add(ChiseledBlocks.VERTICAL_OAK_STAIRS.asItem())
                 .add(ChiseledBlocks.VERTICAL_SPRUCE_STAIRS.asItem())
@@ -54,7 +57,9 @@ public class ChiseledItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ChiseledBlocks.VERTICAL_PALE_OAK_SLAB.asItem())
                 .add(ChiseledBlocks.VERTICAL_BAMBOO_SLAB.asItem())
                 .add(ChiseledBlocks.VERTICAL_CRIMSON_SLAB.asItem())
-                .add(ChiseledBlocks.VERTICAL_WARPED_SLAB.asItem());
+                .add(ChiseledBlocks.VERTICAL_WARPED_SLAB.asItem())
+                .add(ChiseledBlocks.POLISHED_STONE_SLAB.asItem())
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB.asItem());
         valueLookupBuilder(ItemTags.WOODEN_SLABS)
                 .add(ChiseledBlocks.VERTICAL_OAK_SLAB.asItem())
                 .add(ChiseledBlocks.VERTICAL_SPRUCE_SLAB.asItem())
@@ -68,6 +73,11 @@ public class ChiseledItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ChiseledBlocks.VERTICAL_BAMBOO_SLAB.asItem())
                 .add(ChiseledBlocks.VERTICAL_CRIMSON_SLAB.asItem())
                 .add(ChiseledBlocks.VERTICAL_WARPED_SLAB.asItem());
+
+        valueLookupBuilder(ItemTags.WALLS)
+                .add(ChiseledBlocks.STONE_WALL.asItem())
+                .add(ChiseledBlocks.POLISHED_STONE_WALL.asItem())
+                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL.asItem());
 
         valueLookupBuilder(ItemTags.PLANKS)
                 .add(ChiseledBlocks.VERTICAL_OAK_PLANKS.asItem())

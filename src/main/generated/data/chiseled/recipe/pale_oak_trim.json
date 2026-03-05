@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:pale_oak_slab",
+    "0": "minecraft:pale_oak_planks"
+  },
+  "pattern": [
+    " # ",
+    " 0 ",
+    " # "
+  ],
+  "result": {
+    "count": 2,
+    "id": "chiseled:pale_oak_trim"
+  }
+}

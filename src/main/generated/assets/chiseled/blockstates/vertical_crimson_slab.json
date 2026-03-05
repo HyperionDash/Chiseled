@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/vertical_crimson_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/vertical_crimson_planks"
+    },
+    "type=top": {
+      "model": "chiseled:block/vertical_crimson_slab_top"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:mangrove_slab",
+    "0": "minecraft:mangrove_planks"
+  },
+  "pattern": [
+    " # ",
+    " 0 ",
+    " # "
+  ],
+  "result": {
+    "count": 2,
+    "id": "chiseled:mangrove_trim"
+  }
+}

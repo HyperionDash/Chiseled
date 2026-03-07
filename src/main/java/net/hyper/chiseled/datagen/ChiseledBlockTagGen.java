@@ -3,19 +3,18 @@ package net.hyper.chiseled.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.hyper.chiseled.registry.ChiseledBlocks;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
-
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 import java.util.concurrent.CompletableFuture;
 
 public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
-    public ChiseledBlockTagGen(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+    public ChiseledBlockTagGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+    protected void addTags(HolderLookup.Provider wrapperLookup) {
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ChiseledBlocks.STONE_WALL)
                 .add(ChiseledBlocks.POLISHED_STONE)
                 .add(ChiseledBlocks.POLISHED_STONE_STAIRS)
@@ -27,7 +26,7 @@ public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL)
                 .add(ChiseledBlocks.SMOOTH_STONE_STAIRS);
 
-        valueLookupBuilder(BlockTags.AXE_MINEABLE)
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .add(ChiseledBlocks.OAK_TRIM)
                 .add(ChiseledBlocks.VERTICAL_OAK_PLANKS)
                 .add(ChiseledBlocks.VERTICAL_OAK_STAIRS)

@@ -8,8 +8,8 @@ import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.hyper.chiseled.registry.*;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -106,7 +106,7 @@ public class Chiseled implements ModInitializer {
 			builder.add(ChiseledBlocks.VERTICAL_BAMBOO_SLAB, 300);
 		});
 		FabricLoader.getInstance().getModContainer(Chiseled.MOD_ID).ifPresent(modContainer ->
-				ResourceLoader.registerBuiltinPack(Identifier.of("chiseled","data_overrides"), modContainer,
-						Text.translatable("text.chiseled.data_overrides"),PackActivationType.DEFAULT_ENABLED));
+				ResourceLoader.registerBuiltinPack(Identifier.fromNamespaceAndPath("chiseled","data_overrides"), modContainer,
+						Component.translatable("text.chiseled.data_overrides"),PackActivationType.DEFAULT_ENABLED));
 	}
 }

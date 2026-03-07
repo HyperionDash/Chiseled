@@ -3,84 +3,84 @@ package net.hyper.chiseled.registry;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.hyper.chiseled.Chiseled;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
 
 public class ChiseledItemGroups {
-    public static final ItemGroup CHISELED = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Chiseled.MOD_ID, "chiseled"),
+    public static final CreativeModeTab CHISELED = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+            Identifier.fromNamespaceAndPath(Chiseled.MOD_ID, "chiseled"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ChiseledBlocks.POLISHED_STONE))
-                    .displayName(Text.translatable("itemgroup.chiseled.chiseled"))
-                    .entries((displayContext, entries) -> {
-                        entries.add(ChiseledBlocks.OAK_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_OAK_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_OAK_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_OAK_SLAB);
-                        entries.add(ChiseledBlocks.SPRUCE_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_SPRUCE_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_SPRUCE_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_SPRUCE_SLAB);
-                        entries.add(ChiseledBlocks.BIRCH_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_BIRCH_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_BIRCH_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_BIRCH_SLAB);
-                        entries.add(ChiseledBlocks.JUNGLE_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_JUNGLE_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_JUNGLE_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_JUNGLE_SLAB);
-                        entries.add(ChiseledBlocks.ACACIA_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_ACACIA_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_ACACIA_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_ACACIA_SLAB);
-                        entries.add(ChiseledBlocks.DARK_OAK_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_DARK_OAK_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_DARK_OAK_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_DARK_OAK_SLAB);
-                        entries.add(ChiseledBlocks.MANGROVE_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_MANGROVE_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_MANGROVE_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_MANGROVE_SLAB);
-                        entries.add(ChiseledBlocks.CHERRY_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_CHERRY_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_CHERRY_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_CHERRY_SLAB);
-                        entries.add(ChiseledBlocks.PALE_OAK_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_PALE_OAK_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_PALE_OAK_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_PALE_OAK_SLAB);
-                        entries.add(ChiseledBlocks.BAMBOO_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_BAMBOO_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_BAMBOO_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_BAMBOO_SLAB);
-                        entries.add(ChiseledBlocks.CRIMSON_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_CRIMSON_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_CRIMSON_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_CRIMSON_SLAB);
-                        entries.add(ChiseledBlocks.WARPED_TRIM);
-                        entries.add(ChiseledBlocks.VERTICAL_WARPED_PLANKS);
-                        entries.add(ChiseledBlocks.VERTICAL_WARPED_STAIRS);
-                        entries.add(ChiseledBlocks.VERTICAL_WARPED_SLAB);
+                    .title(Component.translatable("itemgroup.chiseled.chiseled"))
+                    .displayItems((displayContext, entries) -> {
+                        entries.accept(ChiseledBlocks.OAK_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_OAK_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_OAK_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_OAK_SLAB);
+                        entries.accept(ChiseledBlocks.SPRUCE_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_SPRUCE_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_SPRUCE_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_SPRUCE_SLAB);
+                        entries.accept(ChiseledBlocks.BIRCH_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_BIRCH_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_BIRCH_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_BIRCH_SLAB);
+                        entries.accept(ChiseledBlocks.JUNGLE_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_JUNGLE_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_JUNGLE_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_JUNGLE_SLAB);
+                        entries.accept(ChiseledBlocks.ACACIA_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_ACACIA_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_ACACIA_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_ACACIA_SLAB);
+                        entries.accept(ChiseledBlocks.DARK_OAK_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_DARK_OAK_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_DARK_OAK_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_DARK_OAK_SLAB);
+                        entries.accept(ChiseledBlocks.MANGROVE_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_MANGROVE_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_MANGROVE_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_MANGROVE_SLAB);
+                        entries.accept(ChiseledBlocks.CHERRY_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_CHERRY_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_CHERRY_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_CHERRY_SLAB);
+                        entries.accept(ChiseledBlocks.PALE_OAK_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_PALE_OAK_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_PALE_OAK_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_PALE_OAK_SLAB);
+                        entries.accept(ChiseledBlocks.BAMBOO_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_BAMBOO_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_BAMBOO_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_BAMBOO_SLAB);
+                        entries.accept(ChiseledBlocks.CRIMSON_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_CRIMSON_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_CRIMSON_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_CRIMSON_SLAB);
+                        entries.accept(ChiseledBlocks.WARPED_TRIM);
+                        entries.accept(ChiseledBlocks.VERTICAL_WARPED_PLANKS);
+                        entries.accept(ChiseledBlocks.VERTICAL_WARPED_STAIRS);
+                        entries.accept(ChiseledBlocks.VERTICAL_WARPED_SLAB);
 
-                        entries.add(ChiseledBlocks.STONE_WALL);
-                        entries.add(ChiseledBlocks.POLISHED_STONE);
-                        entries.add(ChiseledBlocks.POLISHED_STONE_STAIRS);
-                        entries.add(ChiseledBlocks.POLISHED_STONE_SLAB);
-                        entries.add(ChiseledBlocks.POLISHED_STONE_WALL);
-                        entries.add(ChiseledBlocks.MOSSY_POLISHED_STONE);
-                        entries.add(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS);
-                        entries.add(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB);
-                        entries.add(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL);
-                        entries.add(ChiseledBlocks.SMOOTH_STONE_STAIRS);
+                        entries.accept(ChiseledBlocks.STONE_WALL);
+                        entries.accept(ChiseledBlocks.POLISHED_STONE);
+                        entries.accept(ChiseledBlocks.POLISHED_STONE_STAIRS);
+                        entries.accept(ChiseledBlocks.POLISHED_STONE_SLAB);
+                        entries.accept(ChiseledBlocks.POLISHED_STONE_WALL);
+                        entries.accept(ChiseledBlocks.MOSSY_POLISHED_STONE);
+                        entries.accept(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS);
+                        entries.accept(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB);
+                        entries.accept(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL);
+                        entries.accept(ChiseledBlocks.SMOOTH_STONE_STAIRS);
                     }).build());
 
     public static void registerItemGroups() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
             entries.addAfter(Blocks.OAK_PLANKS, ChiseledBlocks.OAK_TRIM,
                     ChiseledBlocks.VERTICAL_OAK_PLANKS);
             entries.addAfter(Blocks.OAK_STAIRS, ChiseledBlocks.VERTICAL_OAK_STAIRS);

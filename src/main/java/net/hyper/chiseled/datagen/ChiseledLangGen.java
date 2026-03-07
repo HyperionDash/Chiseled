@@ -3,16 +3,15 @@ package net.hyper.chiseled.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.hyper.chiseled.registry.ChiseledBlocks;
-import net.minecraft.registry.RegistryWrapper;
-
+import net.minecraft.core.HolderLookup;
 import java.util.concurrent.CompletableFuture;
 
 public class ChiseledLangGen extends FabricLanguageProvider {
-    public ChiseledLangGen (FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    public ChiseledLangGen (FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
-    public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ChiseledBlocks.OAK_TRIM, "Oak Trim");
         translationBuilder.add(ChiseledBlocks.VERTICAL_OAK_PLANKS, "Vertical Oak Planks");
         translationBuilder.add(ChiseledBlocks.VERTICAL_OAK_STAIRS, "Vertical Oak Stairs");

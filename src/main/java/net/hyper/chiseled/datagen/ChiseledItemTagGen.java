@@ -3,18 +3,17 @@ package net.hyper.chiseled.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.hyper.chiseled.registry.ChiseledBlocks;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
-
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.ItemTags;
 import java.util.concurrent.CompletableFuture;
 
 public class ChiseledItemTagGen extends FabricTagProvider.ItemTagProvider {
-    public ChiseledItemTagGen(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+    public ChiseledItemTagGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+    protected void addTags(HolderLookup.Provider wrapperLookup) {
         valueLookupBuilder(ItemTags.STAIRS)
                 .add(ChiseledBlocks.VERTICAL_OAK_STAIRS.asItem())
                 .add(ChiseledBlocks.VERTICAL_SPRUCE_STAIRS.asItem())

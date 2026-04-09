@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "chiseled:polished_stone",
   "result": {
-    "count": 1,
     "id": "chiseled:stone_tile_wall"
   }
 }

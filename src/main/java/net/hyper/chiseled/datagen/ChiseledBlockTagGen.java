@@ -1,14 +1,14 @@
 package net.hyper.chiseled.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.hyper.chiseled.registry.ChiseledBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import java.util.concurrent.CompletableFuture;
 
-public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
-    public ChiseledBlockTagGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
+public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
+    public ChiseledBlockTagGen(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
 

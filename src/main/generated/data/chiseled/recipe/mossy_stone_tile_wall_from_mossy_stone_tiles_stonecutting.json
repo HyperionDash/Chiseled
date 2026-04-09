@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "chiseled:mossy_stone_tiles",
   "result": {
-    "count": 1,
     "id": "chiseled:mossy_stone_tile_wall"
   }
 }

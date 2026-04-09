@@ -1,19 +1,20 @@
 package net.hyper.chiseled.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.hyper.chiseled.registry.ChiseledBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ChiseledRecipeGen extends FabricRecipeProvider {
-    public ChiseledRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    public ChiseledRecipeGen(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
@@ -453,7 +454,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .save(output);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICKS, Blocks.STONE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICKS, ChiseledBlocks.POLISHED_STONE);
-                oreSmelting(List.of(ChiseledBlocks.CUT_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CRACKED_CUT_STONE_BRICKS, 0.1f, 200, "cracked_cut_stone_bricks");
+                oreSmelting(List.of(ChiseledBlocks.CUT_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, CookingBookCategory.BLOCKS, ChiseledBlocks.CRACKED_CUT_STONE_BRICKS, 0.1f, 200, "cracked_cut_stone_bricks");
                 shaped(RecipeCategory.MISC, ChiseledBlocks.CUT_STONE_BRICK_STAIRS, 4)
                         .pattern("#  ")
                         .pattern("## ")

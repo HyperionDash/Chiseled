@@ -1,16 +1,17 @@
 package net.hyper.chiseled.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.hyper.chiseled.registry.ChiseledBlocks;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.Blocks;
 
 public class ChiseledModelGen extends FabricModelProvider {
-    public ChiseledModelGen(FabricDataOutput output) {
+    public ChiseledModelGen(FabricPackOutput output) {
         super(output);
     }
 
@@ -53,7 +54,7 @@ public class ChiseledModelGen extends FabricModelProvider {
         verticalWarpedPool.stairs(ChiseledBlocks.VERTICAL_WARPED_STAIRS);
         verticalWarpedPool.slab(ChiseledBlocks.VERTICAL_WARPED_SLAB);
 
-        final TextureMapping stoneWall = TextureMapping.cube(Identifier.withDefaultNamespace("block/stone"));
+        final TextureMapping stoneWall = TextureMapping.cube(Blocks.STONE);
         final Identifier stoneWallPost = ModelTemplates.WALL_POST.create(ChiseledBlocks.STONE_WALL, stoneWall, blockStateModelGenerator.modelOutput);
         final Identifier stoneWallSide = ModelTemplates.WALL_LOW_SIDE.create(ChiseledBlocks.STONE_WALL, stoneWall, blockStateModelGenerator.modelOutput);
         final Identifier stoneWallSideTall = ModelTemplates.WALL_TALL_SIDE.create(ChiseledBlocks.STONE_WALL, stoneWall, blockStateModelGenerator.modelOutput);
@@ -68,7 +69,7 @@ public class ChiseledModelGen extends FabricModelProvider {
         polishedStonePool.stairs(ChiseledBlocks.POLISHED_STONE_STAIRS);
         polishedStonePool.slab(ChiseledBlocks.POLISHED_STONE_SLAB);
         polishedStonePool.wall(ChiseledBlocks.POLISHED_STONE_WALL);
-        final TextureMapping smoothStone = TextureMapping.cube(Identifier.withDefaultNamespace("block/smooth_stone"));
+        final TextureMapping smoothStone = TextureMapping.cube(Blocks.SMOOTH_STONE);
         final Identifier smoothStoneStairs = ModelTemplates.STAIRS_STRAIGHT.create(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStone, blockStateModelGenerator.modelOutput);
         final Identifier innerSmoothStoneStairs = ModelTemplates.STAIRS_INNER.create(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStone, blockStateModelGenerator.modelOutput);
         final Identifier outerSmoothStoneStairs = ModelTemplates.STAIRS_OUTER.create(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStone, blockStateModelGenerator.modelOutput);
@@ -97,7 +98,7 @@ public class ChiseledModelGen extends FabricModelProvider {
         mossyStoneTilePool.slab(ChiseledBlocks.MOSSY_STONE_TILE_SLAB);
         mossyStoneTilePool.wall(ChiseledBlocks.MOSSY_STONE_TILE_WALL);
 
-        //final TextureMapping slabExample = TextureMapping.cube(Identifier.withDefaultNamespace("block/dirt"));
+        //final TextureMapping slabExample = TextureMapping.cube(Blocks.DIRT);
         //final Identifier slabExampleBottom = ModelTemplates.SLAB_BOTTOM.create(ChiseledBlocks.SLAB, slabExample, blockStateModelGenerator.modelOutput);
         //final Identifier slabExampleTop = ModelTemplates.SLAB_TOP.create(ChiseledBlocks.SLAB, slabExample, blockStateModelGenerator.modelOutput);
         //blockStateModelGenerator.blockStateOutput.accept(

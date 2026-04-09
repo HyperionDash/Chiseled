@@ -3,7 +3,7 @@ package net.hyper.chiseled;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.fabricmc.fabric.api.registry.FuelValueEvents;
 import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
@@ -63,7 +63,7 @@ public class Chiseled implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ChiseledBlocks.VERTICAL_BAMBOO_STAIRS, 5, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ChiseledBlocks.VERTICAL_BAMBOO_SLAB, 5, 20);
 
-		FuelRegistryEvents.BUILD.register((builder, context) -> {
+		FuelValueEvents.BUILD.register((builder, context) -> {
 			builder.add(ChiseledBlocks.OAK_TRIM, 300);
 			builder.add(ChiseledBlocks.VERTICAL_OAK_PLANKS, 300);
 			builder.add(ChiseledBlocks.VERTICAL_OAK_STAIRS, 300);

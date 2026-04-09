@@ -7,7 +7,7 @@ import net.minecraft.core.HolderLookup;
 import java.util.concurrent.CompletableFuture;
 
 public class ChiseledLangGen extends FabricLanguageProvider {
-    public ChiseledLangGen (FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+    public ChiseledLangGen(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
@@ -66,11 +66,24 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.POLISHED_STONE_STAIRS, "Polished Stone Stairs");
         translationBuilder.add(ChiseledBlocks.POLISHED_STONE_SLAB, "Polished Stone Slab");
         translationBuilder.add(ChiseledBlocks.POLISHED_STONE_WALL, "Polished Stone Wall");
-        translationBuilder.add(ChiseledBlocks.MOSSY_POLISHED_STONE, "Mossy Polished Stone");
-        translationBuilder.add(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS, "Mossy Polished Stone Stairs");
-        translationBuilder.add(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB, "Mossy Polished Stone Slab");
-        translationBuilder.add(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL, "Mossy Polished Stone Wall");
         translationBuilder.add(ChiseledBlocks.SMOOTH_STONE_STAIRS, "Smooth Stone Stairs");
+        translationBuilder.add(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS, "Mossy Chiseled Stone Bricks");
+        translationBuilder.add(ChiseledBlocks.CUT_STONE_BRICKS, "Cut Stone Bricks");
+        translationBuilder.add(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS, "Cracked Cut Stone Bricks");
+        translationBuilder.add(ChiseledBlocks.CUT_STONE_BRICK_STAIRS, "Cut Stone Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.CUT_STONE_BRICK_SLAB, "Cut Stone Brick Slab");
+        translationBuilder.add(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS, "Mossy Cut Stone Bricks");
+        translationBuilder.add(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS, "Mossy Cut Stone Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB, "Mossy Cut Stone Brick Slab");
+        translationBuilder.add(ChiseledBlocks.STONE_TILES, "Stone Tiles");
+        translationBuilder.add(ChiseledBlocks.CRACKED_STONE_TILES, "Cracked Stone Tiles");
+        translationBuilder.add(ChiseledBlocks.STONE_TILE_STAIRS, "Stone Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.STONE_TILE_SLAB, "Stone Tile Slab");
+        translationBuilder.add(ChiseledBlocks.STONE_TILE_WALL, "Stone Tile Wall");
+        translationBuilder.add(ChiseledBlocks.MOSSY_STONE_TILES, "Mossy Stone Tiles");
+        translationBuilder.add(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS, "Mossy Stone Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.MOSSY_STONE_TILE_SLAB, "Mossy Stone Tile Slab");
+        translationBuilder.add(ChiseledBlocks.MOSSY_STONE_TILE_WALL, "Mossy Stone Tile Wall");
 
         translationBuilder.add("itemgroup.chiseled.chiseled", "Chiseled");
         translationBuilder.add("text.chiseled.asset_overrides", "Asset Overrides");

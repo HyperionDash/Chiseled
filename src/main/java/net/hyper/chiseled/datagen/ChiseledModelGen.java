@@ -3,7 +3,6 @@ package net.hyper.chiseled.datagen;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.hyper.chiseled.registry.ChiseledBlocks;
-import net.minecraft.client.data.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
@@ -69,10 +68,6 @@ public class ChiseledModelGen extends FabricModelProvider {
         polishedStonePool.stairs(ChiseledBlocks.POLISHED_STONE_STAIRS);
         polishedStonePool.slab(ChiseledBlocks.POLISHED_STONE_SLAB);
         polishedStonePool.wall(ChiseledBlocks.POLISHED_STONE_WALL);
-        BlockModelGenerators.BlockFamilyProvider mossyPolishedStonePool = blockStateModelGenerator.family(ChiseledBlocks.MOSSY_POLISHED_STONE);
-        mossyPolishedStonePool.stairs(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS);
-        mossyPolishedStonePool.slab(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB);
-        mossyPolishedStonePool.wall(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL);
         final TextureMapping smoothStone = TextureMapping.cube(Identifier.withDefaultNamespace("block/smooth_stone"));
         final Identifier smoothStoneStairs = ModelTemplates.STAIRS_STRAIGHT.create(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStone, blockStateModelGenerator.modelOutput);
         final Identifier innerSmoothStoneStairs = ModelTemplates.STAIRS_INNER.create(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStone, blockStateModelGenerator.modelOutput);
@@ -83,6 +78,34 @@ public class ChiseledModelGen extends FabricModelProvider {
                         BlockModelGenerators.plainVariant(smoothStoneStairs),
                         BlockModelGenerators.plainVariant(outerSmoothStoneStairs)));
         blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStoneStairs);
+        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider cutStoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_STONE_BRICKS);
+        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS);
+        cutStoneBrickPool.stairs(ChiseledBlocks.CUT_STONE_BRICK_STAIRS);
+        cutStoneBrickPool.slab(ChiseledBlocks.CUT_STONE_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider mossyCutStoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS);
+        mossyCutStoneBrickPool.stairs(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS);
+        mossyCutStoneBrickPool.slab(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB);
+
+        BlockModelGenerators.BlockFamilyProvider stoneTilePool = blockStateModelGenerator.family(ChiseledBlocks.STONE_TILES);
+        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.CRACKED_STONE_TILES);
+        stoneTilePool.stairs(ChiseledBlocks.STONE_TILE_STAIRS);
+        stoneTilePool.slab(ChiseledBlocks.STONE_TILE_SLAB);
+        stoneTilePool.wall(ChiseledBlocks.STONE_TILE_WALL);
+        BlockModelGenerators.BlockFamilyProvider mossyStoneTilePool = blockStateModelGenerator.family(ChiseledBlocks.MOSSY_STONE_TILES);
+        mossyStoneTilePool.stairs(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS);
+        mossyStoneTilePool.slab(ChiseledBlocks.MOSSY_STONE_TILE_SLAB);
+        mossyStoneTilePool.wall(ChiseledBlocks.MOSSY_STONE_TILE_WALL);
+
+        //final TextureMapping slabExample = TextureMapping.cube(Identifier.withDefaultNamespace("block/dirt"));
+        //final Identifier slabExampleBottom = ModelTemplates.SLAB_BOTTOM.create(ChiseledBlocks.SLAB, slabExample, blockStateModelGenerator.modelOutput);
+        //final Identifier slabExampleTop = ModelTemplates.SLAB_TOP.create(ChiseledBlocks.SLAB, slabExample, blockStateModelGenerator.modelOutput);
+        //blockStateModelGenerator.blockStateOutput.accept(
+        //        BlockModelGenerators.createSlab(ChiseledBlocks.SLAB,
+        //                BlockModelGenerators.plainVariant(slabExampleBottom),
+        //                BlockModelGenerators.plainVariant(slabExampleTop),
+        //                BlockModelGenerators.plainVariant(Identifier.ofVanilla("block/diamond_block"))));
+        //blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.SLAB, slabExampleBottom);
     }
 
     @Override

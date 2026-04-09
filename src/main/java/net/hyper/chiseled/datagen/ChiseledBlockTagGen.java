@@ -20,11 +20,34 @@ public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(ChiseledBlocks.POLISHED_STONE_STAIRS)
                 .add(ChiseledBlocks.POLISHED_STONE_SLAB)
                 .add(ChiseledBlocks.POLISHED_STONE_WALL)
-                .add(ChiseledBlocks.MOSSY_POLISHED_STONE)
-                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS)
-                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB)
-                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL)
-                .add(ChiseledBlocks.SMOOTH_STONE_STAIRS);
+                .add(ChiseledBlocks.SMOOTH_STONE_STAIRS)
+                .add(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS)
+                .add(ChiseledBlocks.CUT_STONE_BRICKS)
+                .add(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS)
+                .add(ChiseledBlocks.CUT_STONE_BRICK_STAIRS)
+                .add(ChiseledBlocks.CUT_STONE_BRICK_SLAB)
+                .add(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS)
+                .add(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS)
+                .add(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB)
+                .add(ChiseledBlocks.STONE_TILES)
+                .add(ChiseledBlocks.CRACKED_STONE_TILES)
+                .add(ChiseledBlocks.STONE_TILE_STAIRS)
+                .add(ChiseledBlocks.STONE_TILE_SLAB)
+                .add(ChiseledBlocks.STONE_TILE_WALL)
+                .add(ChiseledBlocks.MOSSY_STONE_TILES)
+                .add(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS)
+                .add(ChiseledBlocks.MOSSY_STONE_TILE_SLAB)
+                .add(ChiseledBlocks.MOSSY_STONE_TILE_WALL);
+
+        valueLookupBuilder(BlockTags.STONE_BRICKS)
+                .add(ChiseledBlocks.POLISHED_STONE)
+                .add(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS)
+                .add(ChiseledBlocks.CUT_STONE_BRICKS)
+                .add(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS)
+                .add(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS)
+                .add(ChiseledBlocks.STONE_TILES)
+                .add(ChiseledBlocks.CRACKED_STONE_TILES)
+                .add(ChiseledBlocks.MOSSY_STONE_TILES);
 
         valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .add(ChiseledBlocks.OAK_TRIM)
@@ -90,8 +113,11 @@ public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(ChiseledBlocks.VERTICAL_CRIMSON_STAIRS)
                 .add(ChiseledBlocks.VERTICAL_WARPED_STAIRS)
                 .add(ChiseledBlocks.POLISHED_STONE_STAIRS)
-                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS)
-                .add(ChiseledBlocks.SMOOTH_STONE_STAIRS);
+                .add(ChiseledBlocks.SMOOTH_STONE_STAIRS)
+                .add(ChiseledBlocks.CUT_STONE_BRICK_STAIRS)
+                .add(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS)
+                .add(ChiseledBlocks.STONE_TILE_STAIRS)
+                .add(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS);
         valueLookupBuilder(BlockTags.WOODEN_STAIRS)
                 .add(ChiseledBlocks.VERTICAL_OAK_STAIRS)
                 .add(ChiseledBlocks.VERTICAL_SPRUCE_STAIRS)
@@ -120,7 +146,10 @@ public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(ChiseledBlocks.VERTICAL_CRIMSON_SLAB)
                 .add(ChiseledBlocks.VERTICAL_WARPED_SLAB)
                 .add(ChiseledBlocks.POLISHED_STONE_SLAB)
-                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB);
+                .add(ChiseledBlocks.CUT_STONE_BRICK_SLAB)
+                .add(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB)
+                .add(ChiseledBlocks.STONE_TILE_SLAB)
+                .add(ChiseledBlocks.MOSSY_STONE_TILE_SLAB);
         valueLookupBuilder(BlockTags.WOODEN_SLABS)
                 .add(ChiseledBlocks.VERTICAL_OAK_SLAB)
                 .add(ChiseledBlocks.VERTICAL_SPRUCE_SLAB)
@@ -138,7 +167,8 @@ public class ChiseledBlockTagGen extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ChiseledBlocks.STONE_WALL)
                 .add(ChiseledBlocks.POLISHED_STONE_WALL)
-                .add(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL);
+                .add(ChiseledBlocks.STONE_TILE_WALL)
+                .add(ChiseledBlocks.MOSSY_STONE_TILE_WALL);
 
         valueLookupBuilder(BlockTags.PLANKS)
                 .add(ChiseledBlocks.VERTICAL_OAK_PLANKS)

@@ -13,7 +13,10 @@
     "chiseled:vertical_crimson_stairs",
     "chiseled:vertical_warped_stairs",
     "chiseled:polished_stone_stairs",
-    "chiseled:mossy_polished_stone_stairs",
-    "chiseled:smooth_stone_stairs"
+    "chiseled:smooth_stone_stairs",
+    "chiseled:cut_stone_brick_stairs",
+    "chiseled:mossy_cut_stone_brick_stairs",
+    "chiseled:stone_tile_stairs",
+    "chiseled:mossy_stone_tile_stairs"
   ]
 }

@@ -13,6 +13,9 @@
     "chiseled:vertical_crimson_slab",
     "chiseled:vertical_warped_slab",
     "chiseled:polished_stone_slab",
-    "chiseled:mossy_polished_stone_slab"
+    "chiseled:cut_stone_brick_slab",
+    "chiseled:mossy_cut_stone_brick_slab",
+    "chiseled:stone_tile_slab",
+    "chiseled:mossy_stone_tile_slab"
   ]
 }

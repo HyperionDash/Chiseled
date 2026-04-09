@@ -2,6 +2,7 @@
   "values": [
     "chiseled:stone_wall",
     "chiseled:polished_stone_wall",
-    "chiseled:mossy_polished_stone_wall"
+    "chiseled:stone_tile_wall",
+    "chiseled:mossy_stone_tile_wall"
   ]
 }

@@ -106,7 +106,7 @@ public class Chiseled implements ModInitializer {
 			builder.add(ChiseledBlocks.VERTICAL_BAMBOO_SLAB, 300);
 		});
 		FabricLoader.getInstance().getModContainer(Chiseled.MOD_ID).ifPresent(modContainer ->
-				ResourceLoader.registerBuiltinPack(Identifier.fromNamespaceAndPath("chiseled","data_overrides"), modContainer,
-						Component.translatable("text.chiseled.data_overrides"),PackActivationType.DEFAULT_ENABLED));
+				ResourceLoader.registerBuiltinPack(Identifier.fromNamespaceAndPath(Chiseled.MOD_ID,"data_overrides"), modContainer,
+						Component.translatable("text.chiseled.data_overrides"),PackActivationType.ALWAYS_ENABLED));
 	}
 }

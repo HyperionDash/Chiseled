@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "chiseled:stone_tiles",
+    "minecraft:vine"
+  ],
+  "result": {
+    "count": 1,
+    "id": "chiseled:mossy_stone_tiles"
+  }
+}

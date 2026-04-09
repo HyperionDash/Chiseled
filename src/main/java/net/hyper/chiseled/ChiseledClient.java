@@ -11,7 +11,7 @@ public class ChiseledClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         FabricLoader.getInstance().getModContainer(Chiseled.MOD_ID).ifPresent(modContainer ->
-                ResourceLoader.registerBuiltinPack(Identifier.fromNamespaceAndPath("chiseled","asset_overrides"), modContainer,
+                ResourceLoader.registerBuiltinPack(Identifier.fromNamespaceAndPath(Chiseled.MOD_ID,"asset_overrides"), modContainer,
                         Component.translatable("text.chiseled.asset_overrides"), PackActivationType.DEFAULT_ENABLED));
     }
 }

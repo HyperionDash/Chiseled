@@ -72,11 +72,24 @@ public class ChiseledItemGroups {
                         entries.accept(ChiseledBlocks.POLISHED_STONE_STAIRS);
                         entries.accept(ChiseledBlocks.POLISHED_STONE_SLAB);
                         entries.accept(ChiseledBlocks.POLISHED_STONE_WALL);
-                        entries.accept(ChiseledBlocks.MOSSY_POLISHED_STONE);
-                        entries.accept(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS);
-                        entries.accept(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB);
-                        entries.accept(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL);
                         entries.accept(ChiseledBlocks.SMOOTH_STONE_STAIRS);
+                        entries.accept(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_STONE_BRICKS);
+                        entries.accept(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_STONE_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CUT_STONE_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS);
+                        entries.accept(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.STONE_TILES);
+                        entries.accept(ChiseledBlocks.CRACKED_STONE_TILES);
+                        entries.accept(ChiseledBlocks.STONE_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.STONE_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.STONE_TILE_WALL);
+                        entries.accept(ChiseledBlocks.MOSSY_STONE_TILES);
+                        entries.accept(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.MOSSY_STONE_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.MOSSY_STONE_TILE_WALL);
                     }).build());
 
     public static void registerItemGroups() {
@@ -134,12 +147,25 @@ public class ChiseledItemGroups {
             entries.addAfter(Blocks.MOSSY_COBBLESTONE_WALL, ChiseledBlocks.POLISHED_STONE,
                     ChiseledBlocks.POLISHED_STONE_STAIRS,
                     ChiseledBlocks.POLISHED_STONE_SLAB,
-                    ChiseledBlocks.POLISHED_STONE_WALL,
-                    ChiseledBlocks.MOSSY_POLISHED_STONE,
-                    ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS,
-                    ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB,
-                    ChiseledBlocks.MOSSY_POLISHED_STONE_WALL);
+                    ChiseledBlocks.POLISHED_STONE_WALL);
             entries.addAfter(Blocks.SMOOTH_STONE, ChiseledBlocks.SMOOTH_STONE_STAIRS);
+            entries.addAfter(Blocks.MOSSY_STONE_BRICK_WALL, ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS,
+                    ChiseledBlocks.CUT_STONE_BRICKS,
+                    ChiseledBlocks.CRACKED_CUT_STONE_BRICKS,
+                    ChiseledBlocks.CUT_STONE_BRICK_STAIRS,
+                    ChiseledBlocks.CUT_STONE_BRICK_SLAB,
+                    ChiseledBlocks.MOSSY_CUT_STONE_BRICKS,
+                    ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS,
+                    ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB,
+                    ChiseledBlocks.STONE_TILES,
+                    ChiseledBlocks.CRACKED_STONE_TILES,
+                    ChiseledBlocks.STONE_TILE_STAIRS,
+                    ChiseledBlocks.STONE_TILE_SLAB,
+                    ChiseledBlocks.STONE_TILE_WALL,
+                    ChiseledBlocks.MOSSY_STONE_TILES,
+                    ChiseledBlocks.MOSSY_STONE_TILE_STAIRS,
+                    ChiseledBlocks.MOSSY_STONE_TILE_SLAB,
+                    ChiseledBlocks.MOSSY_STONE_TILE_WALL);
         });
     }
 }

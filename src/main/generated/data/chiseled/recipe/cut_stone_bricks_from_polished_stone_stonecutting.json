@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:polished_stone",
+  "result": {
+    "count": 1,
+    "id": "chiseled:cut_stone_bricks"
+  }
+}

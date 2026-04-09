@@ -10,7 +10,7 @@ public class ChiseledDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ChiseledLangGen::new);
-		pack.addProvider(ChiseledLootTableGen::new);
+		pack.addProvider(ChiseledBlockLootTableGen::new);
 		pack.addProvider(ChiseledRecipeGen::new);
 		pack.addProvider(ChiseledModelGen::new);
 		pack.addProvider(ChiseledItemTagGen::new);

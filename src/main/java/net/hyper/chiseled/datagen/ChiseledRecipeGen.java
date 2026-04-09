@@ -8,6 +8,8 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.level.block.Blocks;
+
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ChiseledRecipeGen extends FabricRecipeProvider {
@@ -413,40 +415,6 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .save(output);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_WALL, Blocks.STONE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_WALL, ChiseledBlocks.POLISHED_STONE);
-                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE)
-                        .requires(ChiseledBlocks.POLISHED_STONE)
-                        .requires(Blocks.MOSS_BLOCK)
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_POLISHED_STONE), has(ChiseledBlocks.MOSSY_POLISHED_STONE))
-                        .save(output, "mossy_polished_stone_from_moss");
-                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE)
-                        .requires(ChiseledBlocks.POLISHED_STONE)
-                        .requires(Blocks.VINE)
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_POLISHED_STONE), has(ChiseledBlocks.MOSSY_POLISHED_STONE))
-                        .save(output, "mossy_polished_stone_from_vine");
-                shaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS, 4)
-                        .pattern("#  ")
-                        .pattern("## ")
-                        .pattern("###")
-                        .define('#', ChiseledBlocks.MOSSY_POLISHED_STONE)
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS), has(ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE_STAIRS, ChiseledBlocks.MOSSY_POLISHED_STONE);
-                shaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB, 6)
-                        .pattern("   ")
-                        .pattern("###")
-                        .pattern("   ")
-                        .define('#', ChiseledBlocks.MOSSY_POLISHED_STONE)
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB), has(ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE_SLAB, ChiseledBlocks.MOSSY_POLISHED_STONE,2);
-                shaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_POLISHED_STONE_WALL, 6)
-                        .pattern("   ")
-                        .pattern("###")
-                        .pattern("###")
-                        .define('#', ChiseledBlocks.MOSSY_POLISHED_STONE)
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL), has(ChiseledBlocks.MOSSY_POLISHED_STONE_WALL))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_POLISHED_STONE_WALL, ChiseledBlocks.MOSSY_POLISHED_STONE);
                 shaped(RecipeCategory.MISC, ChiseledBlocks.SMOOTH_STONE_STAIRS, 4)
                         .pattern("#  ")
                         .pattern("## ")
@@ -455,7 +423,6 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ChiseledBlocks.SMOOTH_STONE_STAIRS), has(ChiseledBlocks.SMOOTH_STONE_STAIRS))
                         .save(output);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
-
                 shaped(RecipeCategory.MISC, Blocks.STONE_BRICKS, 4)
                         .pattern("## ")
                         .pattern("## ")
@@ -467,12 +434,156 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_STAIRS, ChiseledBlocks.POLISHED_STONE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_SLAB, ChiseledBlocks.POLISHED_STONE, 2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_WALL, ChiseledBlocks.POLISHED_STONE);
+                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS)
+                        .requires(Blocks.CHISELED_STONE_BRICKS)
+                        .requires(Blocks.MOSS_BLOCK)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS), has(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS))
+                        .save(output, "mossy_chiseled_stone_bricks_from_moss");
+                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS)
+                        .requires(Blocks.CHISELED_STONE_BRICKS)
+                        .requires(Blocks.VINE)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS), has(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS))
+                        .save(output, "mossy_chiseled_stone_bricks_from_vine");
+                shaped(RecipeCategory.MISC, ChiseledBlocks.CUT_STONE_BRICKS)
+                        .pattern(" # ")
+                        .pattern(" # ")
+                        .pattern("   ")
+                        .define('#', ChiseledBlocks.POLISHED_STONE_SLAB)
+                        .unlockedBy(getHasName(ChiseledBlocks.CUT_STONE_BRICKS), has(ChiseledBlocks.CUT_STONE_BRICKS))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICKS, Blocks.STONE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICKS, ChiseledBlocks.POLISHED_STONE);
+                oreSmelting(List.of(ChiseledBlocks.CUT_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CRACKED_CUT_STONE_BRICKS, 0.1f, 200, "cracked_cut_stone_bricks");
+                shaped(RecipeCategory.MISC, ChiseledBlocks.CUT_STONE_BRICK_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ChiseledBlocks.CUT_STONE_BRICKS)
+                        .unlockedBy(getHasName(ChiseledBlocks.CUT_STONE_BRICK_STAIRS), has(ChiseledBlocks.CUT_STONE_BRICK_STAIRS))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_STAIRS, Blocks.STONE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_STAIRS, ChiseledBlocks.POLISHED_STONE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_STAIRS, ChiseledBlocks.CUT_STONE_BRICKS);
+                shaped(RecipeCategory.MISC, ChiseledBlocks.CUT_STONE_BRICK_SLAB, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("   ")
+                        .define('#', ChiseledBlocks.CUT_STONE_BRICKS)
+                        .unlockedBy(getHasName(ChiseledBlocks.CUT_STONE_BRICK_SLAB), has(ChiseledBlocks.CUT_STONE_BRICK_SLAB))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_SLAB, Blocks.STONE,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_SLAB, ChiseledBlocks.POLISHED_STONE,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_SLAB, ChiseledBlocks.CUT_STONE_BRICKS,2);
+                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS)
+                        .requires(ChiseledBlocks.CUT_STONE_BRICKS)
+                        .requires(Blocks.MOSS_BLOCK)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS), has(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS))
+                        .save(output, "mossy_cut_stone_bricks_from_moss");
+                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS)
+                        .requires(ChiseledBlocks.CUT_STONE_BRICKS)
+                        .requires(Blocks.VINE)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS), has(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS))
+                        .save(output, "mossy_cut_bricks_stone_from_vine");
+                shaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ChiseledBlocks.MOSSY_CUT_STONE_BRICKS)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS), has(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS);
+                shaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("   ")
+                        .define('#', ChiseledBlocks.MOSSY_CUT_STONE_BRICKS)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB), has(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS,2);
+
+                shaped(RecipeCategory.MISC, ChiseledBlocks.STONE_TILES, 4)
+                        .pattern("## ")
+                        .pattern("## ")
+                        .pattern("   ")
+                        .define('#', Blocks.STONE_BRICKS)
+                        .unlockedBy(getHasName(ChiseledBlocks.STONE_TILES), has(ChiseledBlocks.STONE_TILES))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILES, Blocks.STONE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILES, ChiseledBlocks.POLISHED_STONE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILES, Blocks.STONE_BRICKS);
+                shaped(RecipeCategory.MISC, ChiseledBlocks.STONE_TILE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ChiseledBlocks.STONE_TILES)
+                        .unlockedBy(getHasName(ChiseledBlocks.STONE_TILE_STAIRS), has(ChiseledBlocks.STONE_TILE_STAIRS))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_STAIRS, Blocks.STONE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_STAIRS, ChiseledBlocks.POLISHED_STONE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_STAIRS, Blocks.STONE_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_STAIRS, ChiseledBlocks.STONE_TILES);
+                shaped(RecipeCategory.MISC, ChiseledBlocks.STONE_TILE_SLAB, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("   ")
+                        .define('#', ChiseledBlocks.STONE_TILES)
+                        .unlockedBy(getHasName(ChiseledBlocks.STONE_TILE_SLAB), has(ChiseledBlocks.STONE_TILE_SLAB))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_SLAB, Blocks.STONE,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_SLAB, ChiseledBlocks.POLISHED_STONE, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_SLAB, Blocks.STONE_BRICKS, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_SLAB, ChiseledBlocks.STONE_TILES,2);
+                shaped(RecipeCategory.MISC, ChiseledBlocks.STONE_TILE_WALL, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("###")
+                        .define('#', ChiseledBlocks.STONE_TILES)
+                        .unlockedBy(getHasName(ChiseledBlocks.STONE_TILE_WALL), has(ChiseledBlocks.STONE_TILE_WALL))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_WALL, Blocks.STONE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_WALL, ChiseledBlocks.POLISHED_STONE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_WALL, Blocks.STONE_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_WALL, ChiseledBlocks.STONE_TILES);
+                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILES)
+                        .requires(ChiseledBlocks.STONE_TILES)
+                        .requires(Blocks.MOSS_BLOCK)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_STONE_TILES), has(ChiseledBlocks.MOSSY_STONE_TILES))
+                        .save(output, "mossy_stone_tiles_from_moss");
+                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILES)
+                        .requires(ChiseledBlocks.STONE_TILES)
+                        .requires(Blocks.VINE)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_STONE_TILES), has(ChiseledBlocks.MOSSY_STONE_TILES))
+                        .save(output, "mossy_stone_tiles_from_vine");
+                shaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_STONE_TILE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ChiseledBlocks.MOSSY_STONE_TILES)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS), has(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILE_STAIRS, ChiseledBlocks.MOSSY_STONE_TILES);
+                shaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_STONE_TILE_SLAB, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("   ")
+                        .define('#', ChiseledBlocks.MOSSY_STONE_TILES)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_STONE_TILE_SLAB), has(ChiseledBlocks.MOSSY_STONE_TILE_SLAB))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILE_SLAB, ChiseledBlocks.MOSSY_STONE_TILES,2);
+                shaped(RecipeCategory.MISC, ChiseledBlocks.MOSSY_STONE_TILE_WALL, 6)
+                        .pattern("   ")
+                        .pattern("###")
+                        .pattern("###")
+                        .define('#', ChiseledBlocks.MOSSY_STONE_TILES)
+                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_STONE_TILE_WALL), has(ChiseledBlocks.MOSSY_STONE_TILE_WALL))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILE_WALL, ChiseledBlocks.MOSSY_STONE_TILES);
             }
         };
     }
 
     @Override
     public String getName() {
-        return "Chiseled Recipes";
+        return "_recipegen";
     }
 }

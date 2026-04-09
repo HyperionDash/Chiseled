@@ -585,6 +585,6 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return "_recipegen";
+        return "recipegen";
     }
 }

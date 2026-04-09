@@ -29,11 +29,12 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	// Client Side mods
-	//modRuntimeOnly("maven.modrinth:jei:${project.jei_version}")
-	//modRuntimeOnly("maven.modrinth:placeholder-api:${project.placeholder_api_version}")
-	//modRuntimeOnly("maven.modrinth:modmenu:${project.modmenu_version}")
-	//modRuntimeOnly("maven.modrinth:Sodium:${project.Sodium_version}")
-	//modRuntimeOnly("maven.modrinth:mouse-tweaks:${project.mouse_tweaks_version}")
+	runtimeOnly("maven.modrinth:jei:${project.jei_version}")
+	runtimeOnly("maven.modrinth:placeholder-api:${project.placeholder_api_version}")
+	runtimeOnly("maven.modrinth:modmenu:${project.modmenu_version}")
+	runtimeOnly("maven.modrinth:Sodium:${project.sodium_version}")
+	runtimeOnly("maven.modrinth:enchanteds-sodium-options:${project.enchanteds_sodium_options_version}")
+	runtimeOnly("maven.modrinth:mouse-tweaks:${project.mouse_tweaks_version}")
 }
 
 processResources {

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "chiseled:mossy_cut_stone_bricks"
+            "items": "chiseled:cut_stone_bricks"
           }
         ]
       },

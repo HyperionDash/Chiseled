@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "#": "minecraft:pale_oak_slab",
     "0": "minecraft:pale_oak_planks"

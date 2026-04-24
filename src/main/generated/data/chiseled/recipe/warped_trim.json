@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "#": "minecraft:warped_slab",
     "0": "minecraft:warped_planks"

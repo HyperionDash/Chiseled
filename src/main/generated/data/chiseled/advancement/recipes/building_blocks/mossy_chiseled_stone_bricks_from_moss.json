@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "chiseled:mossy_chiseled_stone_bricks"
+            "items": "minecraft:chiseled_stone_bricks"
           }
         ]
       },

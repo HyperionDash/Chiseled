@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "#": "minecraft:spruce_slab",
     "0": "minecraft:spruce_planks"

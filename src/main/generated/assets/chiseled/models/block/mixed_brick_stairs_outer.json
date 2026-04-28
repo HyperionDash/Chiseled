@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "chiseled:block/mixed_bricks",
+    "side": "chiseled:block/mixed_bricks",
+    "top": "chiseled:block/mixed_bricks"
+  }
+}

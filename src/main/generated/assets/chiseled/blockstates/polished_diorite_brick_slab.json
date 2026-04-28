@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/polished_diorite_brick_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/polished_diorite_bricks"
+    },
+    "type=top": {
+      "model": "chiseled:block/polished_diorite_brick_slab_top"
+    }
+  }
+}

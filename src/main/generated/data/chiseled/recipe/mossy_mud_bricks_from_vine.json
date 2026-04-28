@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:mud_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "chiseled:mossy_mud_bricks"
+  }
+}

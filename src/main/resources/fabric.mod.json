@@ -3,7 +3,7 @@
 	"id": "chiseled",
 	"version": "${version}",
 	"name": "Chiseled",
-	"description": "silly building blocks mods lol :3",
+	"description": "Silly building blocks mods lol :3",
 	"authors": [
 		"HyperionDash",
 		"Wjph2k10"
@@ -13,7 +13,7 @@
 		"sources": "https://github.com/HyperionDash/Chiseled",
 		"issues":  "https://github.com/HyperionDash/Chiseled/issues"
 	},
-		"license": "MIT",
+		"license": "Hyper License",
 	"icon": "assets/chiseled/icon.png",
 	"environment": "*",
 	"entrypoints": {

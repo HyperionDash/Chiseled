@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "chiseled:mossy_mud_tiles"
+  },
+  "pattern": [
+    "   ",
+    "###",
+    "   "
+  ],
+  "result": {
+    "count": 6,
+    "id": "chiseled:mossy_mud_tile_slab"
+  }
+}

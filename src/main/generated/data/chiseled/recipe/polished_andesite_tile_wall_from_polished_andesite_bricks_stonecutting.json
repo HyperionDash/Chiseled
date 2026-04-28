@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:polished_andesite_bricks",
+  "result": {
+    "id": "chiseled:polished_andesite_tile_wall"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/polished_mud_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/polished_mud"
+    },
+    "type=top": {
+      "model": "chiseled:block/polished_mud_slab_top"
+    }
+  }
+}

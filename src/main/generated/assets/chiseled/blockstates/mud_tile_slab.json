@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/mud_tile_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/mud_tiles"
+    },
+    "type=top": {
+      "model": "chiseled:block/mud_tile_slab_top"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:cut_polished_granite_bricks",
+  "result": {
+    "id": "chiseled:cut_polished_granite_brick_stairs"
+  }
+}

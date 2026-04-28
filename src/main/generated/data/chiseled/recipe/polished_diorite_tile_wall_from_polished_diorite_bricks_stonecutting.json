@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:polished_diorite_bricks",
+  "result": {
+    "id": "chiseled:polished_diorite_tile_wall"
+  }
+}

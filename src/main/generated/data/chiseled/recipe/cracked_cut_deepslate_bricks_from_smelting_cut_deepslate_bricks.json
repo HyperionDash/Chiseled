@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "cracked_cut_deepslate_bricks",
+  "ingredient": "chiseled:cut_deepslate_bricks",
+  "result": {
+    "id": "chiseled:cracked_cut_deepslate_bricks"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "chiseled:mixed_bricks"
+  },
+  "pattern": [
+    "   ",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "chiseled:mixed_brick_wall"
+  }
+}

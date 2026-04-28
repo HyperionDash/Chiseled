@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/polished_andesite_tile_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/polished_andesite_tiles"
+    },
+    "type=top": {
+      "model": "chiseled:block/polished_andesite_tile_slab_top"
+    }
+  }
+}

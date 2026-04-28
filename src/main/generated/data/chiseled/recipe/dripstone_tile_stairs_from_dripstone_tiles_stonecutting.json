@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:dripstone_tiles",
+  "result": {
+    "id": "chiseled:dripstone_tile_stairs"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "chiseled:polished_dripstone"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "chiseled:polished_dripstone_stairs"
+  }
+}

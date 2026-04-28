@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "chiseled:polished_calcite"
+  },
+  "pattern": [
+    "   ",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "chiseled:polished_calcite_wall"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:cut_polished_granite_bricks",
+  "result": {
+    "count": 2,
+    "id": "chiseled:cut_polished_granite_brick_slab"
+  }
+}

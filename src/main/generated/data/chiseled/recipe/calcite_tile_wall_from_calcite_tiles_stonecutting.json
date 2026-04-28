@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:calcite_tiles",
+  "result": {
+    "id": "chiseled:calcite_tile_wall"
+  }
+}

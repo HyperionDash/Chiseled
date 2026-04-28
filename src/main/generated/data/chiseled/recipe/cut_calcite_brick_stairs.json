@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "chiseled:cut_calcite_bricks"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "chiseled:cut_calcite_brick_stairs"
+  }
+}

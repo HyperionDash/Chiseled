@@ -3,7 +3,6 @@
   - I didn't like my implementation of wood additions and it also caused alot of concerns with mod compat that I kinda didn't want to deal with lol
 - added textures for the granite blockset
 - fixed sandstone walls to now use the correct top texture (changes are located in the toggleable asset overrides pack)
-- made it so nether brick fences now connect to wooden fences
 
 # 2.0a+26.1-DEV+0.3a:
 - added planned blockset expansions up to mud (everything is missing textures lol)

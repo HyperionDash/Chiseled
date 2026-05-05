@@ -17,43 +17,6 @@ public class ChiseledModelGen extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
-        BlockModelGenerators.BlockFamilyProvider verticalOakPool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_OAK_PLANKS);
-        verticalOakPool.stairs(ChiseledBlocks.VERTICAL_OAK_STAIRS);
-        verticalOakPool.slab(ChiseledBlocks.VERTICAL_OAK_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalSprucePool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_SPRUCE_PLANKS);
-        verticalSprucePool.stairs(ChiseledBlocks.VERTICAL_SPRUCE_STAIRS);
-        verticalSprucePool.slab(ChiseledBlocks.VERTICAL_SPRUCE_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalBirchPool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_BIRCH_PLANKS);
-        verticalBirchPool.stairs(ChiseledBlocks.VERTICAL_BIRCH_STAIRS);
-        verticalBirchPool.slab(ChiseledBlocks.VERTICAL_BIRCH_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalJunglePool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_JUNGLE_PLANKS);
-        verticalJunglePool.stairs(ChiseledBlocks.VERTICAL_JUNGLE_STAIRS);
-        verticalJunglePool.slab(ChiseledBlocks.VERTICAL_JUNGLE_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalAcaciaPool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_ACACIA_PLANKS);
-        verticalAcaciaPool.stairs(ChiseledBlocks.VERTICAL_ACACIA_STAIRS);
-        verticalAcaciaPool.slab(ChiseledBlocks.VERTICAL_ACACIA_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalDark_OakPool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_DARK_OAK_PLANKS);
-        verticalDark_OakPool.stairs(ChiseledBlocks.VERTICAL_DARK_OAK_STAIRS);
-        verticalDark_OakPool.slab(ChiseledBlocks.VERTICAL_DARK_OAK_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalMangrovePool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_MANGROVE_PLANKS);
-        verticalMangrovePool.stairs(ChiseledBlocks.VERTICAL_MANGROVE_STAIRS);
-        verticalMangrovePool.slab(ChiseledBlocks.VERTICAL_MANGROVE_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalCherryPool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_CHERRY_PLANKS);
-        verticalCherryPool.stairs(ChiseledBlocks.VERTICAL_CHERRY_STAIRS);
-        verticalCherryPool.slab(ChiseledBlocks.VERTICAL_CHERRY_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalPale_OakPool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_PALE_OAK_PLANKS);
-        verticalPale_OakPool.stairs(ChiseledBlocks.VERTICAL_PALE_OAK_STAIRS);
-        verticalPale_OakPool.slab(ChiseledBlocks.VERTICAL_PALE_OAK_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalBambooPool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_BAMBOO_PLANKS);
-        verticalBambooPool.stairs(ChiseledBlocks.VERTICAL_BAMBOO_STAIRS);
-        verticalBambooPool.slab(ChiseledBlocks.VERTICAL_BAMBOO_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalCrimsonPool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_CRIMSON_PLANKS);
-        verticalCrimsonPool.stairs(ChiseledBlocks.VERTICAL_CRIMSON_STAIRS);
-        verticalCrimsonPool.slab(ChiseledBlocks.VERTICAL_CRIMSON_SLAB);
-        BlockModelGenerators.BlockFamilyProvider verticalWarpedPool = blockStateModelGenerator.family(ChiseledBlocks.VERTICAL_WARPED_PLANKS);
-        verticalWarpedPool.stairs(ChiseledBlocks.VERTICAL_WARPED_STAIRS);
-        verticalWarpedPool.slab(ChiseledBlocks.VERTICAL_WARPED_SLAB);
-
         final TextureMapping stoneWall = TextureMapping.cube(Blocks.STONE);
         final Identifier stoneWallPost = ModelTemplates.WALL_POST.create(ChiseledBlocks.STONE_WALL, stoneWall, blockStateModelGenerator.modelOutput);
         final Identifier stoneWallSide = ModelTemplates.WALL_LOW_SIDE.create(ChiseledBlocks.STONE_WALL, stoneWall, blockStateModelGenerator.modelOutput);

@@ -1,11 +1,17 @@
+# 2.0a+26.1-DEV+0.3b
+- removed wood additions
+  - I didn't like my implementation of wood additions and it also caused alot of concerns with mod compat that I kinda didn't want to deal with lol
+- added textures for the granite blockset
+- fixed sandstone walls to now use the correct top texture (changes are located in the toggleable asset overrides pack)
+
 # 2.0a+26.1-DEV+0.3a:
 - added planned blockset expansions up to mud (everything is missing textures lol)
-  - the plan is to add all blocks and then do textures in any order i want :3
+  - the plan is to add all blocks and then do textures in any order I want :3
 - updated mod menu description for chiseled
 - updated recipes to use correct recipe categories and have proper unlock achievements
 - updated to 26.1.x
 - updated license to protect assets present in chiseled under ARR
-- added testing world and settings to github
+- added testing world and settings to GitHub
 - nether brick fences connect to all the wooden fences now
 
 # 2.0a+1.21.11-DEV+0.2b:

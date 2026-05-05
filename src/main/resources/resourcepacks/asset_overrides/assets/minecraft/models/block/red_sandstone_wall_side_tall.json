@@ -1,0 +1,7 @@
+{
+  "parent": "chiseled:block/template/custom_top_wall_side_tall",
+  "textures": {
+    "wall": "minecraft:block/red_sandstone",
+    "top": "minecraft:block/red_sandstone_top"
+  }
+}

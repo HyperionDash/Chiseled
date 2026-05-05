@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:mud_tiles",
+  "result": {
+    "count": 2,
+    "id": "chiseled:mud_tile_slab"
+  }
+}

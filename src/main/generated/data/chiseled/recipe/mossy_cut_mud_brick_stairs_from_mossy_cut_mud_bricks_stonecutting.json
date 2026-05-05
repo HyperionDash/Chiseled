@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:mossy_cut_mud_bricks",
+  "result": {
+    "id": "chiseled:mossy_cut_mud_brick_stairs"
+  }
+}

@@ -1,3 +1,7 @@
+# 2.0a+26.1-DEV+0.4a
+- added textures for andesite, diorite and mud
+- added missing stonecutting recipes for mud
+
 # 2.0a+26.1-DEV+0.3b
 - removed wood additions
   - I didn't like my implementation of wood additions and it also caused alot of concerns with mod compat that I kinda didn't want to deal with lol

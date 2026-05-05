@@ -1056,6 +1056,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', Blocks.PACKED_MUD)
                         .unlockedBy(getHasName(ChiseledBlocks.PACKED_MUD_STAIRS), has(Blocks.PACKED_MUD))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PACKED_MUD_STAIRS, Blocks.PACKED_MUD);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PACKED_MUD_SLAB, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1063,6 +1064,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', Blocks.PACKED_MUD)
                         .unlockedBy(getHasName(ChiseledBlocks.PACKED_MUD_SLAB), has(Blocks.PACKED_MUD))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PACKED_MUD_SLAB, Blocks.PACKED_MUD, 2);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PACKED_MUD_WALL, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1070,6 +1072,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', Blocks.PACKED_MUD)
                         .unlockedBy(getHasName(ChiseledBlocks.PACKED_MUD_WALL), has(Blocks.PACKED_MUD))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PACKED_MUD_WALL, Blocks.PACKED_MUD);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD, 4)
                         .pattern("## ")
                         .pattern("## ")
@@ -1077,6 +1080,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', Blocks.PACKED_MUD)
                         .unlockedBy(getHasName(ChiseledBlocks.POLISHED_MUD), has(Blocks.PACKED_MUD))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD, Blocks.PACKED_MUD);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD_STAIRS, 4)
                         .pattern("#  ")
                         .pattern("## ")
@@ -1084,6 +1088,8 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.POLISHED_MUD)
                         .unlockedBy(getHasName(ChiseledBlocks.POLISHED_MUD_STAIRS), has(ChiseledBlocks.POLISHED_MUD))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD_STAIRS, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD_STAIRS, ChiseledBlocks.POLISHED_MUD);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD_SLAB, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1091,6 +1097,8 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.POLISHED_MUD)
                         .unlockedBy(getHasName(ChiseledBlocks.POLISHED_MUD_SLAB), has(ChiseledBlocks.POLISHED_MUD))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD_SLAB, Blocks.PACKED_MUD, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD_SLAB, ChiseledBlocks.POLISHED_MUD, 2);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD_WALL, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1098,6 +1106,8 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.POLISHED_MUD)
                         .unlockedBy(getHasName(ChiseledBlocks.POLISHED_MUD_WALL), has(ChiseledBlocks.POLISHED_MUD))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD_WALL, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_MUD_WALL, ChiseledBlocks.POLISHED_MUD);
                 shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICKS, 4)
                         .pattern("## ")
                         .pattern("## ")
@@ -1105,6 +1115,14 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.POLISHED_MUD)
                         .unlockedBy(getHasName(Blocks.MUD_BRICKS), has(ChiseledBlocks.POLISHED_MUD))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICKS, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICKS, ChiseledBlocks.POLISHED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICK_STAIRS, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICK_STAIRS, ChiseledBlocks.POLISHED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICK_SLAB, Blocks.PACKED_MUD, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICK_SLAB, ChiseledBlocks.POLISHED_MUD, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICK_WALL, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.MUD_BRICK_WALL, ChiseledBlocks.POLISHED_MUD);
                 shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_BRICKS)
                         .requires(Blocks.MUD_BRICKS)
                         .requires(Blocks.MOSS_BLOCK)
@@ -1122,6 +1140,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MOSSY_MUD_BRICKS)
                         .unlockedBy(getHasName(ChiseledBlocks.MOSSY_MUD_BRICK_STAIRS), has(ChiseledBlocks.MOSSY_MUD_BRICKS))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_BRICK_STAIRS, ChiseledBlocks.MOSSY_MUD_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_BRICK_SLAB, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1129,6 +1148,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MOSSY_MUD_BRICKS)
                         .unlockedBy(getHasName(ChiseledBlocks.MOSSY_MUD_BRICK_SLAB), has(ChiseledBlocks.MOSSY_MUD_BRICKS))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_BRICK_SLAB, ChiseledBlocks.MOSSY_MUD_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_BRICK_WALL, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1136,6 +1156,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MOSSY_MUD_BRICKS)
                         .unlockedBy(getHasName(ChiseledBlocks.MOSSY_MUD_BRICK_WALL), has(ChiseledBlocks.MOSSY_MUD_BRICKS))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_BRICK_WALL, ChiseledBlocks.MOSSY_MUD_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICKS)
                         .pattern(" # ")
                         .pattern(" # ")
@@ -1143,6 +1164,8 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.POLISHED_MUD_SLAB)
                         .unlockedBy(getHasName(ChiseledBlocks.CUT_MUD_BRICKS), has(ChiseledBlocks.POLISHED_MUD))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICKS, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICKS, ChiseledBlocks.POLISHED_MUD);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICK_STAIRS, 4)
                         .pattern("#  ")
                         .pattern("## ")
@@ -1150,6 +1173,9 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.CUT_MUD_BRICKS)
                         .unlockedBy(getHasName(ChiseledBlocks.CUT_MUD_BRICK_STAIRS), has(ChiseledBlocks.CUT_MUD_BRICKS))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICK_STAIRS, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICK_STAIRS, ChiseledBlocks.POLISHED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICK_STAIRS, ChiseledBlocks.CUT_MUD_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICK_SLAB, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1157,6 +1183,9 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.CUT_MUD_BRICKS)
                         .unlockedBy(getHasName(ChiseledBlocks.CUT_MUD_BRICK_SLAB), has(ChiseledBlocks.CUT_MUD_BRICKS))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICK_SLAB, Blocks.PACKED_MUD, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICK_SLAB, ChiseledBlocks.POLISHED_MUD, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_MUD_BRICK_SLAB, ChiseledBlocks.CUT_MUD_BRICKS, 2);
                 shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_MUD_BRICKS)
                         .requires(ChiseledBlocks.CUT_MUD_BRICKS)
                         .requires(Blocks.MOSS_BLOCK)
@@ -1174,6 +1203,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MOSSY_CUT_MUD_BRICKS)
                         .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CUT_MUD_BRICK_STAIRS), has(ChiseledBlocks.MOSSY_CUT_MUD_BRICKS))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_MUD_BRICK_STAIRS, ChiseledBlocks.MOSSY_CUT_MUD_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_MUD_BRICK_SLAB, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1181,6 +1211,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MOSSY_CUT_MUD_BRICKS)
                         .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CUT_MUD_BRICK_SLAB), has(ChiseledBlocks.MOSSY_CUT_MUD_BRICKS))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_MUD_BRICK_SLAB, ChiseledBlocks.MOSSY_CUT_MUD_BRICKS, 2);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILES, 4)
                         .pattern("## ")
                         .pattern("## ")
@@ -1188,6 +1219,9 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', Blocks.MUD_BRICKS)
                         .unlockedBy(getHasName(ChiseledBlocks.MUD_TILES), has(Blocks.MUD_BRICKS))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILES, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILES, ChiseledBlocks.POLISHED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILES, Blocks.MUD_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_STAIRS, 4)
                         .pattern("#  ")
                         .pattern("## ")
@@ -1195,6 +1229,10 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MUD_TILES)
                         .unlockedBy(getHasName(ChiseledBlocks.MUD_TILE_STAIRS), has(ChiseledBlocks.MUD_TILES))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_STAIRS, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_STAIRS, ChiseledBlocks.POLISHED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_STAIRS, Blocks.MUD_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_STAIRS, ChiseledBlocks.MUD_TILES);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_SLAB, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1202,6 +1240,10 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MUD_TILES)
                         .unlockedBy(getHasName(ChiseledBlocks.MUD_TILE_SLAB), has(ChiseledBlocks.MUD_TILES))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_SLAB, Blocks.PACKED_MUD, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_SLAB, ChiseledBlocks.POLISHED_MUD, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_SLAB, Blocks.MUD_BRICKS, 2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_SLAB, ChiseledBlocks.MUD_TILES, 2);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_WALL, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1209,6 +1251,10 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MUD_TILES)
                         .unlockedBy(getHasName(ChiseledBlocks.MUD_TILE_WALL), has(ChiseledBlocks.MUD_TILES))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_WALL, Blocks.PACKED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_WALL, ChiseledBlocks.POLISHED_MUD);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_WALL, Blocks.MUD_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MUD_TILE_WALL, ChiseledBlocks.MUD_TILES);
                 shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_TILES)
                         .requires(ChiseledBlocks.MUD_TILES)
                         .requires(Blocks.MOSS_BLOCK)
@@ -1226,6 +1272,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MOSSY_MUD_TILES)
                         .unlockedBy(getHasName(ChiseledBlocks.MOSSY_MUD_TILE_STAIRS), has(ChiseledBlocks.MOSSY_MUD_TILES))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_TILE_STAIRS, ChiseledBlocks.MOSSY_MUD_TILES);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_TILE_SLAB, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1233,6 +1280,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MOSSY_MUD_TILES)
                         .unlockedBy(getHasName(ChiseledBlocks.MOSSY_MUD_TILE_SLAB), has(ChiseledBlocks.MOSSY_MUD_TILES))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_TILE_SLAB, ChiseledBlocks.MOSSY_MUD_TILES, 2);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_TILE_WALL, 6)
                         .pattern("   ")
                         .pattern("###")
@@ -1240,6 +1288,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .define('#', ChiseledBlocks.MOSSY_MUD_TILES)
                         .unlockedBy(getHasName(ChiseledBlocks.MOSSY_MUD_TILE_WALL), has(ChiseledBlocks.MOSSY_MUD_TILES))
                         .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_MUD_TILE_WALL, ChiseledBlocks.MOSSY_MUD_TILES);
             }
         };
     }

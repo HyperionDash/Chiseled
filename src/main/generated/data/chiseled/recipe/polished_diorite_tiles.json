@@ -5,9 +5,8 @@
     "#": "chiseled:polished_diorite_bricks"
   },
   "pattern": [
-    "## ",
-    "## ",
-    "   "
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

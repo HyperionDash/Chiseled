@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mixed_brick_slab": {
+    "has_mixed_bricks": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mixed_brick_slab"
+      "has_mixed_bricks"
     ]
   ],
   "rewards": {

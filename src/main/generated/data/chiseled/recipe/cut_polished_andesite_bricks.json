@@ -5,9 +5,8 @@
     "#": "minecraft:polished_andesite_slab"
   },
   "pattern": [
-    " # ",
-    " # ",
-    "   "
+    "#",
+    "#"
   ],
   "result": {
     "id": "chiseled:cut_polished_andesite_bricks"

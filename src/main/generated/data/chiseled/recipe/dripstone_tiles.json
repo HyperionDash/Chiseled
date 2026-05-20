@@ -5,9 +5,8 @@
     "#": "chiseled:dripstone_bricks"
   },
   "pattern": [
-    "## ",
-    "## ",
-    "   "
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

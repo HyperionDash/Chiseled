@@ -5,9 +5,7 @@
     "#": "chiseled:cut_deepslate_bricks"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

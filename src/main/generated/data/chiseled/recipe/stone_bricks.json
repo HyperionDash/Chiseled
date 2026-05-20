@@ -5,9 +5,8 @@
     "#": "chiseled:polished_stone"
   },
   "pattern": [
-    "## ",
-    "## ",
-    "   "
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

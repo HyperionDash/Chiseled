@@ -1,3 +1,10 @@
+# 2.0a+26.1-DEV+0.5a
+- added some cracked textures for deepslate, granite and andesite
+- retextured bricks for granite, diorite and andesite
+- removed mossy chiseled stone bricks
+- completely rewrote the recipeGen class for a third time
+- removed testing world from the dev env
+
 # 2.0a+26.1-DEV+0.4a
 - added textures for andesite, diorite and mud
 - added missing stonecutting recipes for mud
@@ -15,7 +22,7 @@
 - updated recipes to use correct recipe categories and have proper unlock achievements
 - updated to 26.1.x
 - updated license to protect assets present in chiseled under ARR
-- added testing world and settings to GitHub
+- added testing world to the dev env
 - nether brick fences connect to all the wooden fences now
 
 # 2.0a+1.21.11-DEV+0.2b:

@@ -5,9 +5,8 @@
     "#": "minecraft:stone_bricks"
   },
   "pattern": [
-    "## ",
-    "## ",
-    "   "
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

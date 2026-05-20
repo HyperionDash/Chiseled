@@ -5,9 +5,8 @@
     "#": "chiseled:polished_mud_slab"
   },
   "pattern": [
-    " # ",
-    " # ",
-    "   "
+    "#",
+    "#"
   ],
   "result": {
     "id": "chiseled:cut_mud_bricks"

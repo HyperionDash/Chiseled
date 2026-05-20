@@ -119,7 +119,6 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
 
         valueLookupBuilder(ItemTags.STONE_BRICKS)
                 .add(ChiseledBlocks.POLISHED_STONE.asItem())
-                .add(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS.asItem())
                 .add(ChiseledBlocks.CUT_STONE_BRICKS.asItem())
                 .add(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS.asItem())
                 .add(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS.asItem())

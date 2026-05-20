@@ -5,9 +5,8 @@
     "#": "chiseled:polished_andesite_bricks"
   },
   "pattern": [
-    "## ",
-    "## ",
-    "   "
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

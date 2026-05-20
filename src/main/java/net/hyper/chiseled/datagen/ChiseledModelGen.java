@@ -42,7 +42,6 @@ public class ChiseledModelGen extends FabricModelProvider {
                         BlockModelGenerators.plainVariant(smoothStoneStairs),
                         BlockModelGenerators.plainVariant(outerSmoothStoneStairs)));
         blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.SMOOTH_STONE_STAIRS, smoothStoneStairs);
-        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.MOSSY_CHISELED_STONE_BRICKS);
         BlockModelGenerators.BlockFamilyProvider cutStoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_STONE_BRICKS);
         blockStateModelGenerator.createTrivialCube(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS);
         cutStoneBrickPool.stairs(ChiseledBlocks.CUT_STONE_BRICK_STAIRS);
@@ -177,13 +176,16 @@ public class ChiseledModelGen extends FabricModelProvider {
         polishedCalcitePool.slab(ChiseledBlocks.POLISHED_CALCITE_SLAB);
         polishedCalcitePool.wall(ChiseledBlocks.POLISHED_CALCITE_WALL);
         BlockModelGenerators.BlockFamilyProvider calciteBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CALCITE_BRICKS);
+        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.CRACKED_CALCITE_BRICKS);
         calciteBrickPool.stairs(ChiseledBlocks.CALCITE_BRICK_STAIRS);
         calciteBrickPool.slab(ChiseledBlocks.CALCITE_BRICK_SLAB);
         calciteBrickPool.wall(ChiseledBlocks.CALCITE_BRICK_WALL);
         BlockModelGenerators.BlockFamilyProvider cutCalciteBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_CALCITE_BRICKS);
+        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.CRACKED_CUT_CALCITE_BRICKS);
         cutCalciteBrickPool.stairs(ChiseledBlocks.CUT_CALCITE_BRICK_STAIRS);
         cutCalciteBrickPool.slab(ChiseledBlocks.CUT_CALCITE_BRICK_SLAB);
         BlockModelGenerators.BlockFamilyProvider calciteTilePool = blockStateModelGenerator.family(ChiseledBlocks.CALCITE_TILES);
+        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.CRACKED_CALCITE_TILES);
         calciteTilePool.stairs(ChiseledBlocks.CALCITE_TILE_STAIRS);
         calciteTilePool.slab(ChiseledBlocks.CALCITE_TILE_SLAB);
         calciteTilePool.wall(ChiseledBlocks.CALCITE_TILE_WALL);
@@ -221,13 +223,16 @@ public class ChiseledModelGen extends FabricModelProvider {
         polishedDripstonePool.slab(ChiseledBlocks.POLISHED_DRIPSTONE_SLAB);
         polishedDripstonePool.wall(ChiseledBlocks.POLISHED_DRIPSTONE_WALL);
         BlockModelGenerators.BlockFamilyProvider dripstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.DRIPSTONE_BRICKS);
+        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.CRACKED_DRIPSTONE_BRICKS);
         dripstoneBrickPool.stairs(ChiseledBlocks.DRIPSTONE_BRICK_STAIRS);
         dripstoneBrickPool.slab(ChiseledBlocks.DRIPSTONE_BRICK_SLAB);
         dripstoneBrickPool.wall(ChiseledBlocks.DRIPSTONE_BRICK_WALL);
         BlockModelGenerators.BlockFamilyProvider cutDripstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_DRIPSTONE_BRICKS);
+        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.CRACKED_CUT_DRIPSTONE_BRICKS);
         cutDripstoneBrickPool.stairs(ChiseledBlocks.CUT_DRIPSTONE_BRICK_STAIRS);
         cutDripstoneBrickPool.slab(ChiseledBlocks.CUT_DRIPSTONE_BRICK_SLAB);
         BlockModelGenerators.BlockFamilyProvider dripstoneTilePool = blockStateModelGenerator.family(ChiseledBlocks.DRIPSTONE_TILES);
+        blockStateModelGenerator.createTrivialCube(ChiseledBlocks.CRACKED_DRIPSTONE_TILES);
         dripstoneTilePool.stairs(ChiseledBlocks.DRIPSTONE_TILE_STAIRS);
         dripstoneTilePool.slab(ChiseledBlocks.DRIPSTONE_TILE_SLAB);
         dripstoneTilePool.wall(ChiseledBlocks.DRIPSTONE_TILE_WALL);

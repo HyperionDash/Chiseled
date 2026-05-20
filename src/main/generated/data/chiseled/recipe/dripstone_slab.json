@@ -5,9 +5,7 @@
     "#": "minecraft:dripstone_block"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

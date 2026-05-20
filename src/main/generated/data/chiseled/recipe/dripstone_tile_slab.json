@@ -5,9 +5,7 @@
     "#": "chiseled:dripstone_tiles"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

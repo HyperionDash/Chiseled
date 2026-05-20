@@ -17,8 +17,8 @@ public class Chiseled implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ChiseledItemGroups.registerItemGroups();
-		ChiseledBlocks.registerBlocks();
+		ChiseledCreativeModeTabs.init();
+		ChiseledBlocks.init();
 
 		LOGGER.info("Chiseling Bricks");
 

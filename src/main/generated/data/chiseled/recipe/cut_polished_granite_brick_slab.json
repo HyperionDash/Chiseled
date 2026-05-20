@@ -5,9 +5,7 @@
     "#": "chiseled:cut_polished_granite_bricks"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

@@ -5,9 +5,8 @@
     "#": "chiseled:polished_dripstone"
   },
   "pattern": [
-    "## ",
-    "## ",
-    "   "
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

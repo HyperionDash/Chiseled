@@ -5,9 +5,7 @@
     "#": "chiseled:cut_calcite_bricks"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

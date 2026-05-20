@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_calcite_tile_slab": {
+    "has_calcite_tiles": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_calcite_tile_slab"
+      "has_calcite_tiles"
     ]
   ],
   "rewards": {

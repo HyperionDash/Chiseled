@@ -5,9 +5,7 @@
     "#": "chiseled:polished_mud"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

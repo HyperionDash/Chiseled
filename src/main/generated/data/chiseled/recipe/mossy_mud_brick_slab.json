@@ -5,9 +5,7 @@
     "#": "chiseled:mossy_mud_bricks"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

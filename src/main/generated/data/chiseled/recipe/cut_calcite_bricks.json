@@ -5,9 +5,8 @@
     "#": "chiseled:polished_calcite_slab"
   },
   "pattern": [
-    " # ",
-    " # ",
-    "   "
+    "#",
+    "#"
   ],
   "result": {
     "id": "chiseled:cut_calcite_bricks"

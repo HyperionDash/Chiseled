@@ -38,9 +38,6 @@ public class ChiseledBlocks {
     public static final Block SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
             properties -> new StairBlock(Blocks.SMOOTH_STONE.defaultBlockState(),properties
                     .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    public static final Block MOSSY_CHISELED_STONE_BRICKS = registerBlock("mossy_chiseled_stone_bricks",
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
     public static final Block CUT_STONE_BRICKS = registerBlock("cut_stone_bricks",
             properties -> new Block(properties
                     .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
@@ -265,6 +262,9 @@ public class ChiseledBlocks {
     public static final Block CALCITE_BRICKS = registerBlock("calcite_bricks",
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
+    public static final Block CRACKED_CALCITE_BRICKS = registerBlock("cracked_calcite_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
     public static final Block CALCITE_BRICK_STAIRS = registerBlock("calcite_brick_stairs",
             properties -> new StairBlock(CALCITE_BRICKS.defaultBlockState(),properties
                     .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
@@ -277,6 +277,9 @@ public class ChiseledBlocks {
     public static final Block CUT_CALCITE_BRICKS = registerBlock("cut_calcite_bricks",
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
+    public static final Block CRACKED_CUT_CALCITE_BRICKS = registerBlock("cracked_cut_calcite_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
     public static final Block CUT_CALCITE_BRICK_STAIRS = registerBlock("cut_calcite_brick_stairs",
             properties -> new StairBlock(CUT_CALCITE_BRICKS.defaultBlockState(),properties
                     .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
@@ -284,6 +287,9 @@ public class ChiseledBlocks {
             properties -> new SlabBlock(properties
                     .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
     public static final Block CALCITE_TILES = registerBlock("calcite_tiles",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
+    public static final Block CRACKED_CALCITE_TILES = registerBlock("cracked_calcite_tiles",
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
     public static final Block CALCITE_TILE_STAIRS = registerBlock("calcite_tile_stairs",
@@ -320,6 +326,9 @@ public class ChiseledBlocks {
     public static final Block DRIPSTONE_BRICKS = registerBlock("dripstone_bricks",
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
+    public static final Block CRACKED_DRIPSTONE_BRICKS = registerBlock("cracked_dripstone_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
     public static final Block DRIPSTONE_BRICK_STAIRS = registerBlock("dripstone_brick_stairs",
             properties -> new StairBlock(DRIPSTONE_BRICKS.defaultBlockState(),properties
                     .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
@@ -332,6 +341,9 @@ public class ChiseledBlocks {
     public static final Block CUT_DRIPSTONE_BRICKS = registerBlock("cut_dripstone_bricks",
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
+    public static final Block CRACKED_CUT_DRIPSTONE_BRICKS = registerBlock("cracked_cut_dripstone_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
     public static final Block CUT_DRIPSTONE_BRICK_STAIRS = registerBlock("cut_dripstone_brick_stairs",
             properties -> new StairBlock(CUT_DRIPSTONE_BRICKS.defaultBlockState(),properties
                     .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
@@ -339,6 +351,9 @@ public class ChiseledBlocks {
             properties -> new SlabBlock(properties
                     .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
     public static final Block DRIPSTONE_TILES = registerBlock("dripstone_tiles",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
+    public static final Block CRACKED_DRIPSTONE_TILES = registerBlock("cracked_dripstone_tiles",
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
     public static final Block DRIPSTONE_TILE_STAIRS = registerBlock("dripstone_tile_stairs",
@@ -463,5 +478,5 @@ public class ChiseledBlocks {
                         .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Chiseled.MOD_ID, name)))));
     }
 
-    public static void registerBlocks() {}
+    public static void init() {}
 }

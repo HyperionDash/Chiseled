@@ -5,9 +5,7 @@
     "#": "minecraft:calcite"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

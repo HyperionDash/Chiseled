@@ -5,9 +5,7 @@
     "#": "chiseled:cut_dripstone_bricks"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

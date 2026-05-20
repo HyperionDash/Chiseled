@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_polished_granite_tile_slab": {
+    "has_polished_granite_tiles": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_polished_granite_tile_slab"
+      "has_polished_granite_tiles"
     ]
   ],
   "rewards": {

@@ -5,9 +5,8 @@
     "#": "chiseled:polished_dripstone_slab"
   },
   "pattern": [
-    " # ",
-    " # ",
-    "   "
+    "#",
+    "#"
   ],
   "result": {
     "id": "chiseled:cut_dripstone_bricks"

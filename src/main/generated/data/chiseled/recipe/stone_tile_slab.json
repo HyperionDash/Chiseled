@@ -5,9 +5,7 @@
     "#": "chiseled:stone_tiles"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

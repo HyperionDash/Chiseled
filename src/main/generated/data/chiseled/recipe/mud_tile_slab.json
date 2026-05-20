@@ -5,9 +5,7 @@
     "#": "chiseled:mud_tiles"
   },
   "pattern": [
-    "   ",
-    "###",
-    "   "
+    "###"
   ],
   "result": {
     "count": 6,

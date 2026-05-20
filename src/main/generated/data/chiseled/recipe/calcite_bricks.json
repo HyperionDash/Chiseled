@@ -5,9 +5,8 @@
     "#": "chiseled:polished_calcite"
   },
   "pattern": [
-    "## ",
-    "## ",
-    "   "
+    "##",
+    "##"
   ],
   "result": {
     "count": 4,

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mossy_cut_mud_brick_slab": {
+    "has_mossy_cut_mud_bricks": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mossy_cut_mud_brick_slab"
+      "has_mossy_cut_mud_bricks"
     ]
   ],
   "rewards": {

@@ -5,9 +5,8 @@
     "#": "chiseled:polished_stone_slab"
   },
   "pattern": [
-    " # ",
-    " # ",
-    "   "
+    "#",
+    "#"
   ],
   "result": {
     "id": "chiseled:cut_stone_bricks"

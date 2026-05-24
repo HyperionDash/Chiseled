@@ -53,10 +53,13 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlocks.HONEYCOMB_STAIRS.asItem())
                 .add(ChiseledBlocks.HONEYCOMB_BRICK_STAIRS.asItem())
                 .add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.HONEYCOMB_TILE_STAIRS.asItem())
                 .add(ChiseledBlocks.SANDSTONE_BRICK_STAIRS.asItem())
                 .add(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.SANDSTONE_TILE_STAIRS.asItem())
                 .add(ChiseledBlocks.RED_SANDSTONE_BRICK_STAIRS.asItem())
-                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS.asItem());
+                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS.asItem());
 
         valueLookupBuilder(ItemTags.SLABS)
                 .add(ChiseledBlocks.POLISHED_STONE_SLAB.asItem())
@@ -96,10 +99,13 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlocks.HONEYCOMB_SLAB.asItem())
                 .add(ChiseledBlocks.HONEYCOMB_BRICK_SLAB.asItem())
                 .add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.HONEYCOMB_TILE_SLAB.asItem())
                 .add(ChiseledBlocks.SANDSTONE_BRICK_SLAB.asItem())
                 .add(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB.asItem())
-                .add(ChiseledBlocks.RED_SANDSTONE_BRICK_SLAB.asItem())
-                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB.asItem());
+                .add(ChiseledBlocks.SANDSTONE_TILE_SLAB.asItem())
+                .add(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB.asItem())
+                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.RED_SANDSTONE_BRICK_SLAB.asItem());
 
         valueLookupBuilder(ItemTags.WALLS)
                 .add(ChiseledBlocks.STONE_WALL.asItem())
@@ -132,10 +138,13 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlocks.MOSSY_MUD_TILE_WALL.asItem())
                 .add(ChiseledBlocks.HONEYCOMB_WALL.asItem())
                 .add(ChiseledBlocks.HONEYCOMB_BRICK_WALL.asItem())
+                .add(ChiseledBlocks.HONEYCOMB_TILE_WALL.asItem())
                 .add(ChiseledBlocks.SMOOTH_SANDSTONE_WALL.asItem())
                 .add(ChiseledBlocks.SANDSTONE_BRICK_WALL.asItem())
+                .add(ChiseledBlocks.SANDSTONE_TILE_WALL.asItem())
                 .add(ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL.asItem())
-                .add(ChiseledBlocks.RED_SANDSTONE_BRICK_WALL.asItem());
+                .add(ChiseledBlocks.RED_SANDSTONE_BRICK_WALL.asItem())
+                .add(ChiseledBlocks.RED_SANDSTONE_TILE_WALL.asItem());
 
         valueLookupBuilder(ItemTags.STONE_BRICKS)
                 .add(ChiseledBlocks.POLISHED_STONE.asItem())

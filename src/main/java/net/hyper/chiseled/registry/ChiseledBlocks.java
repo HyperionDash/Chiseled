@@ -497,6 +497,18 @@ public class ChiseledBlocks {
     public static final Block CUT_HONEYCOMB_BRICK_SLAB = registerBlock("cut_honeycomb_brick_slab",
             properties -> new SlabBlock(properties
                     .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_TILES = registerBlock("honeycomb_tiles",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_TILE_STAIRS = registerBlock("honeycomb_tile_stairs",
+            properties -> new StairBlock(HONEYCOMB_TILES.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_TILE_SLAB = registerBlock("honeycomb_tile_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_TILE_WALL = registerBlock("honeycomb_tile_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
     
     public static final Block SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall",
             properties -> new WallBlock(properties
@@ -522,7 +534,19 @@ public class ChiseledBlocks {
     public static final Block CUT_SANDSTONE_BRICK_SLAB = registerBlock("cut_sandstone_brick_slab",
             properties -> new SlabBlock(properties
                     .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-
+    public static final Block SANDSTONE_TILES = registerBlock("sandstone_tiles",
+            properties -> new Block(properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block SANDSTONE_TILE_STAIRS = registerBlock("sandstone_tile_stairs",
+            properties -> new StairBlock(SANDSTONE_TILES.defaultBlockState(),properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block SANDSTONE_TILE_SLAB = registerBlock("sandstone_tile_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block SANDSTONE_TILE_WALL = registerBlock("sandstone_tile_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    
     public static final Block SMOOTH_RED_SANDSTONE_WALL = registerBlock("smooth_red_sandstone_wall",
             properties -> new WallBlock(properties
                     .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
@@ -546,6 +570,18 @@ public class ChiseledBlocks {
                     .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
     public static final Block CUT_RED_SANDSTONE_BRICK_SLAB = registerBlock("cut_red_sandstone_brick_slab",
             properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block RED_SANDSTONE_TILES = registerBlock("red_sandstone_tiles",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block RED_SANDSTONE_TILE_STAIRS = registerBlock("red_sandstone_tile_stairs",
+            properties -> new StairBlock(RED_SANDSTONE_TILES.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block RED_SANDSTONE_TILE_SLAB = registerBlock("red_sandstone_tile_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block RED_SANDSTONE_TILE_WALL = registerBlock("red_sandstone_tile_wall",
+            properties -> new WallBlock(properties
                     .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
     
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

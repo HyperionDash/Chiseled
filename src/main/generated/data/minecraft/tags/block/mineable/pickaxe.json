@@ -153,6 +153,10 @@
     "chiseled:cut_honeycomb_bricks",
     "chiseled:cut_honeycomb_brick_stairs",
     "chiseled:cut_honeycomb_brick_slab",
+    "chiseled:honeycomb_tiles",
+    "chiseled:honeycomb_tile_stairs",
+    "chiseled:honeycomb_tile_slab",
+    "chiseled:honeycomb_tile_wall",
     "chiseled:smooth_sandstone_wall",
     "chiseled:sandstone_bricks",
     "chiseled:sandstone_brick_stairs",
@@ -161,6 +165,10 @@
     "chiseled:cut_sandstone_bricks",
     "chiseled:cut_sandstone_brick_stairs",
     "chiseled:cut_sandstone_brick_slab",
+    "chiseled:sandstone_tiles",
+    "chiseled:sandstone_tile_stairs",
+    "chiseled:sandstone_tile_slab",
+    "chiseled:sandstone_tile_wall",
     "chiseled:smooth_red_sandstone_wall",
     "chiseled:red_sandstone_bricks",
     "chiseled:red_sandstone_brick_stairs",
@@ -168,6 +176,10 @@
     "chiseled:red_sandstone_brick_wall",
     "chiseled:cut_red_sandstone_bricks",
     "chiseled:cut_red_sandstone_brick_stairs",
-    "chiseled:cut_red_sandstone_brick_slab"
+    "chiseled:cut_red_sandstone_brick_slab",
+    "chiseled:red_sandstone_tiles",
+    "chiseled:red_sandstone_tile_stairs",
+    "chiseled:red_sandstone_tile_slab",
+    "chiseled:red_sandstone_tile_wall"
   ]
 }

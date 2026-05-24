@@ -183,6 +183,10 @@ public class ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlocks.CUT_HONEYCOMB_BRICKS);
                         entries.accept(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS);
                         entries.accept(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.HONEYCOMB_TILES);
+                        entries.accept(ChiseledBlocks.HONEYCOMB_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.HONEYCOMB_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.HONEYCOMB_TILE_WALL);
 
                         entries.accept(ChiseledBlocks.SMOOTH_SANDSTONE_WALL);
                         entries.accept(ChiseledBlocks.SANDSTONE_BRICKS);
@@ -192,6 +196,10 @@ public class ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlocks.CUT_SANDSTONE_BRICKS);
                         entries.accept(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS);
                         entries.accept(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.SANDSTONE_TILES);
+                        entries.accept(ChiseledBlocks.SANDSTONE_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.SANDSTONE_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.SANDSTONE_TILE_WALL);
 
                         entries.accept(ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL);
                         entries.accept(ChiseledBlocks.RED_SANDSTONE_BRICKS);
@@ -201,6 +209,10 @@ public class ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlocks.CUT_RED_SANDSTONE_BRICKS);
                         entries.accept(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS);
                         entries.accept(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.RED_SANDSTONE_TILES);
+                        entries.accept(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
                     }).build());
 
     public static void init() {
@@ -373,7 +385,11 @@ public class ChiseledCreativeModeTabs {
                     ChiseledBlocks.HONEYCOMB_BRICK_WALL,
                     ChiseledBlocks.CUT_HONEYCOMB_BRICKS,
                     ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS,
-                    ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB);
+                    ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB,
+                    ChiseledBlocks.HONEYCOMB_TILES,
+                    ChiseledBlocks.HONEYCOMB_TILE_STAIRS,
+                    ChiseledBlocks.HONEYCOMB_TILE_SLAB,
+                    ChiseledBlocks.HONEYCOMB_TILE_WALL);
 
             entries.insertAfter(Blocks.SMOOTH_SANDSTONE_SLAB, ChiseledBlocks.SMOOTH_SANDSTONE_WALL);
             entries.insertAfter(Blocks.CUT_SANDSTONE_SLAB, ChiseledBlocks.SANDSTONE_BRICKS,
@@ -382,7 +398,11 @@ public class ChiseledCreativeModeTabs {
                     ChiseledBlocks.SANDSTONE_BRICK_WALL,
                     ChiseledBlocks.CUT_SANDSTONE_BRICKS,
                     ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS,
-                    ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB);
+                    ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB,
+                    ChiseledBlocks.SANDSTONE_TILES,
+                    ChiseledBlocks.SANDSTONE_TILE_STAIRS,
+                    ChiseledBlocks.SANDSTONE_TILE_SLAB,
+                    ChiseledBlocks.SANDSTONE_TILE_WALL);
 
             entries.insertAfter(Blocks.SMOOTH_RED_SANDSTONE_SLAB, ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL);
             entries.insertAfter(Blocks.CUT_RED_SANDSTONE_SLAB, ChiseledBlocks.RED_SANDSTONE_BRICKS,
@@ -391,7 +411,11 @@ public class ChiseledCreativeModeTabs {
                     ChiseledBlocks.RED_SANDSTONE_BRICK_WALL,
                     ChiseledBlocks.CUT_RED_SANDSTONE_BRICKS,
                     ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS,
-                    ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB);
+                    ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB,
+                    ChiseledBlocks.RED_SANDSTONE_TILES,
+                    ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS,
+                    ChiseledBlocks.RED_SANDSTONE_TILE_SLAB,
+                    ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
 
             //entries.insertAfter(Blocks.POLISHED_BLACKSTONE_BRICK_WALL, Blocks.QUARTZ_BLOCK,
             //        Blocks.QUARTZ_STAIRS,

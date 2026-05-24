@@ -178,6 +178,10 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.CUT_HONEYCOMB_BRICKS);
         dropSelf(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS);
         add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.HONEYCOMB_TILES);
+        dropSelf(ChiseledBlocks.HONEYCOMB_TILE_STAIRS);
+        add(ChiseledBlocks.HONEYCOMB_TILE_SLAB, createSlabItemTable(ChiseledBlocks.HONEYCOMB_TILE_SLAB));
+        dropSelf(ChiseledBlocks.HONEYCOMB_TILE_WALL);
 
         dropSelf(ChiseledBlocks.SMOOTH_SANDSTONE_WALL);
         dropSelf(ChiseledBlocks.SANDSTONE_BRICKS);
@@ -187,6 +191,10 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.CUT_SANDSTONE_BRICKS);
         dropSelf(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS);
         add(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.SANDSTONE_TILES);
+        dropSelf(ChiseledBlocks.SANDSTONE_TILE_STAIRS);
+        add(ChiseledBlocks.SANDSTONE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.SANDSTONE_TILE_SLAB));
+        dropSelf(ChiseledBlocks.SANDSTONE_TILE_WALL);
 
         dropSelf(ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL);
         dropSelf(ChiseledBlocks.RED_SANDSTONE_BRICKS);
@@ -196,5 +204,9 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.CUT_RED_SANDSTONE_BRICKS);
         dropSelf(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS);
         add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.RED_SANDSTONE_TILES);
+        dropSelf(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS);
+        add(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB));
+        dropSelf(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
     }
 }

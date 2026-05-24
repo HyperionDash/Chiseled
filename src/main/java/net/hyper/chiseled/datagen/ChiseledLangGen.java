@@ -177,6 +177,10 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.CUT_HONEYCOMB_BRICKS, "Cut Honeycomb Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS, "Cut Honeycomb Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB, "Cut Honeycomb Brick Slab");
+        translationBuilder.add(ChiseledBlocks.HONEYCOMB_TILES, "Honeycomb Tiles");
+        translationBuilder.add(ChiseledBlocks.HONEYCOMB_TILE_STAIRS, "Honeycomb Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.HONEYCOMB_TILE_SLAB, "Honeycomb Tile Slab");
+        translationBuilder.add(ChiseledBlocks.HONEYCOMB_TILE_WALL, "Honeycomb Tile Wall");
 
         translationBuilder.add(ChiseledBlocks.SMOOTH_SANDSTONE_WALL, "Smooth Sandstone Wall");
         translationBuilder.add(ChiseledBlocks.SANDSTONE_BRICKS, "Sandstone Bricks");
@@ -186,6 +190,10 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.CUT_SANDSTONE_BRICKS, "Cut Sandstone Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS, "Cut Sandstone Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB, "Cut Sandstone Brick Slab");
+        translationBuilder.add(ChiseledBlocks.SANDSTONE_TILES, "Sandstone Tiles");
+        translationBuilder.add(ChiseledBlocks.SANDSTONE_TILE_STAIRS, "Sandstone Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.SANDSTONE_TILE_SLAB, "Sandstone Tile Slab");
+        translationBuilder.add(ChiseledBlocks.SANDSTONE_TILE_WALL, "Sandstone Tile Wall");
 
         translationBuilder.add(ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL, "Smooth Red Sandstone Wall");
         translationBuilder.add(ChiseledBlocks.RED_SANDSTONE_BRICKS, "Red Sandstone Bricks");
@@ -195,6 +203,10 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICKS, "Cut Red Sandstone Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS, "Cut Red Sandstone Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB, "Cut Red Sandstone Brick Slab");
+        translationBuilder.add(ChiseledBlocks.RED_SANDSTONE_TILES, "Red Sandstone Tiles");
+        translationBuilder.add(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS, "Red Sandstone Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB, "Red Sandstone Tile Slab");
+        translationBuilder.add(ChiseledBlocks.RED_SANDSTONE_TILE_WALL, "Red Sandstone Tile Wall");
 
         translationBuilder.add("itemgroup.chiseled.chiseled", "Chiseled");
         translationBuilder.add("text.chiseled.asset_overrides", "Asset Overrides");

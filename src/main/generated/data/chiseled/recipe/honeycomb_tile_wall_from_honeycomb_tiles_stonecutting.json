@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:honeycomb_tiles",
+  "result": {
+    "id": "chiseled:honeycomb_tile_wall"
+  }
+}

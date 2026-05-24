@@ -332,6 +332,10 @@ public class ChiseledModelGen extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider cutHoneycombBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_HONEYCOMB_BRICKS);
         cutHoneycombBrickPool.stairs(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS);
         cutHoneycombBrickPool.slab(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider honeycombTilePool = blockStateModelGenerator.family(ChiseledBlocks.HONEYCOMB_TILES);
+        honeycombTilePool.stairs(ChiseledBlocks.HONEYCOMB_TILE_STAIRS);
+        honeycombTilePool.slab(ChiseledBlocks.HONEYCOMB_TILE_SLAB);
+        honeycombTilePool.wall(ChiseledBlocks.HONEYCOMB_TILE_WALL);
         
         BlockModelGenerators.BlockFamilyProvider sandstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.SANDSTONE_BRICKS);
         sandstoneBrickPool.stairs(ChiseledBlocks.SANDSTONE_BRICK_STAIRS);
@@ -340,6 +344,10 @@ public class ChiseledModelGen extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider cutSandstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_SANDSTONE_BRICKS);
         cutSandstoneBrickPool.stairs(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS);
         cutSandstoneBrickPool.slab(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider sandstoneTilePool = blockStateModelGenerator.family(ChiseledBlocks.SANDSTONE_TILES);
+        sandstoneTilePool.stairs(ChiseledBlocks.SANDSTONE_TILE_STAIRS);
+        sandstoneTilePool.slab(ChiseledBlocks.SANDSTONE_TILE_SLAB);
+        sandstoneTilePool.wall(ChiseledBlocks.SANDSTONE_TILE_WALL);
 
         BlockModelGenerators.BlockFamilyProvider redSandstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.RED_SANDSTONE_BRICKS);
         redSandstoneBrickPool.stairs(ChiseledBlocks.RED_SANDSTONE_BRICK_STAIRS);
@@ -348,6 +356,10 @@ public class ChiseledModelGen extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider cutRedSandstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_RED_SANDSTONE_BRICKS);
         cutRedSandstoneBrickPool.stairs(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS);
         cutRedSandstoneBrickPool.slab(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider redSandstoneTilePool = blockStateModelGenerator.family(ChiseledBlocks.RED_SANDSTONE_TILES);
+        redSandstoneTilePool.stairs(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS);
+        redSandstoneTilePool.slab(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB);
+        redSandstoneTilePool.wall(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
     }
 
     @Override

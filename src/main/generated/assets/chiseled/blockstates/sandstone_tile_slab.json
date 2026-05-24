@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/sandstone_tile_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/sandstone_tiles"
+    },
+    "type=top": {
+      "model": "chiseled:block/sandstone_tile_slab_top"
+    }
+  }
+}

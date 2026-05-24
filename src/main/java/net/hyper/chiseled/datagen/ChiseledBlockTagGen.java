@@ -170,6 +170,10 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.CUT_HONEYCOMB_BRICKS)
                 .add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS)
                 .add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB)
+                .add(ChiseledBlocks.HONEYCOMB_TILES)
+                .add(ChiseledBlocks.HONEYCOMB_TILE_STAIRS)
+                .add(ChiseledBlocks.HONEYCOMB_TILE_SLAB)
+                .add(ChiseledBlocks.HONEYCOMB_TILE_WALL)
                 .add(ChiseledBlocks.SMOOTH_SANDSTONE_WALL)
                 .add(ChiseledBlocks.SANDSTONE_BRICKS)
                 .add(ChiseledBlocks.SANDSTONE_BRICK_STAIRS)
@@ -178,6 +182,10 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.CUT_SANDSTONE_BRICKS)
                 .add(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS)
                 .add(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB)
+                .add(ChiseledBlocks.SANDSTONE_TILES)
+                .add(ChiseledBlocks.SANDSTONE_TILE_STAIRS)
+                .add(ChiseledBlocks.SANDSTONE_TILE_SLAB)
+                .add(ChiseledBlocks.SANDSTONE_TILE_WALL)
                 .add(ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL)
                 .add(ChiseledBlocks.RED_SANDSTONE_BRICKS)
                 .add(ChiseledBlocks.RED_SANDSTONE_BRICK_STAIRS)
@@ -185,7 +193,11 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.RED_SANDSTONE_BRICK_WALL)
                 .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICKS)
                 .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS)
-                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB);
+                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB)
+                .add(ChiseledBlocks.RED_SANDSTONE_TILES)
+                .add(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS)
+                .add(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB)
+                .add(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
 
         valueLookupBuilder(BlockTags.STONE_BRICKS)
                 .add(ChiseledBlocks.POLISHED_STONE)
@@ -234,11 +246,14 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.MOSSY_MUD_TILE_STAIRS)
                 .add(ChiseledBlocks.HONEYCOMB_STAIRS)
                 .add(ChiseledBlocks.HONEYCOMB_BRICK_STAIRS)
+                .add(ChiseledBlocks.HONEYCOMB_TILE_STAIRS)
                 .add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS)
                 .add(ChiseledBlocks.SANDSTONE_BRICK_STAIRS)
                 .add(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS)
+                .add(ChiseledBlocks.SANDSTONE_TILE_STAIRS)
                 .add(ChiseledBlocks.RED_SANDSTONE_BRICK_STAIRS)
-                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS);
+                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS)
+                .add(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS);
 
         valueLookupBuilder(BlockTags.SLABS)
                 .add(ChiseledBlocks.POLISHED_STONE_SLAB)
@@ -278,10 +293,13 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.HONEYCOMB_SLAB)
                 .add(ChiseledBlocks.HONEYCOMB_BRICK_SLAB)
                 .add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB)
+                .add(ChiseledBlocks.HONEYCOMB_TILE_SLAB)
                 .add(ChiseledBlocks.SANDSTONE_BRICK_SLAB)
                 .add(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB)
+                .add(ChiseledBlocks.SANDSTONE_TILE_SLAB)
                 .add(ChiseledBlocks.RED_SANDSTONE_BRICK_SLAB)
-                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB);
+                .add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB)
+                .add(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB);
 
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ChiseledBlocks.STONE_WALL)
@@ -314,10 +332,13 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.MOSSY_MUD_TILE_WALL)
                 .add(ChiseledBlocks.HONEYCOMB_WALL)
                 .add(ChiseledBlocks.HONEYCOMB_BRICK_WALL)
+                .add(ChiseledBlocks.HONEYCOMB_TILE_WALL)
                 .add(ChiseledBlocks.SMOOTH_SANDSTONE_WALL)
                 .add(ChiseledBlocks.SANDSTONE_BRICK_WALL)
+                .add(ChiseledBlocks.SANDSTONE_TILE_WALL)
                 .add(ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL)
-                .add(ChiseledBlocks.RED_SANDSTONE_BRICK_WALL);
+                .add(ChiseledBlocks.RED_SANDSTONE_BRICK_WALL)
+                .add(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
 
         valueLookupBuilder(BlockTags.WOODEN_FENCES)
                 .add(Blocks.NETHER_BRICK_FENCE);

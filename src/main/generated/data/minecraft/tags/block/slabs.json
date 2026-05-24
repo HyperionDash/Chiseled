@@ -37,9 +37,12 @@
     "chiseled:honeycomb_slab",
     "chiseled:honeycomb_brick_slab",
     "chiseled:cut_honeycomb_brick_slab",
+    "chiseled:honeycomb_tile_slab",
     "chiseled:sandstone_brick_slab",
     "chiseled:cut_sandstone_brick_slab",
+    "chiseled:sandstone_tile_slab",
     "chiseled:red_sandstone_brick_slab",
-    "chiseled:cut_red_sandstone_brick_slab"
+    "chiseled:cut_red_sandstone_brick_slab",
+    "chiseled:red_sandstone_tile_slab"
   ]
 }

@@ -1,3 +1,7 @@
+# 2.0a+26.1-DEV+0.6b
+- retextured mud tiles
+- added tiles for honeycomb and both sandstones
+
 # 2.0a+26.1-DEV+0.6a
 - added blockset additions for honeycomb
 - added blockset additions for sandstone and red sandstone

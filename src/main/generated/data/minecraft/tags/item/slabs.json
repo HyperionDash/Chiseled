@@ -33,6 +33,13 @@
     "chiseled:cut_mud_brick_slab",
     "chiseled:mossy_cut_mud_brick_slab",
     "chiseled:mud_tile_slab",
-    "chiseled:mossy_mud_tile_slab"
+    "chiseled:mossy_mud_tile_slab",
+    "chiseled:honeycomb_slab",
+    "chiseled:honeycomb_brick_slab",
+    "chiseled:cut_honeycomb_brick_slab",
+    "chiseled:sandstone_brick_slab",
+    "chiseled:cut_sandstone_brick_slab",
+    "chiseled:red_sandstone_brick_slab",
+    "chiseled:cut_red_sandstone_brick_slab"
   ]
 }

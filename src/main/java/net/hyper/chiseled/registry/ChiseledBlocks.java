@@ -416,7 +416,7 @@ public class ChiseledBlocks {
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block MOSSY_MUD_BRICK_STAIRS = registerBlock("mossy_mud_brick_stairs",
-            properties -> new StairBlock(POLISHED_MUD.defaultBlockState(),properties
+            properties -> new StairBlock(MOSSY_MUD_BRICKS.defaultBlockState(),properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block MOSSY_MUD_BRICK_SLAB = registerBlock("mossy_mud_brick_slab",
             properties -> new SlabBlock(properties
@@ -428,7 +428,7 @@ public class ChiseledBlocks {
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block CUT_MUD_BRICK_STAIRS = registerBlock("cut_mud_brick_stairs",
-            properties -> new StairBlock(POLISHED_MUD.defaultBlockState(),properties
+            properties -> new StairBlock(CUT_MUD_BRICKS.defaultBlockState(),properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block CUT_MUD_BRICK_SLAB = registerBlock("cut_mud_brick_slab",
             properties -> new SlabBlock(properties
@@ -437,7 +437,7 @@ public class ChiseledBlocks {
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block MOSSY_CUT_MUD_BRICK_STAIRS = registerBlock("mossy_cut_mud_brick_stairs",
-            properties -> new StairBlock(POLISHED_MUD.defaultBlockState(),properties
+            properties -> new StairBlock(MOSSY_CUT_MUD_BRICKS.defaultBlockState(),properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block MOSSY_CUT_MUD_BRICK_SLAB = registerBlock("mossy_cut_mud_brick_slab",
             properties -> new SlabBlock(properties
@@ -446,7 +446,7 @@ public class ChiseledBlocks {
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block MUD_TILE_STAIRS = registerBlock("mud_tile_stairs",
-            properties -> new StairBlock(POLISHED_MUD.defaultBlockState(),properties
+            properties -> new StairBlock(MUD_TILES.defaultBlockState(),properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block MUD_TILE_SLAB = registerBlock("mud_tile_slab",
             properties -> new SlabBlock(properties
@@ -458,7 +458,7 @@ public class ChiseledBlocks {
             properties -> new Block(properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block MOSSY_MUD_TILE_STAIRS = registerBlock("mossy_mud_tile_stairs",
-            properties -> new StairBlock(POLISHED_MUD.defaultBlockState(),properties
+            properties -> new StairBlock(MOSSY_MUD_TILES.defaultBlockState(),properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
     public static final Block MOSSY_MUD_TILE_SLAB = registerBlock("mossy_mud_tile_slab",
             properties -> new SlabBlock(properties
@@ -466,6 +466,87 @@ public class ChiseledBlocks {
     public static final Block MOSSY_MUD_TILE_WALL = registerBlock("mossy_mud_tile_wall",
             properties -> new WallBlock(properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
+
+    public static final Block HONEYCOMB_STAIRS = registerBlock("honeycomb_stairs",
+            properties -> new StairBlock(Blocks.HONEYCOMB_BLOCK.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(0.6F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_SLAB = registerBlock("honeycomb_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(0.6F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_WALL = registerBlock("honeycomb_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(0.6F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_BRICKS = registerBlock("honeycomb_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_BRICK_STAIRS = registerBlock("honeycomb_brick_stairs",
+            properties -> new StairBlock(HONEYCOMB_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_BRICK_SLAB = registerBlock("honeycomb_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block HONEYCOMB_BRICK_WALL = registerBlock("honeycomb_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block CUT_HONEYCOMB_BRICKS = registerBlock("cut_honeycomb_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block CUT_HONEYCOMB_BRICK_STAIRS = registerBlock("cut_honeycomb_brick_stairs",
+            properties -> new StairBlock(CUT_HONEYCOMB_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final Block CUT_HONEYCOMB_BRICK_SLAB = registerBlock("cut_honeycomb_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
+    
+    public static final Block SMOOTH_SANDSTONE_WALL = registerBlock("smooth_sandstone_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block SANDSTONE_BRICKS = registerBlock("sandstone_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block SANDSTONE_BRICK_STAIRS = registerBlock("sandstone_brick_stairs",
+            properties -> new StairBlock(SANDSTONE_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block SANDSTONE_BRICK_SLAB = registerBlock("sandstone_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block SANDSTONE_BRICK_WALL = registerBlock("sandstone_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block CUT_SANDSTONE_BRICKS = registerBlock("cut_sandstone_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block CUT_SANDSTONE_BRICK_STAIRS = registerBlock("cut_sandstone_brick_stairs",
+            properties -> new StairBlock(CUT_SANDSTONE_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block CUT_SANDSTONE_BRICK_SLAB = registerBlock("cut_sandstone_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+
+    public static final Block SMOOTH_RED_SANDSTONE_WALL = registerBlock("smooth_red_sandstone_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block RED_SANDSTONE_BRICKS = registerBlock("red_sandstone_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block RED_SANDSTONE_BRICK_STAIRS = registerBlock("red_sandstone_brick_stairs",
+            properties -> new StairBlock(RED_SANDSTONE_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block RED_SANDSTONE_BRICK_SLAB = registerBlock("red_sandstone_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block RED_SANDSTONE_BRICK_WALL = registerBlock("red_sandstone_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block CUT_RED_SANDSTONE_BRICKS = registerBlock("cut_red_sandstone_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block CUT_RED_SANDSTONE_BRICK_STAIRS = registerBlock("cut_red_sandstone_brick_stairs",
+            properties -> new StairBlock(CUT_RED_SANDSTONE_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block CUT_RED_SANDSTONE_BRICK_SLAB = registerBlock("cut_red_sandstone_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
     
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Chiseled.MOD_ID, name))));

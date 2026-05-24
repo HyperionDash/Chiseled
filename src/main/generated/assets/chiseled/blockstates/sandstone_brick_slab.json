@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/sandstone_brick_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/sandstone_bricks"
+    },
+    "type=top": {
+      "model": "chiseled:block/sandstone_brick_slab_top"
+    }
+  }
+}

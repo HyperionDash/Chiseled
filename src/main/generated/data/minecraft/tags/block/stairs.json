@@ -34,6 +34,13 @@
     "chiseled:cut_mud_brick_stairs",
     "chiseled:mossy_cut_mud_brick_stairs",
     "chiseled:mud_tile_stairs",
-    "chiseled:mossy_mud_tile_stairs"
+    "chiseled:mossy_mud_tile_stairs",
+    "chiseled:honeycomb_stairs",
+    "chiseled:honeycomb_brick_stairs",
+    "chiseled:cut_honeycomb_brick_stairs",
+    "chiseled:sandstone_brick_stairs",
+    "chiseled:cut_sandstone_brick_stairs",
+    "chiseled:red_sandstone_brick_stairs",
+    "chiseled:cut_red_sandstone_brick_stairs"
   ]
 }

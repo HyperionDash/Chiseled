@@ -1,3 +1,7 @@
+# 2.0a+26.1-DEV+0.6a
+- added blockset additions for honeycomb
+- added blockset additions for sandstone and red sandstone
+
 # 2.0a+26.1-DEV+0.5a
 - added some cracked textures for deepslate, granite and andesite
 - retextured bricks for granite, diorite and andesite

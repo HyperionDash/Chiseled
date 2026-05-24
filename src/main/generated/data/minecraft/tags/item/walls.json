@@ -27,6 +27,12 @@
     "chiseled:polished_mud_wall",
     "chiseled:mossy_mud_brick_wall",
     "chiseled:mud_tile_wall",
-    "chiseled:mossy_mud_tile_wall"
+    "chiseled:mossy_mud_tile_wall",
+    "chiseled:honeycomb_wall",
+    "chiseled:honeycomb_brick_wall",
+    "chiseled:smooth_sandstone_wall",
+    "chiseled:sandstone_brick_wall",
+    "chiseled:smooth_red_sandstone_wall",
+    "chiseled:red_sandstone_brick_wall"
   ]
 }

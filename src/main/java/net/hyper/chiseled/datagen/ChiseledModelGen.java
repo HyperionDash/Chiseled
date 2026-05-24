@@ -246,34 +246,34 @@ public class ChiseledModelGen extends FabricModelProvider {
         mossyBrickPool.slab(ChiseledBlocks.MOSSY_BRICK_SLAB);
         mossyBrickPool.wall(ChiseledBlocks.MOSSY_BRICK_WALL);
 
-        final TextureMapping packed_mud = TextureMapping.cube(Blocks.PACKED_MUD);
-        final Identifier packedMudStairs = ModelTemplates.STAIRS_STRAIGHT.create(ChiseledBlocks.PACKED_MUD_STAIRS, packed_mud, blockStateModelGenerator.modelOutput);
-        final Identifier innerPackedMudStairs = ModelTemplates.STAIRS_INNER.create(ChiseledBlocks.PACKED_MUD_STAIRS, packed_mud, blockStateModelGenerator.modelOutput);
-        final Identifier outerPackedMudStairs = ModelTemplates.STAIRS_OUTER.create(ChiseledBlocks.PACKED_MUD_STAIRS, packed_mud, blockStateModelGenerator.modelOutput);
+        final TextureMapping packedMud = TextureMapping.cube(Blocks.PACKED_MUD);
+        final Identifier packedMudStairs = ModelTemplates.STAIRS_STRAIGHT.create(ChiseledBlocks.PACKED_MUD_STAIRS, packedMud, blockStateModelGenerator.modelOutput);
+        final Identifier innerPackedMudStairs = ModelTemplates.STAIRS_INNER.create(ChiseledBlocks.PACKED_MUD_STAIRS, packedMud, blockStateModelGenerator.modelOutput);
+        final Identifier outerPackedMudStairs = ModelTemplates.STAIRS_OUTER.create(ChiseledBlocks.PACKED_MUD_STAIRS, packedMud, blockStateModelGenerator.modelOutput);
         blockStateModelGenerator.blockStateOutput.accept(
                 BlockModelGenerators.createStairs(ChiseledBlocks.PACKED_MUD_STAIRS,
                         BlockModelGenerators.plainVariant(innerPackedMudStairs),
                         BlockModelGenerators.plainVariant(packedMudStairs),
                         BlockModelGenerators.plainVariant(outerPackedMudStairs)));
         blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.PACKED_MUD_STAIRS, packedMudStairs);
-        final Identifier packed_mudSlabBottom = ModelTemplates.SLAB_BOTTOM.create(ChiseledBlocks.PACKED_MUD_SLAB, packed_mud, blockStateModelGenerator.modelOutput);
-        final Identifier packed_mudSlabTop = ModelTemplates.SLAB_TOP.create(ChiseledBlocks.PACKED_MUD_SLAB, packed_mud, blockStateModelGenerator.modelOutput);
+        final Identifier packedMudSlabBottom = ModelTemplates.SLAB_BOTTOM.create(ChiseledBlocks.PACKED_MUD_SLAB, packedMud, blockStateModelGenerator.modelOutput);
+        final Identifier packedMudSlabTop = ModelTemplates.SLAB_TOP.create(ChiseledBlocks.PACKED_MUD_SLAB, packedMud, blockStateModelGenerator.modelOutput);
         blockStateModelGenerator.blockStateOutput.accept(
                 BlockModelGenerators.createSlab(ChiseledBlocks.PACKED_MUD_SLAB,
-                        BlockModelGenerators.plainVariant(packed_mudSlabBottom),
-                        BlockModelGenerators.plainVariant(packed_mudSlabTop),
+                        BlockModelGenerators.plainVariant(packedMudSlabBottom),
+                        BlockModelGenerators.plainVariant(packedMudSlabTop),
                         BlockModelGenerators.plainVariant(Identifier.withDefaultNamespace("block/packed_mud"))));
-        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.PACKED_MUD_SLAB, packed_mudSlabBottom);
-        final Identifier packed_mudWallPost = ModelTemplates.WALL_POST.create(ChiseledBlocks.PACKED_MUD_WALL, packed_mud, blockStateModelGenerator.modelOutput);
-        final Identifier packed_mudWallSide = ModelTemplates.WALL_LOW_SIDE.create(ChiseledBlocks.PACKED_MUD_WALL, packed_mud, blockStateModelGenerator.modelOutput);
-        final Identifier packed_mudWallSideTall = ModelTemplates.WALL_TALL_SIDE.create(ChiseledBlocks.PACKED_MUD_WALL, packed_mud, blockStateModelGenerator.modelOutput);
-        final Identifier packed_mudWallInventory = ModelTemplates.WALL_INVENTORY.create(ChiseledBlocks.PACKED_MUD_WALL, packed_mud, blockStateModelGenerator.modelOutput);
+        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.PACKED_MUD_SLAB, packedMudSlabBottom);
+        final Identifier packedMudWallPost = ModelTemplates.WALL_POST.create(ChiseledBlocks.PACKED_MUD_WALL, packedMud, blockStateModelGenerator.modelOutput);
+        final Identifier packedMudWallSide = ModelTemplates.WALL_LOW_SIDE.create(ChiseledBlocks.PACKED_MUD_WALL, packedMud, blockStateModelGenerator.modelOutput);
+        final Identifier packedMudWallSideTall = ModelTemplates.WALL_TALL_SIDE.create(ChiseledBlocks.PACKED_MUD_WALL, packedMud, blockStateModelGenerator.modelOutput);
+        final Identifier packedMudWallInventory = ModelTemplates.WALL_INVENTORY.create(ChiseledBlocks.PACKED_MUD_WALL, packedMud, blockStateModelGenerator.modelOutput);
         blockStateModelGenerator.blockStateOutput.accept(
                 BlockModelGenerators.createWall(ChiseledBlocks.PACKED_MUD_WALL,
-                        BlockModelGenerators.plainVariant(packed_mudWallPost),
-                        BlockModelGenerators.plainVariant(packed_mudWallSide),
-                        BlockModelGenerators.plainVariant(packed_mudWallSideTall)));
-        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.PACKED_MUD_WALL, packed_mudWallInventory);
+                        BlockModelGenerators.plainVariant(packedMudWallPost),
+                        BlockModelGenerators.plainVariant(packedMudWallSide),
+                        BlockModelGenerators.plainVariant(packedMudWallSideTall)));
+        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.PACKED_MUD_WALL, packedMudWallInventory);
         BlockModelGenerators.BlockFamilyProvider polishedMudPool = blockStateModelGenerator.family(ChiseledBlocks.POLISHED_MUD);
         polishedMudPool.stairs(ChiseledBlocks.POLISHED_MUD_STAIRS);
         polishedMudPool.slab(ChiseledBlocks.POLISHED_MUD_SLAB);
@@ -296,6 +296,58 @@ public class ChiseledModelGen extends FabricModelProvider {
         mossyMudTilePool.stairs(ChiseledBlocks.MOSSY_MUD_TILE_STAIRS);
         mossyMudTilePool.slab(ChiseledBlocks.MOSSY_MUD_TILE_SLAB);
         mossyMudTilePool.wall(ChiseledBlocks.MOSSY_MUD_TILE_WALL);
+
+        final TextureMapping honeycomb = TextureMapping.cube(Blocks.HONEYCOMB_BLOCK);
+        final Identifier honeycombStairs = ModelTemplates.STAIRS_STRAIGHT.create(ChiseledBlocks.HONEYCOMB_STAIRS, honeycomb, blockStateModelGenerator.modelOutput);
+        final Identifier innerHoneycombStairs = ModelTemplates.STAIRS_INNER.create(ChiseledBlocks.HONEYCOMB_STAIRS, honeycomb, blockStateModelGenerator.modelOutput);
+        final Identifier outerHoneycombStairs = ModelTemplates.STAIRS_OUTER.create(ChiseledBlocks.HONEYCOMB_STAIRS, honeycomb, blockStateModelGenerator.modelOutput);
+        blockStateModelGenerator.blockStateOutput.accept(
+                BlockModelGenerators.createStairs(ChiseledBlocks.HONEYCOMB_STAIRS,
+                        BlockModelGenerators.plainVariant(innerHoneycombStairs),
+                        BlockModelGenerators.plainVariant(honeycombStairs),
+                        BlockModelGenerators.plainVariant(outerHoneycombStairs)));
+        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.HONEYCOMB_STAIRS, honeycombStairs);
+        final Identifier honeycombSlabBottom = ModelTemplates.SLAB_BOTTOM.create(ChiseledBlocks.HONEYCOMB_SLAB, honeycomb, blockStateModelGenerator.modelOutput);
+        final Identifier honeycombSlabTop = ModelTemplates.SLAB_TOP.create(ChiseledBlocks.HONEYCOMB_SLAB, honeycomb, blockStateModelGenerator.modelOutput);
+        blockStateModelGenerator.blockStateOutput.accept(
+                BlockModelGenerators.createSlab(ChiseledBlocks.HONEYCOMB_SLAB,
+                        BlockModelGenerators.plainVariant(honeycombSlabBottom),
+                        BlockModelGenerators.plainVariant(honeycombSlabTop),
+                        BlockModelGenerators.plainVariant(Identifier.withDefaultNamespace("block/honeycomb_block"))));
+        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.HONEYCOMB_SLAB, honeycombSlabBottom);
+        final Identifier honeycombWallPost = ModelTemplates.WALL_POST.create(ChiseledBlocks.HONEYCOMB_WALL, honeycomb, blockStateModelGenerator.modelOutput);
+        final Identifier honeycombWallSide = ModelTemplates.WALL_LOW_SIDE.create(ChiseledBlocks.HONEYCOMB_WALL, honeycomb, blockStateModelGenerator.modelOutput);
+        final Identifier honeycombWallSideTall = ModelTemplates.WALL_TALL_SIDE.create(ChiseledBlocks.HONEYCOMB_WALL, honeycomb, blockStateModelGenerator.modelOutput);
+        final Identifier honeycombWallInventory = ModelTemplates.WALL_INVENTORY.create(ChiseledBlocks.HONEYCOMB_WALL, honeycomb, blockStateModelGenerator.modelOutput);
+        blockStateModelGenerator.blockStateOutput.accept(
+                BlockModelGenerators.createWall(ChiseledBlocks.HONEYCOMB_WALL,
+                        BlockModelGenerators.plainVariant(honeycombWallPost),
+                        BlockModelGenerators.plainVariant(honeycombWallSide),
+                        BlockModelGenerators.plainVariant(honeycombWallSideTall)));
+        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.HONEYCOMB_WALL, honeycombWallInventory);
+        BlockModelGenerators.BlockFamilyProvider honeycombBrickPool = blockStateModelGenerator.family(ChiseledBlocks.HONEYCOMB_BRICKS);
+        honeycombBrickPool.stairs(ChiseledBlocks.HONEYCOMB_BRICK_STAIRS);
+        honeycombBrickPool.slab(ChiseledBlocks.HONEYCOMB_BRICK_SLAB);
+        honeycombBrickPool.wall(ChiseledBlocks.HONEYCOMB_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider cutHoneycombBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_HONEYCOMB_BRICKS);
+        cutHoneycombBrickPool.stairs(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS);
+        cutHoneycombBrickPool.slab(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB);
+        
+        BlockModelGenerators.BlockFamilyProvider sandstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.SANDSTONE_BRICKS);
+        sandstoneBrickPool.stairs(ChiseledBlocks.SANDSTONE_BRICK_STAIRS);
+        sandstoneBrickPool.slab(ChiseledBlocks.SANDSTONE_BRICK_SLAB);
+        sandstoneBrickPool.wall(ChiseledBlocks.SANDSTONE_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider cutSandstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_SANDSTONE_BRICKS);
+        cutSandstoneBrickPool.stairs(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS);
+        cutSandstoneBrickPool.slab(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB);
+
+        BlockModelGenerators.BlockFamilyProvider redSandstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.RED_SANDSTONE_BRICKS);
+        redSandstoneBrickPool.stairs(ChiseledBlocks.RED_SANDSTONE_BRICK_STAIRS);
+        redSandstoneBrickPool.slab(ChiseledBlocks.RED_SANDSTONE_BRICK_SLAB);
+        redSandstoneBrickPool.wall(ChiseledBlocks.RED_SANDSTONE_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider cutRedSandstoneBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_RED_SANDSTONE_BRICKS);
+        cutRedSandstoneBrickPool.stairs(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS);
+        cutRedSandstoneBrickPool.slab(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB);
     }
 
     @Override

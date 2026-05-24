@@ -167,5 +167,34 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.MOSSY_MUD_TILE_STAIRS);
         add(ChiseledBlocks.MOSSY_MUD_TILE_SLAB, createSlabItemTable(ChiseledBlocks.MOSSY_MUD_TILE_SLAB));
         dropSelf(ChiseledBlocks.MOSSY_MUD_TILE_WALL);
+
+        dropSelf(ChiseledBlocks.HONEYCOMB_STAIRS);
+        add(ChiseledBlocks.HONEYCOMB_SLAB, createSlabItemTable(ChiseledBlocks.HONEYCOMB_SLAB));
+        dropSelf(ChiseledBlocks.HONEYCOMB_WALL);
+        dropSelf(ChiseledBlocks.HONEYCOMB_BRICKS);
+        dropSelf(ChiseledBlocks.HONEYCOMB_BRICK_STAIRS);
+        add(ChiseledBlocks.HONEYCOMB_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.HONEYCOMB_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.HONEYCOMB_BRICK_WALL);
+        dropSelf(ChiseledBlocks.CUT_HONEYCOMB_BRICKS);
+        dropSelf(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS);
+        add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB));
+
+        dropSelf(ChiseledBlocks.SMOOTH_SANDSTONE_WALL);
+        dropSelf(ChiseledBlocks.SANDSTONE_BRICKS);
+        dropSelf(ChiseledBlocks.SANDSTONE_BRICK_STAIRS);
+        add(ChiseledBlocks.SANDSTONE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.SANDSTONE_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.SANDSTONE_BRICK_WALL);
+        dropSelf(ChiseledBlocks.CUT_SANDSTONE_BRICKS);
+        dropSelf(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS);
+        add(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB));
+
+        dropSelf(ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL);
+        dropSelf(ChiseledBlocks.RED_SANDSTONE_BRICKS);
+        dropSelf(ChiseledBlocks.RED_SANDSTONE_BRICK_STAIRS);
+        add(ChiseledBlocks.RED_SANDSTONE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.RED_SANDSTONE_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.RED_SANDSTONE_BRICK_WALL);
+        dropSelf(ChiseledBlocks.CUT_RED_SANDSTONE_BRICKS);
+        dropSelf(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS);
+        add(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB));
     }
 }

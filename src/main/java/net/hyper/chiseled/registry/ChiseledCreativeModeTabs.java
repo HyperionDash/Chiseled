@@ -288,7 +288,7 @@ public class ChiseledCreativeModeTabs {
                     ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB,
                     ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL);
 
-            entries.insertAfter(Blocks.POLISHED_DEEPSLATE_WALL, ChiseledBlocks.CUT_DEEPSLATE_BRICKS,
+            entries.insertAfter(Blocks.DEEPSLATE_BRICK_WALL, ChiseledBlocks.CUT_DEEPSLATE_BRICKS,
                     ChiseledBlocks.CRACKED_CUT_DEEPSLATE_BRICKS,
                     ChiseledBlocks.CUT_DEEPSLATE_BRICK_STAIRS,
                     ChiseledBlocks.CUT_DEEPSLATE_BRICK_SLAB);

@@ -1,3 +1,11 @@
+# 2.0a+26.1-DEV+0.7a
+- added blockset additions for prismarine and dark prismarine
+- retextured vanilla dark prismarine to be more like normal prismarine
+- added blockset additions for snow
+- added blockset additions for all the terracottas
+- removed asset overrides and moved all the remaining changes to no longer be optional
+- added a secret and its related advancement
+
 # 2.0a+26.1-DEV+0.6b
 - retextured mud tiles
 - added tiles for honeycomb and both sandstones

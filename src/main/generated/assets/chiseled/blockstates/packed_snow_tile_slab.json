@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/packed_snow_tile_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/packed_snow_tiles"
+    },
+    "type=top": {
+      "model": "chiseled:block/packed_snow_tile_slab_top"
+    }
+  }
+}

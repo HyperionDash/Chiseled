@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:snow_block",
+  "result": {
+    "id": "chiseled:packed_snow_tiles"
+  }
+}

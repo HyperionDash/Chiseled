@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:gray_terracotta_bricks",
+  "result": {
+    "id": "chiseled:gray_terracotta_brick_wall"
+  }
+}

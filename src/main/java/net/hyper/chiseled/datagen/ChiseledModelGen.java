@@ -360,6 +360,129 @@ public class ChiseledModelGen extends FabricModelProvider {
         redSandstoneTilePool.stairs(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS);
         redSandstoneTilePool.slab(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB);
         redSandstoneTilePool.wall(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
+
+        final TextureMapping prismarineBricks = TextureMapping.cube(Blocks.PRISMARINE_BRICKS);
+        final Identifier prismarineBrickWallPost = ModelTemplates.WALL_POST.create(ChiseledBlocks.PRISMARINE_BRICK_WALL, prismarineBricks, blockStateModelGenerator.modelOutput);
+        final Identifier prismarineBrickWallSide = ModelTemplates.WALL_LOW_SIDE.create(ChiseledBlocks.PRISMARINE_BRICK_WALL, prismarineBricks, blockStateModelGenerator.modelOutput);
+        final Identifier prismarineBrickWallSideTall = ModelTemplates.WALL_TALL_SIDE.create(ChiseledBlocks.PRISMARINE_BRICK_WALL, prismarineBricks, blockStateModelGenerator.modelOutput);
+        final Identifier prismarineBrickWallInventory = ModelTemplates.WALL_INVENTORY.create(ChiseledBlocks.PRISMARINE_BRICK_WALL, prismarineBricks, blockStateModelGenerator.modelOutput);
+        blockStateModelGenerator.blockStateOutput.accept(
+                BlockModelGenerators.createWall(ChiseledBlocks.PRISMARINE_BRICK_WALL,
+                        BlockModelGenerators.plainVariant(prismarineBrickWallPost),
+                        BlockModelGenerators.plainVariant(prismarineBrickWallSide),
+                        BlockModelGenerators.plainVariant(prismarineBrickWallSideTall)));
+        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.PRISMARINE_BRICK_WALL, prismarineBrickWallInventory);
+        BlockModelGenerators.BlockFamilyProvider cutPrismarineBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_PRISMARINE_BRICKS);
+        cutPrismarineBrickPool.stairs(ChiseledBlocks.CUT_PRISMARINE_BRICK_STAIRS);
+        cutPrismarineBrickPool.slab(ChiseledBlocks.CUT_PRISMARINE_BRICK_SLAB);
+        final TextureMapping darkPrismarine = TextureMapping.cube(Blocks.DARK_PRISMARINE);
+        final Identifier darkPrismarineWallPost = ModelTemplates.WALL_POST.create(ChiseledBlocks.DARK_PRISMARINE_WALL, darkPrismarine, blockStateModelGenerator.modelOutput);
+        final Identifier darkPrismarineWallSide = ModelTemplates.WALL_LOW_SIDE.create(ChiseledBlocks.DARK_PRISMARINE_WALL, darkPrismarine, blockStateModelGenerator.modelOutput);
+        final Identifier darkPrismarineWallSideTall = ModelTemplates.WALL_TALL_SIDE.create(ChiseledBlocks.DARK_PRISMARINE_WALL, darkPrismarine, blockStateModelGenerator.modelOutput);
+        final Identifier darkPrismarineWallInventory = ModelTemplates.WALL_INVENTORY.create(ChiseledBlocks.DARK_PRISMARINE_WALL, darkPrismarine, blockStateModelGenerator.modelOutput);
+        blockStateModelGenerator.blockStateOutput.accept(
+                BlockModelGenerators.createWall(ChiseledBlocks.DARK_PRISMARINE_WALL,
+                        BlockModelGenerators.plainVariant(darkPrismarineWallPost),
+                        BlockModelGenerators.plainVariant(darkPrismarineWallSide),
+                        BlockModelGenerators.plainVariant(darkPrismarineWallSideTall)));
+        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.DARK_PRISMARINE_WALL, darkPrismarineWallInventory);
+        BlockModelGenerators.BlockFamilyProvider darkPrismarineBrickPool = blockStateModelGenerator.family(ChiseledBlocks.DARK_PRISMARINE_BRICKS);
+        darkPrismarineBrickPool.stairs(ChiseledBlocks.DARK_PRISMARINE_BRICK_STAIRS);
+        darkPrismarineBrickPool.slab(ChiseledBlocks.DARK_PRISMARINE_BRICK_SLAB);
+        darkPrismarineBrickPool.wall(ChiseledBlocks.DARK_PRISMARINE_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider cutDarkPrismarineBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICKS);
+        cutDarkPrismarineBrickPool.stairs(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS);
+        cutDarkPrismarineBrickPool.slab(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB);
+
+        final TextureMapping netherite = TextureMapping.cube(Blocks.NETHERITE_BLOCK);
+        final Identifier netheriteStairs = ModelTemplates.STAIRS_STRAIGHT.create(ChiseledBlocks.NETHERITE_STAIRS, netherite, blockStateModelGenerator.modelOutput);
+        final Identifier innerNetheriteStairs = ModelTemplates.STAIRS_INNER.create(ChiseledBlocks.NETHERITE_STAIRS, netherite, blockStateModelGenerator.modelOutput);
+        final Identifier outerNetheriteStairs = ModelTemplates.STAIRS_OUTER.create(ChiseledBlocks.NETHERITE_STAIRS, netherite, blockStateModelGenerator.modelOutput);
+        blockStateModelGenerator.blockStateOutput.accept(
+                BlockModelGenerators.createStairs(ChiseledBlocks.NETHERITE_STAIRS,
+                        BlockModelGenerators.plainVariant(innerNetheriteStairs),
+                        BlockModelGenerators.plainVariant(netheriteStairs),
+                        BlockModelGenerators.plainVariant(outerNetheriteStairs)));
+        blockStateModelGenerator.registerSimpleItemModel(ChiseledBlocks.NETHERITE_STAIRS, netheriteStairs);
+
+        BlockModelGenerators.BlockFamilyProvider packedSnowBrickPool = blockStateModelGenerator.family(ChiseledBlocks.PACKED_SNOW_BRICKS);
+        packedSnowBrickPool.stairs(ChiseledBlocks.PACKED_SNOW_BRICK_STAIRS);
+        packedSnowBrickPool.slab(ChiseledBlocks.PACKED_SNOW_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider cutPackedSnowBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CUT_PACKED_SNOW_BRICKS);
+        cutPackedSnowBrickPool.stairs(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_STAIRS);
+        cutPackedSnowBrickPool.slab(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider packedSnowTilePool = blockStateModelGenerator.family(ChiseledBlocks.PACKED_SNOW_TILES);
+        packedSnowTilePool.stairs(ChiseledBlocks.PACKED_SNOW_TILE_STAIRS);
+        packedSnowTilePool.slab(ChiseledBlocks.PACKED_SNOW_TILE_SLAB);
+
+        BlockModelGenerators.BlockFamilyProvider terracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.TERRACOTTA_BRICKS);
+        terracottaBrickPool.stairs(ChiseledBlocks.TERRACOTTA_BRICK_STAIRS);
+        terracottaBrickPool.slab(ChiseledBlocks.TERRACOTTA_BRICK_SLAB);
+        terracottaBrickPool.wall(ChiseledBlocks.TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider whiteTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.WHITE_TERRACOTTA_BRICKS);
+        whiteTerracottaBrickPool.stairs(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS);
+        whiteTerracottaBrickPool.slab(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_SLAB);
+        whiteTerracottaBrickPool.wall(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider lightGrayTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS);
+        lightGrayTerracottaBrickPool.stairs(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS);
+        lightGrayTerracottaBrickPool.slab(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB);
+        lightGrayTerracottaBrickPool.wall(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider grayTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.GRAY_TERRACOTTA_BRICKS);
+        grayTerracottaBrickPool.stairs(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS);
+        grayTerracottaBrickPool.slab(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_SLAB);
+        grayTerracottaBrickPool.wall(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider blackTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.BLACK_TERRACOTTA_BRICKS);
+        blackTerracottaBrickPool.stairs(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS);
+        blackTerracottaBrickPool.slab(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_SLAB);
+        blackTerracottaBrickPool.wall(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider brownTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.BROWN_TERRACOTTA_BRICKS);
+        brownTerracottaBrickPool.stairs(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS);
+        brownTerracottaBrickPool.slab(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_SLAB);
+        brownTerracottaBrickPool.wall(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider redTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.RED_TERRACOTTA_BRICKS);
+        redTerracottaBrickPool.stairs(ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS);
+        redTerracottaBrickPool.slab(ChiseledBlocks.RED_TERRACOTTA_BRICK_SLAB);
+        redTerracottaBrickPool.wall(ChiseledBlocks.RED_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider orangeTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS);
+        orangeTerracottaBrickPool.stairs(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS);
+        orangeTerracottaBrickPool.slab(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_SLAB);
+        orangeTerracottaBrickPool.wall(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider yellowTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS);
+        yellowTerracottaBrickPool.stairs(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS);
+        yellowTerracottaBrickPool.slab(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_SLAB);
+        yellowTerracottaBrickPool.wall(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider limeTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.LIME_TERRACOTTA_BRICKS);
+        limeTerracottaBrickPool.stairs(ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS);
+        limeTerracottaBrickPool.slab(ChiseledBlocks.LIME_TERRACOTTA_BRICK_SLAB);
+        limeTerracottaBrickPool.wall(ChiseledBlocks.LIME_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider greenTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.GREEN_TERRACOTTA_BRICKS);
+        greenTerracottaBrickPool.stairs(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS);
+        greenTerracottaBrickPool.slab(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_SLAB);
+        greenTerracottaBrickPool.wall(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider cyanTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.CYAN_TERRACOTTA_BRICKS);
+        cyanTerracottaBrickPool.stairs(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS);
+        cyanTerracottaBrickPool.slab(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_SLAB);
+        cyanTerracottaBrickPool.wall(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider lightBlueTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS);
+        lightBlueTerracottaBrickPool.stairs(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS);
+        lightBlueTerracottaBrickPool.slab(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB);
+        lightBlueTerracottaBrickPool.wall(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider blueTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.BLUE_TERRACOTTA_BRICKS);
+        blueTerracottaBrickPool.stairs(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS);
+        blueTerracottaBrickPool.slab(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB);
+        blueTerracottaBrickPool.wall(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider purpleTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS);
+        purpleTerracottaBrickPool.stairs(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS);
+        purpleTerracottaBrickPool.slab(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB);
+        purpleTerracottaBrickPool.wall(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider magentaTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS);
+        magentaTerracottaBrickPool.stairs(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS);
+        magentaTerracottaBrickPool.slab(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB);
+        magentaTerracottaBrickPool.wall(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider pinkTerracottaBrickPool = blockStateModelGenerator.family(ChiseledBlocks.PINK_TERRACOTTA_BRICKS);
+        pinkTerracottaBrickPool.stairs(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS);
+        pinkTerracottaBrickPool.slab(ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB);
+        pinkTerracottaBrickPool.wall(ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL);
     }
 
     @Override

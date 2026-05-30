@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:cut_dark_prismarine_bricks",
+  "result": {
+    "id": "chiseled:cut_dark_prismarine_brick_stairs"
+  }
+}

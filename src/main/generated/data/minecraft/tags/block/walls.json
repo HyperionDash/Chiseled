@@ -36,6 +36,26 @@
     "chiseled:sandstone_tile_wall",
     "chiseled:smooth_red_sandstone_wall",
     "chiseled:red_sandstone_brick_wall",
-    "chiseled:red_sandstone_tile_wall"
+    "chiseled:red_sandstone_tile_wall",
+    "chiseled:prismarine_brick_wall",
+    "chiseled:dark_prismarine_wall",
+    "chiseled:dark_prismarine_brick_wall",
+    "chiseled:terracotta_brick_wall",
+    "chiseled:white_terracotta_brick_wall",
+    "chiseled:light_gray_terracotta_brick_wall",
+    "chiseled:gray_terracotta_brick_wall",
+    "chiseled:black_terracotta_brick_wall",
+    "chiseled:brown_terracotta_brick_wall",
+    "chiseled:red_terracotta_brick_wall",
+    "chiseled:orange_terracotta_brick_wall",
+    "chiseled:yellow_terracotta_brick_wall",
+    "chiseled:lime_terracotta_brick_wall",
+    "chiseled:green_terracotta_brick_wall",
+    "chiseled:cyan_terracotta_brick_wall",
+    "chiseled:light_blue_terracotta_brick_wall",
+    "chiseled:blue_terracotta_brick_wall",
+    "chiseled:purple_terracotta_brick_wall",
+    "chiseled:magenta_terracotta_brick_wall",
+    "chiseled:pink_terracotta_brick_wall"
   ]
 }

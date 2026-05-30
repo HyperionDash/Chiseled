@@ -31,6 +31,7 @@ dependencies {
 	runtimeOnly("maven.modrinth:Sodium:${project.sodium_version}")
 	runtimeOnly("maven.modrinth:enchanteds-sodium-options:${project.enchanteds_sodium_options_version}")
 	runtimeOnly("maven.modrinth:mouse-tweaks:${project.mouse_tweaks_version}")
+	runtimeOnly("maven.modrinth:mc122477fix-re-updated:${project.mc122477fix_re_updated_version}")
 }
 
 processResources {

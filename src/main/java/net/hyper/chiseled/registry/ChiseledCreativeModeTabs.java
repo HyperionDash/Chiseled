@@ -213,6 +213,98 @@ public class ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS);
                         entries.accept(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB);
                         entries.accept(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
+
+                        entries.accept(ChiseledBlocks.PRISMARINE_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.CUT_PRISMARINE_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_PRISMARINE_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CUT_PRISMARINE_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.DARK_PRISMARINE_WALL);
+                        entries.accept(ChiseledBlocks.DARK_PRISMARINE_BRICKS);
+                        entries.accept(ChiseledBlocks.DARK_PRISMARINE_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.DARK_PRISMARINE_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.DARK_PRISMARINE_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB);
+
+                        entries.accept(ChiseledBlocks.PACKED_SNOW_BRICKS);
+                        entries.accept(ChiseledBlocks.PACKED_SNOW_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.PACKED_SNOW_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.CUT_PACKED_SNOW_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.PACKED_SNOW_TILES);
+                        entries.accept(ChiseledBlocks.PACKED_SNOW_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.PACKED_SNOW_TILE_SLAB);
+
+                        entries.accept(ChiseledBlocks.TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.WHITE_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.GRAY_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.BLACK_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.BROWN_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.RED_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.RED_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.RED_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.LIME_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.LIME_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.LIME_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.GREEN_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.CYAN_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.BLUE_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.PINK_TERRACOTTA_BRICKS);
+                        entries.accept(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL);
                     }).build());
 
     public static void init() {
@@ -417,18 +509,129 @@ public class ChiseledCreativeModeTabs {
                     ChiseledBlocks.RED_SANDSTONE_TILE_SLAB,
                     ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
 
-            //entries.insertAfter(Blocks.POLISHED_BLACKSTONE_BRICK_WALL, Blocks.QUARTZ_BLOCK,
-            //        Blocks.QUARTZ_STAIRS,
-            //        Blocks.QUARTZ_SLAB,
-            //        ChiseledBlocks.QUARTZ_WALL,
-            //        Blocks.CHISELED_QUARTZ_BLOCK,
-            //        Blocks.QUARTZ_PILLAR,
-            //        Blocks.SMOOTH_QUARTZ,
-            //        Blocks.SMOOTH_QUARTZ_STAIRS,
-            //        Blocks.SMOOTH_QUARTZ_SLAB,
-            //        ChiseledBlocks.SMOOTH_QUARTZ_WALL,
-            //        Blocks.QUARTZ_BRICKS
-            //        );
+            entries.insertAfter(Blocks.PRISMARINE_BRICK_SLAB, ChiseledBlocks.PRISMARINE_BRICK_WALL,
+                    ChiseledBlocks.CUT_PRISMARINE_BRICKS,
+                    ChiseledBlocks.CUT_PRISMARINE_BRICK_STAIRS,
+                    ChiseledBlocks.CUT_PRISMARINE_BRICK_SLAB);
+            entries.insertAfter(Blocks.DARK_PRISMARINE_SLAB, ChiseledBlocks.DARK_PRISMARINE_WALL,
+                    ChiseledBlocks.DARK_PRISMARINE_BRICKS,
+                    ChiseledBlocks.DARK_PRISMARINE_BRICK_STAIRS,
+                    ChiseledBlocks.DARK_PRISMARINE_BRICK_SLAB,
+                    ChiseledBlocks.DARK_PRISMARINE_BRICK_WALL,
+                    ChiseledBlocks.CUT_DARK_PRISMARINE_BRICKS,
+                    ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS,
+                    ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB,
+                    Blocks.SNOW_BLOCK,
+                    ChiseledBlocks.PACKED_SNOW_BRICKS,
+                    ChiseledBlocks.PACKED_SNOW_BRICK_STAIRS,
+                    ChiseledBlocks.PACKED_SNOW_BRICK_SLAB,
+                    ChiseledBlocks.CUT_PACKED_SNOW_BRICKS,
+                    ChiseledBlocks.CUT_PACKED_SNOW_BRICK_STAIRS,
+                    ChiseledBlocks.CUT_PACKED_SNOW_BRICK_SLAB,
+                    ChiseledBlocks.PACKED_SNOW_TILES,
+                    ChiseledBlocks.PACKED_SNOW_TILE_STAIRS,
+                    ChiseledBlocks.PACKED_SNOW_TILE_SLAB);
+
+            entries.insertAfter(Blocks.NETHERITE_BLOCK, Blocks.QUARTZ_BLOCK,
+                    Blocks.QUARTZ_STAIRS,
+                    Blocks.QUARTZ_SLAB,
+                    //ChiseledBlocks.QUARTZ_WALL,
+                    Blocks.CHISELED_QUARTZ_BLOCK,
+                    Blocks.QUARTZ_PILLAR,
+                    Blocks.SMOOTH_QUARTZ,
+                    Blocks.SMOOTH_QUARTZ_STAIRS,
+                    Blocks.SMOOTH_QUARTZ_SLAB,
+                    //ChiseledBlocks.SMOOTH_QUARTZ_WALL,
+                    Blocks.QUARTZ_BRICKS
+                    );
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {
+            entries.insertAfter(Blocks.TERRACOTTA,
+                    ChiseledBlocks.TERRACOTTA_BRICKS,
+                    ChiseledBlocks.TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.WHITE_TERRACOTTA,
+                    ChiseledBlocks.WHITE_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.WHITE_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.WHITE_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.LIGHT_GRAY_TERRACOTTA,
+                    ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.GRAY_TERRACOTTA,
+                    ChiseledBlocks.GRAY_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.GRAY_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.GRAY_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.BLACK_TERRACOTTA,
+                    ChiseledBlocks.BLACK_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.BLACK_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.BLACK_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.BROWN_TERRACOTTA,
+                    ChiseledBlocks.BROWN_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.BROWN_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.BROWN_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.RED_TERRACOTTA,
+                    ChiseledBlocks.RED_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.RED_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.RED_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.ORANGE_TERRACOTTA,
+                    ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.YELLOW_TERRACOTTA,
+                    ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.LIME_TERRACOTTA,
+                    ChiseledBlocks.LIME_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.LIME_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.LIME_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.GREEN_TERRACOTTA,
+                    ChiseledBlocks.GREEN_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.GREEN_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.GREEN_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.CYAN_TERRACOTTA,
+                    ChiseledBlocks.CYAN_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.CYAN_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.CYAN_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.LIGHT_BLUE_TERRACOTTA,
+                    ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.BLUE_TERRACOTTA,
+                    ChiseledBlocks.BLUE_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.PURPLE_TERRACOTTA,
+                    ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.MAGENTA_TERRACOTTA,
+                    ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL);
+            entries.insertAfter(Blocks.PINK_TERRACOTTA,
+                    ChiseledBlocks.PINK_TERRACOTTA_BRICKS,
+                    ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS,
+                    ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB,
+                    ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL);
         });
     }
 }

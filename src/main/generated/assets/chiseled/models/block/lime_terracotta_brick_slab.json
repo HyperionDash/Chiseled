@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "chiseled:block/lime_terracotta_bricks",
+    "side": "chiseled:block/lime_terracotta_bricks",
+    "top": "chiseled:block/lime_terracotta_bricks"
+  }
+}

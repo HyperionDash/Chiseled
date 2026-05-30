@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:black_terracotta_bricks",
+  "result": {
+    "id": "chiseled:black_terracotta_brick_stairs"
+  }
+}

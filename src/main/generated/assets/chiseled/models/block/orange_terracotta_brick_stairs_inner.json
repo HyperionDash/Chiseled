@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "chiseled:block/orange_terracotta_bricks",
+    "side": "chiseled:block/orange_terracotta_bricks",
+    "top": "chiseled:block/orange_terracotta_bricks"
+  }
+}

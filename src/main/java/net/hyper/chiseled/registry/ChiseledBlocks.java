@@ -583,7 +583,285 @@ public class ChiseledBlocks {
     public static final Block RED_SANDSTONE_TILE_WALL = registerBlock("red_sandstone_tile_wall",
             properties -> new WallBlock(properties
                     .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+
+    public static final Block PRISMARINE_BRICK_WALL = registerBlock("prismarine_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block CUT_PRISMARINE_BRICKS = registerBlock("cut_prismarine_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block CUT_PRISMARINE_BRICK_STAIRS = registerBlock("cut_prismarine_brick_stairs",
+            properties -> new StairBlock(CUT_PRISMARINE_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block CUT_PRISMARINE_BRICK_SLAB = registerBlock("cut_prismarine_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block DARK_PRISMARINE_WALL = registerBlock("dark_prismarine_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block DARK_PRISMARINE_BRICKS = registerBlock("dark_prismarine_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block DARK_PRISMARINE_BRICK_STAIRS = registerBlock("dark_prismarine_brick_stairs",
+            properties -> new StairBlock(DARK_PRISMARINE_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block DARK_PRISMARINE_BRICK_SLAB = registerBlock("dark_prismarine_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block DARK_PRISMARINE_BRICK_WALL = registerBlock("dark_prismarine_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block CUT_DARK_PRISMARINE_BRICKS = registerBlock("cut_dark_prismarine_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block CUT_DARK_PRISMARINE_BRICK_STAIRS = registerBlock("cut_dark_prismarine_brick_stairs",
+            properties -> new StairBlock(CUT_DARK_PRISMARINE_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final Block CUT_DARK_PRISMARINE_BRICK_SLAB = registerBlock("cut_dark_prismarine_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+
+    public static final Block PACKED_SNOW_BRICKS = registerBlock("packed_snow_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
+    public static final Block PACKED_SNOW_BRICK_STAIRS = registerBlock("packed_snow_brick_stairs",
+            properties -> new StairBlock(PACKED_SNOW_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
+    public static final Block PACKED_SNOW_BRICK_SLAB = registerBlock("packed_snow_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
+    public static final Block CUT_PACKED_SNOW_BRICKS = registerBlock("cut_packed_snow_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
+    public static final Block CUT_PACKED_SNOW_BRICK_STAIRS = registerBlock("cut_packed_snow_brick_stairs",
+            properties -> new StairBlock(CUT_PACKED_SNOW_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
+    public static final Block CUT_PACKED_SNOW_BRICK_SLAB = registerBlock("cut_packed_snow_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
+    public static final Block PACKED_SNOW_TILES = registerBlock("packed_snow_tiles",
+            properties -> new Block(properties
+                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
+    public static final Block PACKED_SNOW_TILE_STAIRS = registerBlock("packed_snow_tile_stairs",
+            properties -> new StairBlock(PACKED_SNOW_TILES.defaultBlockState(),properties
+                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
+    public static final Block PACKED_SNOW_TILE_SLAB = registerBlock("packed_snow_tile_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
+
+    public static final Block TERRACOTTA_BRICKS = registerBlock("terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block TERRACOTTA_BRICK_STAIRS = registerBlock("terracotta_brick_stairs",
+            properties -> new StairBlock(TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block TERRACOTTA_BRICK_SLAB = registerBlock("terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block TERRACOTTA_BRICK_WALL = registerBlock("terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block WHITE_TERRACOTTA_BRICKS = registerBlock("white_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block WHITE_TERRACOTTA_BRICK_STAIRS = registerBlock("white_terracotta_brick_stairs",
+            properties -> new StairBlock(WHITE_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block WHITE_TERRACOTTA_BRICK_SLAB = registerBlock("white_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block WHITE_TERRACOTTA_BRICK_WALL = registerBlock("white_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIGHT_GRAY_TERRACOTTA_BRICKS = registerBlock("light_gray_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS = registerBlock("light_gray_terracotta_brick_stairs",
+            properties -> new StairBlock(LIGHT_GRAY_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIGHT_GRAY_TERRACOTTA_BRICK_SLAB = registerBlock("light_gray_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIGHT_GRAY_TERRACOTTA_BRICK_WALL = registerBlock("light_gray_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block GRAY_TERRACOTTA_BRICKS = registerBlock("gray_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block GRAY_TERRACOTTA_BRICK_STAIRS = registerBlock("gray_terracotta_brick_stairs",
+            properties -> new StairBlock(GRAY_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block GRAY_TERRACOTTA_BRICK_SLAB = registerBlock("gray_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block GRAY_TERRACOTTA_BRICK_WALL = registerBlock("gray_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BLACK_TERRACOTTA_BRICKS = registerBlock("black_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BLACK_TERRACOTTA_BRICK_STAIRS = registerBlock("black_terracotta_brick_stairs",
+            properties -> new StairBlock(BLACK_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BLACK_TERRACOTTA_BRICK_SLAB = registerBlock("black_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BLACK_TERRACOTTA_BRICK_WALL = registerBlock("black_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BROWN_TERRACOTTA_BRICKS = registerBlock("brown_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BROWN_TERRACOTTA_BRICK_STAIRS = registerBlock("brown_terracotta_brick_stairs",
+            properties -> new StairBlock(BROWN_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BROWN_TERRACOTTA_BRICK_SLAB = registerBlock("brown_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BROWN_TERRACOTTA_BRICK_WALL = registerBlock("brown_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block RED_TERRACOTTA_BRICKS = registerBlock("red_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block RED_TERRACOTTA_BRICK_STAIRS = registerBlock("red_terracotta_brick_stairs",
+            properties -> new StairBlock(RED_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block RED_TERRACOTTA_BRICK_SLAB = registerBlock("red_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block RED_TERRACOTTA_BRICK_WALL = registerBlock("red_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block ORANGE_TERRACOTTA_BRICKS = registerBlock("orange_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block ORANGE_TERRACOTTA_BRICK_STAIRS = registerBlock("orange_terracotta_brick_stairs",
+            properties -> new StairBlock(ORANGE_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block ORANGE_TERRACOTTA_BRICK_SLAB = registerBlock("orange_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block ORANGE_TERRACOTTA_BRICK_WALL = registerBlock("orange_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block YELLOW_TERRACOTTA_BRICKS = registerBlock("yellow_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block YELLOW_TERRACOTTA_BRICK_STAIRS = registerBlock("yellow_terracotta_brick_stairs",
+            properties -> new StairBlock(YELLOW_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block YELLOW_TERRACOTTA_BRICK_SLAB = registerBlock("yellow_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block YELLOW_TERRACOTTA_BRICK_WALL = registerBlock("yellow_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIME_TERRACOTTA_BRICKS = registerBlock("lime_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIME_TERRACOTTA_BRICK_STAIRS = registerBlock("lime_terracotta_brick_stairs",
+            properties -> new StairBlock(LIME_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIME_TERRACOTTA_BRICK_SLAB = registerBlock("lime_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIME_TERRACOTTA_BRICK_WALL = registerBlock("lime_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block GREEN_TERRACOTTA_BRICKS = registerBlock("green_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block GREEN_TERRACOTTA_BRICK_STAIRS = registerBlock("green_terracotta_brick_stairs",
+            properties -> new StairBlock(GREEN_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block GREEN_TERRACOTTA_BRICK_SLAB = registerBlock("green_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block GREEN_TERRACOTTA_BRICK_WALL = registerBlock("green_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block CYAN_TERRACOTTA_BRICKS = registerBlock("cyan_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_CYAN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block CYAN_TERRACOTTA_BRICK_STAIRS = registerBlock("cyan_terracotta_brick_stairs",
+            properties -> new StairBlock(CYAN_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_CYAN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block CYAN_TERRACOTTA_BRICK_SLAB = registerBlock("cyan_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_CYAN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block CYAN_TERRACOTTA_BRICK_WALL = registerBlock("cyan_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_CYAN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIGHT_BLUE_TERRACOTTA_BRICKS = registerBlock("light_blue_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS = registerBlock("light_blue_terracotta_brick_stairs",
+            properties -> new StairBlock(LIGHT_BLUE_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIGHT_BLUE_TERRACOTTA_BRICK_SLAB = registerBlock("light_blue_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block LIGHT_BLUE_TERRACOTTA_BRICK_WALL = registerBlock("light_blue_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BLUE_TERRACOTTA_BRICKS = registerBlock("blue_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BLUE_TERRACOTTA_BRICK_STAIRS = registerBlock("blue_terracotta_brick_stairs",
+            properties -> new StairBlock(BLUE_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BLUE_TERRACOTTA_BRICK_SLAB = registerBlock("blue_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block BLUE_TERRACOTTA_BRICK_WALL = registerBlock("blue_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block PURPLE_TERRACOTTA_BRICKS = registerBlock("purple_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_PURPLE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block PURPLE_TERRACOTTA_BRICK_STAIRS = registerBlock("purple_terracotta_brick_stairs",
+            properties -> new StairBlock(PURPLE_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_PURPLE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block PURPLE_TERRACOTTA_BRICK_SLAB = registerBlock("purple_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_PURPLE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block PURPLE_TERRACOTTA_BRICK_WALL = registerBlock("purple_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_PURPLE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block MAGENTA_TERRACOTTA_BRICKS = registerBlock("magenta_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_MAGENTA).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block MAGENTA_TERRACOTTA_BRICK_STAIRS = registerBlock("magenta_terracotta_brick_stairs",
+            properties -> new StairBlock(MAGENTA_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_MAGENTA).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block MAGENTA_TERRACOTTA_BRICK_SLAB = registerBlock("magenta_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_MAGENTA).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block MAGENTA_TERRACOTTA_BRICK_WALL = registerBlock("magenta_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_MAGENTA).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block PINK_TERRACOTTA_BRICKS = registerBlock("pink_terracotta_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.TERRACOTTA_PINK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block PINK_TERRACOTTA_BRICK_STAIRS = registerBlock("pink_terracotta_brick_stairs",
+            properties -> new StairBlock(PINK_TERRACOTTA_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.TERRACOTTA_PINK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block PINK_TERRACOTTA_BRICK_SLAB = registerBlock("pink_terracotta_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_PINK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
+    public static final Block PINK_TERRACOTTA_BRICK_WALL = registerBlock("pink_terracotta_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.TERRACOTTA_PINK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
     
+    public static final Block NETHERITE_STAIRS = registerBlockWithoutBlockItem("netherite_stairs",
+            properties -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops().strength(50.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
+
+    private static Block registerBlockWithoutBlockItem(String name, Function<BlockBehaviour.Properties, Block> function) {
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(Chiseled.MOD_ID, name), function.apply(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Chiseled.MOD_ID, name)))));
+    }
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Chiseled.MOD_ID, name))));
         registerBlockItem(name, toRegister);

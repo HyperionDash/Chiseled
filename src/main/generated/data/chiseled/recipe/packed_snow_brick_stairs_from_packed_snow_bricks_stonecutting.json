@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:packed_snow_bricks",
+  "result": {
+    "id": "chiseled:packed_snow_brick_stairs"
+  }
+}

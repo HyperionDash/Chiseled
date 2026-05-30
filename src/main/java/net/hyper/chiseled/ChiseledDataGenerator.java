@@ -15,5 +15,6 @@ public class ChiseledDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ChiseledModelGen::new);
 		pack.addProvider(ChiseledItemTagGen::new);
 		pack.addProvider(ChiseledBlockTagGen::new);
+		pack.addProvider(ChiseledAdvancementGen::new);
 	}
 }

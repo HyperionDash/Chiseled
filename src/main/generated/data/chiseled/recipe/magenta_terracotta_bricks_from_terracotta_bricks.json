@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "chiseled:terracotta_bricks",
+    "0": "minecraft:magenta_dye"
+  },
+  "pattern": [
+    "###",
+    "#0#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "chiseled:magenta_terracotta_bricks"
+  }
+}

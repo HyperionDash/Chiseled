@@ -342,6 +342,34 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.END_STONE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.END_STONE_TILE_SLAB));
         dropSelf(ChiseledBlocks.END_STONE_TILE_WALL);
 
+        dropSelf(ChiseledBlocks.QUARTZ_WALL);
+        dropSelf(ChiseledBlocks.SMOOTH_QUARTZ_WALL);
+        dropSelf(ChiseledBlocks.QUARTZ_BRICK_STAIRS);
+        add(ChiseledBlocks.QUARTZ_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.QUARTZ_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.QUARTZ_BRICK_WALL);
+        dropSelf(ChiseledBlocks.CUT_QUARTZ_BRICKS);
+        dropSelf(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS);
+        add(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.QUARTZ_TILES);
+        dropSelf(ChiseledBlocks.QUARTZ_TILE_STAIRS);
+        add(ChiseledBlocks.QUARTZ_TILE_SLAB, createSlabItemTable(ChiseledBlocks.QUARTZ_TILE_SLAB));
+        dropSelf(ChiseledBlocks.QUARTZ_TILE_WALL);
+
+        dropSelf(ChiseledBlocks.AMETHYST_STAIRS);
+        add(ChiseledBlocks.AMETHYST_SLAB, createSlabItemTable(ChiseledBlocks.AMETHYST_SLAB));
+        dropSelf(ChiseledBlocks.AMETHYST_WALL);
+        dropSelf(ChiseledBlocks.AMETHYST_BRICKS);
+        dropSelf(ChiseledBlocks.AMETHYST_BRICK_STAIRS);
+        add(ChiseledBlocks.AMETHYST_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.AMETHYST_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.AMETHYST_BRICK_WALL);
+        dropSelf(ChiseledBlocks.CUT_AMETHYST_BRICKS);
+        dropSelf(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS);
+        add(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.AMETHYST_TILES);
+        dropSelf(ChiseledBlocks.AMETHYST_TILE_STAIRS);
+        add(ChiseledBlocks.AMETHYST_TILE_SLAB, createSlabItemTable(ChiseledBlocks.AMETHYST_TILE_SLAB));
+        dropSelf(ChiseledBlocks.AMETHYST_TILE_WALL);
+
         dropSelf(ChiseledBlocks.NETHERITE_STAIRS);
     }
 }

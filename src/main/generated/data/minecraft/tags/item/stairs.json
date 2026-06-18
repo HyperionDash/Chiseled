@@ -78,6 +78,13 @@
     "chiseled:end_stone_stairs",
     "chiseled:polished_end_stone_stairs",
     "chiseled:cut_end_stone_brick_stairs",
-    "chiseled:end_stone_tile_stairs"
+    "chiseled:end_stone_tile_stairs",
+    "chiseled:quartz_brick_stairs",
+    "chiseled:cut_quartz_brick_stairs",
+    "chiseled:quartz_tile_stairs",
+    "chiseled:amethyst_stairs",
+    "chiseled:amethyst_brick_stairs",
+    "chiseled:amethyst_tile_stairs",
+    "chiseled:cut_amethyst_brick_stairs"
   ]
 }

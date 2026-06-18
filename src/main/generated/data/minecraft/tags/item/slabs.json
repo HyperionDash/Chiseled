@@ -76,6 +76,13 @@
     "chiseled:end_stone_slab",
     "chiseled:polished_end_stone_slab",
     "chiseled:cut_end_stone_brick_slab",
-    "chiseled:end_stone_tile_slab"
+    "chiseled:end_stone_tile_slab",
+    "chiseled:quartz_brick_slab",
+    "chiseled:cut_quartz_brick_slab",
+    "chiseled:quartz_tile_slab",
+    "chiseled:amethyst_slab",
+    "chiseled:amethyst_brick_slab",
+    "chiseled:cut_amethyst_brick_slab",
+    "chiseled:amethyst_tile_slab"
   ]
 }

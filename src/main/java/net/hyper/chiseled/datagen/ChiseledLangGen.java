@@ -341,6 +341,34 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.END_STONE_TILE_SLAB, "End Stone Tile Slab");
         translationBuilder.add(ChiseledBlocks.END_STONE_TILE_WALL, "End Stone Tile Wall");
 
+        translationBuilder.add(ChiseledBlocks.QUARTZ_WALL, "Quartz Wall");
+        translationBuilder.add(ChiseledBlocks.SMOOTH_QUARTZ_WALL, "Smooth Quartz Wall");
+        translationBuilder.add(ChiseledBlocks.QUARTZ_BRICK_STAIRS, "Quartz Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.QUARTZ_BRICK_SLAB, "Quartz Brick Slab");
+        translationBuilder.add(ChiseledBlocks.QUARTZ_BRICK_WALL, "Quartz Brick Wall");
+        translationBuilder.add(ChiseledBlocks.CUT_QUARTZ_BRICKS, "Cut Quartz Bricks");
+        translationBuilder.add(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS, "Cut Quartz Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB, "Cut Quartz Brick Slab");
+        translationBuilder.add(ChiseledBlocks.QUARTZ_TILES, "Quartz Tiles");
+        translationBuilder.add(ChiseledBlocks.QUARTZ_TILE_STAIRS, "Quartz Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.QUARTZ_TILE_SLAB, "Quartz Tile Slab");
+        translationBuilder.add(ChiseledBlocks.QUARTZ_TILE_WALL, "Quartz Tile Wall");
+
+        translationBuilder.add(ChiseledBlocks.AMETHYST_STAIRS, "Amethyst Stairs");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_SLAB, "Amethyst Slab");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_WALL, "Amethyst Wall");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_BRICKS, "Amethyst Bricks");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_BRICK_STAIRS, "Amethyst Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_BRICK_SLAB, "Amethyst Brick Slab");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_BRICK_WALL, "Amethyst Brick Wall");
+        translationBuilder.add(ChiseledBlocks.CUT_AMETHYST_BRICKS, "Cut Amethyst Bricks");
+        translationBuilder.add(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS, "Cut Amethyst Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB, "Cut Amethyst Brick Slab");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_TILES, "Amethyst Tiles");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_TILE_STAIRS, "Amethyst Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_TILE_SLAB, "Amethyst Tile Slab");
+        translationBuilder.add(ChiseledBlocks.AMETHYST_TILE_WALL, "Amethyst Tile Wall");
+
         translationBuilder.add(ChiseledBlocks.NETHERITE_STAIRS, "Netherite Stairs");
 
         translationBuilder.add("advancements.chiseled.swaggiest_stairs_ever.title", "Swaggiest Stairs Ever");

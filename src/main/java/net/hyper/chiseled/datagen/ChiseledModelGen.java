@@ -397,6 +397,32 @@ public class ChiseledModelGen extends FabricModelProvider {
         endStoneTilePool.stairs(ChiseledBlocks.END_STONE_TILE_STAIRS);
         endStoneTilePool.slab(ChiseledBlocks.END_STONE_TILE_SLAB);
         endStoneTilePool.wall(ChiseledBlocks.END_STONE_TILE_WALL);
+
+        createStairs(ChiseledBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS, blockModelGenerators);
+        createSlab(ChiseledBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS, blockModelGenerators);
+        createWall(ChiseledBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS, blockModelGenerators);
+        BlockModelGenerators.BlockFamilyProvider cutQuartzBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_QUARTZ_BRICKS);
+        cutQuartzBrickPool.stairs(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS);
+        cutQuartzBrickPool.slab(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider quartzTilePool = blockModelGenerators.family(ChiseledBlocks.QUARTZ_TILES);
+        quartzTilePool.stairs(ChiseledBlocks.QUARTZ_TILE_STAIRS);
+        quartzTilePool.slab(ChiseledBlocks.QUARTZ_TILE_SLAB);
+        quartzTilePool.wall(ChiseledBlocks.QUARTZ_TILE_WALL);
+
+        createStairs(ChiseledBlocks.AMETHYST_STAIRS, Blocks.AMETHYST_BLOCK, blockModelGenerators);
+        createSlab(ChiseledBlocks.AMETHYST_SLAB, Blocks.AMETHYST_BLOCK, blockModelGenerators);
+        createWall(ChiseledBlocks.AMETHYST_WALL, Blocks.AMETHYST_BLOCK, blockModelGenerators);
+        BlockModelGenerators.BlockFamilyProvider amethystBrickPool = blockModelGenerators.family(ChiseledBlocks.AMETHYST_BRICKS);
+        amethystBrickPool.stairs(ChiseledBlocks.AMETHYST_BRICK_STAIRS);
+        amethystBrickPool.slab(ChiseledBlocks.AMETHYST_BRICK_SLAB);
+        amethystBrickPool.wall(ChiseledBlocks.AMETHYST_BRICK_WALL);
+        BlockModelGenerators.BlockFamilyProvider cutAmethystBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_AMETHYST_BRICKS);
+        cutAmethystBrickPool.stairs(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS);
+        cutAmethystBrickPool.slab(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider amethystTilePool = blockModelGenerators.family(ChiseledBlocks.AMETHYST_TILES);
+        amethystTilePool.stairs(ChiseledBlocks.AMETHYST_TILE_STAIRS);
+        amethystTilePool.slab(ChiseledBlocks.AMETHYST_TILE_SLAB);
+        amethystTilePool.wall(ChiseledBlocks.AMETHYST_TILE_WALL);
     }
 
     @Override

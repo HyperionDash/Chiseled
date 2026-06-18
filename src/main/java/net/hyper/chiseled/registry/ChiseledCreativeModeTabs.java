@@ -10,7 +10,9 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 
 public class ChiseledCreativeModeTabs {
     public static final CreativeModeTab CHISELED = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
@@ -277,7 +279,35 @@ public class ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlocks.END_STONE_TILE_STAIRS);
                         entries.accept(ChiseledBlocks.END_STONE_TILE_SLAB);
                         entries.accept(ChiseledBlocks.END_STONE_TILE_WALL);
-                        
+
+                        entries.accept(ChiseledBlocks.QUARTZ_WALL);
+                        entries.accept(ChiseledBlocks.SMOOTH_QUARTZ_WALL);
+                        entries.accept(ChiseledBlocks.QUARTZ_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.QUARTZ_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.QUARTZ_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.CUT_QUARTZ_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.QUARTZ_TILES);
+                        entries.accept(ChiseledBlocks.QUARTZ_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.QUARTZ_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.QUARTZ_TILE_WALL);
+
+                        entries.accept(ChiseledBlocks.AMETHYST_STAIRS);
+                        entries.accept(ChiseledBlocks.AMETHYST_SLAB);
+                        entries.accept(ChiseledBlocks.AMETHYST_WALL);
+                        entries.accept(ChiseledBlocks.AMETHYST_BRICKS);
+                        entries.accept(ChiseledBlocks.AMETHYST_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.AMETHYST_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.AMETHYST_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.CUT_AMETHYST_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.AMETHYST_TILES);
+                        entries.accept(ChiseledBlocks.AMETHYST_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.AMETHYST_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.AMETHYST_TILE_WALL);
+
                         entries.accept(ChiseledBlocks.TERRACOTTA_BRICKS);
                         entries.accept(ChiseledBlocks.TERRACOTTA_BRICK_STAIRS);
                         entries.accept(ChiseledBlocks.TERRACOTTA_BRICK_SLAB);
@@ -617,14 +647,39 @@ public class ChiseledCreativeModeTabs {
             entries.insertAfter(Blocks.NETHERITE_BLOCK, Blocks.QUARTZ_BLOCK,
                     Blocks.QUARTZ_STAIRS,
                     Blocks.QUARTZ_SLAB,
-                    //ChiseledBlocks.QUARTZ_WALL,
+                    ChiseledBlocks.QUARTZ_WALL,
                     Blocks.CHISELED_QUARTZ_BLOCK,
                     Blocks.QUARTZ_PILLAR,
                     Blocks.SMOOTH_QUARTZ,
                     Blocks.SMOOTH_QUARTZ_STAIRS,
                     Blocks.SMOOTH_QUARTZ_SLAB,
-                    //ChiseledBlocks.SMOOTH_QUARTZ_WALL,
-                    Blocks.QUARTZ_BRICKS);
+                    ChiseledBlocks.SMOOTH_QUARTZ_WALL,
+                    Blocks.QUARTZ_BRICKS,
+                    ChiseledBlocks.QUARTZ_BRICK_STAIRS,
+                    ChiseledBlocks.QUARTZ_BRICK_SLAB,
+                    ChiseledBlocks.QUARTZ_BRICK_WALL,
+                    ChiseledBlocks.CUT_QUARTZ_BRICKS,
+                    ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS,
+                    ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB,
+                    ChiseledBlocks.QUARTZ_TILES,
+                    ChiseledBlocks.QUARTZ_TILE_STAIRS,
+                    ChiseledBlocks.QUARTZ_TILE_SLAB,
+                    ChiseledBlocks.QUARTZ_TILE_WALL);
+
+            entries.insertAfter(Blocks.AMETHYST_BLOCK, ChiseledBlocks.AMETHYST_STAIRS,
+                    ChiseledBlocks.AMETHYST_SLAB,
+                    ChiseledBlocks.AMETHYST_WALL,
+                    ChiseledBlocks.AMETHYST_BRICKS,
+                    ChiseledBlocks.AMETHYST_BRICK_STAIRS,
+                    ChiseledBlocks.AMETHYST_BRICK_SLAB,
+                    ChiseledBlocks.AMETHYST_BRICK_WALL,
+                    ChiseledBlocks.CUT_AMETHYST_BRICKS,
+                    ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS,
+                    ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB,
+                    ChiseledBlocks.AMETHYST_TILES,
+                    ChiseledBlocks.AMETHYST_TILE_STAIRS,
+                    ChiseledBlocks.AMETHYST_TILE_SLAB,
+                    ChiseledBlocks.AMETHYST_TILE_WALL);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {

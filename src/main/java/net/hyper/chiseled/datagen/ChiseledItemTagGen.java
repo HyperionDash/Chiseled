@@ -93,7 +93,14 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlocks.END_STONE_STAIRS.asItem())
                 .add(ChiseledBlocks.POLISHED_END_STONE_STAIRS.asItem())
                 .add(ChiseledBlocks.CUT_END_STONE_BRICK_STAIRS.asItem())
-                .add(ChiseledBlocks.END_STONE_TILE_STAIRS.asItem());
+                .add(ChiseledBlocks.END_STONE_TILE_STAIRS.asItem())
+                .add(ChiseledBlocks.QUARTZ_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.QUARTZ_TILE_STAIRS.asItem())
+                .add(ChiseledBlocks.AMETHYST_STAIRS.asItem())
+                .add(ChiseledBlocks.AMETHYST_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.AMETHYST_TILE_STAIRS.asItem())
+                .add(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS.asItem());
 
         valueLookupBuilder(ItemTags.SLABS)
                 .add(ChiseledBlocks.POLISHED_STONE_SLAB.asItem())
@@ -172,7 +179,14 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlocks.END_STONE_SLAB.asItem())
                 .add(ChiseledBlocks.POLISHED_END_STONE_SLAB.asItem())
                 .add(ChiseledBlocks.CUT_END_STONE_BRICK_SLAB.asItem())
-                .add(ChiseledBlocks.END_STONE_TILE_SLAB.asItem());
+                .add(ChiseledBlocks.END_STONE_TILE_SLAB.asItem())
+                .add(ChiseledBlocks.QUARTZ_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.QUARTZ_TILE_SLAB.asItem())
+                .add(ChiseledBlocks.AMETHYST_SLAB.asItem())
+                .add(ChiseledBlocks.AMETHYST_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.AMETHYST_TILE_SLAB.asItem());
 
         valueLookupBuilder(ItemTags.WALLS)
                 .add(ChiseledBlocks.STONE_WALL.asItem())
@@ -238,7 +252,14 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL.asItem())
                 .add(ChiseledBlocks.END_STONE_WALL.asItem())
                 .add(ChiseledBlocks.POLISHED_END_STONE_WALL.asItem())
-                .add(ChiseledBlocks.END_STONE_TILE_WALL.asItem());
+                .add(ChiseledBlocks.END_STONE_TILE_WALL.asItem())
+                .add(ChiseledBlocks.QUARTZ_WALL.asItem())
+                .add(ChiseledBlocks.SMOOTH_QUARTZ_WALL.asItem())
+                .add(ChiseledBlocks.QUARTZ_BRICK_WALL.asItem())
+                .add(ChiseledBlocks.QUARTZ_TILE_WALL.asItem())
+                .add(ChiseledBlocks.AMETHYST_WALL.asItem())
+                .add(ChiseledBlocks.AMETHYST_BRICK_WALL.asItem())
+                .add(ChiseledBlocks.AMETHYST_TILE_WALL.asItem());
 
         valueLookupBuilder(ItemTags.FENCES)
                 .add(ChiseledBlocks.RED_NETHER_BRICK_FENCE.asItem());

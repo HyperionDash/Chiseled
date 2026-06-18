@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:quartz_tiles",
+  "result": {
+    "id": "chiseled:quartz_tile_wall"
+  }
+}

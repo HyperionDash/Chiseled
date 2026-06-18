@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/quartz_tile_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/quartz_tiles"
+    },
+    "type=top": {
+      "model": "chiseled:block/quartz_tile_slab_top"
+    }
+  }
+}

@@ -315,7 +315,30 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.CRACKED_END_STONE_TILES)
                 .add(ChiseledBlocks.END_STONE_TILE_STAIRS)
                 .add(ChiseledBlocks.END_STONE_TILE_SLAB)
-                .add(ChiseledBlocks.END_STONE_TILE_WALL);
+                .add(ChiseledBlocks.END_STONE_TILE_WALL)
+                .add(ChiseledBlocks.QUARTZ_WALL)
+                .add(ChiseledBlocks.SMOOTH_QUARTZ_WALL)
+                .add(ChiseledBlocks.QUARTZ_BRICK_STAIRS)
+                .add(ChiseledBlocks.QUARTZ_BRICK_SLAB)
+                .add(ChiseledBlocks.QUARTZ_BRICK_WALL)
+                .add(ChiseledBlocks.CUT_QUARTZ_BRICKS)
+                .add(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS)
+                .add(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB)
+                .add(ChiseledBlocks.QUARTZ_TILES)
+                .add(ChiseledBlocks.QUARTZ_TILE_STAIRS)
+                .add(ChiseledBlocks.QUARTZ_TILE_SLAB)
+                .add(ChiseledBlocks.QUARTZ_TILE_WALL)
+                .add(ChiseledBlocks.AMETHYST_BRICKS)
+                .add(ChiseledBlocks.AMETHYST_BRICK_STAIRS)
+                .add(ChiseledBlocks.AMETHYST_BRICK_SLAB)
+                .add(ChiseledBlocks.AMETHYST_BRICK_WALL)
+                .add(ChiseledBlocks.CUT_AMETHYST_BRICKS)
+                .add(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS)
+                .add(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB)
+                .add(ChiseledBlocks.AMETHYST_TILES)
+                .add(ChiseledBlocks.AMETHYST_TILE_STAIRS)
+                .add(ChiseledBlocks.AMETHYST_TILE_SLAB)
+                .add(ChiseledBlocks.AMETHYST_TILE_WALL);
 
         valueLookupBuilder(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ChiseledBlocks.PACKED_SNOW_BRICKS)
@@ -419,7 +442,14 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.END_STONE_STAIRS)
                 .add(ChiseledBlocks.POLISHED_END_STONE_STAIRS)
                 .add(ChiseledBlocks.CUT_END_STONE_BRICK_STAIRS)
-                .add(ChiseledBlocks.END_STONE_TILE_STAIRS);
+                .add(ChiseledBlocks.END_STONE_TILE_STAIRS)
+                .add(ChiseledBlocks.QUARTZ_BRICK_STAIRS)
+                .add(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS)
+                .add(ChiseledBlocks.QUARTZ_TILE_STAIRS)
+                .add(ChiseledBlocks.AMETHYST_STAIRS)
+                .add(ChiseledBlocks.AMETHYST_BRICK_STAIRS)
+                .add(ChiseledBlocks.AMETHYST_TILE_STAIRS)
+                .add(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS);
 
         valueLookupBuilder(BlockTags.SLABS)
                 .add(ChiseledBlocks.POLISHED_STONE_SLAB)
@@ -498,7 +528,14 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.END_STONE_SLAB)
                 .add(ChiseledBlocks.POLISHED_END_STONE_SLAB)
                 .add(ChiseledBlocks.CUT_END_STONE_BRICK_SLAB)
-                .add(ChiseledBlocks.END_STONE_TILE_SLAB);
+                .add(ChiseledBlocks.END_STONE_TILE_SLAB)
+                .add(ChiseledBlocks.QUARTZ_BRICK_SLAB)
+                .add(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB)
+                .add(ChiseledBlocks.QUARTZ_TILE_SLAB)
+                .add(ChiseledBlocks.AMETHYST_SLAB)
+                .add(ChiseledBlocks.AMETHYST_BRICK_SLAB)
+                .add(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB)
+                .add(ChiseledBlocks.AMETHYST_TILE_SLAB);
 
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ChiseledBlocks.STONE_WALL)
@@ -564,7 +601,14 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL)
                 .add(ChiseledBlocks.END_STONE_WALL)
                 .add(ChiseledBlocks.POLISHED_END_STONE_WALL)
-                .add(ChiseledBlocks.END_STONE_TILE_WALL);
+                .add(ChiseledBlocks.END_STONE_TILE_WALL)
+                .add(ChiseledBlocks.QUARTZ_WALL)
+                .add(ChiseledBlocks.SMOOTH_QUARTZ_WALL)
+                .add(ChiseledBlocks.QUARTZ_BRICK_WALL)
+                .add(ChiseledBlocks.QUARTZ_TILE_WALL)
+                .add(ChiseledBlocks.AMETHYST_WALL)
+                .add(ChiseledBlocks.AMETHYST_BRICK_WALL)
+                .add(ChiseledBlocks.AMETHYST_TILE_WALL);
 
         valueLookupBuilder(BlockTags.FENCES)
                 .add(ChiseledBlocks.RED_NETHER_BRICK_FENCE);

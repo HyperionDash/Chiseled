@@ -63,6 +63,13 @@
     "chiseled:polished_blackstone_tile_wall",
     "chiseled:end_stone_wall",
     "chiseled:polished_end_stone_wall",
-    "chiseled:end_stone_tile_wall"
+    "chiseled:end_stone_tile_wall",
+    "chiseled:quartz_wall",
+    "chiseled:smooth_quartz_wall",
+    "chiseled:quartz_brick_wall",
+    "chiseled:quartz_tile_wall",
+    "chiseled:amethyst_wall",
+    "chiseled:amethyst_brick_wall",
+    "chiseled:amethyst_tile_wall"
   ]
 }

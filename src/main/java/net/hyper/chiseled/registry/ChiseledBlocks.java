@@ -1,6 +1,7 @@
 package net.hyper.chiseled.registry;
 
 import net.hyper.chiseled.Chiseled;
+import net.hyper.chiseled.block.*;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -963,6 +964,86 @@ public class ChiseledBlocks {
     public static final Block END_STONE_TILE_WALL = registerBlock("end_stone_tile_wall",
             properties -> new WallBlock(properties
                     .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(3.0F, 9.0F)));
+
+    public static final Block QUARTZ_WALL = registerBlock("quartz_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block SMOOTH_QUARTZ_WALL = registerBlock("smooth_quartz_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final Block QUARTZ_BRICK_STAIRS = registerBlock("quartz_brick_stairs",
+            properties -> new StairBlock(Blocks.QUARTZ_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block QUARTZ_BRICK_SLAB = registerBlock("quartz_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block QUARTZ_BRICK_WALL = registerBlock("quartz_brick_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block CUT_QUARTZ_BRICKS = registerBlock("cut_quartz_bricks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block CUT_QUARTZ_BRICK_STAIRS = registerBlock("cut_quartz_brick_stairs",
+            properties -> new StairBlock(CUT_QUARTZ_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block CUT_QUARTZ_BRICK_SLAB = registerBlock("cut_quartz_brick_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block QUARTZ_TILES = registerBlock("quartz_tiles",
+            properties -> new Block(properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block QUARTZ_TILE_STAIRS = registerBlock("quartz_tile_stairs",
+            properties -> new StairBlock(QUARTZ_TILES.defaultBlockState(),properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block QUARTZ_TILE_SLAB = registerBlock("quartz_tile_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+    public static final Block QUARTZ_TILE_WALL = registerBlock("quartz_tile_wall",
+            properties -> new WallBlock(properties
+                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8F)));
+
+    public static final Block AMETHYST_STAIRS = registerBlock("amethyst_stairs",
+            properties -> new AmethystStairBlock(Blocks.AMETHYST_BLOCK.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_SLAB = registerBlock("amethyst_slab",
+            properties -> new AmethystSlabBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_WALL = registerBlock("amethyst_wall",
+            properties -> new AmethystWallBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_BRICKS = registerBlock("amethyst_bricks",
+            properties -> new AmethystBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_BRICK_STAIRS = registerBlock("amethyst_brick_stairs",
+            properties -> new AmethystStairBlock(AMETHYST_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_BRICK_SLAB = registerBlock("amethyst_brick_slab",
+            properties -> new AmethystSlabBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_BRICK_WALL = registerBlock("amethyst_brick_wall",
+            properties -> new AmethystWallBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block CUT_AMETHYST_BRICKS = registerBlock("cut_amethyst_bricks",
+            properties -> new AmethystBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block CUT_AMETHYST_BRICK_STAIRS = registerBlock("cut_amethyst_brick_stairs",
+            properties -> new AmethystStairBlock(CUT_AMETHYST_BRICKS.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block CUT_AMETHYST_BRICK_SLAB = registerBlock("cut_amethyst_brick_slab",
+            properties -> new AmethystSlabBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_TILES = registerBlock("amethyst_tiles",
+            properties -> new AmethystBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_TILE_STAIRS = registerBlock("amethyst_tile_stairs",
+            properties -> new AmethystStairBlock(AMETHYST_TILES.defaultBlockState(),properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_TILE_SLAB = registerBlock("amethyst_tile_slab",
+            properties -> new AmethystSlabBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
+    public static final Block AMETHYST_TILE_WALL = registerBlock("amethyst_tile_wall",
+            properties -> new AmethystWallBlock(properties
+                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
     
     public static final Block NETHERITE_STAIRS = registerBlockWithoutBlockItem("netherite_stairs",
             properties -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(),properties

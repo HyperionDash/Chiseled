@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:smooth_basalt",
+  "result": {
+    "id": "chiseled:cut_basalt_brick_stairs"
+  }
+}

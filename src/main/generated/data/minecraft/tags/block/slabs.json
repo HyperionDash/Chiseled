@@ -66,6 +66,16 @@
     "chiseled:blue_terracotta_brick_slab",
     "chiseled:purple_terracotta_brick_slab",
     "chiseled:magenta_terracotta_brick_slab",
-    "chiseled:pink_terracotta_brick_slab"
+    "chiseled:pink_terracotta_brick_slab",
+    "chiseled:smooth_basalt_slab",
+    "chiseled:basalt_brick_slab",
+    "chiseled:cut_basalt_brick_slab",
+    "chiseled:basalt_tile_slab",
+    "chiseled:cut_polished_blackstone_brick_slab",
+    "chiseled:polished_blackstone_tile_slab",
+    "chiseled:end_stone_slab",
+    "chiseled:polished_end_stone_slab",
+    "chiseled:cut_end_stone_brick_slab",
+    "chiseled:end_stone_tile_slab"
   ]
 }

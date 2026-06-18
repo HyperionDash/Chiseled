@@ -68,6 +68,16 @@
     "chiseled:blue_terracotta_brick_stairs",
     "chiseled:purple_terracotta_brick_stairs",
     "chiseled:magenta_terracotta_brick_stairs",
-    "chiseled:pink_terracotta_brick_stairs"
+    "chiseled:pink_terracotta_brick_stairs",
+    "chiseled:smooth_basalt_stairs",
+    "chiseled:basalt_brick_stairs",
+    "chiseled:cut_basalt_brick_stairs",
+    "chiseled:basalt_tile_stairs",
+    "chiseled:cut_polished_blackstone_brick_stairs",
+    "chiseled:polished_blackstone_tile_stairs",
+    "chiseled:end_stone_stairs",
+    "chiseled:polished_end_stone_stairs",
+    "chiseled:cut_end_stone_brick_stairs",
+    "chiseled:end_stone_tile_stairs"
   ]
 }

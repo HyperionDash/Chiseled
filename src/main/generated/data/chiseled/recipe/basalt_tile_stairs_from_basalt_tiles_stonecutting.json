@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:basalt_tiles",
+  "result": {
+    "id": "chiseled:basalt_tile_stairs"
+  }
+}

@@ -23,6 +23,9 @@ public class Chiseled implements ModInitializer {
 	public static final String MOD_ID = "chiseled";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	public static final Item NETHERITE_STAIRS = registerItem("netherite_stairs",
+			properties -> new BlockItem(ChiseledBlocks.NETHERITE_STAIRS, properties.fireResistant().useBlockDescriptionPrefix()));
+
 	private static Item registerItem(String name, Function<Item.Properties, Item> function) {
 		return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, name),
 				function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, name)))));
@@ -33,10 +36,8 @@ public class Chiseled implements ModInitializer {
 		ChiseledCreativeModeTabs.init();
 		ChiseledBlocks.init();
 
-		final Item NETHERITE_STAIRS = registerItem("netherite_stairs",
-				properties -> new BlockItem(ChiseledBlocks.NETHERITE_STAIRS, properties.fireResistant().useBlockDescriptionPrefix()));
-
 		LOGGER.info("Chiseling Bricks");
+
 		FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(modContainer ->
 				ResourceLoader.registerBuiltinPack(Identifier.fromNamespaceAndPath(MOD_ID,"data_overrides"), modContainer,
 						Component.translatable("text.chiseled.data_overrides"),PackActivationType.ALWAYS_ENABLED));

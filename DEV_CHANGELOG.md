@@ -1,3 +1,12 @@
+# 2.0a+26.1-DEV+0.8a
+- added blockset additions for nether bricks
+- added blockset additions for basalt
+- added blockset additions for blackstone
+- added blockset additions for end stone
+- simplified some parts of the modelGen class
+- removed cracked dripstone and calcite
+- removed dark prismarine retexture
+
 # 2.0a+26.1-DEV+0.7a
 - added blockset additions for prismarine and dark prismarine
 - retextured vanilla dark prismarine to be more like normal prismarine
@@ -20,7 +29,6 @@
 - removed mossy chiseled stone bricks
 - completely rewrote the recipeGen class for a third time
 - removed testing world from the dev env
-
 # 2.0a+26.1-DEV+0.4a
 - added textures for andesite, diorite and mud
 - added missing stonecutting recipes for mud

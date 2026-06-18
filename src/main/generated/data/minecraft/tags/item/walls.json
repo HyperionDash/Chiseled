@@ -56,6 +56,13 @@
     "chiseled:blue_terracotta_brick_wall",
     "chiseled:purple_terracotta_brick_wall",
     "chiseled:magenta_terracotta_brick_wall",
-    "chiseled:pink_terracotta_brick_wall"
+    "chiseled:pink_terracotta_brick_wall",
+    "chiseled:smooth_basalt_wall",
+    "chiseled:basalt_brick_wall",
+    "chiseled:basalt_tile_wall",
+    "chiseled:polished_blackstone_tile_wall",
+    "chiseled:end_stone_wall",
+    "chiseled:polished_end_stone_wall",
+    "chiseled:end_stone_tile_wall"
   ]
 }

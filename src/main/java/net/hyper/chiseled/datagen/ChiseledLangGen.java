@@ -96,16 +96,13 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.POLISHED_CALCITE_SLAB, "Polished Calcite Slab");
         translationBuilder.add(ChiseledBlocks.POLISHED_CALCITE_WALL, "Polished Calcite Wall");
         translationBuilder.add(ChiseledBlocks.CALCITE_BRICKS, "Calcite Bricks");
-        translationBuilder.add(ChiseledBlocks.CRACKED_CALCITE_BRICKS, "Cracked Calcite Bricks");
         translationBuilder.add(ChiseledBlocks.CALCITE_BRICK_STAIRS, "Calcite Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CALCITE_BRICK_SLAB, "Calcite Brick Slab");
         translationBuilder.add(ChiseledBlocks.CALCITE_BRICK_WALL, "Calcite Brick Wall");
         translationBuilder.add(ChiseledBlocks.CUT_CALCITE_BRICKS, "Cut Calcite Bricks");
-        translationBuilder.add(ChiseledBlocks.CRACKED_CUT_CALCITE_BRICKS, "Cracked Cut Calcite Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_CALCITE_BRICK_STAIRS, "Cut Calcite Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_CALCITE_BRICK_SLAB, "Cut Calcite Brick Slab");
         translationBuilder.add(ChiseledBlocks.CALCITE_TILES, "Calcite Tiles");
-        translationBuilder.add(ChiseledBlocks.CRACKED_CALCITE_TILES, "Cracked Calcite Tiles");
         translationBuilder.add(ChiseledBlocks.CALCITE_TILE_STAIRS, "Calcite Tile Stairs");
         translationBuilder.add(ChiseledBlocks.CALCITE_TILE_SLAB, "Calcite Tile Slab");
         translationBuilder.add(ChiseledBlocks.CALCITE_TILE_WALL, "Calcite Tile Wall");
@@ -118,16 +115,13 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.POLISHED_DRIPSTONE_SLAB, "Polished Dripstone Slab");
         translationBuilder.add(ChiseledBlocks.POLISHED_DRIPSTONE_WALL, "Polished Dripstone Wall");
         translationBuilder.add(ChiseledBlocks.DRIPSTONE_BRICKS, "Dripstone Bricks");
-        translationBuilder.add(ChiseledBlocks.CRACKED_DRIPSTONE_BRICKS, "Cracked Dripstone Bricks");
         translationBuilder.add(ChiseledBlocks.DRIPSTONE_BRICK_STAIRS, "Dripstone Brick Stairs");
         translationBuilder.add(ChiseledBlocks.DRIPSTONE_BRICK_SLAB, "Dripstone Brick Slab");
         translationBuilder.add(ChiseledBlocks.DRIPSTONE_BRICK_WALL, "Dripstone Brick Wall");
         translationBuilder.add(ChiseledBlocks.CUT_DRIPSTONE_BRICKS, "Cut Dripstone Bricks");
-        translationBuilder.add(ChiseledBlocks.CRACKED_CUT_DRIPSTONE_BRICKS, "Cracked Cut Dripstone Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_DRIPSTONE_BRICK_STAIRS, "Cut Dripstone Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_DRIPSTONE_BRICK_SLAB, "Cut Dripstone Brick Slab");
         translationBuilder.add(ChiseledBlocks.DRIPSTONE_TILES, "Dripstone Tiles");
-        translationBuilder.add(ChiseledBlocks.CRACKED_DRIPSTONE_TILES, "Cracked Dripstone Tiles");
         translationBuilder.add(ChiseledBlocks.DRIPSTONE_TILE_STAIRS, "Dripstone Tile Stairs");
         translationBuilder.add(ChiseledBlocks.DRIPSTONE_TILE_SLAB, "Dripstone Tile Slab");
         translationBuilder.add(ChiseledBlocks.DRIPSTONE_TILE_WALL, "Dripstone Tile Wall");
@@ -299,6 +293,53 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS, "Pink Terracotta Brick Stairs");
         translationBuilder.add(ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB, "Pink Terracotta Brick Slab");
         translationBuilder.add(ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL, "Pink Terracotta Brick Wall");
+
+        translationBuilder.add(ChiseledBlocks.CRACKED_RED_NETHER_BRICKS, "Cracked Red Nether Bricks");
+        translationBuilder.add(ChiseledBlocks.RED_NETHER_BRICK_FENCE, "Red Nether Brick Fence");
+        translationBuilder.add(ChiseledBlocks.CHISELED_RED_NETHER_BRICKS, "Chiseled Red Nether Bricks");
+
+        translationBuilder.add(ChiseledBlocks.SMOOTH_BASALT_STAIRS, "Smooth Basalt Stairs");
+        translationBuilder.add(ChiseledBlocks.SMOOTH_BASALT_SLAB, "Smooth Basalt Slab");
+        translationBuilder.add(ChiseledBlocks.SMOOTH_BASALT_WALL, "Smooth Basalt Wall");
+        translationBuilder.add(ChiseledBlocks.BASALT_BRICKS, "Basalt Bricks");
+        translationBuilder.add(ChiseledBlocks.BASALT_BRICK_STAIRS, "Basalt Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.BASALT_BRICK_SLAB, "Basalt Brick Slab");
+        translationBuilder.add(ChiseledBlocks.BASALT_BRICK_WALL, "Basalt Brick Wall");
+        translationBuilder.add(ChiseledBlocks.CUT_BASALT_BRICKS, "Cut Basalt Bricks");
+        translationBuilder.add(ChiseledBlocks.CUT_BASALT_BRICK_STAIRS, "Cut Basalt Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.CUT_BASALT_BRICK_SLAB, "Cut Basalt Brick Slab");
+        translationBuilder.add(ChiseledBlocks.BASALT_TILES, "Basalt Tiles");
+        translationBuilder.add(ChiseledBlocks.BASALT_TILE_STAIRS, "Basalt Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.BASALT_TILE_SLAB, "Basalt Tile Slab");
+        translationBuilder.add(ChiseledBlocks.BASALT_TILE_WALL, "Basalt Tile Wall");
+
+        translationBuilder.add(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICKS, "Cut Polished Blackstone Bricks");
+        translationBuilder.add(ChiseledBlocks.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS, "Cracked Cut Polished Blackstone Bricks");
+        translationBuilder.add(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_STAIRS, "Cut Polished Blackstone Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_SLAB, "Cut Polished Blackstone Brick Slab");
+        translationBuilder.add(ChiseledBlocks.POLISHED_BLACKSTONE_TILES, "Polished Blackstone Tiles");
+        translationBuilder.add(ChiseledBlocks.CRACKED_POLISHED_BLACKSTONE_TILES, "Cracked Polished Blackstone Tiles");
+        translationBuilder.add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_STAIRS, "Polished Blackstone Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB, "Polished Blackstone Tile Slab");
+        translationBuilder.add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL, "Polished Blackstone Tile Wall");
+
+        translationBuilder.add(ChiseledBlocks.END_STONE_STAIRS, "End Stone Stairs");
+        translationBuilder.add(ChiseledBlocks.END_STONE_SLAB, "End Stone Slab");
+        translationBuilder.add(ChiseledBlocks.END_STONE_WALL, "End Stone Wall");
+        translationBuilder.add(ChiseledBlocks.POLISHED_END_STONE, "Polished End Stone");
+        translationBuilder.add(ChiseledBlocks.POLISHED_END_STONE_STAIRS, "Polished End Stone Stairs");
+        translationBuilder.add(ChiseledBlocks.POLISHED_END_STONE_SLAB, "Polished End Stone Slab");
+        translationBuilder.add(ChiseledBlocks.POLISHED_END_STONE_WALL, "Polished End Stone Wall");
+        translationBuilder.add(ChiseledBlocks.CRACKED_END_STONE_BRICKS, "Cracked End Stone Bricks");
+        translationBuilder.add(ChiseledBlocks.CUT_END_STONE_BRICKS, "Cut End Stone Bricks");
+        translationBuilder.add(ChiseledBlocks.CRACKED_CUT_END_STONE_BRICKS, "Cracked Cut End Stone Bricks");
+        translationBuilder.add(ChiseledBlocks.CUT_END_STONE_BRICK_STAIRS, "Cut End Stone Brick Stairs");
+        translationBuilder.add(ChiseledBlocks.CUT_END_STONE_BRICK_SLAB, "Cut End Stone Brick Slab");
+        translationBuilder.add(ChiseledBlocks.END_STONE_TILES, "End Stone Tiles");
+        translationBuilder.add(ChiseledBlocks.CRACKED_END_STONE_TILES, "Cracked End Stone Tiles");
+        translationBuilder.add(ChiseledBlocks.END_STONE_TILE_STAIRS, "End Stone Tile Stairs");
+        translationBuilder.add(ChiseledBlocks.END_STONE_TILE_SLAB, "End Stone Tile Slab");
+        translationBuilder.add(ChiseledBlocks.END_STONE_TILE_WALL, "End Stone Tile Wall");
 
         translationBuilder.add(ChiseledBlocks.NETHERITE_STAIRS, "Netherite Stairs");
 

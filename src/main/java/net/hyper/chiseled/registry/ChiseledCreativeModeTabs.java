@@ -102,16 +102,13 @@ public class ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlocks.POLISHED_CALCITE_SLAB);
                         entries.accept(ChiseledBlocks.POLISHED_CALCITE_WALL);
                         entries.accept(ChiseledBlocks.CALCITE_BRICKS);
-                        entries.accept(ChiseledBlocks.CRACKED_CALCITE_BRICKS);
                         entries.accept(ChiseledBlocks.CALCITE_BRICK_STAIRS);
                         entries.accept(ChiseledBlocks.CALCITE_BRICK_SLAB);
                         entries.accept(ChiseledBlocks.CALCITE_BRICK_WALL);
                         entries.accept(ChiseledBlocks.CUT_CALCITE_BRICKS);
-                        entries.accept(ChiseledBlocks.CRACKED_CUT_CALCITE_BRICKS);
                         entries.accept(ChiseledBlocks.CUT_CALCITE_BRICK_STAIRS);
                         entries.accept(ChiseledBlocks.CUT_CALCITE_BRICK_SLAB);
                         entries.accept(ChiseledBlocks.CALCITE_TILES);
-                        entries.accept(ChiseledBlocks.CRACKED_CALCITE_TILES);
                         entries.accept(ChiseledBlocks.CALCITE_TILE_STAIRS);
                         entries.accept(ChiseledBlocks.CALCITE_TILE_SLAB);
                         entries.accept(ChiseledBlocks.CALCITE_TILE_WALL);
@@ -124,16 +121,13 @@ public class ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlocks.POLISHED_DRIPSTONE_SLAB);
                         entries.accept(ChiseledBlocks.POLISHED_DRIPSTONE_WALL);
                         entries.accept(ChiseledBlocks.DRIPSTONE_BRICKS);
-                        entries.accept(ChiseledBlocks.CRACKED_DRIPSTONE_BRICKS);
                         entries.accept(ChiseledBlocks.DRIPSTONE_BRICK_STAIRS);
                         entries.accept(ChiseledBlocks.DRIPSTONE_BRICK_SLAB);
                         entries.accept(ChiseledBlocks.DRIPSTONE_BRICK_WALL);
                         entries.accept(ChiseledBlocks.CUT_DRIPSTONE_BRICKS);
-                        entries.accept(ChiseledBlocks.CRACKED_CUT_DRIPSTONE_BRICKS);
                         entries.accept(ChiseledBlocks.CUT_DRIPSTONE_BRICK_STAIRS);
                         entries.accept(ChiseledBlocks.CUT_DRIPSTONE_BRICK_SLAB);
                         entries.accept(ChiseledBlocks.DRIPSTONE_TILES);
-                        entries.accept(ChiseledBlocks.CRACKED_DRIPSTONE_TILES);
                         entries.accept(ChiseledBlocks.DRIPSTONE_TILE_STAIRS);
                         entries.accept(ChiseledBlocks.DRIPSTONE_TILE_SLAB);
                         entries.accept(ChiseledBlocks.DRIPSTONE_TILE_WALL);
@@ -237,6 +231,53 @@ public class ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlocks.PACKED_SNOW_TILE_STAIRS);
                         entries.accept(ChiseledBlocks.PACKED_SNOW_TILE_SLAB);
 
+                        entries.accept(ChiseledBlocks.CRACKED_RED_NETHER_BRICKS);
+                        entries.accept(ChiseledBlocks.RED_NETHER_BRICK_FENCE);
+                        entries.accept(ChiseledBlocks.CHISELED_RED_NETHER_BRICKS);
+
+                        entries.accept(ChiseledBlocks.SMOOTH_BASALT_STAIRS);
+                        entries.accept(ChiseledBlocks.SMOOTH_BASALT_SLAB);
+                        entries.accept(ChiseledBlocks.SMOOTH_BASALT_WALL);
+                        entries.accept(ChiseledBlocks.BASALT_BRICKS);
+                        entries.accept(ChiseledBlocks.BASALT_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.BASALT_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.BASALT_BRICK_WALL);
+                        entries.accept(ChiseledBlocks.CUT_BASALT_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_BASALT_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CUT_BASALT_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.BASALT_TILES);
+                        entries.accept(ChiseledBlocks.BASALT_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.BASALT_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.BASALT_TILE_WALL);
+
+                        entries.accept(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICKS);
+                        entries.accept(ChiseledBlocks.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.POLISHED_BLACKSTONE_TILES);
+                        entries.accept(ChiseledBlocks.CRACKED_POLISHED_BLACKSTONE_TILES);
+                        entries.accept(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL);
+
+                        entries.accept(ChiseledBlocks.END_STONE_STAIRS);
+                        entries.accept(ChiseledBlocks.END_STONE_SLAB);
+                        entries.accept(ChiseledBlocks.END_STONE_WALL);
+                        entries.accept(ChiseledBlocks.POLISHED_END_STONE);
+                        entries.accept(ChiseledBlocks.POLISHED_END_STONE_STAIRS);
+                        entries.accept(ChiseledBlocks.POLISHED_END_STONE_SLAB);
+                        entries.accept(ChiseledBlocks.POLISHED_END_STONE_WALL);
+                        entries.accept(ChiseledBlocks.CRACKED_END_STONE_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_END_STONE_BRICKS);
+                        entries.accept(ChiseledBlocks.CRACKED_CUT_END_STONE_BRICKS);
+                        entries.accept(ChiseledBlocks.CUT_END_STONE_BRICK_STAIRS);
+                        entries.accept(ChiseledBlocks.CUT_END_STONE_BRICK_SLAB);
+                        entries.accept(ChiseledBlocks.END_STONE_TILES);
+                        entries.accept(ChiseledBlocks.CRACKED_END_STONE_TILES);
+                        entries.accept(ChiseledBlocks.END_STONE_TILE_STAIRS);
+                        entries.accept(ChiseledBlocks.END_STONE_TILE_SLAB);
+                        entries.accept(ChiseledBlocks.END_STONE_TILE_WALL);
+                        
                         entries.accept(ChiseledBlocks.TERRACOTTA_BRICKS);
                         entries.accept(ChiseledBlocks.TERRACOTTA_BRICK_STAIRS);
                         entries.accept(ChiseledBlocks.TERRACOTTA_BRICK_SLAB);
@@ -394,16 +435,13 @@ public class ChiseledCreativeModeTabs {
                     ChiseledBlocks.POLISHED_CALCITE_SLAB,
                     ChiseledBlocks.POLISHED_CALCITE_WALL,
                     ChiseledBlocks.CALCITE_BRICKS,
-                    ChiseledBlocks.CRACKED_CALCITE_BRICKS,
                     ChiseledBlocks.CALCITE_BRICK_STAIRS,
                     ChiseledBlocks.CALCITE_BRICK_SLAB,
                     ChiseledBlocks.CALCITE_BRICK_WALL,
                     ChiseledBlocks.CUT_CALCITE_BRICKS,
-                    ChiseledBlocks.CRACKED_CUT_CALCITE_BRICKS,
                     ChiseledBlocks.CUT_CALCITE_BRICK_STAIRS,
                     ChiseledBlocks.CUT_CALCITE_BRICK_SLAB,
                     ChiseledBlocks.CALCITE_TILES,
-                    ChiseledBlocks.CRACKED_CALCITE_TILES,
                     ChiseledBlocks.CALCITE_TILE_STAIRS,
                     ChiseledBlocks.CALCITE_TILE_SLAB,
                     ChiseledBlocks.CALCITE_TILE_WALL);
@@ -417,16 +455,13 @@ public class ChiseledCreativeModeTabs {
                     ChiseledBlocks.POLISHED_DRIPSTONE_SLAB,
                     ChiseledBlocks.POLISHED_DRIPSTONE_WALL,
                     ChiseledBlocks.DRIPSTONE_BRICKS,
-                    ChiseledBlocks.CRACKED_DRIPSTONE_BRICKS,
                     ChiseledBlocks.DRIPSTONE_BRICK_STAIRS,
                     ChiseledBlocks.DRIPSTONE_BRICK_SLAB,
                     ChiseledBlocks.DRIPSTONE_BRICK_WALL,
                     ChiseledBlocks.CUT_DRIPSTONE_BRICKS,
-                    ChiseledBlocks.CRACKED_CUT_DRIPSTONE_BRICKS,
                     ChiseledBlocks.CUT_DRIPSTONE_BRICK_STAIRS,
                     ChiseledBlocks.CUT_DRIPSTONE_BRICK_SLAB,
                     ChiseledBlocks.DRIPSTONE_TILES,
-                    ChiseledBlocks.CRACKED_DRIPSTONE_TILES,
                     ChiseledBlocks.DRIPSTONE_TILE_STAIRS,
                     ChiseledBlocks.DRIPSTONE_TILE_SLAB,
                     ChiseledBlocks.DRIPSTONE_TILE_WALL);
@@ -532,6 +567,35 @@ public class ChiseledCreativeModeTabs {
                     ChiseledBlocks.PACKED_SNOW_TILE_STAIRS,
                     ChiseledBlocks.PACKED_SNOW_TILE_SLAB);
 
+            entries.insertAfter(Blocks.RED_NETHER_BRICKS, ChiseledBlocks.CRACKED_RED_NETHER_BRICKS);
+            entries.insertAfter(Blocks.RED_NETHER_BRICK_WALL, ChiseledBlocks.RED_NETHER_BRICK_FENCE,
+                    ChiseledBlocks.CHISELED_RED_NETHER_BRICKS);
+
+            entries.insertAfter(Blocks.SMOOTH_BASALT, ChiseledBlocks.SMOOTH_BASALT_STAIRS,
+                    ChiseledBlocks.SMOOTH_BASALT_SLAB,
+                    ChiseledBlocks.SMOOTH_BASALT_WALL);
+            entries.insertAfter(Blocks.POLISHED_BASALT, ChiseledBlocks.BASALT_BRICKS,
+                    ChiseledBlocks.BASALT_BRICK_STAIRS,
+                    ChiseledBlocks.BASALT_BRICK_SLAB,
+                    ChiseledBlocks.BASALT_BRICK_WALL,
+                    ChiseledBlocks.CUT_BASALT_BRICKS,
+                    ChiseledBlocks.CUT_BASALT_BRICK_STAIRS,
+                    ChiseledBlocks.CUT_BASALT_BRICK_SLAB,
+                    ChiseledBlocks.BASALT_TILES,
+                    ChiseledBlocks.BASALT_TILE_STAIRS,
+                    ChiseledBlocks.BASALT_TILE_SLAB,
+                    ChiseledBlocks.BASALT_TILE_WALL);
+
+            entries.insertAfter(Blocks.POLISHED_BLACKSTONE_BRICK_WALL, ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICKS,
+                    ChiseledBlocks.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS,
+                    ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_STAIRS,
+                    ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_SLAB,
+                    ChiseledBlocks.POLISHED_BLACKSTONE_TILES,
+                    ChiseledBlocks.CRACKED_POLISHED_BLACKSTONE_TILES,
+                    ChiseledBlocks.POLISHED_BLACKSTONE_TILE_STAIRS,
+                    ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB,
+                    ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL);
+
             entries.insertAfter(Blocks.NETHERITE_BLOCK, Blocks.QUARTZ_BLOCK,
                     Blocks.QUARTZ_STAIRS,
                     Blocks.QUARTZ_SLAB,
@@ -542,8 +606,7 @@ public class ChiseledCreativeModeTabs {
                     Blocks.SMOOTH_QUARTZ_STAIRS,
                     Blocks.SMOOTH_QUARTZ_SLAB,
                     //ChiseledBlocks.SMOOTH_QUARTZ_WALL,
-                    Blocks.QUARTZ_BRICKS
-                    );
+                    Blocks.QUARTZ_BRICKS);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {

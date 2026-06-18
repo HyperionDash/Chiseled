@@ -83,7 +83,17 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS.asItem())
                 .add(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS.asItem())
                 .add(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS.asItem())
-                .add(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS.asItem());
+                .add(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.SMOOTH_BASALT_STAIRS.asItem())
+                .add(ChiseledBlocks.BASALT_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.CUT_BASALT_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.BASALT_TILE_STAIRS.asItem())
+                .add(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_STAIRS.asItem())
+                .add(ChiseledBlocks.END_STONE_STAIRS.asItem())
+                .add(ChiseledBlocks.POLISHED_END_STONE_STAIRS.asItem())
+                .add(ChiseledBlocks.CUT_END_STONE_BRICK_STAIRS.asItem())
+                .add(ChiseledBlocks.END_STONE_TILE_STAIRS.asItem());
 
         valueLookupBuilder(ItemTags.SLABS)
                 .add(ChiseledBlocks.POLISHED_STONE_SLAB.asItem())
@@ -152,7 +162,17 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB.asItem())
                 .add(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB.asItem())
                 .add(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB.asItem())
-                .add(ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB.asItem());
+                .add(ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.SMOOTH_BASALT_SLAB.asItem())
+                .add(ChiseledBlocks.BASALT_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.CUT_BASALT_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.BASALT_TILE_SLAB.asItem())
+                .add(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB.asItem())
+                .add(ChiseledBlocks.END_STONE_SLAB.asItem())
+                .add(ChiseledBlocks.POLISHED_END_STONE_SLAB.asItem())
+                .add(ChiseledBlocks.CUT_END_STONE_BRICK_SLAB.asItem())
+                .add(ChiseledBlocks.END_STONE_TILE_SLAB.asItem());
 
         valueLookupBuilder(ItemTags.WALLS)
                 .add(ChiseledBlocks.STONE_WALL.asItem())
@@ -211,7 +231,17 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL.asItem())
                 .add(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL.asItem())
                 .add(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL.asItem())
-                .add(ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL.asItem());
+                .add(ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL.asItem())
+                .add(ChiseledBlocks.SMOOTH_BASALT_WALL.asItem())
+                .add(ChiseledBlocks.BASALT_BRICK_WALL.asItem())
+                .add(ChiseledBlocks.BASALT_TILE_WALL.asItem())
+                .add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL.asItem())
+                .add(ChiseledBlocks.END_STONE_WALL.asItem())
+                .add(ChiseledBlocks.POLISHED_END_STONE_WALL.asItem())
+                .add(ChiseledBlocks.END_STONE_TILE_WALL.asItem());
+
+        valueLookupBuilder(ItemTags.FENCES)
+                .add(ChiseledBlocks.RED_NETHER_BRICK_FENCE.asItem());
 
         valueLookupBuilder(ItemTags.STONE_BRICKS)
                 .add(ChiseledBlocks.POLISHED_STONE.asItem())

@@ -596,6 +596,24 @@ public class ChiseledCreativeModeTabs {
                     ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB,
                     ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL);
 
+            entries.insertAfter(Blocks.END_STONE, ChiseledBlocks.END_STONE_STAIRS,
+                    ChiseledBlocks.END_STONE_SLAB,
+                    ChiseledBlocks.END_STONE_WALL,
+                    ChiseledBlocks.POLISHED_END_STONE,
+                    ChiseledBlocks.POLISHED_END_STONE_STAIRS,
+                    ChiseledBlocks.POLISHED_END_STONE_SLAB,
+                    ChiseledBlocks.POLISHED_END_STONE_WALL);
+            entries.insertAfter(Blocks.END_STONE_BRICKS, ChiseledBlocks.CRACKED_END_STONE_BRICKS);
+            entries.insertAfter(Blocks.END_STONE_BRICK_WALL, ChiseledBlocks.CUT_END_STONE_BRICKS,
+                    ChiseledBlocks.CRACKED_CUT_END_STONE_BRICKS,
+                    ChiseledBlocks.CUT_END_STONE_BRICK_STAIRS,
+                    ChiseledBlocks.CUT_END_STONE_BRICK_SLAB,
+                    ChiseledBlocks.END_STONE_TILES,
+                    ChiseledBlocks.CRACKED_END_STONE_TILES,
+                    ChiseledBlocks.END_STONE_TILE_STAIRS,
+                    ChiseledBlocks.END_STONE_TILE_SLAB,
+                    ChiseledBlocks.END_STONE_TILE_WALL);
+
             entries.insertAfter(Blocks.NETHERITE_BLOCK, Blocks.QUARTZ_BLOCK,
                     Blocks.QUARTZ_STAIRS,
                     Blocks.QUARTZ_SLAB,

@@ -25,12 +25,12 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	// Client Side mods
-	runtimeOnly("maven.modrinth:jei:${project.jei_version}")
-	runtimeOnly("maven.modrinth:placeholder-api:${project.placeholder_api_version}")
-	runtimeOnly("maven.modrinth:modmenu:${project.modmenu_version}")
-	runtimeOnly("maven.modrinth:Sodium:${project.sodium_version}")
-	runtimeOnly("maven.modrinth:mouse-tweaks:${project.mouse_tweaks_version}")
-	runtimeOnly("maven.modrinth:mc122477fix-re-updated:${project.mc122477fix_re_updated_version}")
+	runtimeOnly "maven.modrinth:u6dRKJwZ:q4A3KM39"
+	runtimeOnly "maven.modrinth:eXts2L7r:NDqH16LT"
+	runtimeOnly "maven.modrinth:mOgUt4GM:3gAjUrx6"
+	runtimeOnly "maven.modrinth:AANobbMI:3QgJXuSK"
+	runtimeOnly "maven.modrinth:aC3cM3Vq:jOiTBIaB"
+	//runtimeOnly("maven.modrinth:mc122477fix-re-updated:${project.mc122477fix_re_updated_version}")
 }
 
 processResources {

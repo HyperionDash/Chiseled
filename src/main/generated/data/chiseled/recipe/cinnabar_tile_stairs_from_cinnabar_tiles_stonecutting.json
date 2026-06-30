@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:cinnabar_tiles",
+  "result": {
+    "id": "chiseled:cinnabar_tile_stairs"
+  }
+}

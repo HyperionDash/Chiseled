@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "chiseled:block/sulfur_tiles",
+    "side": "chiseled:block/sulfur_tiles",
+    "top": "chiseled:block/sulfur_tiles"
+  }
+}

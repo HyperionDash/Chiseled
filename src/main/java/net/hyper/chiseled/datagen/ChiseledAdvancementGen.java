@@ -3,7 +3,7 @@ package net.hyper.chiseled.datagen;
 import net.hyper.chiseled.Chiseled;
 import net.hyper.chiseled.registry.ChiseledBlocks;
 import net.minecraft.advancements.*;
-import net.minecraft.advancements.criterion.ItemPredicate;
+import net.minecraft.advancements.predicates.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
-import static net.minecraft.advancements.criterion.InventoryChangeTrigger.TriggerInstance.hasItems;
+import static net.minecraft.advancements.triggers.InventoryChangeTrigger.TriggerInstance.hasItems;
 
 public class ChiseledAdvancementGen extends AdvancementProvider {
     public ChiseledAdvancementGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

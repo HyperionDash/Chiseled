@@ -42,6 +42,7 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS);
         add(ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB));
         dropSelf(ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL);
+        dropSelf(ChiseledBlocks.POLISHED_GRANITE_PILLAR);
         dropSelf(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS);
         dropSelf(ChiseledBlocks.CRACKED_CUT_POLISHED_GRANITE_BRICKS);
         dropSelf(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_STAIRS);
@@ -58,6 +59,7 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS);
         add(ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB));
         dropSelf(ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL);
+        dropSelf(ChiseledBlocks.POLISHED_DIORITE_PILLAR);
         dropSelf(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS);
         dropSelf(ChiseledBlocks.CRACKED_CUT_POLISHED_DIORITE_BRICKS);
         dropSelf(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_STAIRS);
@@ -74,6 +76,7 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS);
         add(ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB));
         dropSelf(ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL);
+        dropSelf(ChiseledBlocks.POLISHED_ANDESITE_PILLAR);
         dropSelf(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS);
         dropSelf(ChiseledBlocks.CRACKED_CUT_POLISHED_ANDESITE_BRICKS);
         dropSelf(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_STAIRS);
@@ -202,6 +205,22 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS);
         add(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB));
         dropSelf(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
+
+        dropSelf(ChiseledBlocks.CUT_CINNABAR_BRICKS);
+        dropSelf(ChiseledBlocks.CUT_CINNABAR_BRICK_STAIRS);
+        add(ChiseledBlocks.CUT_CINNABAR_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_CINNABAR_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.CINNABAR_TILES);
+        dropSelf(ChiseledBlocks.CINNABAR_TILE_STAIRS);
+        add(ChiseledBlocks.CINNABAR_TILE_SLAB, createSlabItemTable(ChiseledBlocks.CINNABAR_TILE_SLAB));
+        dropSelf(ChiseledBlocks.CINNABAR_TILE_WALL);
+
+        dropSelf(ChiseledBlocks.CUT_SULFUR_BRICKS);
+        dropSelf(ChiseledBlocks.CUT_SULFUR_BRICK_STAIRS);
+        add(ChiseledBlocks.CUT_SULFUR_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_SULFUR_BRICK_SLAB));
+        dropSelf(ChiseledBlocks.SULFUR_TILES);
+        dropSelf(ChiseledBlocks.SULFUR_TILE_STAIRS);
+        add(ChiseledBlocks.SULFUR_TILE_SLAB, createSlabItemTable(ChiseledBlocks.SULFUR_TILE_SLAB));
+        dropSelf(ChiseledBlocks.SULFUR_TILE_WALL);
 
         dropSelf(ChiseledBlocks.PRISMARINE_BRICK_WALL);
         dropSelf(ChiseledBlocks.CUT_PRISMARINE_BRICKS);

@@ -164,6 +164,14 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, Blocks.GRANITE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, Blocks.POLISHED_GRANITE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_PILLAR,2)
+                        .pattern("#")
+                        .pattern("#")
+                        .define('#', Blocks.POLISHED_GRANITE)
+                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_GRANITE_PILLAR), has(Blocks.POLISHED_GRANITE))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_PILLAR, Blocks.GRANITE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_PILLAR, Blocks.POLISHED_GRANITE);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS)
                         .pattern("#")
                         .pattern("#")
@@ -237,6 +245,14 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, Blocks.DIORITE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, Blocks.POLISHED_DIORITE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_PILLAR,2)
+                        .pattern("#")
+                        .pattern("#")
+                        .define('#', Blocks.POLISHED_DIORITE)
+                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_DIORITE_PILLAR), has(Blocks.POLISHED_DIORITE))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_PILLAR, Blocks.DIORITE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_PILLAR, Blocks.POLISHED_DIORITE);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS)
                         .pattern("#")
                         .pattern("#")
@@ -310,6 +326,14 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, Blocks.ANDESITE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, Blocks.POLISHED_ANDESITE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_PILLAR,2)
+                        .pattern("#")
+                        .pattern("#")
+                        .define('#', Blocks.POLISHED_ANDESITE)
+                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_ANDESITE_PILLAR), has(Blocks.POLISHED_ANDESITE))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_PILLAR, Blocks.ANDESITE);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_PILLAR, Blocks.POLISHED_ANDESITE);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS)
                         .pattern("#")
                         .pattern("#")
@@ -920,6 +944,82 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_SANDSTONE_TILE_WALL, ChiseledBlocks.RED_SANDSTONE_BRICKS);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_SANDSTONE_TILE_WALL, ChiseledBlocks.RED_SANDSTONE_TILES);
 
+                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_CINNABAR_BRICKS)
+                        .pattern("#")
+                        .pattern("#")
+                        .define('#', Blocks.POLISHED_CINNABAR_SLAB)
+                        .unlockedBy(getHasName(ChiseledBlocks.CUT_CINNABAR_BRICKS), has(Blocks.POLISHED_CINNABAR))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_CINNABAR_BRICKS, Blocks.POLISHED_CINNABAR);
+                stairBuilder(ChiseledBlocks.CUT_CINNABAR_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.CUT_CINNABAR_BRICKS))
+                        .unlockedBy(getHasName(ChiseledBlocks.CUT_CINNABAR_BRICK_STAIRS), has(ChiseledBlocks.CUT_CINNABAR_BRICKS))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_CINNABAR_BRICK_STAIRS, Blocks.POLISHED_CINNABAR);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_CINNABAR_BRICK_STAIRS, ChiseledBlocks.CUT_CINNABAR_BRICKS);
+                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_CINNABAR_BRICK_SLAB, ChiseledBlocks.CUT_CINNABAR_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_CINNABAR_BRICK_SLAB, Blocks.POLISHED_CINNABAR,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_CINNABAR_BRICK_SLAB, ChiseledBlocks.CUT_CINNABAR_BRICKS,2);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILES,4)
+                        .pattern("##")
+                        .pattern("##")
+                        .define('#', Blocks.CINNABAR_BRICKS)
+                        .unlockedBy(getHasName(ChiseledBlocks.CINNABAR_TILES), has(Blocks.CINNABAR_BRICKS))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILES, Blocks.POLISHED_CINNABAR);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILES, Blocks.CINNABAR_BRICKS);
+                stairBuilder(ChiseledBlocks.CINNABAR_TILE_STAIRS, Ingredient.of(ChiseledBlocks.CINNABAR_TILES))
+                        .unlockedBy(getHasName(ChiseledBlocks.CINNABAR_TILE_STAIRS), has(ChiseledBlocks.CINNABAR_TILES))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_STAIRS, Blocks.POLISHED_CINNABAR);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_STAIRS, Blocks.CINNABAR_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_STAIRS, ChiseledBlocks.CINNABAR_TILES);
+                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_SLAB, ChiseledBlocks.CINNABAR_TILES);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_SLAB, Blocks.POLISHED_CINNABAR,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_SLAB, Blocks.CINNABAR_BRICKS,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_SLAB, ChiseledBlocks.CINNABAR_TILES,2);
+                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_WALL, ChiseledBlocks.CINNABAR_TILES);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_WALL, Blocks.POLISHED_CINNABAR);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_WALL, Blocks.CINNABAR_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CINNABAR_TILE_WALL, ChiseledBlocks.CINNABAR_TILES);
+
+                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_SULFUR_BRICKS)
+                        .pattern("#")
+                        .pattern("#")
+                        .define('#', Blocks.POLISHED_SULFUR_SLAB)
+                        .unlockedBy(getHasName(ChiseledBlocks.CUT_SULFUR_BRICKS), has(Blocks.POLISHED_SULFUR))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_SULFUR_BRICKS, Blocks.POLISHED_SULFUR);
+                stairBuilder(ChiseledBlocks.CUT_SULFUR_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.CUT_SULFUR_BRICKS))
+                        .unlockedBy(getHasName(ChiseledBlocks.CUT_SULFUR_BRICK_STAIRS), has(ChiseledBlocks.CUT_SULFUR_BRICKS))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_SULFUR_BRICK_STAIRS, Blocks.POLISHED_SULFUR);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_SULFUR_BRICK_STAIRS, ChiseledBlocks.CUT_SULFUR_BRICKS);
+                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_SULFUR_BRICK_SLAB, ChiseledBlocks.CUT_SULFUR_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_SULFUR_BRICK_SLAB, Blocks.POLISHED_SULFUR,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_SULFUR_BRICK_SLAB, ChiseledBlocks.CUT_SULFUR_BRICKS,2);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILES,4)
+                        .pattern("##")
+                        .pattern("##")
+                        .define('#', Blocks.SULFUR_BRICKS)
+                        .unlockedBy(getHasName(ChiseledBlocks.SULFUR_TILES), has(Blocks.SULFUR_BRICKS))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILES, Blocks.POLISHED_SULFUR);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILES, Blocks.SULFUR_BRICKS);
+                stairBuilder(ChiseledBlocks.SULFUR_TILE_STAIRS, Ingredient.of(ChiseledBlocks.SULFUR_TILES))
+                        .unlockedBy(getHasName(ChiseledBlocks.SULFUR_TILE_STAIRS), has(ChiseledBlocks.SULFUR_TILES))
+                        .save(output);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_STAIRS, Blocks.POLISHED_SULFUR);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_STAIRS, Blocks.SULFUR_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_STAIRS, ChiseledBlocks.SULFUR_TILES);
+                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_SLAB, ChiseledBlocks.SULFUR_TILES);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_SLAB, Blocks.POLISHED_SULFUR,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_SLAB, Blocks.SULFUR_BRICKS,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_SLAB, ChiseledBlocks.SULFUR_TILES,2);
+                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_WALL, ChiseledBlocks.SULFUR_TILES);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_WALL, Blocks.POLISHED_SULFUR);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_WALL, Blocks.SULFUR_BRICKS);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SULFUR_TILE_WALL, ChiseledBlocks.SULFUR_TILES);
+                
                 shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.PRISMARINE_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
@@ -952,7 +1052,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern(" # ")
                         .define('#', Items.PRISMARINE_SHARD)
-                        .define('0', Items.BLACK_DYE)
+                        .define('0', Items.DYE.black())
                         .unlockedBy(getHasName(Blocks.DARK_PRISMARINE), has(Items.PRISMARINE_SHARD))
                         .save(output);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.DARK_PRISMARINE_WALL, Blocks.DARK_PRISMARINE);
@@ -1064,290 +1164,290 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.WHITE_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.WHITE_TERRACOTTA_BRICKS), has(Blocks.WHITE_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.white())
+                        .unlockedBy(getHasName(ChiseledBlocks.WHITE_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.white()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICKS, Blocks.WHITE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.white());
                 stairBuilder(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.WHITE_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.WHITE_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS, Blocks.WHITE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.white());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.WHITE_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.WHITE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_SLAB, Blocks.WHITE_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.white(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.WHITE_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.WHITE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_WALL, Blocks.WHITE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.white());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.WHITE_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.LIGHT_GRAY_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS), has(Blocks.LIGHT_GRAY_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.lightGray())
+                        .unlockedBy(getHasName(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.lightGray()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS, Blocks.LIGHT_GRAY_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.lightGray());
                 stairBuilder(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS, Blocks.LIGHT_GRAY_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.lightGray());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB, Blocks.LIGHT_GRAY_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.lightGray(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL, Blocks.LIGHT_GRAY_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.lightGray());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.GRAY_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.GRAY_TERRACOTTA_BRICKS), has(Blocks.GRAY_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.gray())
+                        .unlockedBy(getHasName(ChiseledBlocks.GRAY_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.gray()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICKS, Blocks.GRAY_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.gray());
                 stairBuilder(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.GRAY_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.GRAY_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS, Blocks.GRAY_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.gray());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.GRAY_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.GRAY_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_SLAB, Blocks.GRAY_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.gray(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.GRAY_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_WALL, ChiseledBlocks.GRAY_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_WALL, Blocks.GRAY_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.gray());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICK_WALL, ChiseledBlocks.GRAY_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.BLACK_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.BLACK_TERRACOTTA_BRICKS), has(Blocks.BLACK_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.black())
+                        .unlockedBy(getHasName(ChiseledBlocks.BLACK_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.black()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICKS, Blocks.BLACK_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.black());
                 stairBuilder(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.BLACK_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.BLACK_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS, Blocks.BLACK_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.black());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.BLACK_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.BLACK_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_SLAB, Blocks.BLACK_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.black(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.BLACK_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_WALL, ChiseledBlocks.BLACK_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_WALL, Blocks.BLACK_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.black());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICK_WALL, ChiseledBlocks.BLACK_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.BROWN_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.BROWN_TERRACOTTA_BRICKS), has(Blocks.BROWN_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.brown())
+                        .unlockedBy(getHasName(ChiseledBlocks.BROWN_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.brown()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICKS, Blocks.BROWN_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.brown());
                 stairBuilder(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.BROWN_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.BROWN_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS, Blocks.BROWN_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.brown());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.BROWN_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.BROWN_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_SLAB, Blocks.BROWN_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.brown(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.BROWN_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_WALL, ChiseledBlocks.BROWN_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_WALL, Blocks.BROWN_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.brown());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICK_WALL, ChiseledBlocks.BROWN_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.RED_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.RED_TERRACOTTA_BRICKS), has(Blocks.RED_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.red())
+                        .unlockedBy(getHasName(ChiseledBlocks.RED_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.red()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICKS, Blocks.RED_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.red());
                 stairBuilder(ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.RED_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.RED_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS, Blocks.RED_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.red());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.RED_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.RED_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_SLAB, Blocks.RED_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.red(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.RED_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_WALL, ChiseledBlocks.RED_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_WALL, Blocks.RED_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.red());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICK_WALL, ChiseledBlocks.RED_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.ORANGE_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS), has(Blocks.ORANGE_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.orange())
+                        .unlockedBy(getHasName(ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.orange()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS, Blocks.ORANGE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.orange());
                 stairBuilder(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS, Blocks.ORANGE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.orange());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_SLAB, Blocks.ORANGE_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.orange(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_WALL, Blocks.ORANGE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.orange());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.YELLOW_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS), has(Blocks.YELLOW_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.yellow())
+                        .unlockedBy(getHasName(ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.yellow()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS, Blocks.YELLOW_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.yellow());
                 stairBuilder(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS, Blocks.YELLOW_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.yellow());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_SLAB, Blocks.YELLOW_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.yellow(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_WALL, ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_WALL, Blocks.YELLOW_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.yellow());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_WALL, ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.LIME_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.LIME_TERRACOTTA_BRICKS), has(Blocks.LIME_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.lime())
+                        .unlockedBy(getHasName(ChiseledBlocks.LIME_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.lime()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICKS, Blocks.LIME_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.lime());
                 stairBuilder(ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.LIME_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.LIME_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS, Blocks.LIME_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.lime());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.LIME_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.LIME_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_SLAB, Blocks.LIME_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.lime(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.LIME_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_WALL, ChiseledBlocks.LIME_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_WALL, Blocks.LIME_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.lime());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICK_WALL, ChiseledBlocks.LIME_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.GREEN_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.GREEN_TERRACOTTA_BRICKS), has(Blocks.GREEN_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.green())
+                        .unlockedBy(getHasName(ChiseledBlocks.GREEN_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.green()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICKS, Blocks.GREEN_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.green());
                 stairBuilder(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.GREEN_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.GREEN_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS, Blocks.GREEN_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.green());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.GREEN_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.GREEN_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_SLAB, Blocks.GREEN_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.green(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.GREEN_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_WALL, ChiseledBlocks.GREEN_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_WALL, Blocks.GREEN_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.green());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICK_WALL, ChiseledBlocks.GREEN_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.CYAN_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.CYAN_TERRACOTTA_BRICKS), has(Blocks.CYAN_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.cyan())
+                        .unlockedBy(getHasName(ChiseledBlocks.CYAN_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.cyan()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICKS, Blocks.CYAN_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.cyan());
                 stairBuilder(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.CYAN_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.CYAN_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS, Blocks.CYAN_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.cyan());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.CYAN_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.CYAN_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_SLAB, Blocks.CYAN_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.cyan(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.CYAN_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_WALL, ChiseledBlocks.CYAN_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_WALL, Blocks.CYAN_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.cyan());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICK_WALL, ChiseledBlocks.CYAN_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.LIGHT_BLUE_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS), has(Blocks.LIGHT_BLUE_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.lightBlue())
+                        .unlockedBy(getHasName(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.lightBlue()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS, Blocks.LIGHT_BLUE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.lightBlue());
                 stairBuilder(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS, Blocks.LIGHT_BLUE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.lightBlue());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB, Blocks.LIGHT_BLUE_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.lightBlue(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL, Blocks.LIGHT_BLUE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.lightBlue());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.BLUE_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.BLUE_TERRACOTTA_BRICKS), has(Blocks.BLUE_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.blue())
+                        .unlockedBy(getHasName(ChiseledBlocks.BLUE_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.blue()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICKS, Blocks.BLUE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.blue());
                 stairBuilder(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.BLUE_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.BLUE_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS, Blocks.BLUE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.blue());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.BLUE_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.BLUE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB, Blocks.BLUE_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.blue(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.BLUE_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.BLUE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL, Blocks.BLUE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.blue());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.BLUE_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.PURPLE_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS), has(Blocks.PURPLE_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.purple())
+                        .unlockedBy(getHasName(ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.purple()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS, Blocks.PURPLE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.purple());
                 stairBuilder(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS, Blocks.PURPLE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.purple());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB, Blocks.PURPLE_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.purple(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL, Blocks.PURPLE_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.purple());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL, ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.MAGENTA_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS), has(Blocks.MAGENTA_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.magenta())
+                        .unlockedBy(getHasName(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.magenta()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS, Blocks.MAGENTA_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.magenta());
                 stairBuilder(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS, Blocks.MAGENTA_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.magenta());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB, Blocks.MAGENTA_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.magenta(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL, Blocks.MAGENTA_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.magenta());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICKS,4)
                         .pattern("##")
                         .pattern("##")
-                        .define('#', Blocks.PINK_TERRACOTTA)
-                        .unlockedBy(getHasName(ChiseledBlocks.PINK_TERRACOTTA_BRICKS), has(Blocks.PINK_TERRACOTTA))
+                        .define('#', Blocks.DYED_TERRACOTTA.pink())
+                        .unlockedBy(getHasName(ChiseledBlocks.PINK_TERRACOTTA_BRICKS), has(Blocks.DYED_TERRACOTTA.pink()))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICKS, Blocks.PINK_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.pink());
                 stairBuilder(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.PINK_TERRACOTTA_BRICKS))
                         .unlockedBy(getHasName(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS), has(ChiseledBlocks.PINK_TERRACOTTA_BRICKS))
                         .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS, Blocks.PINK_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS, Blocks.DYED_TERRACOTTA.pink());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS, ChiseledBlocks.PINK_TERRACOTTA_BRICKS);
                 slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.PINK_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB, Blocks.PINK_TERRACOTTA,2);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB, Blocks.DYED_TERRACOTTA.pink(),2);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB, ChiseledBlocks.PINK_TERRACOTTA_BRICKS,2);
                 wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL, ChiseledBlocks.PINK_TERRACOTTA_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL, Blocks.PINK_TERRACOTTA);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.pink());
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL, ChiseledBlocks.PINK_TERRACOTTA_BRICKS);
 
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.WHITE_TERRACOTTA_BRICKS, 8)
@@ -1355,7 +1455,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.WHITE_DYE)
+                        .define('0', Items.DYE.white())
                         .unlockedBy(getHasName(ChiseledBlocks.WHITE_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "white_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS, 8)
@@ -1363,7 +1463,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.LIGHT_GRAY_DYE)
+                        .define('0', Items.DYE.lightGray())
                         .unlockedBy(getHasName(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "light_gray_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GRAY_TERRACOTTA_BRICKS, 8)
@@ -1371,7 +1471,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.GRAY_DYE)
+                        .define('0', Items.DYE.gray())
                         .unlockedBy(getHasName(ChiseledBlocks.GRAY_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "gray_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLACK_TERRACOTTA_BRICKS, 8)
@@ -1379,7 +1479,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.BLACK_DYE)
+                        .define('0', Items.DYE.black())
                         .unlockedBy(getHasName(ChiseledBlocks.BLACK_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "black_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BROWN_TERRACOTTA_BRICKS, 8)
@@ -1387,7 +1487,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.BROWN_DYE)
+                        .define('0', Items.DYE.brown())
                         .unlockedBy(getHasName(ChiseledBlocks.BROWN_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "brown_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.RED_TERRACOTTA_BRICKS, 8)
@@ -1395,7 +1495,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.RED_DYE)
+                        .define('0', Items.DYE.red())
                         .unlockedBy(getHasName(ChiseledBlocks.RED_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "red_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS, 8)
@@ -1403,7 +1503,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.ORANGE_DYE)
+                        .define('0', Items.DYE.orange())
                         .unlockedBy(getHasName(ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "orange_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS, 8)
@@ -1411,7 +1511,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.YELLOW_DYE)
+                        .define('0', Items.DYE.yellow())
                         .unlockedBy(getHasName(ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "yellow_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIME_TERRACOTTA_BRICKS, 8)
@@ -1419,7 +1519,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.LIME_DYE)
+                        .define('0', Items.DYE.lime())
                         .unlockedBy(getHasName(ChiseledBlocks.LIME_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "lime_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.GREEN_TERRACOTTA_BRICKS, 8)
@@ -1427,7 +1527,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.GREEN_DYE)
+                        .define('0', Items.DYE.green())
                         .unlockedBy(getHasName(ChiseledBlocks.GREEN_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "green_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CYAN_TERRACOTTA_BRICKS, 8)
@@ -1435,7 +1535,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.CYAN_DYE)
+                        .define('0', Items.DYE.cyan())
                         .unlockedBy(getHasName(ChiseledBlocks.CYAN_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "cyan_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS, 8)
@@ -1443,7 +1543,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.LIGHT_BLUE_DYE)
+                        .define('0', Items.DYE.lightBlue())
                         .unlockedBy(getHasName(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "light_blue_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.BLUE_TERRACOTTA_BRICKS, 8)
@@ -1451,7 +1551,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.BLUE_DYE)
+                        .define('0', Items.DYE.blue())
                         .unlockedBy(getHasName(ChiseledBlocks.BLUE_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "blue_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS, 8)
@@ -1459,7 +1559,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.PURPLE_DYE)
+                        .define('0', Items.DYE.purple())
                         .unlockedBy(getHasName(ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "purple_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS, 8)
@@ -1467,7 +1567,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.MAGENTA_DYE)
+                        .define('0', Items.DYE.magenta())
                         .unlockedBy(getHasName(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "magenta_terracotta_bricks_from_terracotta_bricks");
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.PINK_TERRACOTTA_BRICKS, 8)
@@ -1475,7 +1575,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .pattern("#0#")
                         .pattern("###")
                         .define('#', ChiseledBlocks.TERRACOTTA_BRICKS)
-                        .define('0', Items.PINK_DYE)
+                        .define('0', Items.DYE.pink())
                         .unlockedBy(getHasName(ChiseledBlocks.PINK_TERRACOTTA_BRICKS), has(ChiseledBlocks.TERRACOTTA_BRICKS))
                         .save(output, "pink_terracotta_bricks_from_terracotta_bricks");
 

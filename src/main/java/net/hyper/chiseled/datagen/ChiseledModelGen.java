@@ -257,6 +257,22 @@ public class ChiseledModelGen extends FabricModelProvider {
         redSandstoneTilePool.slab(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB);
         redSandstoneTilePool.wall(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
 
+        BlockModelGenerators.BlockFamilyProvider cutCinnabarBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_CINNABAR_BRICKS);
+        cutCinnabarBrickPool.stairs(ChiseledBlocks.CUT_CINNABAR_BRICK_STAIRS);
+        cutCinnabarBrickPool.slab(ChiseledBlocks.CUT_CINNABAR_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider cinnabarTilePool = blockModelGenerators.family(ChiseledBlocks.CINNABAR_TILES);
+        cinnabarTilePool.stairs(ChiseledBlocks.CINNABAR_TILE_STAIRS);
+        cinnabarTilePool.slab(ChiseledBlocks.CINNABAR_TILE_SLAB);
+        cinnabarTilePool.wall(ChiseledBlocks.CINNABAR_TILE_WALL);
+
+        BlockModelGenerators.BlockFamilyProvider cutSulfurBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_SULFUR_BRICKS);
+        cutSulfurBrickPool.stairs(ChiseledBlocks.CUT_SULFUR_BRICK_STAIRS);
+        cutSulfurBrickPool.slab(ChiseledBlocks.CUT_SULFUR_BRICK_SLAB);
+        BlockModelGenerators.BlockFamilyProvider sulfurTilePool = blockModelGenerators.family(ChiseledBlocks.SULFUR_TILES);
+        sulfurTilePool.stairs(ChiseledBlocks.SULFUR_TILE_STAIRS);
+        sulfurTilePool.slab(ChiseledBlocks.SULFUR_TILE_SLAB);
+        sulfurTilePool.wall(ChiseledBlocks.SULFUR_TILE_WALL);
+
         createWall(ChiseledBlocks.PRISMARINE_BRICK_WALL, Blocks.PRISMARINE_BRICKS, blockModelGenerators);
         BlockModelGenerators.BlockFamilyProvider cutPrismarineBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_PRISMARINE_BRICKS);
         cutPrismarineBrickPool.stairs(ChiseledBlocks.CUT_PRISMARINE_BRICK_STAIRS);

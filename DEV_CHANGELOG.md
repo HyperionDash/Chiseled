@@ -1,3 +1,9 @@
+# 2.0a+26.2-DEV+0.9a
+- updated to 26.2
+- added blockset additions for cinnabar
+- added blockset additions for sulfur
+- i dont remember what else go check the modified files
+
 # 2.0a+26.1-DEV+0.8a
 - added blockset additions for nether bricks
 - added blockset additions for basalt

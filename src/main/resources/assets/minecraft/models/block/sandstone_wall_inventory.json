@@ -1,7 +1,7 @@
 {
-  "parent": "chiseled:block/template/custom_top_wall_inventory",
+  "parent": "silliestlib:block/custom_wall_inventory",
   "textures": {
-    "wall": "minecraft:block/sandstone",
+    "side": "minecraft:block/sandstone",
     "top": "minecraft:block/sandstone_top"
   }
 }

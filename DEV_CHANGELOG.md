@@ -1,3 +1,9 @@
+# 2.0a+26.2-DEV+0.9b
+- migrated to using SilliestLib
+- added missing recipes for sulfur and cinnabar blocks
+- added some textures for dripstone
+- fixed a visual bug with the existing pillars
+
 # 2.0a+26.2-DEV+0.9a
 - updated to 26.2
 - added blockset additions for cinnabar

@@ -1,7 +1,8 @@
 package net.hyper.chiseled.refrence;
 
-import net.hyper.chiseled.Chiseled;
 import net.minecraft.references.BlockItemId;
+
+import static net.hyper.silliestlib.utils.SilliestLibRegUtils.*;
 
 public interface ChiseledBlockItemIds {
     BlockItemId STONE_WALL = regBlockItemId("stone_wall");
@@ -381,11 +382,4 @@ public interface ChiseledBlockItemIds {
     BlockItemId AMETHYST_TILE_WALL = regBlockItemId("amethyst_tile_wall");
 
     BlockItemId NETHERITE_STAIRS = regBlockItemId("netherite_stairs");
-
-    static BlockItemId regBlockItemId(String blockName, String itemName) {
-        return BlockItemId.create(Chiseled.id(blockName), Chiseled.id(itemName));
-    }
-    static BlockItemId regBlockItemId(final String name) {
-        return regBlockItemId(name, name);
-    }
 }

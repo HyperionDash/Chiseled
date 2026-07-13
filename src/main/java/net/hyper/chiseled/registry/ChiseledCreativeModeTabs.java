@@ -6,7 +6,6 @@ import net.hyper.chiseled.Chiseled;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +14,7 @@ import net.minecraft.world.level.block.*;
 
 public interface ChiseledCreativeModeTabs {
     CreativeModeTab CHISELED = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-            Identifier.fromNamespaceAndPath(Chiseled.MOD_ID, "chiseled"),
+            Chiseled.id("chiseled"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ChiseledBlockItems.POLISHED_STONE))
                     .title(Component.translatable("itemgroup.chiseled.chiseled"))
                     .displayItems((displayContext, entries) -> {

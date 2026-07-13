@@ -2,14 +2,11 @@ package net.hyper.chiseled.registry;
 
 import net.hyper.chiseled.block.*;
 import net.hyper.chiseled.refrence.ChiseledBlockItemIds;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.references.BlockItemId;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
-import java.util.function.Function;
+
+import static net.hyper.silliestlib.utils.SilliestLibRegUtils.*;
 
 public interface ChiseledBlocks {
     Block STONE_WALL = regBlock(ChiseledBlockItemIds.STONE_WALL,
@@ -1098,8 +1095,5 @@ public interface ChiseledBlocks {
             properties -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(),properties
                     .mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops().strength(50.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
 
-    static Block regBlock(BlockItemId id, Function<BlockBehaviour.Properties, Block> function) {
-        return Registry.register(BuiltInRegistries.BLOCK, id.block(), function.apply(BlockBehaviour.Properties.of().setId(id.block())));
-    }
     static void init() {}
 }

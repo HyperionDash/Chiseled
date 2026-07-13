@@ -1,14 +1,11 @@
 package net.hyper.chiseled.registry;
 
 import net.hyper.chiseled.refrence.ChiseledBlockItemIds;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.references.BlockItemId;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 
-import java.util.function.Function;
+import static net.hyper.silliestlib.utils.SilliestLibRegUtils.*;
 
 public interface ChiseledBlockItems {
     Item STONE_WALL = regBlockItem(ChiseledBlockItemIds.STONE_WALL, properties -> new BlockItem(ChiseledBlocks.STONE_WALL,properties));
@@ -389,8 +386,5 @@ public interface ChiseledBlockItems {
 
     Item NETHERITE_STAIRS = regBlockItem(ChiseledBlockItemIds.NETHERITE_STAIRS, properties -> new BlockItem(ChiseledBlocks.NETHERITE_STAIRS,properties.fireResistant()));
 
-    static Item regBlockItem(BlockItemId id, Function<Item.Properties, Item> function) {
-        return Registry.register(BuiltInRegistries.ITEM, id.item(), function.apply(new Item.Properties().useBlockDescriptionPrefix().setId(id.item())));
-    }
     static void init() {}
 }

@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.hyper.chiseled.registry.*;
+import net.hyper.silliestlib.SilliestLib;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
@@ -18,9 +19,10 @@ public class Chiseled implements ModInitializer {
 		return Identifier.fromNamespaceAndPath(MOD_ID, path);
 	}
 
-
 	@Override
 	public void onInitialize() {
+		SilliestLib.init(MOD_ID);
+
 		ChiseledBlocks.init();
 		ChiseledBlockItems.init();
 		ChiseledCreativeModeTabs.init();
@@ -28,7 +30,7 @@ public class Chiseled implements ModInitializer {
 		LOGGER.info("Chiseling Bricks");
 
 		FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(modContainer ->
-				ResourceLoader.registerBuiltinPack(Identifier.fromNamespaceAndPath(MOD_ID,"data_overrides"), modContainer,
+				ResourceLoader.registerBuiltinPack(id("data_overrides"), modContainer,
 						Component.translatable("text.chiseled.data_overrides"),PackActivationType.ALWAYS_ENABLED));
 	}
 }

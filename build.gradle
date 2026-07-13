@@ -23,6 +23,7 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	implementation "maven.modrinth:silliestlib:${project.silliestlib_version}"
 
 	// Client Side mods
 	runtimeOnly "maven.modrinth:u6dRKJwZ:q4A3KM39"
@@ -30,7 +31,6 @@ dependencies {
 	runtimeOnly "maven.modrinth:mOgUt4GM:3gAjUrx6"
 	runtimeOnly "maven.modrinth:AANobbMI:3QgJXuSK"
 	runtimeOnly "maven.modrinth:aC3cM3Vq:jOiTBIaB"
-	//runtimeOnly("maven.modrinth:mc122477fix-re-updated:${project.mc122477fix_re_updated_version}")
 }
 
 processResources {

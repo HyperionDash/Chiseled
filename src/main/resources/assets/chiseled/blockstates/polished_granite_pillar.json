@@ -6,7 +6,7 @@
       "y": 90
     },
     "axis=y": {
-      "model": "chiseled:block/polished_granite_pillar"
+      "model": "chiseled:block/polished_granite_pillar_vertical"
     },
     "axis=z": {
       "model": "chiseled:block/polished_granite_pillar",

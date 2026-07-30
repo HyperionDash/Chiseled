@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "chiseled:block/cut_honeycomb_bricks",
-    "side": "chiseled:block/cut_honeycomb_bricks",
-    "top": "chiseled:block/cut_honeycomb_bricks"
-  }
-}

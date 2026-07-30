@@ -43,9 +43,6 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.MOSSY_MUD_BRICK_WALL)
                 .add(ChiseledBlockItemIds.MUD_TILE_WALL)
                 .add(ChiseledBlockItemIds.MOSSY_MUD_TILE_WALL)
-                .add(ChiseledBlockItemIds.HONEYCOMB_WALL)
-                .add(ChiseledBlockItemIds.HONEYCOMB_BRICK_WALL)
-                .add(ChiseledBlockItemIds.HONEYCOMB_TILE_WALL)
                 .add(ChiseledBlockItemIds.SMOOTH_SANDSTONE_WALL)
                 .add(ChiseledBlockItemIds.SANDSTONE_BRICK_WALL)
                 .add(ChiseledBlockItemIds.SANDSTONE_TILE_WALL)
@@ -86,8 +83,7 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.QUARTZ_BRICK_WALL)
                 .add(ChiseledBlockItemIds.QUARTZ_TILE_WALL)
                 .add(ChiseledBlockItemIds.AMETHYST_WALL)
-                .add(ChiseledBlockItemIds.AMETHYST_BRICK_WALL)
-                .add(ChiseledBlockItemIds.AMETHYST_TILE_WALL);
+                .add(ChiseledBlockItemIds.AMETHYST_BRICK_WALL);
 
         builder(ItemTags.STONE_BRICKS)
                 .add(ChiseledBlockItemIds.POLISHED_STONE)

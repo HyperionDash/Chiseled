@@ -164,21 +164,6 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.MOSSY_MUD_TILE_SLAB, "Mossy Mud Tile Slab");
         translationBuilder.add(ChiseledBlocks.MOSSY_MUD_TILE_WALL, "Mossy Mud Tile Wall");
 
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_STAIRS, "Honeycomb Stairs");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_SLAB, "Honeycomb Slab");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_WALL, "Honeycomb Wall");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_BRICKS, "Honeycomb Bricks");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_BRICK_STAIRS, "Honeycomb Brick Stairs");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_BRICK_SLAB, "Honeycomb Brick Slab");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_BRICK_WALL, "Honeycomb Brick Wall");
-        translationBuilder.add(ChiseledBlocks.CUT_HONEYCOMB_BRICKS, "Cut Honeycomb Bricks");
-        translationBuilder.add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS, "Cut Honeycomb Brick Stairs");
-        translationBuilder.add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB, "Cut Honeycomb Brick Slab");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_TILES, "Honeycomb Tiles");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_TILE_STAIRS, "Honeycomb Tile Stairs");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_TILE_SLAB, "Honeycomb Tile Slab");
-        translationBuilder.add(ChiseledBlocks.HONEYCOMB_TILE_WALL, "Honeycomb Tile Wall");
-
         translationBuilder.add(ChiseledBlocks.SMOOTH_SANDSTONE_WALL, "Smooth Sandstone Wall");
         translationBuilder.add(ChiseledBlocks.SANDSTONE_BRICKS, "Sandstone Bricks");
         translationBuilder.add(ChiseledBlocks.SANDSTONE_BRICK_STAIRS, "Sandstone Brick Stairs");
@@ -233,16 +218,6 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICKS, "Cut Dark Prismarine Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS, "Cut Dark Prismarine Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB, "Cut Dark Prismarine Brick Slab");
-
-        translationBuilder.add(ChiseledBlocks.PACKED_SNOW_BRICKS, "Packed Snow Bricks");
-        translationBuilder.add(ChiseledBlocks.PACKED_SNOW_BRICK_STAIRS, "Packed Snow Brick Stairs");
-        translationBuilder.add(ChiseledBlocks.PACKED_SNOW_BRICK_SLAB, "Packed Snow Brick Slab");
-        translationBuilder.add(ChiseledBlocks.CUT_PACKED_SNOW_BRICKS, "Cut Packed Snow Bricks");
-        translationBuilder.add(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_STAIRS, "Cut Packed Snow Brick Stairs");
-        translationBuilder.add(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_SLAB, "Cut Packed Snow Brick Slab");
-        translationBuilder.add(ChiseledBlocks.PACKED_SNOW_TILES, "Packed Snow Tiles");
-        translationBuilder.add(ChiseledBlocks.PACKED_SNOW_TILE_STAIRS, "Packed Snow Tile Stairs");
-        translationBuilder.add(ChiseledBlocks.PACKED_SNOW_TILE_SLAB, "Packed Snow Tile Slab");
 
         translationBuilder.add(ChiseledBlocks.TERRACOTTA_BRICKS, "Terracotta Bricks");
         translationBuilder.add(ChiseledBlocks.TERRACOTTA_BRICK_STAIRS, "Terracotta Brick Stairs");
@@ -383,10 +358,6 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.CUT_AMETHYST_BRICKS, "Cut Amethyst Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS, "Cut Amethyst Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB, "Cut Amethyst Brick Slab");
-        translationBuilder.add(ChiseledBlocks.AMETHYST_TILES, "Amethyst Tiles");
-        translationBuilder.add(ChiseledBlocks.AMETHYST_TILE_STAIRS, "Amethyst Tile Stairs");
-        translationBuilder.add(ChiseledBlocks.AMETHYST_TILE_SLAB, "Amethyst Tile Slab");
-        translationBuilder.add(ChiseledBlocks.AMETHYST_TILE_WALL, "Amethyst Tile Wall");
 
         translationBuilder.add(ChiseledBlocks.NETHERITE_STAIRS, "Netherite Stairs");
 

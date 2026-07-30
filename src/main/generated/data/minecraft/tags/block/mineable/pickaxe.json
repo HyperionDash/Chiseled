@@ -143,17 +143,6 @@
     "chiseled:mossy_mud_tile_stairs",
     "chiseled:mossy_mud_tile_slab",
     "chiseled:mossy_mud_tile_wall",
-    "chiseled:honeycomb_bricks",
-    "chiseled:honeycomb_brick_stairs",
-    "chiseled:honeycomb_brick_slab",
-    "chiseled:honeycomb_brick_wall",
-    "chiseled:cut_honeycomb_bricks",
-    "chiseled:cut_honeycomb_brick_stairs",
-    "chiseled:cut_honeycomb_brick_slab",
-    "chiseled:honeycomb_tiles",
-    "chiseled:honeycomb_tile_stairs",
-    "chiseled:honeycomb_tile_slab",
-    "chiseled:honeycomb_tile_wall",
     "chiseled:smooth_sandstone_wall",
     "chiseled:sandstone_bricks",
     "chiseled:sandstone_brick_stairs",
@@ -334,10 +323,6 @@
     "chiseled:amethyst_brick_wall",
     "chiseled:cut_amethyst_bricks",
     "chiseled:cut_amethyst_brick_stairs",
-    "chiseled:cut_amethyst_brick_slab",
-    "chiseled:amethyst_tiles",
-    "chiseled:amethyst_tile_stairs",
-    "chiseled:amethyst_tile_slab",
-    "chiseled:amethyst_tile_wall"
+    "chiseled:cut_amethyst_brick_slab"
   ]
 }

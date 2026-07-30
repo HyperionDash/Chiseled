@@ -34,10 +34,6 @@
     "chiseled:mossy_cut_mud_brick_slab",
     "chiseled:mud_tile_slab",
     "chiseled:mossy_mud_tile_slab",
-    "chiseled:honeycomb_slab",
-    "chiseled:honeycomb_brick_slab",
-    "chiseled:cut_honeycomb_brick_slab",
-    "chiseled:honeycomb_tile_slab",
     "chiseled:sandstone_brick_slab",
     "chiseled:cut_sandstone_brick_slab",
     "chiseled:sandstone_tile_slab",
@@ -48,12 +44,7 @@
     "chiseled:cinnabar_tile_slab",
     "chiseled:cut_sulfur_brick_slab",
     "chiseled:sulfur_tile_slab",
-    "chiseled:cut_prismarine_brick_slab",
     "chiseled:dark_prismarine_brick_slab",
-    "chiseled:cut_dark_prismarine_brick_slab",
-    "chiseled:packed_snow_brick_slab",
-    "chiseled:cut_packed_snow_brick_slab",
-    "chiseled:packed_snow_tile_slab",
     "chiseled:terracotta_brick_slab",
     "chiseled:white_terracotta_brick_slab",
     "chiseled:light_gray_terracotta_brick_slab",
@@ -86,7 +77,6 @@
     "chiseled:quartz_tile_slab",
     "chiseled:amethyst_slab",
     "chiseled:amethyst_brick_slab",
-    "chiseled:cut_amethyst_brick_slab",
-    "chiseled:amethyst_tile_slab"
+    "chiseled:cut_amethyst_brick_slab"
   ]
 }

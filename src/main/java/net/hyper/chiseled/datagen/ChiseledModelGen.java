@@ -163,21 +163,6 @@ public class ChiseledModelGen extends FabricModelProvider {
         mossyMudTilePool.stairs(ChiseledBlocks.MOSSY_MUD_TILE_STAIRS);
         mossyMudTilePool.slab(ChiseledBlocks.MOSSY_MUD_TILE_SLAB);
         mossyMudTilePool.wall(ChiseledBlocks.MOSSY_MUD_TILE_WALL);
-
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.HONEYCOMB_STAIRS, Blocks.HONEYCOMB_BLOCK, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneSlab(ChiseledBlocks.HONEYCOMB_SLAB, Blocks.HONEYCOMB_BLOCK, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.HONEYCOMB_WALL, Blocks.HONEYCOMB_BLOCK, blockModelGenerators);
-        BlockModelGenerators.BlockFamilyProvider honeycombBrickPool = blockModelGenerators.family(ChiseledBlocks.HONEYCOMB_BRICKS);
-        honeycombBrickPool.stairs(ChiseledBlocks.HONEYCOMB_BRICK_STAIRS);
-        honeycombBrickPool.slab(ChiseledBlocks.HONEYCOMB_BRICK_SLAB);
-        honeycombBrickPool.wall(ChiseledBlocks.HONEYCOMB_BRICK_WALL);
-        BlockModelGenerators.BlockFamilyProvider cutHoneycombBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_HONEYCOMB_BRICKS);
-        cutHoneycombBrickPool.stairs(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS);
-        cutHoneycombBrickPool.slab(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB);
-        BlockModelGenerators.BlockFamilyProvider honeycombTilePool = blockModelGenerators.family(ChiseledBlocks.HONEYCOMB_TILES);
-        honeycombTilePool.stairs(ChiseledBlocks.HONEYCOMB_TILE_STAIRS);
-        honeycombTilePool.slab(ChiseledBlocks.HONEYCOMB_TILE_SLAB);
-        honeycombTilePool.wall(ChiseledBlocks.HONEYCOMB_TILE_WALL);
         
         BlockModelGenerators.BlockFamilyProvider sandstoneBrickPool = blockModelGenerators.family(ChiseledBlocks.SANDSTONE_BRICKS);
         sandstoneBrickPool.stairs(ChiseledBlocks.SANDSTONE_BRICK_STAIRS);
@@ -233,16 +218,6 @@ public class ChiseledModelGen extends FabricModelProvider {
         cutDarkPrismarineBrickPool.slab(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB);
 
         SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.NETHERITE_STAIRS, Blocks.NETHERITE_BLOCK, blockModelGenerators);
-
-        BlockModelGenerators.BlockFamilyProvider packedSnowBrickPool = blockModelGenerators.family(ChiseledBlocks.PACKED_SNOW_BRICKS);
-        packedSnowBrickPool.stairs(ChiseledBlocks.PACKED_SNOW_BRICK_STAIRS);
-        packedSnowBrickPool.slab(ChiseledBlocks.PACKED_SNOW_BRICK_SLAB);
-        BlockModelGenerators.BlockFamilyProvider cutPackedSnowBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_PACKED_SNOW_BRICKS);
-        cutPackedSnowBrickPool.stairs(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_STAIRS);
-        cutPackedSnowBrickPool.slab(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_SLAB);
-        BlockModelGenerators.BlockFamilyProvider packedSnowTilePool = blockModelGenerators.family(ChiseledBlocks.PACKED_SNOW_TILES);
-        packedSnowTilePool.stairs(ChiseledBlocks.PACKED_SNOW_TILE_STAIRS);
-        packedSnowTilePool.slab(ChiseledBlocks.PACKED_SNOW_TILE_SLAB);
 
         BlockModelGenerators.BlockFamilyProvider terracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.TERRACOTTA_BRICKS);
         terracottaBrickPool.stairs(ChiseledBlocks.TERRACOTTA_BRICK_STAIRS);
@@ -381,10 +356,6 @@ public class ChiseledModelGen extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider cutAmethystBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_AMETHYST_BRICKS);
         cutAmethystBrickPool.stairs(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS);
         cutAmethystBrickPool.slab(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB);
-        BlockModelGenerators.BlockFamilyProvider amethystTilePool = blockModelGenerators.family(ChiseledBlocks.AMETHYST_TILES);
-        amethystTilePool.stairs(ChiseledBlocks.AMETHYST_TILE_STAIRS);
-        amethystTilePool.slab(ChiseledBlocks.AMETHYST_TILE_SLAB);
-        amethystTilePool.wall(ChiseledBlocks.AMETHYST_TILE_WALL);
     }
 
     @Override

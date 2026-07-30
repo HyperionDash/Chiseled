@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:honeycomb_block",
-  "result": {
-    "id": "chiseled:honeycomb_tile_stairs"
-  }
-}

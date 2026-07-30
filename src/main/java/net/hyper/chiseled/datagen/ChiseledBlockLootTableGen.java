@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.hyper.chiseled.registry.ChiseledBlocks;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.world.item.Items;
+
 import java.util.concurrent.CompletableFuture;
 
 public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
@@ -165,21 +167,6 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.MOSSY_MUD_TILE_SLAB, createSlabItemTable(ChiseledBlocks.MOSSY_MUD_TILE_SLAB));
         dropSelf(ChiseledBlocks.MOSSY_MUD_TILE_WALL);
 
-        dropSelf(ChiseledBlocks.HONEYCOMB_STAIRS);
-        add(ChiseledBlocks.HONEYCOMB_SLAB, createSlabItemTable(ChiseledBlocks.HONEYCOMB_SLAB));
-        dropSelf(ChiseledBlocks.HONEYCOMB_WALL);
-        dropSelf(ChiseledBlocks.HONEYCOMB_BRICKS);
-        dropSelf(ChiseledBlocks.HONEYCOMB_BRICK_STAIRS);
-        add(ChiseledBlocks.HONEYCOMB_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.HONEYCOMB_BRICK_SLAB));
-        dropSelf(ChiseledBlocks.HONEYCOMB_BRICK_WALL);
-        dropSelf(ChiseledBlocks.CUT_HONEYCOMB_BRICKS);
-        dropSelf(ChiseledBlocks.CUT_HONEYCOMB_BRICK_STAIRS);
-        add(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_HONEYCOMB_BRICK_SLAB));
-        dropSelf(ChiseledBlocks.HONEYCOMB_TILES);
-        dropSelf(ChiseledBlocks.HONEYCOMB_TILE_STAIRS);
-        add(ChiseledBlocks.HONEYCOMB_TILE_SLAB, createSlabItemTable(ChiseledBlocks.HONEYCOMB_TILE_SLAB));
-        dropSelf(ChiseledBlocks.HONEYCOMB_TILE_WALL);
-
         dropSelf(ChiseledBlocks.SMOOTH_SANDSTONE_WALL);
         dropSelf(ChiseledBlocks.SANDSTONE_BRICKS);
         dropSelf(ChiseledBlocks.SANDSTONE_BRICK_STAIRS);
@@ -234,16 +221,6 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICKS);
         dropSelf(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS);
         add(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB));
-
-        dropSelf(ChiseledBlocks.PACKED_SNOW_BRICKS);
-        dropSelf(ChiseledBlocks.PACKED_SNOW_BRICK_STAIRS);
-        add(ChiseledBlocks.PACKED_SNOW_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.PACKED_SNOW_BRICK_SLAB));
-        dropSelf(ChiseledBlocks.CUT_PACKED_SNOW_BRICKS);
-        dropSelf(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_STAIRS);
-        add(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_PACKED_SNOW_BRICK_SLAB));
-        dropSelf(ChiseledBlocks.PACKED_SNOW_TILES);
-        dropSelf(ChiseledBlocks.PACKED_SNOW_TILE_STAIRS);
-        add(ChiseledBlocks.PACKED_SNOW_TILE_SLAB, createSlabItemTable(ChiseledBlocks.PACKED_SNOW_TILE_SLAB));
 
         dropSelf(ChiseledBlocks.TERRACOTTA_BRICKS);
         dropSelf(ChiseledBlocks.TERRACOTTA_BRICK_STAIRS);
@@ -384,10 +361,6 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.CUT_AMETHYST_BRICKS);
         dropSelf(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS);
         add(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB));
-        dropSelf(ChiseledBlocks.AMETHYST_TILES);
-        dropSelf(ChiseledBlocks.AMETHYST_TILE_STAIRS);
-        add(ChiseledBlocks.AMETHYST_TILE_SLAB, createSlabItemTable(ChiseledBlocks.AMETHYST_TILE_SLAB));
-        dropSelf(ChiseledBlocks.AMETHYST_TILE_WALL);
 
         dropSelf(ChiseledBlocks.NETHERITE_STAIRS);
     }

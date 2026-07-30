@@ -2,7 +2,9 @@ package net.hyper.chiseled.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.hyper.chiseled.refrence.ChiseledBlockItemIds;
+import net.hyper.chiseled.registry.ChiseledBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.references.BlockItemIds;
 import net.minecraft.tags.BlockTags;
@@ -160,17 +162,6 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.MOSSY_MUD_TILE_STAIRS)
                 .add(ChiseledBlockItemIds.MOSSY_MUD_TILE_SLAB)
                 .add(ChiseledBlockItemIds.MOSSY_MUD_TILE_WALL)
-                .add(ChiseledBlockItemIds.HONEYCOMB_BRICKS)
-                .add(ChiseledBlockItemIds.HONEYCOMB_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.HONEYCOMB_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.HONEYCOMB_BRICK_WALL)
-                .add(ChiseledBlockItemIds.CUT_HONEYCOMB_BRICKS)
-                .add(ChiseledBlockItemIds.CUT_HONEYCOMB_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.CUT_HONEYCOMB_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.HONEYCOMB_TILES)
-                .add(ChiseledBlockItemIds.HONEYCOMB_TILE_STAIRS)
-                .add(ChiseledBlockItemIds.HONEYCOMB_TILE_SLAB)
-                .add(ChiseledBlockItemIds.HONEYCOMB_TILE_WALL)
                 .add(ChiseledBlockItemIds.SMOOTH_SANDSTONE_WALL)
                 .add(ChiseledBlockItemIds.SANDSTONE_BRICKS)
                 .add(ChiseledBlockItemIds.SANDSTONE_BRICK_STAIRS)
@@ -351,22 +342,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.AMETHYST_BRICK_WALL)
                 .add(ChiseledBlockItemIds.CUT_AMETHYST_BRICKS)
                 .add(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.AMETHYST_TILES)
-                .add(ChiseledBlockItemIds.AMETHYST_TILE_STAIRS)
-                .add(ChiseledBlockItemIds.AMETHYST_TILE_SLAB)
-                .add(ChiseledBlockItemIds.AMETHYST_TILE_WALL);
-
-        builder(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_BRICKS)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.CUT_PACKED_SNOW_BRICKS)
-                .add(ChiseledBlockItemIds.CUT_PACKED_SNOW_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.CUT_PACKED_SNOW_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_TILES)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_TILE_STAIRS)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_TILE_SLAB);
+                .add(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_SLAB);
 
         builder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ChiseledBlockItemIds.NETHERITE_STAIRS);
@@ -416,10 +392,6 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.MOSSY_CUT_MUD_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.MUD_TILE_STAIRS)
                 .add(ChiseledBlockItemIds.MOSSY_MUD_TILE_STAIRS)
-                .add(ChiseledBlockItemIds.HONEYCOMB_STAIRS)
-                .add(ChiseledBlockItemIds.HONEYCOMB_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.HONEYCOMB_TILE_STAIRS)
-                .add(ChiseledBlockItemIds.CUT_HONEYCOMB_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.SANDSTONE_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.CUT_SANDSTONE_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.SANDSTONE_TILE_STAIRS)
@@ -430,13 +402,8 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.CINNABAR_TILE_STAIRS)
                 .add(ChiseledBlockItemIds.CUT_SULFUR_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.SULFUR_TILE_STAIRS)
-                .add(ChiseledBlockItemIds.CUT_PRISMARINE_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.DARK_PRISMARINE_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.NETHERITE_STAIRS)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.CUT_PACKED_SNOW_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_TILE_STAIRS)
                 .add(ChiseledBlockItemIds.TERRACOTTA_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS)
@@ -469,7 +436,6 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.QUARTZ_TILE_STAIRS)
                 .add(ChiseledBlockItemIds.AMETHYST_STAIRS)
                 .add(ChiseledBlockItemIds.AMETHYST_BRICK_STAIRS)
-                .add(ChiseledBlockItemIds.AMETHYST_TILE_STAIRS)
                 .add(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_STAIRS);
 
         builder(BlockTags.SLABS)
@@ -507,10 +473,6 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.MOSSY_CUT_MUD_BRICK_SLAB)
                 .add(ChiseledBlockItemIds.MUD_TILE_SLAB)
                 .add(ChiseledBlockItemIds.MOSSY_MUD_TILE_SLAB)
-                .add(ChiseledBlockItemIds.HONEYCOMB_SLAB)
-                .add(ChiseledBlockItemIds.HONEYCOMB_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.CUT_HONEYCOMB_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.HONEYCOMB_TILE_SLAB)
                 .add(ChiseledBlockItemIds.SANDSTONE_BRICK_SLAB)
                 .add(ChiseledBlockItemIds.CUT_SANDSTONE_BRICK_SLAB)
                 .add(ChiseledBlockItemIds.SANDSTONE_TILE_SLAB)
@@ -521,12 +483,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.CINNABAR_TILE_SLAB)
                 .add(ChiseledBlockItemIds.CUT_SULFUR_BRICK_SLAB)
                 .add(ChiseledBlockItemIds.SULFUR_TILE_SLAB)
-                .add(ChiseledBlockItemIds.CUT_PRISMARINE_BRICK_SLAB)
                 .add(ChiseledBlockItemIds.DARK_PRISMARINE_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.CUT_PACKED_SNOW_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.PACKED_SNOW_TILE_SLAB)
                 .add(ChiseledBlockItemIds.TERRACOTTA_BRICK_SLAB)
                 .add(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICK_SLAB)
                 .add(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB)
@@ -559,8 +516,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.QUARTZ_TILE_SLAB)
                 .add(ChiseledBlockItemIds.AMETHYST_SLAB)
                 .add(ChiseledBlockItemIds.AMETHYST_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_SLAB)
-                .add(ChiseledBlockItemIds.AMETHYST_TILE_SLAB);
+                .add(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_SLAB);
 
         builder(BlockTags.WALLS)
                 .add(ChiseledBlockItemIds.STONE_WALL)
@@ -591,9 +547,6 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.MOSSY_MUD_BRICK_WALL)
                 .add(ChiseledBlockItemIds.MUD_TILE_WALL)
                 .add(ChiseledBlockItemIds.MOSSY_MUD_TILE_WALL)
-                .add(ChiseledBlockItemIds.HONEYCOMB_WALL)
-                .add(ChiseledBlockItemIds.HONEYCOMB_BRICK_WALL)
-                .add(ChiseledBlockItemIds.HONEYCOMB_TILE_WALL)
                 .add(ChiseledBlockItemIds.SMOOTH_SANDSTONE_WALL)
                 .add(ChiseledBlockItemIds.SANDSTONE_BRICK_WALL)
                 .add(ChiseledBlockItemIds.SANDSTONE_TILE_WALL)
@@ -634,8 +587,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.QUARTZ_BRICK_WALL)
                 .add(ChiseledBlockItemIds.QUARTZ_TILE_WALL)
                 .add(ChiseledBlockItemIds.AMETHYST_WALL)
-                .add(ChiseledBlockItemIds.AMETHYST_BRICK_WALL)
-                .add(ChiseledBlockItemIds.AMETHYST_TILE_WALL);
+                .add(ChiseledBlockItemIds.AMETHYST_BRICK_WALL);
 
         builder(BlockTags.FENCES)
                 .add(ChiseledBlockItemIds.RED_NETHER_BRICK_FENCE);

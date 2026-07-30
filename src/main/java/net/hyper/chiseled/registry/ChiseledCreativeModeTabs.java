@@ -170,21 +170,6 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlockItems.MOSSY_MUD_TILE_SLAB);
                         entries.accept(ChiseledBlockItems.MOSSY_MUD_TILE_WALL);
 
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_STAIRS);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_SLAB);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_WALL);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_BRICKS);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_BRICK_STAIRS);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_BRICK_SLAB);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_BRICK_WALL);
-                        entries.accept(ChiseledBlockItems.CUT_HONEYCOMB_BRICKS);
-                        entries.accept(ChiseledBlockItems.CUT_HONEYCOMB_BRICK_STAIRS);
-                        entries.accept(ChiseledBlockItems.CUT_HONEYCOMB_BRICK_SLAB);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_TILES);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_TILE_STAIRS);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_TILE_SLAB);
-                        entries.accept(ChiseledBlockItems.HONEYCOMB_TILE_WALL);
-
                         entries.accept(ChiseledBlockItems.SMOOTH_SANDSTONE_WALL);
                         entries.accept(ChiseledBlockItems.SANDSTONE_BRICKS);
                         entries.accept(ChiseledBlockItems.SANDSTONE_BRICK_STAIRS);
@@ -239,16 +224,6 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlockItems.CUT_DARK_PRISMARINE_BRICKS);
                         entries.accept(ChiseledBlockItems.CUT_DARK_PRISMARINE_BRICK_STAIRS);
                         entries.accept(ChiseledBlockItems.CUT_DARK_PRISMARINE_BRICK_SLAB);
-
-                        entries.accept(ChiseledBlockItems.PACKED_SNOW_BRICKS);
-                        entries.accept(ChiseledBlockItems.PACKED_SNOW_BRICK_STAIRS);
-                        entries.accept(ChiseledBlockItems.PACKED_SNOW_BRICK_SLAB);
-                        entries.accept(ChiseledBlockItems.CUT_PACKED_SNOW_BRICKS);
-                        entries.accept(ChiseledBlockItems.CUT_PACKED_SNOW_BRICK_STAIRS);
-                        entries.accept(ChiseledBlockItems.CUT_PACKED_SNOW_BRICK_SLAB);
-                        entries.accept(ChiseledBlockItems.PACKED_SNOW_TILES);
-                        entries.accept(ChiseledBlockItems.PACKED_SNOW_TILE_STAIRS);
-                        entries.accept(ChiseledBlockItems.PACKED_SNOW_TILE_SLAB);
 
                         entries.accept(ChiseledBlockItems.CRACKED_RED_NETHER_BRICKS);
                         entries.accept(ChiseledBlockItems.RED_NETHER_BRICK_FENCE);
@@ -320,10 +295,6 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledBlockItems.CUT_AMETHYST_BRICKS);
                         entries.accept(ChiseledBlockItems.CUT_AMETHYST_BRICK_STAIRS);
                         entries.accept(ChiseledBlockItems.CUT_AMETHYST_BRICK_SLAB);
-                        entries.accept(ChiseledBlockItems.AMETHYST_TILES);
-                        entries.accept(ChiseledBlockItems.AMETHYST_TILE_STAIRS);
-                        entries.accept(ChiseledBlockItems.AMETHYST_TILE_SLAB);
-                        entries.accept(ChiseledBlockItems.AMETHYST_TILE_WALL);
 
                         entries.accept(ChiseledBlockItems.TERRACOTTA_BRICKS);
                         entries.accept(ChiseledBlockItems.TERRACOTTA_BRICK_STAIRS);
@@ -552,22 +523,6 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledBlockItems.MOSSY_MUD_TILE_SLAB,
                     ChiseledBlockItems.MOSSY_MUD_TILE_WALL);
 
-            entries.insertAfter(Items.CHISELED_RESIN_BRICKS, Items.HONEYCOMB_BLOCK,
-                    ChiseledBlockItems.HONEYCOMB_STAIRS,
-                    ChiseledBlockItems.HONEYCOMB_SLAB,
-                    ChiseledBlockItems.HONEYCOMB_WALL,
-                    ChiseledBlockItems.HONEYCOMB_BRICKS,
-                    ChiseledBlockItems.HONEYCOMB_BRICK_STAIRS,
-                    ChiseledBlockItems.HONEYCOMB_BRICK_SLAB,
-                    ChiseledBlockItems.HONEYCOMB_BRICK_WALL,
-                    ChiseledBlockItems.CUT_HONEYCOMB_BRICKS,
-                    ChiseledBlockItems.CUT_HONEYCOMB_BRICK_STAIRS,
-                    ChiseledBlockItems.CUT_HONEYCOMB_BRICK_SLAB,
-                    ChiseledBlockItems.HONEYCOMB_TILES,
-                    ChiseledBlockItems.HONEYCOMB_TILE_STAIRS,
-                    ChiseledBlockItems.HONEYCOMB_TILE_SLAB,
-                    ChiseledBlockItems.HONEYCOMB_TILE_WALL);
-
             entries.insertAfter(Items.SMOOTH_SANDSTONE_SLAB, ChiseledBlockItems.SMOOTH_SANDSTONE_WALL);
             entries.insertAfter(Items.CUT_STANDSTONE_SLAB, ChiseledBlockItems.SANDSTONE_BRICKS,
                     ChiseledBlockItems.SANDSTONE_BRICK_STAIRS,
@@ -621,17 +576,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledBlockItems.DARK_PRISMARINE_BRICK_WALL,
                     ChiseledBlockItems.CUT_DARK_PRISMARINE_BRICKS,
                     ChiseledBlockItems.CUT_DARK_PRISMARINE_BRICK_STAIRS,
-                    ChiseledBlockItems.CUT_DARK_PRISMARINE_BRICK_SLAB,
-                    Items.SNOW_BLOCK,
-                    ChiseledBlockItems.PACKED_SNOW_BRICKS,
-                    ChiseledBlockItems.PACKED_SNOW_BRICK_STAIRS,
-                    ChiseledBlockItems.PACKED_SNOW_BRICK_SLAB,
-                    ChiseledBlockItems.CUT_PACKED_SNOW_BRICKS,
-                    ChiseledBlockItems.CUT_PACKED_SNOW_BRICK_STAIRS,
-                    ChiseledBlockItems.CUT_PACKED_SNOW_BRICK_SLAB,
-                    ChiseledBlockItems.PACKED_SNOW_TILES,
-                    ChiseledBlockItems.PACKED_SNOW_TILE_STAIRS,
-                    ChiseledBlockItems.PACKED_SNOW_TILE_SLAB);
+                    ChiseledBlockItems.CUT_DARK_PRISMARINE_BRICK_SLAB);
 
             entries.insertAfter(Items.RED_NETHER_BRICKS, ChiseledBlockItems.CRACKED_RED_NETHER_BRICKS);
             entries.insertAfter(Items.RED_NETHER_BRICK_WALL, ChiseledBlockItems.RED_NETHER_BRICK_FENCE,
@@ -711,11 +656,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledBlockItems.AMETHYST_BRICK_WALL,
                     ChiseledBlockItems.CUT_AMETHYST_BRICKS,
                     ChiseledBlockItems.CUT_AMETHYST_BRICK_STAIRS,
-                    ChiseledBlockItems.CUT_AMETHYST_BRICK_SLAB,
-                    ChiseledBlockItems.AMETHYST_TILES,
-                    ChiseledBlockItems.AMETHYST_TILE_STAIRS,
-                    ChiseledBlockItems.AMETHYST_TILE_SLAB,
-                    ChiseledBlockItems.AMETHYST_TILE_WALL);
+                    ChiseledBlockItems.CUT_AMETHYST_BRICK_SLAB);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {

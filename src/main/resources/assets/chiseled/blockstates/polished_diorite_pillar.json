@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "chiseled:block/polished_diorite_pillar",
+      "model": "chiseled:block/polished_diorite_pillar_horizontal",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "chiseled:block/polished_diorite_pillar_vertical"
+      "model": "chiseled:block/polished_diorite_pillar"
     },
     "axis=z": {
-      "model": "chiseled:block/polished_diorite_pillar",
+      "model": "chiseled:block/polished_diorite_pillar_horizontal",
       "x": 90
     }
   }

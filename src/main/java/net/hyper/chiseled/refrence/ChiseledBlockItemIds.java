@@ -157,21 +157,6 @@ public interface ChiseledBlockItemIds {
     BlockItemId MOSSY_MUD_TILE_SLAB = regBlockItemId("mossy_mud_tile_slab");
     BlockItemId MOSSY_MUD_TILE_WALL = regBlockItemId("mossy_mud_tile_wall");
 
-    BlockItemId HONEYCOMB_STAIRS = regBlockItemId("honeycomb_stairs");
-    BlockItemId HONEYCOMB_SLAB = regBlockItemId("honeycomb_slab");
-    BlockItemId HONEYCOMB_WALL = regBlockItemId("honeycomb_wall");
-    BlockItemId HONEYCOMB_BRICKS = regBlockItemId("honeycomb_bricks");
-    BlockItemId HONEYCOMB_BRICK_STAIRS = regBlockItemId("honeycomb_brick_stairs");
-    BlockItemId HONEYCOMB_BRICK_SLAB = regBlockItemId("honeycomb_brick_slab");
-    BlockItemId HONEYCOMB_BRICK_WALL = regBlockItemId("honeycomb_brick_wall");
-    BlockItemId CUT_HONEYCOMB_BRICKS = regBlockItemId("cut_honeycomb_bricks");
-    BlockItemId CUT_HONEYCOMB_BRICK_STAIRS = regBlockItemId("cut_honeycomb_brick_stairs");
-    BlockItemId CUT_HONEYCOMB_BRICK_SLAB = regBlockItemId("cut_honeycomb_brick_slab");
-    BlockItemId HONEYCOMB_TILES = regBlockItemId("honeycomb_tiles");
-    BlockItemId HONEYCOMB_TILE_STAIRS = regBlockItemId("honeycomb_tile_stairs");
-    BlockItemId HONEYCOMB_TILE_SLAB = regBlockItemId("honeycomb_tile_slab");
-    BlockItemId HONEYCOMB_TILE_WALL = regBlockItemId("honeycomb_tile_wall");
-
     BlockItemId SMOOTH_SANDSTONE_WALL = regBlockItemId("smooth_sandstone_wall");
     BlockItemId SANDSTONE_BRICKS = regBlockItemId("sandstone_bricks");
     BlockItemId SANDSTONE_BRICK_STAIRS = regBlockItemId("sandstone_brick_stairs");
@@ -226,16 +211,6 @@ public interface ChiseledBlockItemIds {
     BlockItemId CUT_DARK_PRISMARINE_BRICKS = regBlockItemId("cut_dark_prismarine_bricks");
     BlockItemId CUT_DARK_PRISMARINE_BRICK_STAIRS = regBlockItemId("cut_dark_prismarine_brick_stairs");
     BlockItemId CUT_DARK_PRISMARINE_BRICK_SLAB = regBlockItemId("cut_dark_prismarine_brick_slab");
-
-    BlockItemId PACKED_SNOW_BRICKS = regBlockItemId("packed_snow_bricks");
-    BlockItemId PACKED_SNOW_BRICK_STAIRS = regBlockItemId("packed_snow_brick_stairs");
-    BlockItemId PACKED_SNOW_BRICK_SLAB = regBlockItemId("packed_snow_brick_slab");
-    BlockItemId CUT_PACKED_SNOW_BRICKS = regBlockItemId("cut_packed_snow_bricks");
-    BlockItemId CUT_PACKED_SNOW_BRICK_STAIRS = regBlockItemId("cut_packed_snow_brick_stairs");
-    BlockItemId CUT_PACKED_SNOW_BRICK_SLAB = regBlockItemId("cut_packed_snow_brick_slab");
-    BlockItemId PACKED_SNOW_TILES = regBlockItemId("packed_snow_tiles");
-    BlockItemId PACKED_SNOW_TILE_STAIRS = regBlockItemId("packed_snow_tile_stairs");
-    BlockItemId PACKED_SNOW_TILE_SLAB = regBlockItemId("packed_snow_tile_slab");
 
     BlockItemId TERRACOTTA_BRICKS = regBlockItemId("terracotta_bricks");
     BlockItemId TERRACOTTA_BRICK_STAIRS = regBlockItemId("terracotta_brick_stairs");
@@ -376,10 +351,6 @@ public interface ChiseledBlockItemIds {
     BlockItemId CUT_AMETHYST_BRICKS = regBlockItemId("cut_amethyst_bricks");
     BlockItemId CUT_AMETHYST_BRICK_STAIRS = regBlockItemId("cut_amethyst_brick_stairs");
     BlockItemId CUT_AMETHYST_BRICK_SLAB = regBlockItemId("cut_amethyst_brick_slab");
-    BlockItemId AMETHYST_TILES = regBlockItemId("amethyst_tiles");
-    BlockItemId AMETHYST_TILE_STAIRS = regBlockItemId("amethyst_tile_stairs");
-    BlockItemId AMETHYST_TILE_SLAB = regBlockItemId("amethyst_tile_slab");
-    BlockItemId AMETHYST_TILE_WALL = regBlockItemId("amethyst_tile_wall");
 
     BlockItemId NETHERITE_STAIRS = regBlockItemId("netherite_stairs");
 }

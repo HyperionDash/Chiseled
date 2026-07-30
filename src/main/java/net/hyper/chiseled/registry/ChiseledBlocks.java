@@ -5,6 +5,7 @@ import net.hyper.chiseled.refrence.ChiseledBlockItemIds;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 import static net.hyper.silliestlib.utils.SilliestLibRegUtils.*;
 
@@ -446,49 +447,6 @@ public interface ChiseledBlocks {
     Block MOSSY_MUD_TILE_WALL = regBlock(ChiseledBlockItemIds.MOSSY_MUD_TILE_WALL,
             properties -> new WallBlock(properties
                     .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-
-    Block HONEYCOMB_STAIRS = regBlock(ChiseledBlockItemIds.HONEYCOMB_STAIRS,
-            properties -> new StairBlock(Blocks.HONEYCOMB_BLOCK.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(0.6F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_SLAB = regBlock(ChiseledBlockItemIds.HONEYCOMB_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(0.6F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_WALL = regBlock(ChiseledBlockItemIds.HONEYCOMB_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(0.6F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_BRICKS = regBlock(ChiseledBlockItemIds.HONEYCOMB_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.HONEYCOMB_BRICK_STAIRS,
-            properties -> new StairBlock(HONEYCOMB_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_BRICK_SLAB = regBlock(ChiseledBlockItemIds.HONEYCOMB_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_BRICK_WALL = regBlock(ChiseledBlockItemIds.HONEYCOMB_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block CUT_HONEYCOMB_BRICKS = regBlock(ChiseledBlockItemIds.CUT_HONEYCOMB_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block CUT_HONEYCOMB_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_HONEYCOMB_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_HONEYCOMB_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block CUT_HONEYCOMB_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_HONEYCOMB_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_TILES = regBlock(ChiseledBlockItemIds.HONEYCOMB_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_TILE_STAIRS = regBlock(ChiseledBlockItemIds.HONEYCOMB_TILE_STAIRS,
-            properties -> new StairBlock(HONEYCOMB_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_TILE_SLAB = regBlock(ChiseledBlockItemIds.HONEYCOMB_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
-    Block HONEYCOMB_TILE_WALL = regBlock(ChiseledBlockItemIds.HONEYCOMB_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).strength(1.5F, 3.0F).sound(SoundType.CORAL_BLOCK)));
     
     Block SMOOTH_SANDSTONE_WALL = regBlock(ChiseledBlockItemIds.SMOOTH_SANDSTONE_WALL,
             properties -> new WallBlock(properties
@@ -644,34 +602,6 @@ public interface ChiseledBlocks {
     Block CUT_DARK_PRISMARINE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICK_SLAB,
             properties -> new SlabBlock(properties
                     .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-
-    Block PACKED_SNOW_BRICKS = regBlock(ChiseledBlockItemIds.PACKED_SNOW_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
-    Block PACKED_SNOW_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.PACKED_SNOW_BRICK_STAIRS,
-            properties -> new StairBlock(PACKED_SNOW_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
-    Block PACKED_SNOW_BRICK_SLAB = regBlock(ChiseledBlockItemIds.PACKED_SNOW_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
-    Block CUT_PACKED_SNOW_BRICKS = regBlock(ChiseledBlockItemIds.CUT_PACKED_SNOW_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
-    Block CUT_PACKED_SNOW_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_PACKED_SNOW_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_PACKED_SNOW_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
-    Block CUT_PACKED_SNOW_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_PACKED_SNOW_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
-    Block PACKED_SNOW_TILES = regBlock(ChiseledBlockItemIds.PACKED_SNOW_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
-    Block PACKED_SNOW_TILE_STAIRS = regBlock(ChiseledBlockItemIds.PACKED_SNOW_TILE_STAIRS,
-            properties -> new StairBlock(PACKED_SNOW_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
-    Block PACKED_SNOW_TILE_SLAB = regBlock(ChiseledBlockItemIds.PACKED_SNOW_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.SNOW).requiresCorrectToolForDrops().strength(0.6F).sound(SoundType.SNOW)));
 
     Block TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.TERRACOTTA_BRICKS,
             properties -> new Block(properties
@@ -1077,18 +1007,6 @@ public interface ChiseledBlocks {
                     .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
     Block CUT_AMETHYST_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_SLAB,
             properties -> new AmethystSlabBlock(properties
-                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
-    Block AMETHYST_TILES = regBlock(ChiseledBlockItemIds.AMETHYST_TILES,
-            properties -> new AmethystBlock(properties
-                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
-    Block AMETHYST_TILE_STAIRS = regBlock(ChiseledBlockItemIds.AMETHYST_TILE_STAIRS,
-            properties -> new AmethystStairBlock(AMETHYST_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
-    Block AMETHYST_TILE_SLAB = regBlock(ChiseledBlockItemIds.AMETHYST_TILE_SLAB,
-            properties -> new AmethystSlabBlock(properties
-                    .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
-    Block AMETHYST_TILE_WALL = regBlock(ChiseledBlockItemIds.AMETHYST_TILE_WALL,
-            properties -> new AmethystWallBlock(properties
                     .mapColor(MapColor.COLOR_PURPLE).strength(1.5F, 3.0F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops()));
     
     Block NETHERITE_STAIRS = regBlock(ChiseledBlockItemIds.NETHERITE_STAIRS,

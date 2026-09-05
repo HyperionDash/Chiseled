@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cut_polished_andesite_bricks": {
+    "has_polished_andesite_slab": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:polished_andesite"
+            "items": "minecraft:polished_andesite_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cut_polished_andesite_bricks"
+      "has_polished_andesite_slab"
     ]
   ],
   "rewards": {

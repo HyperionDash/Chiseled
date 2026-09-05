@@ -89,9 +89,9 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 wallRecipes(ChiseledBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE);
                 brickRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_POLISHED_GRANITE_BRICKS, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                stairRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                slabRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                wallRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
+                stairRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS, ChiseledBlocks.POLISHED_GRANITE_BRICKS, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
+                slabRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB, ChiseledBlocks.POLISHED_GRANITE_BRICKS, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
+                wallRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, ChiseledBlocks.POLISHED_GRANITE_BRICKS, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
                 pillarRecipes(ChiseledBlocks.POLISHED_GRANITE_PILLAR, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE);
                 cutBrickRecipes(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE_SLAB, Blocks.GRANITE, Blocks.POLISHED_GRANITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_CUT_POLISHED_GRANITE_BRICKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS);
@@ -106,9 +106,9 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 wallRecipes(ChiseledBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE);
                 brickRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_POLISHED_DIORITE_BRICKS, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                stairRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                slabRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                wallRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
+                stairRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS, ChiseledBlocks.POLISHED_DIORITE_BRICKS, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
+                slabRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB, ChiseledBlocks.POLISHED_DIORITE_BRICKS, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
+                wallRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, ChiseledBlocks.POLISHED_DIORITE_BRICKS, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
                 pillarRecipes(ChiseledBlocks.POLISHED_DIORITE_PILLAR, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE);
                 cutBrickRecipes(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE_SLAB, Blocks.DIORITE, Blocks.POLISHED_DIORITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_CUT_POLISHED_DIORITE_BRICKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS);
@@ -123,9 +123,9 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 wallRecipes(ChiseledBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE);
                 brickRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_POLISHED_ANDESITE_BRICKS, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                stairRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                slabRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                wallRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
+                stairRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
+                slabRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
+                wallRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
                 pillarRecipes(ChiseledBlocks.POLISHED_ANDESITE_PILLAR, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE);
                 cutBrickRecipes(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE_SLAB, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_CUT_POLISHED_ANDESITE_BRICKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS);

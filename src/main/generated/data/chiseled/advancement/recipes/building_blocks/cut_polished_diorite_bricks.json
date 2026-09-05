@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cut_polished_diorite_bricks": {
+    "has_polished_diorite_slab": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:polished_diorite"
+            "items": "minecraft:polished_diorite_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cut_polished_diorite_bricks"
+      "has_polished_diorite_slab"
     ]
   ],
   "rewards": {

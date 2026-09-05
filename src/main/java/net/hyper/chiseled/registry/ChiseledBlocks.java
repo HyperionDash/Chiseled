@@ -167,6 +167,7 @@ public interface ChiseledBlocks {
     Block MOSSY_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.MOSSY_BRICK_STAIRS, Blocks.BRICKS, Blocks.BRICK_STAIRS);
     Block MOSSY_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.MOSSY_BRICK_SLAB, Blocks.BRICK_SLAB);
     Block MOSSY_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.MOSSY_BRICK_WALL, Blocks.BRICK_WALL);
+
     Block PACKED_MUD_STAIRS = regBasicStairs(ChiseledBlockItemIds.PACKED_MUD_STAIRS, Blocks.PACKED_MUD, Blocks.PACKED_MUD);
     Block PACKED_MUD_SLAB = regBasicSlab(ChiseledBlockItemIds.PACKED_MUD_SLAB, Blocks.PACKED_MUD);
     Block PACKED_MUD_WALL = regBasicWall(ChiseledBlockItemIds.PACKED_MUD_WALL, Blocks.PACKED_MUD);

@@ -359,6 +359,5 @@ public class ChiseledModelGen extends FabricModelProvider {
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-    }
+    public void generateItemModels(ItemModelGenerators itemModelGenerators) {}
 }

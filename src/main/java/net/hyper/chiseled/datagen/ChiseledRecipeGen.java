@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
@@ -21,365 +22,120 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
     @Override
     protected RecipeProvider createRecipeProvider(HolderLookup.Provider wrapperLookup, RecipeOutput recipeExporter) {
         return new RecipeProvider(wrapperLookup, recipeExporter) {
+            void brickRecipes(Block craftingOutput, Block craftingInput, Block... stonecutterInputs) {
+                shaped(RecipeCategory.BUILDING_BLOCKS, craftingOutput,4).pattern("##").pattern("##").define('#', craftingInput).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output);
+                for (Block stonecutterInput : stonecutterInputs) stonecuttingRecipes(craftingOutput, stonecutterInput);
+            }
+            void cutBrickRecipes(Block craftingOutput, Block craftingInput, Block... stonecutterInputs) {
+                shaped(RecipeCategory.BUILDING_BLOCKS, craftingOutput).pattern("#").pattern("#").define('#', craftingInput).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output);
+                for (Block stonecutterInput : stonecutterInputs) stonecuttingRecipes(craftingOutput, stonecutterInput);
+            }
+            void pillarRecipes(Block craftingOutput, Block craftingInput, Block... stonecutterInputs) {
+                shaped(RecipeCategory.BUILDING_BLOCKS, craftingOutput, 2).pattern("#").pattern("#").define('#', craftingInput).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output);
+                for (Block stonecutterInput : stonecutterInputs) stonecuttingRecipes(craftingOutput, stonecutterInput);
+            }
+            void stairRecipes(Block craftingOutput, Block craftingInput, Block... stonecutterInputs) {
+                stairBuilder(craftingOutput, Ingredient.of(craftingInput)).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output);
+                for (Block stonecutterInput : stonecutterInputs) stonecuttingRecipes(craftingOutput, stonecutterInput);
+            }
+            void slabRecipes(Block craftingOutput, Block craftingInput, Block... stonecutterInputs) {
+                slab(RecipeCategory.BUILDING_BLOCKS, craftingOutput, craftingInput);
+                for (Block stonecutterInput : stonecutterInputs) stonecuttingRecipes(craftingOutput, stonecutterInput, 2);
+            }
+            void wallRecipes(Block craftingOutput, Block craftingInput, Block... stonecutterInputs) {
+                wall(RecipeCategory.BUILDING_BLOCKS, craftingOutput, craftingInput);
+                for (Block stonecutterInput : stonecutterInputs) stonecuttingRecipes(craftingOutput, stonecutterInput);
+            }
+            void stonecuttingRecipes(Block output, Block input, int count) {
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, output, input, count);
+            }
+            void stonecuttingRecipes(Block output, Block input) {
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, output, input);
+            }
+            void mossyRecipes(Block craftingOutput, Block craftingInput) {
+                shapeless(RecipeCategory.BUILDING_BLOCKS, craftingOutput).requires(craftingInput).requires(Blocks.MOSS_BLOCK).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output, getItemName(craftingOutput)+"_from_moss");
+                shapeless(RecipeCategory.BUILDING_BLOCKS, craftingOutput).requires(craftingInput).requires(Blocks.VINE).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output, getItemName(craftingOutput)+"_from_vine");
+            }
+
             @Override
             public void buildRecipes() {
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_WALL, Blocks.STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_WALL, Blocks.STONE);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE,4)
-                        .pattern("##")
-                        .pattern("##")
-                        .define('#', Blocks.STONE)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_STONE), has(Blocks.STONE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE, Blocks.STONE);
-                stairBuilder(ChiseledBlocks.POLISHED_STONE_STAIRS, Ingredient.of(ChiseledBlocks.POLISHED_STONE))
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_STONE_STAIRS), has(ChiseledBlocks.POLISHED_STONE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_STAIRS, Blocks.STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_STAIRS, ChiseledBlocks.POLISHED_STONE);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_SLAB, ChiseledBlocks.POLISHED_STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_SLAB, Blocks.STONE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_SLAB, ChiseledBlocks.POLISHED_STONE,2);
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_WALL, ChiseledBlocks.POLISHED_STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_WALL, Blocks.STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_STONE_WALL, ChiseledBlocks.POLISHED_STONE);
-                stairBuilder(ChiseledBlocks.SMOOTH_STONE_STAIRS, Ingredient.of(Blocks.SMOOTH_STONE))
-                        .unlockedBy(getHasName(ChiseledBlocks.SMOOTH_STONE_STAIRS), has(Blocks.SMOOTH_STONE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
-                shaped(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICKS,4)
-                        .pattern("##")
-                        .pattern("##")
-                        .define('#', ChiseledBlocks.POLISHED_STONE)
-                        .unlockedBy(getHasName(Blocks.STONE_BRICKS), has(ChiseledBlocks.POLISHED_STONE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICKS, ChiseledBlocks.POLISHED_STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_STAIRS, ChiseledBlocks.POLISHED_STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_SLAB, ChiseledBlocks.POLISHED_STONE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_WALL, ChiseledBlocks.POLISHED_STONE);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICKS)
-                        .pattern("#")
-                        .pattern("#")
-                        .define('#', ChiseledBlocks.POLISHED_STONE_SLAB)
-                        .unlockedBy(getHasName(ChiseledBlocks.CUT_STONE_BRICKS), has(ChiseledBlocks.POLISHED_STONE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICKS, Blocks.STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICKS, ChiseledBlocks.POLISHED_STONE);
+                wallRecipes(ChiseledBlocks.STONE_WALL, Blocks.STONE, Blocks.STONE);
+                brickRecipes(ChiseledBlocks.POLISHED_STONE, Blocks.STONE, Blocks.STONE);
+                stairRecipes(ChiseledBlocks.POLISHED_STONE_STAIRS, ChiseledBlocks.POLISHED_STONE, Blocks.STONE, ChiseledBlocks.POLISHED_STONE);
+                slabRecipes(ChiseledBlocks.POLISHED_STONE_SLAB, ChiseledBlocks.POLISHED_STONE, Blocks.STONE, ChiseledBlocks.POLISHED_STONE);
+                wallRecipes(ChiseledBlocks.POLISHED_STONE_WALL, ChiseledBlocks.POLISHED_STONE, Blocks.STONE, ChiseledBlocks.POLISHED_STONE);
+                stairRecipes(ChiseledBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE, Blocks.SMOOTH_STONE);
+                brickRecipes(Blocks.STONE_BRICKS, ChiseledBlocks.POLISHED_STONE, ChiseledBlocks.POLISHED_STONE);
+                stonecuttingRecipes(Blocks.STONE_BRICK_STAIRS, ChiseledBlocks.POLISHED_STONE);
+                stonecuttingRecipes(Blocks.STONE_BRICK_SLAB, ChiseledBlocks.POLISHED_STONE, 2);
+                stonecuttingRecipes(Blocks.STONE_BRICK_WALL, ChiseledBlocks.POLISHED_STONE);
+                cutBrickRecipes(ChiseledBlocks.CUT_STONE_BRICKS, ChiseledBlocks.POLISHED_STONE_SLAB, Blocks.STONE, ChiseledBlocks.POLISHED_STONE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS, ChiseledBlocks.CUT_STONE_BRICKS);
-                stairBuilder(ChiseledBlocks.CUT_STONE_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.CUT_STONE_BRICKS))
-                        .unlockedBy(getHasName(ChiseledBlocks.CUT_STONE_BRICK_STAIRS), has(ChiseledBlocks.CUT_STONE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_STAIRS, Blocks.STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_STAIRS, ChiseledBlocks.POLISHED_STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_STAIRS, ChiseledBlocks.CUT_STONE_BRICKS);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_SLAB, ChiseledBlocks.CUT_STONE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_SLAB, Blocks.STONE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_SLAB, ChiseledBlocks.POLISHED_STONE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_STONE_BRICK_SLAB, ChiseledBlocks.CUT_STONE_BRICKS,2);
-                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS)
-                        .requires(ChiseledBlocks.CUT_STONE_BRICKS)
-                        .requires(Blocks.MOSS_BLOCK)
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS), has(ChiseledBlocks.CUT_STONE_BRICKS))
-                        .save(output, "mossy_cut_stone_bricks_from_moss");
-                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS)
-                        .requires(ChiseledBlocks.CUT_STONE_BRICKS)
-                        .requires(Blocks.VINE)
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS), has(ChiseledBlocks.CUT_STONE_BRICKS))
-                        .save(output, "mossy_cut_stone_bricks_from_vine");
-                stairBuilder(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS))
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS), has(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS,2);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILES,4)
-                        .pattern("##")
-                        .pattern("##")
-                        .define('#', Blocks.STONE_BRICKS)
-                        .unlockedBy(getHasName(ChiseledBlocks.STONE_TILES), has(Blocks.STONE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILES, Blocks.STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILES, ChiseledBlocks.POLISHED_STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILES, Blocks.STONE_BRICKS);
+                stairRecipes(ChiseledBlocks.CUT_STONE_BRICK_STAIRS, ChiseledBlocks.CUT_STONE_BRICKS, Blocks.STONE, ChiseledBlocks.POLISHED_STONE, ChiseledBlocks.CUT_STONE_BRICKS);
+                slabRecipes(ChiseledBlocks.CUT_STONE_BRICK_SLAB, ChiseledBlocks.CUT_STONE_BRICKS, Blocks.STONE, ChiseledBlocks.POLISHED_STONE, ChiseledBlocks.CUT_STONE_BRICKS);
+                mossyRecipes(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS, ChiseledBlocks.CUT_STONE_BRICKS);
+                stairRecipes(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS);
+                slabRecipes(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS, ChiseledBlocks.MOSSY_CUT_STONE_BRICKS);
+                brickRecipes(ChiseledBlocks.STONE_TILES, Blocks.STONE_BRICKS, Blocks.STONE, ChiseledBlocks.POLISHED_STONE, Blocks.STONE_BRICKS);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_STONE_TILES, ChiseledBlocks.STONE_TILES);
-                stairBuilder(ChiseledBlocks.STONE_TILE_STAIRS, Ingredient.of(ChiseledBlocks.STONE_TILES))
-                        .unlockedBy(getHasName(ChiseledBlocks.STONE_TILE_STAIRS), has(ChiseledBlocks.STONE_TILES))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_STAIRS, Blocks.STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_STAIRS, ChiseledBlocks.POLISHED_STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_STAIRS, Blocks.STONE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_STAIRS, ChiseledBlocks.STONE_TILES);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_SLAB, ChiseledBlocks.STONE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_SLAB, Blocks.STONE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_SLAB, ChiseledBlocks.POLISHED_STONE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_SLAB, Blocks.STONE_BRICKS,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_SLAB, ChiseledBlocks.STONE_TILES,2);
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_WALL, ChiseledBlocks.STONE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_WALL, Blocks.STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_WALL, ChiseledBlocks.POLISHED_STONE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_WALL, Blocks.STONE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.STONE_TILE_WALL, ChiseledBlocks.STONE_TILES);
-                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILES)
-                        .requires(ChiseledBlocks.STONE_TILES)
-                        .requires(Blocks.MOSS_BLOCK)
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_STONE_TILES), has(ChiseledBlocks.STONE_TILES))
-                        .save(output, "mossy_stone_tiles_from_moss");
-                shapeless(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILES)
-                        .requires(ChiseledBlocks.STONE_TILES)
-                        .requires(Blocks.VINE)
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_STONE_TILES), has(ChiseledBlocks.STONE_TILES))
-                        .save(output, "mossy_stone_tiles_from_vine");
-                stairBuilder(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS, Ingredient.of(ChiseledBlocks.MOSSY_STONE_TILES))
-                        .unlockedBy(getHasName(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS), has(ChiseledBlocks.MOSSY_STONE_TILES))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILE_STAIRS, ChiseledBlocks.MOSSY_STONE_TILES);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILE_SLAB, ChiseledBlocks.MOSSY_STONE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILE_SLAB, ChiseledBlocks.MOSSY_STONE_TILES,2);
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILE_WALL, ChiseledBlocks.MOSSY_STONE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.MOSSY_STONE_TILE_WALL, ChiseledBlocks.MOSSY_STONE_TILES);
+                stairRecipes(ChiseledBlocks.STONE_TILE_STAIRS, ChiseledBlocks.STONE_TILES, Blocks.STONE, ChiseledBlocks.POLISHED_STONE, Blocks.STONE_BRICKS, ChiseledBlocks.STONE_TILES);
+                slabRecipes(ChiseledBlocks.STONE_TILE_SLAB, ChiseledBlocks.STONE_TILES, Blocks.STONE, ChiseledBlocks.POLISHED_STONE, Blocks.STONE_BRICKS, ChiseledBlocks.STONE_TILES);
+                wallRecipes(ChiseledBlocks.STONE_TILE_WALL, ChiseledBlocks.STONE_TILES, Blocks.STONE, ChiseledBlocks.POLISHED_STONE, Blocks.STONE_BRICKS, ChiseledBlocks.STONE_TILES);
+                mossyRecipes(ChiseledBlocks.MOSSY_STONE_TILES, ChiseledBlocks.STONE_TILES);
+                stairRecipes(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS, ChiseledBlocks.MOSSY_STONE_TILES, ChiseledBlocks.MOSSY_STONE_TILES);
+                slabRecipes(ChiseledBlocks.MOSSY_STONE_TILE_SLAB, ChiseledBlocks.MOSSY_STONE_TILES, ChiseledBlocks.MOSSY_STONE_TILES);
+                wallRecipes(ChiseledBlocks.MOSSY_STONE_TILE_WALL, ChiseledBlocks.MOSSY_STONE_TILES, ChiseledBlocks.MOSSY_STONE_TILES);
 
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_WALL, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICKS,4)
-                        .pattern("##")
-                        .pattern("##")
-                        .define('#', Blocks.POLISHED_GRANITE)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_GRANITE_BRICKS), has(Blocks.POLISHED_GRANITE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICKS, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE);
+                wallRecipes(ChiseledBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE);
+                brickRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_POLISHED_GRANITE_BRICKS, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                stairBuilder(ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.POLISHED_GRANITE_BRICKS))
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS), has(ChiseledBlocks.POLISHED_GRANITE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS, Blocks.POLISHED_GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB, Blocks.GRANITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB, Blocks.POLISHED_GRANITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB, ChiseledBlocks.POLISHED_GRANITE_BRICKS,2);
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, Blocks.POLISHED_GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_PILLAR,2)
-                        .pattern("#")
-                        .pattern("#")
-                        .define('#', Blocks.POLISHED_GRANITE)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_GRANITE_PILLAR), has(Blocks.POLISHED_GRANITE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_PILLAR, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_PILLAR, Blocks.POLISHED_GRANITE);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS)
-                        .pattern("#")
-                        .pattern("#")
-                        .define('#', Blocks.POLISHED_GRANITE_SLAB)
-                        .unlockedBy(getHasName(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS), has(Blocks.POLISHED_GRANITE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE);
+                stairRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
+                slabRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
+                wallRecipes(ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
+                pillarRecipes(ChiseledBlocks.POLISHED_GRANITE_PILLAR, Blocks.POLISHED_GRANITE, Blocks.GRANITE, Blocks.POLISHED_GRANITE);
+                cutBrickRecipes(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE_SLAB, Blocks.GRANITE, Blocks.POLISHED_GRANITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_CUT_POLISHED_GRANITE_BRICKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS);
-                stairBuilder(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS))
-                        .unlockedBy(getHasName(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_STAIRS), has(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_STAIRS, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_STAIRS, Blocks.POLISHED_GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_STAIRS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_SLAB, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_SLAB, Blocks.GRANITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_SLAB, Blocks.POLISHED_GRANITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_SLAB, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS,2);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILES,4)
-                        .pattern("##")
-                        .pattern("##")
-                        .define('#', ChiseledBlocks.POLISHED_GRANITE_BRICKS)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_GRANITE_TILES), has(ChiseledBlocks.POLISHED_GRANITE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILES, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILES, Blocks.POLISHED_GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILES, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
+                stairRecipes(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_STAIRS, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS);
+                slabRecipes(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_SLAB, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS);
+                brickRecipes(ChiseledBlocks.POLISHED_GRANITE_TILES, ChiseledBlocks.POLISHED_GRANITE_BRICKS, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_POLISHED_GRANITE_TILES, ChiseledBlocks.POLISHED_GRANITE_TILES);
-                stairBuilder(ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS, Ingredient.of(ChiseledBlocks.POLISHED_GRANITE_TILES))
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS), has(ChiseledBlocks.POLISHED_GRANITE_TILES))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS, Blocks.POLISHED_GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS, ChiseledBlocks.POLISHED_GRANITE_TILES);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB, ChiseledBlocks.POLISHED_GRANITE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB, Blocks.GRANITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB, Blocks.POLISHED_GRANITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB, ChiseledBlocks.POLISHED_GRANITE_BRICKS, 2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB, ChiseledBlocks.POLISHED_GRANITE_TILES,2);
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_WALL, ChiseledBlocks.POLISHED_GRANITE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_WALL, Blocks.GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_WALL, Blocks.POLISHED_GRANITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_WALL, ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_GRANITE_TILE_WALL, ChiseledBlocks.POLISHED_GRANITE_TILES);
+                stairRecipes(ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS, ChiseledBlocks.POLISHED_GRANITE_TILES, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS, ChiseledBlocks.POLISHED_GRANITE_TILES);
+                slabRecipes(ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB, ChiseledBlocks.POLISHED_GRANITE_TILES, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS, ChiseledBlocks.POLISHED_GRANITE_TILES);
+                wallRecipes(ChiseledBlocks.POLISHED_GRANITE_TILE_WALL, ChiseledBlocks.POLISHED_GRANITE_TILES, Blocks.GRANITE, Blocks.POLISHED_GRANITE, ChiseledBlocks.POLISHED_GRANITE_BRICKS, ChiseledBlocks.POLISHED_GRANITE_TILES);
 
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_WALL, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICKS,4)
-                        .pattern("##")
-                        .pattern("##")
-                        .define('#', Blocks.POLISHED_DIORITE)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_DIORITE_BRICKS), has(Blocks.POLISHED_DIORITE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICKS, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE);
+                wallRecipes(ChiseledBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE);
+                brickRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_POLISHED_DIORITE_BRICKS, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                stairBuilder(ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.POLISHED_DIORITE_BRICKS))
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS), has(ChiseledBlocks.POLISHED_DIORITE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS, Blocks.POLISHED_DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB, Blocks.DIORITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB, Blocks.POLISHED_DIORITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB, ChiseledBlocks.POLISHED_DIORITE_BRICKS,2);
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, Blocks.POLISHED_DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_PILLAR,2)
-                        .pattern("#")
-                        .pattern("#")
-                        .define('#', Blocks.POLISHED_DIORITE)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_DIORITE_PILLAR), has(Blocks.POLISHED_DIORITE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_PILLAR, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_PILLAR, Blocks.POLISHED_DIORITE);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS)
-                        .pattern("#")
-                        .pattern("#")
-                        .define('#', Blocks.POLISHED_DIORITE_SLAB)
-                        .unlockedBy(getHasName(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS), has(Blocks.POLISHED_DIORITE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE);
+                stairRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
+                slabRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
+                wallRecipes(ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
+                pillarRecipes(ChiseledBlocks.POLISHED_DIORITE_PILLAR, Blocks.POLISHED_DIORITE, Blocks.DIORITE, Blocks.POLISHED_DIORITE);
+                cutBrickRecipes(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE_SLAB, Blocks.DIORITE, Blocks.POLISHED_DIORITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_CUT_POLISHED_DIORITE_BRICKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS);
-                stairBuilder(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS))
-                        .unlockedBy(getHasName(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_STAIRS), has(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_STAIRS, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_STAIRS, Blocks.POLISHED_DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_STAIRS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_SLAB, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_SLAB, Blocks.DIORITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_SLAB, Blocks.POLISHED_DIORITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_SLAB, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS,2);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILES,4)
-                        .pattern("##")
-                        .pattern("##")
-                        .define('#', ChiseledBlocks.POLISHED_DIORITE_BRICKS)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_DIORITE_TILES), has(ChiseledBlocks.POLISHED_DIORITE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILES, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILES, Blocks.POLISHED_DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILES, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
+                stairRecipes(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_STAIRS, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS);
+                slabRecipes(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_SLAB, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS);
+                brickRecipes(ChiseledBlocks.POLISHED_DIORITE_TILES, ChiseledBlocks.POLISHED_DIORITE_BRICKS, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_POLISHED_DIORITE_TILES, ChiseledBlocks.POLISHED_DIORITE_TILES);
-                stairBuilder(ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS, Ingredient.of(ChiseledBlocks.POLISHED_DIORITE_TILES))
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS), has(ChiseledBlocks.POLISHED_DIORITE_TILES))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS, Blocks.POLISHED_DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS, ChiseledBlocks.POLISHED_DIORITE_TILES);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB, ChiseledBlocks.POLISHED_DIORITE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB, Blocks.DIORITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB, Blocks.POLISHED_DIORITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB, ChiseledBlocks.POLISHED_DIORITE_BRICKS, 2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB, ChiseledBlocks.POLISHED_DIORITE_TILES,2);
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_WALL, ChiseledBlocks.POLISHED_DIORITE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_WALL, Blocks.DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_WALL, Blocks.POLISHED_DIORITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_WALL, ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_DIORITE_TILE_WALL, ChiseledBlocks.POLISHED_DIORITE_TILES);
+                stairRecipes(ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS, ChiseledBlocks.POLISHED_DIORITE_TILES, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS, ChiseledBlocks.POLISHED_DIORITE_TILES);
+                slabRecipes(ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB, ChiseledBlocks.POLISHED_DIORITE_TILES, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS, ChiseledBlocks.POLISHED_DIORITE_TILES);
+                wallRecipes(ChiseledBlocks.POLISHED_DIORITE_TILE_WALL, ChiseledBlocks.POLISHED_DIORITE_TILES, Blocks.DIORITE, Blocks.POLISHED_DIORITE, ChiseledBlocks.POLISHED_DIORITE_BRICKS, ChiseledBlocks.POLISHED_DIORITE_TILES);
 
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_WALL, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICKS,4)
-                        .pattern("##")
-                        .pattern("##")
-                        .define('#', Blocks.POLISHED_ANDESITE)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_ANDESITE_BRICKS), has(Blocks.POLISHED_ANDESITE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE);
+                wallRecipes(ChiseledBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE);
+                brickRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_POLISHED_ANDESITE_BRICKS, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                stairBuilder(ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.POLISHED_ANDESITE_BRICKS))
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS), has(ChiseledBlocks.POLISHED_ANDESITE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS, Blocks.POLISHED_ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB, Blocks.ANDESITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB, Blocks.POLISHED_ANDESITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB, ChiseledBlocks.POLISHED_ANDESITE_BRICKS,2);
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, Blocks.POLISHED_ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_PILLAR,2)
-                        .pattern("#")
-                        .pattern("#")
-                        .define('#', Blocks.POLISHED_ANDESITE)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_ANDESITE_PILLAR), has(Blocks.POLISHED_ANDESITE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_PILLAR, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_PILLAR, Blocks.POLISHED_ANDESITE);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS)
-                        .pattern("#")
-                        .pattern("#")
-                        .define('#', Blocks.POLISHED_ANDESITE_SLAB)
-                        .unlockedBy(getHasName(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS), has(Blocks.POLISHED_ANDESITE))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE);
+                stairRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
+                slabRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
+                wallRecipes(ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
+                pillarRecipes(ChiseledBlocks.POLISHED_ANDESITE_PILLAR, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE);
+                cutBrickRecipes(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE_SLAB, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_CUT_POLISHED_ANDESITE_BRICKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS);
-                stairBuilder(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_STAIRS, Ingredient.of(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS))
-                        .unlockedBy(getHasName(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_STAIRS), has(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_STAIRS, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_STAIRS, Blocks.POLISHED_ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_STAIRS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_SLAB, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_SLAB, Blocks.ANDESITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_SLAB, Blocks.POLISHED_ANDESITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_SLAB, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS,2);
-                shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILES,4)
-                        .pattern("##")
-                        .pattern("##")
-                        .define('#', ChiseledBlocks.POLISHED_ANDESITE_BRICKS)
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_ANDESITE_TILES), has(ChiseledBlocks.POLISHED_ANDESITE_BRICKS))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILES, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILES, Blocks.POLISHED_ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILES, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
+                stairRecipes(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_STAIRS, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS);
+                slabRecipes(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_SLAB, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS);
+                brickRecipes(ChiseledBlocks.POLISHED_ANDESITE_TILES, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
                 smeltingResultFromBase(ChiseledBlocks.CRACKED_POLISHED_ANDESITE_TILES, ChiseledBlocks.POLISHED_ANDESITE_TILES);
-                stairBuilder(ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS, Ingredient.of(ChiseledBlocks.POLISHED_ANDESITE_TILES))
-                        .unlockedBy(getHasName(ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS), has(ChiseledBlocks.POLISHED_ANDESITE_TILES))
-                        .save(output);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS, Blocks.POLISHED_ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS, ChiseledBlocks.POLISHED_ANDESITE_TILES);
-                slab(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB, ChiseledBlocks.POLISHED_ANDESITE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB, Blocks.ANDESITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB, Blocks.POLISHED_ANDESITE,2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, 2);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB, ChiseledBlocks.POLISHED_ANDESITE_TILES,2);
-                wall(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL, ChiseledBlocks.POLISHED_ANDESITE_TILES);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL, Blocks.ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL, Blocks.POLISHED_ANDESITE);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL, ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL, ChiseledBlocks.POLISHED_ANDESITE_TILES);
+                stairRecipes(ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS, ChiseledBlocks.POLISHED_ANDESITE_TILES, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, ChiseledBlocks.POLISHED_ANDESITE_TILES);
+                slabRecipes(ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB, ChiseledBlocks.POLISHED_ANDESITE_TILES, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, ChiseledBlocks.POLISHED_ANDESITE_TILES);
+                wallRecipes(ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL, ChiseledBlocks.POLISHED_ANDESITE_TILES, Blocks.ANDESITE, Blocks.POLISHED_ANDESITE, ChiseledBlocks.POLISHED_ANDESITE_BRICKS, ChiseledBlocks.POLISHED_ANDESITE_TILES);
 
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledBlocks.CUT_DEEPSLATE_BRICKS)
                         .pattern("#")

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cut_stone_bricks": {
+    "has_polished_stone_slab": {
       "conditions": {
         "items": [
           {
-            "items": "chiseled:polished_stone"
+            "items": "chiseled:polished_stone_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cut_stone_bricks"
+      "has_polished_stone_slab"
     ]
   ],
   "rewards": {

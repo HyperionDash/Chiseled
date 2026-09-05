@@ -18,6 +18,7 @@ import java.util.function.Consumer;
 
 import static net.minecraft.advancements.triggers.InventoryChangeTrigger.TriggerInstance.hasItems;
 
+@SuppressWarnings("removal")
 public class ChiseledAdvancementGen extends AdvancementProvider {
     public ChiseledAdvancementGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, List.of(new ChiseledAdvancements()));

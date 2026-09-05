@@ -2,821 +2,325 @@ package net.hyper.chiseled.registry;
 
 import net.hyper.chiseled.block.*;
 import net.hyper.chiseled.refrence.ChiseledBlockItemIds;
+import net.minecraft.references.BlockItemId;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 
 import static net.hyper.silliestlib.utils.SilliestLibRegUtils.*;
 
 public interface ChiseledBlocks {
-    Block STONE_WALL = regBlock(ChiseledBlockItemIds.STONE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_STONE = regBlock(ChiseledBlockItemIds.POLISHED_STONE,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_STONE_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_STONE_STAIRS,
-            properties -> new StairBlock(POLISHED_STONE.defaultBlockState(),properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_STONE_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_STONE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_STONE_WALL = regBlock(ChiseledBlockItemIds.POLISHED_STONE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block SMOOTH_STONE_STAIRS = regBlock(ChiseledBlockItemIds.SMOOTH_STONE_STAIRS,
-            properties -> new StairBlock(Blocks.SMOOTH_STONE.defaultBlockState(),properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block CUT_STONE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_STONE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_CUT_STONE_BRICKS = regBlock(ChiseledBlockItemIds.CRACKED_CUT_STONE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_STONE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_STONE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_STONE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_STONE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_STONE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block MOSSY_CUT_STONE_BRICKS = regBlock(ChiseledBlockItemIds.MOSSY_CUT_STONE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block MOSSY_CUT_STONE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.MOSSY_CUT_STONE_BRICK_STAIRS,
-            properties -> new StairBlock(MOSSY_CUT_STONE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block MOSSY_CUT_STONE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.MOSSY_CUT_STONE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block STONE_TILES = regBlock(ChiseledBlockItemIds.STONE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_STONE_TILES = regBlock(ChiseledBlockItemIds.CRACKED_STONE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block STONE_TILE_STAIRS = regBlock(ChiseledBlockItemIds.STONE_TILE_STAIRS,
-            properties -> new StairBlock(STONE_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block STONE_TILE_SLAB = regBlock(ChiseledBlockItemIds.STONE_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block STONE_TILE_WALL = regBlock(ChiseledBlockItemIds.STONE_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block MOSSY_STONE_TILES = regBlock(ChiseledBlockItemIds.MOSSY_STONE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block MOSSY_STONE_TILE_STAIRS = regBlock(ChiseledBlockItemIds.MOSSY_STONE_TILE_STAIRS,
-            properties -> new StairBlock(MOSSY_STONE_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block MOSSY_STONE_TILE_SLAB = regBlock(ChiseledBlockItemIds.MOSSY_STONE_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block MOSSY_STONE_TILE_WALL = regBlock(ChiseledBlockItemIds.MOSSY_STONE_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    static Block regBasicBlock(final BlockItemId id, final BlockBehaviour.Properties blockProperties) {
+        return regBlock(id, properties -> new Block(blockProperties.setId(id.block())));
+    }
+    static Block regBasicBlock(BlockItemId id, Block baseProperties) {
+        return regBlock(id, properties -> new Block(BlockBehaviour.Properties.ofFullCopy(baseProperties).setId(id.block())));
+    }
+    static Block regBasicRotatedPillar(BlockItemId id, Block baseProperties) {
+        return regBlock(id, properties -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(baseProperties).setId(id.block())));
+    }
+    static Block regBasicStairs(BlockItemId id, Block parentBlock, BlockBehaviour.Properties blockProperties) {
+        return regBlock(id, properties -> new StairBlock(parentBlock.defaultBlockState(), blockProperties.setId(id.block())));
+    }
+    static Block regBasicStairs(BlockItemId id, Block parentBlock, Block baseProperties) {
+        return regBlock(id, properties -> new StairBlock(parentBlock.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(baseProperties).setId(id.block())));
+    }
+    static Block regBasicSlab(BlockItemId id, BlockBehaviour.Properties blockProperties) {
+        return regBlock(id, properties -> new SlabBlock(blockProperties.setId(id.block())));
+    }
+    static Block regBasicSlab(BlockItemId id, Block baseProperties) {
+        return regBlock(id, properties -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(baseProperties).setId(id.block())));
+    }
+    static Block regBasicWall(BlockItemId id, BlockBehaviour.Properties blockProperties) {
+        return regBlock(id, properties -> new WallBlock(blockProperties.setId(id.block())));
+    }
+    static Block regBasicWall(BlockItemId id, Block baseProperties) {
+        return regBlock(id, properties -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(baseProperties).setId(id.block())));
+    }
+    static Block regBasicFence(BlockItemId id, Block baseProperties) {
+        return regBlock(id, properties -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(baseProperties).setId(id.block())));
+    }
 
-    Block POLISHED_GRANITE_WALL = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_GRANITE_BRICKS = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_POLISHED_GRANITE_BRICKS = regBlock(ChiseledBlockItemIds.CRACKED_POLISHED_GRANITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_GRANITE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_BRICK_STAIRS,
-            properties -> new StairBlock(POLISHED_GRANITE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_GRANITE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_GRANITE_BRICK_WALL = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_GRANITE_PILLAR = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_PILLAR,
-            properties -> new RotatedPillarBlock(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_POLISHED_GRANITE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_POLISHED_GRANITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_CUT_POLISHED_GRANITE_BRICKS = regBlock(ChiseledBlockItemIds.CRACKED_CUT_POLISHED_GRANITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_POLISHED_GRANITE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_POLISHED_GRANITE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_POLISHED_GRANITE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_POLISHED_GRANITE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_POLISHED_GRANITE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_GRANITE_TILES = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_POLISHED_GRANITE_TILES = regBlock(ChiseledBlockItemIds.CRACKED_POLISHED_GRANITE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_GRANITE_TILE_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_TILE_STAIRS,
-            properties -> new StairBlock(POLISHED_GRANITE_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_GRANITE_TILE_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_GRANITE_TILE_WALL = regBlock(ChiseledBlockItemIds.POLISHED_GRANITE_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.DIRT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    Block STONE_WALL = regBasicWall(ChiseledBlockItemIds.STONE_WALL, Blocks.STONE);
+    Block POLISHED_STONE = regBasicBlock(ChiseledBlockItemIds.POLISHED_STONE, Blocks.STONE_BRICKS);
+    Block POLISHED_STONE_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_STONE_STAIRS, POLISHED_STONE, Blocks.STONE_BRICK_STAIRS);
+    Block POLISHED_STONE_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_STONE_SLAB, Blocks.STONE_BRICK_SLAB);
+    Block POLISHED_STONE_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_STONE_WALL, Blocks.STONE_BRICK_WALL);
+    Block SMOOTH_STONE_STAIRS = regBasicStairs(ChiseledBlockItemIds.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE, Blocks.SMOOTH_STONE);
+    Block CUT_STONE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_STONE_BRICKS, Blocks.STONE_BRICKS);
+    Block CRACKED_CUT_STONE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CRACKED_CUT_STONE_BRICKS, Blocks.STONE_BRICKS);
+    Block CUT_STONE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_STONE_BRICK_STAIRS, CUT_STONE_BRICKS, Blocks.STONE_BRICK_STAIRS);
+    Block CUT_STONE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_STONE_BRICK_SLAB, Blocks.STONE_BRICK_SLAB);
+    Block MOSSY_CUT_STONE_BRICKS = regBasicBlock(ChiseledBlockItemIds.MOSSY_CUT_STONE_BRICKS, Blocks.MOSSY_STONE_BRICKS);
+    Block MOSSY_CUT_STONE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.MOSSY_CUT_STONE_BRICK_STAIRS, MOSSY_CUT_STONE_BRICKS, Blocks.MOSSY_STONE_BRICK_STAIRS);
+    Block MOSSY_CUT_STONE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.MOSSY_CUT_STONE_BRICK_SLAB, Blocks.MOSSY_STONE_BRICK_SLAB);
+    Block STONE_TILES = regBasicBlock(ChiseledBlockItemIds.STONE_TILES, Blocks.STONE_BRICKS);
+    Block CRACKED_STONE_TILES = regBasicBlock(ChiseledBlockItemIds.CRACKED_STONE_TILES, Blocks.STONE_BRICKS);
+    Block STONE_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.STONE_TILE_STAIRS, STONE_TILES, Blocks.STONE_BRICK_STAIRS);
+    Block STONE_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.STONE_TILE_SLAB, Blocks.STONE_BRICK_SLAB);
+    Block STONE_TILE_WALL = regBasicWall(ChiseledBlockItemIds.STONE_TILE_WALL, Blocks.STONE_BRICK_WALL);
+    Block MOSSY_STONE_TILES = regBasicBlock(ChiseledBlockItemIds.MOSSY_STONE_TILES, Blocks.MOSSY_STONE_BRICKS);
+    Block MOSSY_STONE_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.MOSSY_STONE_TILE_STAIRS, MOSSY_STONE_TILES, Blocks.MOSSY_STONE_BRICK_STAIRS);
+    Block MOSSY_STONE_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.MOSSY_STONE_TILE_SLAB, Blocks.MOSSY_STONE_BRICK_SLAB);
+    Block MOSSY_STONE_TILE_WALL = regBasicWall(ChiseledBlockItemIds.MOSSY_STONE_TILE_WALL, Blocks.MOSSY_STONE_BRICK_WALL);
 
-    Block POLISHED_DIORITE_WALL = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DIORITE_BRICKS = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_POLISHED_DIORITE_BRICKS = regBlock(ChiseledBlockItemIds.CRACKED_POLISHED_DIORITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DIORITE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_BRICK_STAIRS,
-            properties -> new StairBlock(POLISHED_DIORITE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DIORITE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DIORITE_BRICK_WALL = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DIORITE_PILLAR = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_PILLAR,
-            properties -> new RotatedPillarBlock(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_POLISHED_DIORITE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_POLISHED_DIORITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_CUT_POLISHED_DIORITE_BRICKS = regBlock(ChiseledBlockItemIds.CRACKED_CUT_POLISHED_DIORITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_POLISHED_DIORITE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_POLISHED_DIORITE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_POLISHED_DIORITE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_POLISHED_DIORITE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_POLISHED_DIORITE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DIORITE_TILES = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_POLISHED_DIORITE_TILES = regBlock(ChiseledBlockItemIds.CRACKED_POLISHED_DIORITE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DIORITE_TILE_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_TILE_STAIRS,
-            properties -> new StairBlock(POLISHED_DIORITE_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DIORITE_TILE_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DIORITE_TILE_WALL = regBlock(ChiseledBlockItemIds.POLISHED_DIORITE_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.QUARTZ).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    Block POLISHED_GRANITE_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
+    Block POLISHED_GRANITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE);
+    Block CRACKED_POLISHED_GRANITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CRACKED_POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE);
+    Block POLISHED_GRANITE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_GRANITE_BRICK_STAIRS, POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE_STAIRS);
+    Block POLISHED_GRANITE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_GRANITE_BRICK_SLAB, Blocks.POLISHED_GRANITE_SLAB);
+    Block POLISHED_GRANITE_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_GRANITE_BRICK_WALL, POLISHED_GRANITE_WALL);
+    Block POLISHED_GRANITE_PILLAR = regBasicRotatedPillar(ChiseledBlockItemIds.POLISHED_GRANITE_PILLAR, Blocks.POLISHED_GRANITE);
+    Block CUT_POLISHED_GRANITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE);
+    Block CRACKED_CUT_POLISHED_GRANITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CRACKED_CUT_POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE);
+    Block CUT_POLISHED_GRANITE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_POLISHED_GRANITE_BRICK_STAIRS, CUT_POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE_STAIRS);
+    Block CUT_POLISHED_GRANITE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_POLISHED_GRANITE_BRICK_SLAB, Blocks.POLISHED_GRANITE_SLAB);
+    Block POLISHED_GRANITE_TILES = regBasicBlock(ChiseledBlockItemIds.POLISHED_GRANITE_TILES, Blocks.POLISHED_GRANITE);
+    Block CRACKED_POLISHED_GRANITE_TILES = regBasicBlock(ChiseledBlockItemIds.CRACKED_POLISHED_GRANITE_TILES, Blocks.POLISHED_GRANITE);
+    Block POLISHED_GRANITE_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_GRANITE_TILE_STAIRS, POLISHED_GRANITE_TILES, Blocks.POLISHED_GRANITE_STAIRS);
+    Block POLISHED_GRANITE_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_GRANITE_TILE_SLAB, Blocks.POLISHED_GRANITE_SLAB);
+    Block POLISHED_GRANITE_TILE_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_GRANITE_TILE_WALL, POLISHED_GRANITE_WALL);
 
-    Block POLISHED_ANDESITE_WALL = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_ANDESITE_BRICKS = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_POLISHED_ANDESITE_BRICKS = regBlock(ChiseledBlockItemIds.CRACKED_POLISHED_ANDESITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_ANDESITE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_BRICK_STAIRS,
-            properties -> new StairBlock(POLISHED_ANDESITE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_ANDESITE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_ANDESITE_BRICK_WALL = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_ANDESITE_PILLAR = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_PILLAR,
-            properties -> new RotatedPillarBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_POLISHED_ANDESITE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_POLISHED_ANDESITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_CUT_POLISHED_ANDESITE_BRICKS = regBlock(ChiseledBlockItemIds.CRACKED_CUT_POLISHED_ANDESITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_POLISHED_ANDESITE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_POLISHED_ANDESITE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_POLISHED_ANDESITE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_POLISHED_ANDESITE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_POLISHED_ANDESITE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_ANDESITE_TILES = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CRACKED_POLISHED_ANDESITE_TILES = regBlock(ChiseledBlockItemIds.CRACKED_POLISHED_ANDESITE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_ANDESITE_TILE_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_TILE_STAIRS,
-            properties -> new StairBlock(POLISHED_ANDESITE_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_ANDESITE_TILE_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_ANDESITE_TILE_WALL = regBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    Block POLISHED_DIORITE_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);
+    Block POLISHED_DIORITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE);
+    Block CRACKED_POLISHED_DIORITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CRACKED_POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE);
+    Block POLISHED_DIORITE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_DIORITE_BRICK_STAIRS, POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE_STAIRS);
+    Block POLISHED_DIORITE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_DIORITE_BRICK_SLAB, Blocks.POLISHED_DIORITE_SLAB);
+    Block POLISHED_DIORITE_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_DIORITE_BRICK_WALL, POLISHED_DIORITE_WALL);
+    Block POLISHED_DIORITE_PILLAR = regBasicRotatedPillar(ChiseledBlockItemIds.POLISHED_DIORITE_PILLAR, Blocks.POLISHED_DIORITE);
+    Block CUT_POLISHED_DIORITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE);
+    Block CRACKED_CUT_POLISHED_DIORITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CRACKED_CUT_POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE);
+    Block CUT_POLISHED_DIORITE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_POLISHED_DIORITE_BRICK_STAIRS, CUT_POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE_STAIRS);
+    Block CUT_POLISHED_DIORITE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_POLISHED_DIORITE_BRICK_SLAB, Blocks.POLISHED_DIORITE_SLAB);
+    Block POLISHED_DIORITE_TILES = regBasicBlock(ChiseledBlockItemIds.POLISHED_DIORITE_TILES, Blocks.POLISHED_DIORITE);
+    Block CRACKED_POLISHED_DIORITE_TILES = regBasicBlock(ChiseledBlockItemIds.CRACKED_POLISHED_DIORITE_TILES, Blocks.POLISHED_DIORITE);
+    Block POLISHED_DIORITE_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_DIORITE_TILE_STAIRS, POLISHED_DIORITE_TILES, Blocks.POLISHED_DIORITE_STAIRS);
+    Block POLISHED_DIORITE_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_DIORITE_TILE_SLAB, Blocks.POLISHED_DIORITE_SLAB);
+    Block POLISHED_DIORITE_TILE_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_DIORITE_TILE_WALL, POLISHED_DIORITE_WALL);
 
-    Block CUT_DEEPSLATE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_DEEPSLATE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(3.5F, 6.0F).sound(SoundType.DEEPSLATE_BRICKS)));
-    Block CRACKED_CUT_DEEPSLATE_BRICKS = regBlock(ChiseledBlockItemIds.CRACKED_CUT_DEEPSLATE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(3.5F, 6.0F).sound(SoundType.DEEPSLATE_BRICKS)));
-    Block CUT_DEEPSLATE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_DEEPSLATE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_DEEPSLATE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(3.5F, 6.0F).sound(SoundType.DEEPSLATE_BRICKS)));
-    Block CUT_DEEPSLATE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_DEEPSLATE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(3.5F, 6.0F).sound(SoundType.DEEPSLATE_BRICKS)));
+    Block POLISHED_ANDESITE_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
+    Block POLISHED_ANDESITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE);
+    Block CRACKED_POLISHED_ANDESITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CRACKED_POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE);
+    Block POLISHED_ANDESITE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_ANDESITE_BRICK_STAIRS, POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE_STAIRS);
+    Block POLISHED_ANDESITE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_ANDESITE_BRICK_SLAB, Blocks.POLISHED_ANDESITE_SLAB);
+    Block POLISHED_ANDESITE_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_ANDESITE_BRICK_WALL, POLISHED_ANDESITE_WALL);
+    Block POLISHED_ANDESITE_PILLAR = regBasicRotatedPillar(ChiseledBlockItemIds.POLISHED_ANDESITE_PILLAR, Blocks.POLISHED_ANDESITE);
+    Block CUT_POLISHED_ANDESITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE);
+    Block CRACKED_CUT_POLISHED_ANDESITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CRACKED_CUT_POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE);
+    Block CUT_POLISHED_ANDESITE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_POLISHED_ANDESITE_BRICK_STAIRS, CUT_POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE_STAIRS);
+    Block CUT_POLISHED_ANDESITE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_POLISHED_ANDESITE_BRICK_SLAB, Blocks.POLISHED_ANDESITE_SLAB);
+    Block POLISHED_ANDESITE_TILES = regBasicBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_TILES, Blocks.POLISHED_ANDESITE);
+    Block CRACKED_POLISHED_ANDESITE_TILES = regBasicBlock(ChiseledBlockItemIds.CRACKED_POLISHED_ANDESITE_TILES, Blocks.POLISHED_ANDESITE);
+    Block POLISHED_ANDESITE_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_ANDESITE_TILE_STAIRS, POLISHED_ANDESITE_TILES, Blocks.POLISHED_ANDESITE_STAIRS);
+    Block POLISHED_ANDESITE_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_ANDESITE_TILE_SLAB, Blocks.POLISHED_ANDESITE_SLAB);
+    Block POLISHED_ANDESITE_TILE_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_ANDESITE_TILE_WALL, POLISHED_ANDESITE_WALL);
 
-    Block CALCITE_STAIRS = regBlock(ChiseledBlockItemIds.CALCITE_STAIRS,
-            properties -> new StairBlock(Blocks.CALCITE.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
-    Block CALCITE_SLAB = regBlock(ChiseledBlockItemIds.CALCITE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
-    Block CALCITE_WALL = regBlock(ChiseledBlockItemIds.CALCITE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.75F)));
-    Block POLISHED_CALCITE = regBlock(ChiseledBlockItemIds.POLISHED_CALCITE,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block POLISHED_CALCITE_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_CALCITE_STAIRS,
-            properties -> new StairBlock(POLISHED_CALCITE.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block POLISHED_CALCITE_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_CALCITE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block POLISHED_CALCITE_WALL = regBlock(ChiseledBlockItemIds.POLISHED_CALCITE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CALCITE_BRICKS = regBlock(ChiseledBlockItemIds.CALCITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CALCITE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CALCITE_BRICK_STAIRS,
-            properties -> new StairBlock(CALCITE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CALCITE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CALCITE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CALCITE_BRICK_WALL = regBlock(ChiseledBlockItemIds.CALCITE_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CUT_CALCITE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_CALCITE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CUT_CALCITE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_CALCITE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_CALCITE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CUT_CALCITE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_CALCITE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CALCITE_TILES = regBlock(ChiseledBlockItemIds.CALCITE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CALCITE_TILE_STAIRS = regBlock(ChiseledBlockItemIds.CALCITE_TILE_STAIRS,
-            properties -> new StairBlock(CALCITE_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CALCITE_TILE_SLAB = regBlock(ChiseledBlockItemIds.CALCITE_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
-    Block CALCITE_TILE_WALL = regBlock(ChiseledBlockItemIds.CALCITE_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(1.5F, 4.0F)));
+    Block CUT_DEEPSLATE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICKS);
+    Block CRACKED_CUT_DEEPSLATE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CRACKED_CUT_DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICKS);
+    Block CUT_DEEPSLATE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_DEEPSLATE_BRICK_STAIRS, CUT_DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICK_STAIRS);
+    Block CUT_DEEPSLATE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_DEEPSLATE_BRICK_SLAB, Blocks.DEEPSLATE_BRICK_SLAB);
 
-    Block DRIPSTONE_STAIRS = regBlock(ChiseledBlockItemIds.DRIPSTONE_STAIRS,
-            properties -> new StairBlock(Blocks.DRIPSTONE_BLOCK.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
-    Block DRIPSTONE_SLAB = regBlock(ChiseledBlockItemIds.DRIPSTONE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
-    Block DRIPSTONE_WALL = regBlock(ChiseledBlockItemIds.DRIPSTONE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 1.0F)));
-    Block POLISHED_DRIPSTONE = regBlock(ChiseledBlockItemIds.POLISHED_DRIPSTONE,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DRIPSTONE_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_DRIPSTONE_STAIRS,
-            properties -> new StairBlock(POLISHED_DRIPSTONE.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DRIPSTONE_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_DRIPSTONE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block POLISHED_DRIPSTONE_WALL = regBlock(ChiseledBlockItemIds.POLISHED_DRIPSTONE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DRIPSTONE_BRICKS = regBlock(ChiseledBlockItemIds.DRIPSTONE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DRIPSTONE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.DRIPSTONE_BRICK_STAIRS,
-            properties -> new StairBlock(DRIPSTONE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DRIPSTONE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.DRIPSTONE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DRIPSTONE_BRICK_WALL = regBlock(ChiseledBlockItemIds.DRIPSTONE_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_DRIPSTONE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_DRIPSTONE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_DRIPSTONE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_DRIPSTONE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_DRIPSTONE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_DRIPSTONE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_DRIPSTONE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DRIPSTONE_TILES = regBlock(ChiseledBlockItemIds.DRIPSTONE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DRIPSTONE_TILE_STAIRS = regBlock(ChiseledBlockItemIds.DRIPSTONE_TILE_STAIRS,
-            properties -> new StairBlock(DRIPSTONE_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DRIPSTONE_TILE_SLAB = regBlock(ChiseledBlockItemIds.DRIPSTONE_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DRIPSTONE_TILE_WALL = regBlock(ChiseledBlockItemIds.DRIPSTONE_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    Block CALCITE_STAIRS = regBasicStairs(ChiseledBlockItemIds.CALCITE_STAIRS, Blocks.CALCITE, Blocks.CALCITE);
+    Block CALCITE_SLAB = regBasicSlab(ChiseledBlockItemIds.CALCITE_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).strength(1.25F));
+    Block CALCITE_WALL = regBasicWall(ChiseledBlockItemIds.CALCITE_WALL, Blocks.CALCITE);
+    Block POLISHED_CALCITE = regBasicBlock(ChiseledBlockItemIds.POLISHED_CALCITE, BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).strength(1.5F, 4.0F));
+    Block POLISHED_CALCITE_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_CALCITE_STAIRS, POLISHED_CALCITE, BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).strength(1.5F, 4.0F));
+    Block POLISHED_CALCITE_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_CALCITE_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).strength(2.0F, 4.0F));
+    Block POLISHED_CALCITE_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_CALCITE_WALL, BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).strength(1.5F, 4.0F));
+    Block CALCITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CALCITE_BRICKS, POLISHED_CALCITE);
+    Block CALCITE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CALCITE_BRICK_STAIRS, CALCITE_BRICKS, POLISHED_CALCITE_STAIRS);
+    Block CALCITE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CALCITE_BRICK_SLAB, POLISHED_CALCITE_SLAB);
+    Block CALCITE_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.CALCITE_BRICK_WALL, POLISHED_CALCITE_WALL);
+    Block CUT_CALCITE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_CALCITE_BRICKS, POLISHED_CALCITE);
+    Block CUT_CALCITE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_CALCITE_BRICK_STAIRS, CALCITE_BRICKS, POLISHED_CALCITE_STAIRS);
+    Block CUT_CALCITE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_CALCITE_BRICK_SLAB, POLISHED_CALCITE_SLAB);
+    Block CALCITE_TILES = regBasicBlock(ChiseledBlockItemIds.CALCITE_TILES, POLISHED_CALCITE);
+    Block CALCITE_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.CALCITE_TILE_STAIRS, CALCITE_BRICKS, POLISHED_CALCITE_STAIRS);
+    Block CALCITE_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.CALCITE_TILE_SLAB, POLISHED_CALCITE_SLAB);
+    Block CALCITE_TILE_WALL = regBasicWall(ChiseledBlockItemIds.CALCITE_TILE_WALL, POLISHED_CALCITE_WALL);
 
-    Block MIXED_BRICKS = regBlock(ChiseledBlockItemIds.MIXED_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block MIXED_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.MIXED_BRICK_STAIRS,
-            properties -> new StairBlock(MIXED_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block MIXED_BRICK_SLAB = regBlock(ChiseledBlockItemIds.MIXED_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block MIXED_BRICK_WALL = regBlock(ChiseledBlockItemIds.MIXED_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block MOSSY_BRICKS = regBlock(ChiseledBlockItemIds.MOSSY_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block MOSSY_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.MOSSY_BRICK_STAIRS,
-            properties -> new StairBlock(MOSSY_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block MOSSY_BRICK_SLAB = regBlock(ChiseledBlockItemIds.MOSSY_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block MOSSY_BRICK_WALL = regBlock(ChiseledBlockItemIds.MOSSY_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    Block DRIPSTONE_STAIRS = regBasicStairs(ChiseledBlockItemIds.DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK, Blocks.DRIPSTONE_BLOCK);
+    Block DRIPSTONE_SLAB = regBasicSlab(ChiseledBlockItemIds.DRIPSTONE_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK).strength(2.0F, 1.0F));
+    Block DRIPSTONE_WALL = regBasicWall(ChiseledBlockItemIds.DRIPSTONE_WALL, Blocks.DRIPSTONE_BLOCK);
+    Block POLISHED_DRIPSTONE = regBasicBlock(ChiseledBlockItemIds.POLISHED_DRIPSTONE, BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK).strength(1.5F, 4.0F));
+    Block POLISHED_DRIPSTONE_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_DRIPSTONE_STAIRS, POLISHED_DRIPSTONE, BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK).strength(1.5F, 4.0F));
+    Block POLISHED_DRIPSTONE_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_DRIPSTONE_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK).strength(2.0F, 4.0F));
+    Block POLISHED_DRIPSTONE_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_DRIPSTONE_WALL, BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK).strength(1.5F, 4.0F));
+    Block DRIPSTONE_BRICKS = regBasicBlock(ChiseledBlockItemIds.DRIPSTONE_BRICKS, POLISHED_DRIPSTONE);
+    Block DRIPSTONE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.DRIPSTONE_BRICK_STAIRS, DRIPSTONE_BRICKS, POLISHED_DRIPSTONE_STAIRS);
+    Block DRIPSTONE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.DRIPSTONE_BRICK_SLAB, POLISHED_DRIPSTONE_SLAB);
+    Block DRIPSTONE_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.DRIPSTONE_BRICK_WALL, POLISHED_DRIPSTONE_WALL);
+    Block CUT_DRIPSTONE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_DRIPSTONE_BRICKS, POLISHED_DRIPSTONE);
+    Block CUT_DRIPSTONE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_DRIPSTONE_BRICK_STAIRS, DRIPSTONE_BRICKS, POLISHED_DRIPSTONE_STAIRS);
+    Block CUT_DRIPSTONE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_DRIPSTONE_BRICK_SLAB, POLISHED_DRIPSTONE_SLAB);
+    Block DRIPSTONE_TILES = regBasicBlock(ChiseledBlockItemIds.DRIPSTONE_TILES, POLISHED_DRIPSTONE);
+    Block DRIPSTONE_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.DRIPSTONE_TILE_STAIRS, DRIPSTONE_BRICKS, POLISHED_DRIPSTONE_STAIRS);
+    Block DRIPSTONE_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.DRIPSTONE_TILE_SLAB, POLISHED_DRIPSTONE_SLAB);
+    Block DRIPSTONE_TILE_WALL = regBasicWall(ChiseledBlockItemIds.DRIPSTONE_TILE_WALL, POLISHED_DRIPSTONE_WALL);
 
-    Block PACKED_MUD_STAIRS = regBlock(ChiseledBlockItemIds.PACKED_MUD_STAIRS,
-            properties -> new StairBlock(Blocks.PACKED_MUD.defaultBlockState(),properties
-                    .mapColor(MapColor.DIRT).strength(1.0F, 3.0F).sound(SoundType.PACKED_MUD)));
-    Block PACKED_MUD_SLAB = regBlock(ChiseledBlockItemIds.PACKED_MUD_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.DIRT).strength(1.0F, 3.0F).sound(SoundType.PACKED_MUD)));
-    Block PACKED_MUD_WALL = regBlock(ChiseledBlockItemIds.PACKED_MUD_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.DIRT).strength(1.0F, 3.0F).sound(SoundType.PACKED_MUD)));
-    Block POLISHED_MUD = regBlock(ChiseledBlockItemIds.POLISHED_MUD,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block POLISHED_MUD_STAIRS = regBlock(ChiseledBlockItemIds.POLISHED_MUD_STAIRS,
-            properties -> new StairBlock(POLISHED_MUD.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block POLISHED_MUD_SLAB = regBlock(ChiseledBlockItemIds.POLISHED_MUD_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block POLISHED_MUD_WALL = regBlock(ChiseledBlockItemIds.POLISHED_MUD_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_MUD_BRICKS = regBlock(ChiseledBlockItemIds.MOSSY_MUD_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_MUD_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.MOSSY_MUD_BRICK_STAIRS,
-            properties -> new StairBlock(MOSSY_MUD_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_MUD_BRICK_SLAB = regBlock(ChiseledBlockItemIds.MOSSY_MUD_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_MUD_BRICK_WALL = regBlock(ChiseledBlockItemIds.MOSSY_MUD_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block CUT_MUD_BRICKS = regBlock(ChiseledBlockItemIds.CUT_MUD_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block CUT_MUD_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_MUD_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_MUD_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block CUT_MUD_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_MUD_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_CUT_MUD_BRICKS = regBlock(ChiseledBlockItemIds.MOSSY_CUT_MUD_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_CUT_MUD_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.MOSSY_CUT_MUD_BRICK_STAIRS,
-            properties -> new StairBlock(MOSSY_CUT_MUD_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_CUT_MUD_BRICK_SLAB = regBlock(ChiseledBlockItemIds.MOSSY_CUT_MUD_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MUD_TILES = regBlock(ChiseledBlockItemIds.MUD_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MUD_TILE_STAIRS = regBlock(ChiseledBlockItemIds.MUD_TILE_STAIRS,
-            properties -> new StairBlock(MUD_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MUD_TILE_SLAB = regBlock(ChiseledBlockItemIds.MUD_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MUD_TILE_WALL = regBlock(ChiseledBlockItemIds.MUD_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_MUD_TILES = regBlock(ChiseledBlockItemIds.MOSSY_MUD_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_MUD_TILE_STAIRS = regBlock(ChiseledBlockItemIds.MOSSY_MUD_TILE_STAIRS,
-            properties -> new StairBlock(MOSSY_MUD_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_MUD_TILE_SLAB = regBlock(ChiseledBlockItemIds.MOSSY_MUD_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    Block MOSSY_MUD_TILE_WALL = regBlock(ChiseledBlockItemIds.MOSSY_MUD_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 3.0F).sound(SoundType.MUD_BRICKS)));
-    
-    Block SMOOTH_SANDSTONE_WALL = regBlock(ChiseledBlockItemIds.SMOOTH_SANDSTONE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block SANDSTONE_BRICKS = regBlock(ChiseledBlockItemIds.SANDSTONE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block SANDSTONE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.SANDSTONE_BRICK_STAIRS,
-            properties -> new StairBlock(SANDSTONE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block SANDSTONE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.SANDSTONE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block SANDSTONE_BRICK_WALL = regBlock(ChiseledBlockItemIds.SANDSTONE_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block CUT_SANDSTONE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_SANDSTONE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block CUT_SANDSTONE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_SANDSTONE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_SANDSTONE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block CUT_SANDSTONE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_SANDSTONE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block SANDSTONE_TILES = regBlock(ChiseledBlockItemIds.SANDSTONE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block SANDSTONE_TILE_STAIRS = regBlock(ChiseledBlockItemIds.SANDSTONE_TILE_STAIRS,
-            properties -> new StairBlock(SANDSTONE_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block SANDSTONE_TILE_SLAB = regBlock(ChiseledBlockItemIds.SANDSTONE_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block SANDSTONE_TILE_WALL = regBlock(ChiseledBlockItemIds.SANDSTONE_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    
-    Block SMOOTH_RED_SANDSTONE_WALL = regBlock(ChiseledBlockItemIds.SMOOTH_RED_SANDSTONE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block RED_SANDSTONE_BRICKS = regBlock(ChiseledBlockItemIds.RED_SANDSTONE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block RED_SANDSTONE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.RED_SANDSTONE_BRICK_STAIRS,
-            properties -> new StairBlock(RED_SANDSTONE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block RED_SANDSTONE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.RED_SANDSTONE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block RED_SANDSTONE_BRICK_WALL = regBlock(ChiseledBlockItemIds.RED_SANDSTONE_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block CUT_RED_SANDSTONE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_RED_SANDSTONE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block CUT_RED_SANDSTONE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_RED_SANDSTONE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_RED_SANDSTONE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block CUT_RED_SANDSTONE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_RED_SANDSTONE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block RED_SANDSTONE_TILES = regBlock(ChiseledBlockItemIds.RED_SANDSTONE_TILES,
-            properties -> new Block(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block RED_SANDSTONE_TILE_STAIRS = regBlock(ChiseledBlockItemIds.RED_SANDSTONE_TILE_STAIRS,
-            properties -> new StairBlock(RED_SANDSTONE_TILES.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block RED_SANDSTONE_TILE_SLAB = regBlock(ChiseledBlockItemIds.RED_SANDSTONE_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
-    Block RED_SANDSTONE_TILE_WALL = regBlock(ChiseledBlockItemIds.RED_SANDSTONE_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    Block MIXED_BRICKS = regBasicBlock(ChiseledBlockItemIds.MIXED_BRICKS, Blocks.BRICKS);
+    Block MIXED_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.MIXED_BRICK_STAIRS, Blocks.BRICKS, Blocks.BRICK_STAIRS);
+    Block MIXED_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.MIXED_BRICK_SLAB, Blocks.BRICK_SLAB);
+    Block MIXED_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.MIXED_BRICK_WALL, Blocks.BRICK_WALL);
+    Block MOSSY_BRICKS = regBasicBlock(ChiseledBlockItemIds.MOSSY_BRICKS, Blocks.BRICKS);
+    Block MOSSY_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.MOSSY_BRICK_STAIRS, Blocks.BRICKS, Blocks.BRICK_STAIRS);
+    Block MOSSY_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.MOSSY_BRICK_SLAB, Blocks.BRICK_SLAB);
+    Block MOSSY_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.MOSSY_BRICK_WALL, Blocks.BRICK_WALL);
+    Block PACKED_MUD_STAIRS = regBasicStairs(ChiseledBlockItemIds.PACKED_MUD_STAIRS, Blocks.PACKED_MUD, Blocks.PACKED_MUD);
+    Block PACKED_MUD_SLAB = regBasicSlab(ChiseledBlockItemIds.PACKED_MUD_SLAB, Blocks.PACKED_MUD);
+    Block PACKED_MUD_WALL = regBasicWall(ChiseledBlockItemIds.PACKED_MUD_WALL, Blocks.PACKED_MUD);
+    Block POLISHED_MUD = regBasicBlock(ChiseledBlockItemIds.POLISHED_MUD, Blocks.MUD_BRICKS);
+    Block POLISHED_MUD_STAIRS = regBasicStairs(ChiseledBlockItemIds.POLISHED_MUD_STAIRS, POLISHED_MUD, Blocks.MUD_BRICK_STAIRS);
+    Block POLISHED_MUD_SLAB = regBasicSlab(ChiseledBlockItemIds.POLISHED_MUD_SLAB, Blocks.MUD_BRICK_SLAB);
+    Block POLISHED_MUD_WALL = regBasicWall(ChiseledBlockItemIds.POLISHED_MUD_WALL, Blocks.MUD_BRICK_WALL);
+    Block MOSSY_MUD_BRICKS = regBasicBlock(ChiseledBlockItemIds.MOSSY_MUD_BRICKS, Blocks.MUD_BRICKS);
+    Block MOSSY_MUD_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.MOSSY_MUD_BRICK_STAIRS, MOSSY_MUD_BRICKS, Blocks.MUD_BRICK_STAIRS);
+    Block MOSSY_MUD_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.MOSSY_MUD_BRICK_SLAB, Blocks.MUD_BRICK_SLAB);
+    Block MOSSY_MUD_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.MOSSY_MUD_BRICK_WALL, Blocks.MUD_BRICK_WALL);
+    Block CUT_MUD_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_MUD_BRICKS, Blocks.MUD_BRICKS);
+    Block CUT_MUD_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_MUD_BRICK_STAIRS, CUT_MUD_BRICKS, Blocks.MUD_BRICK_STAIRS);
+    Block CUT_MUD_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_MUD_BRICK_SLAB, Blocks.MUD_BRICK_SLAB);
+    Block MOSSY_CUT_MUD_BRICKS = regBasicBlock(ChiseledBlockItemIds.MOSSY_CUT_MUD_BRICKS, Blocks.MUD_BRICKS);
+    Block MOSSY_CUT_MUD_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.MOSSY_CUT_MUD_BRICK_STAIRS, MOSSY_CUT_MUD_BRICKS, Blocks.MUD_BRICK_STAIRS);
+    Block MOSSY_CUT_MUD_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.MOSSY_CUT_MUD_BRICK_SLAB, Blocks.MUD_BRICK_SLAB);
+    Block MUD_TILES = regBasicBlock(ChiseledBlockItemIds.MUD_TILES, Blocks.MUD_BRICKS);
+    Block MUD_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.MUD_TILE_STAIRS, MUD_TILES, Blocks.MUD_BRICK_STAIRS);
+    Block MUD_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.MUD_TILE_SLAB, Blocks.MUD_BRICK_SLAB);
+    Block MUD_TILE_WALL = regBasicWall(ChiseledBlockItemIds.MUD_TILE_WALL, Blocks.MUD_BRICK_WALL);
+    Block MOSSY_MUD_TILES = regBasicBlock(ChiseledBlockItemIds.MOSSY_MUD_TILES, Blocks.MUD_BRICKS);
+    Block MOSSY_MUD_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.MOSSY_MUD_TILE_STAIRS, MOSSY_MUD_TILES, Blocks.MUD_BRICK_STAIRS);
+    Block MOSSY_MUD_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.MOSSY_MUD_TILE_SLAB, Blocks.MUD_BRICK_SLAB);
+    Block MOSSY_MUD_TILE_WALL = regBasicWall(ChiseledBlockItemIds.MOSSY_MUD_TILE_WALL, Blocks.MUD_BRICK_WALL);
 
-    Block CUT_CINNABAR_BRICKS = regBlock(ChiseledBlockItemIds.CUT_CINNABAR_BRICKS,
-            properties -> new Block(properties
-                    .sound(SoundType.CINNABAR).mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_CINNABAR_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_CINNABAR_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_CINNABAR_BRICKS.defaultBlockState(),properties
-                    .sound(SoundType.CINNABAR).mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_CINNABAR_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_CINNABAR_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .sound(SoundType.CINNABAR).mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CINNABAR_TILES = regBlock(ChiseledBlockItemIds.CINNABAR_TILES,
-            properties -> new Block(properties
-                    .sound(SoundType.CINNABAR).mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CINNABAR_TILE_STAIRS = regBlock(ChiseledBlockItemIds.CINNABAR_TILE_STAIRS,
-            properties -> new StairBlock(CINNABAR_TILES.defaultBlockState(),properties
-                    .sound(SoundType.CINNABAR).mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CINNABAR_TILE_SLAB = regBlock(ChiseledBlockItemIds.CINNABAR_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .sound(SoundType.CINNABAR).mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CINNABAR_TILE_WALL = regBlock(ChiseledBlockItemIds.CINNABAR_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .sound(SoundType.CINNABAR).mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    Block SMOOTH_SANDSTONE_WALL = regBasicWall(ChiseledBlockItemIds.SMOOTH_SANDSTONE_WALL, Blocks.SMOOTH_SANDSTONE);
+    Block SANDSTONE_BRICKS = regBasicBlock(ChiseledBlockItemIds.SANDSTONE_BRICKS, Blocks.SMOOTH_SANDSTONE);
+    Block SANDSTONE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.SANDSTONE_BRICK_STAIRS, SANDSTONE_BRICKS, Blocks.SMOOTH_SANDSTONE_STAIRS);
+    Block SANDSTONE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.SANDSTONE_BRICK_SLAB, Blocks.SMOOTH_SANDSTONE_SLAB);
+    Block SANDSTONE_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.SANDSTONE_BRICK_WALL, SMOOTH_SANDSTONE_WALL);
+    Block CUT_SANDSTONE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_SANDSTONE_BRICKS, Blocks.SMOOTH_SANDSTONE);
+    Block CUT_SANDSTONE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_SANDSTONE_BRICK_STAIRS, CUT_SANDSTONE_BRICKS, Blocks.SMOOTH_SANDSTONE_STAIRS);
+    Block CUT_SANDSTONE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_SANDSTONE_BRICK_SLAB, Blocks.SMOOTH_SANDSTONE_SLAB);
+    Block SANDSTONE_TILES = regBasicBlock(ChiseledBlockItemIds.SANDSTONE_TILES, Blocks.SMOOTH_SANDSTONE);
+    Block SANDSTONE_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.SANDSTONE_TILE_STAIRS, SANDSTONE_TILES, Blocks.SMOOTH_SANDSTONE_STAIRS);
+    Block SANDSTONE_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.SANDSTONE_TILE_SLAB, Blocks.SMOOTH_SANDSTONE_SLAB);
+    Block SANDSTONE_TILE_WALL = regBasicWall(ChiseledBlockItemIds.SANDSTONE_TILE_WALL, SMOOTH_SANDSTONE_WALL);
 
-    Block CUT_SULFUR_BRICKS = regBlock(ChiseledBlockItemIds.CUT_SULFUR_BRICKS,
-            properties -> new Block(properties
-                    .sound(SoundType.SULFUR).mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_SULFUR_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_SULFUR_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_SULFUR_BRICKS.defaultBlockState(),properties
-                    .sound(SoundType.SULFUR).mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_SULFUR_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_SULFUR_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .sound(SoundType.SULFUR).mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block SULFUR_TILES = regBlock(ChiseledBlockItemIds.SULFUR_TILES,
-            properties -> new Block(properties
-                    .sound(SoundType.SULFUR).mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block SULFUR_TILE_STAIRS = regBlock(ChiseledBlockItemIds.SULFUR_TILE_STAIRS,
-            properties -> new StairBlock(SULFUR_TILES.defaultBlockState(),properties
-                    .sound(SoundType.SULFUR).mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block SULFUR_TILE_SLAB = regBlock(ChiseledBlockItemIds.SULFUR_TILE_SLAB,
-            properties -> new SlabBlock(properties
-                    .sound(SoundType.SULFUR).mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block SULFUR_TILE_WALL = regBlock(ChiseledBlockItemIds.SULFUR_TILE_WALL,
-            properties -> new WallBlock(properties
-                    .sound(SoundType.SULFUR).mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    
-    Block PRISMARINE_BRICK_WALL = regBlock(ChiseledBlockItemIds.PRISMARINE_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_PRISMARINE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_PRISMARINE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_PRISMARINE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_PRISMARINE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_PRISMARINE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_PRISMARINE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_PRISMARINE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DARK_PRISMARINE_WALL = regBlock(ChiseledBlockItemIds.DARK_PRISMARINE_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DARK_PRISMARINE_BRICKS = regBlock(ChiseledBlockItemIds.DARK_PRISMARINE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DARK_PRISMARINE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.DARK_PRISMARINE_BRICK_STAIRS,
-            properties -> new StairBlock(DARK_PRISMARINE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DARK_PRISMARINE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.DARK_PRISMARINE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block DARK_PRISMARINE_BRICK_WALL = regBlock(ChiseledBlockItemIds.DARK_PRISMARINE_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_DARK_PRISMARINE_BRICKS = regBlock(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_DARK_PRISMARINE_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICK_STAIRS,
-            properties -> new StairBlock(CUT_DARK_PRISMARINE_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
-    Block CUT_DARK_PRISMARINE_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.DIAMOND).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    Block SMOOTH_RED_SANDSTONE_WALL = regBasicWall(ChiseledBlockItemIds.SMOOTH_RED_SANDSTONE_WALL, Blocks.SMOOTH_RED_SANDSTONE);
+    Block RED_SANDSTONE_BRICKS = regBasicBlock(ChiseledBlockItemIds.RED_SANDSTONE_BRICKS, Blocks.SMOOTH_RED_SANDSTONE);
+    Block RED_SANDSTONE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.RED_SANDSTONE_BRICK_STAIRS, RED_SANDSTONE_BRICKS, Blocks.SMOOTH_RED_SANDSTONE_STAIRS);
+    Block RED_SANDSTONE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.RED_SANDSTONE_BRICK_SLAB, Blocks.SMOOTH_RED_SANDSTONE_SLAB);
+    Block RED_SANDSTONE_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.RED_SANDSTONE_BRICK_WALL, SMOOTH_RED_SANDSTONE_WALL);
+    Block CUT_RED_SANDSTONE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_RED_SANDSTONE_BRICKS, Blocks.SMOOTH_RED_SANDSTONE);
+    Block CUT_RED_SANDSTONE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_RED_SANDSTONE_BRICK_STAIRS, CUT_RED_SANDSTONE_BRICKS, Blocks.SMOOTH_RED_SANDSTONE_STAIRS);
+    Block CUT_RED_SANDSTONE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_RED_SANDSTONE_BRICK_SLAB, Blocks.SMOOTH_RED_SANDSTONE_SLAB);
+    Block RED_SANDSTONE_TILES = regBasicBlock(ChiseledBlockItemIds.RED_SANDSTONE_TILES, Blocks.SMOOTH_RED_SANDSTONE);
+    Block RED_SANDSTONE_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.RED_SANDSTONE_TILE_STAIRS, RED_SANDSTONE_TILES, Blocks.SMOOTH_RED_SANDSTONE_STAIRS);
+    Block RED_SANDSTONE_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.RED_SANDSTONE_TILE_SLAB, Blocks.SMOOTH_RED_SANDSTONE_SLAB);
+    Block RED_SANDSTONE_TILE_WALL = regBasicWall(ChiseledBlockItemIds.RED_SANDSTONE_TILE_WALL, SMOOTH_RED_SANDSTONE_WALL);
 
-    Block TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block WHITE_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block WHITE_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(WHITE_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block WHITE_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block WHITE_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIGHT_GRAY_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(LIGHT_GRAY_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIGHT_GRAY_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIGHT_GRAY_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block GRAY_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.GRAY_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block GRAY_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.GRAY_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(GRAY_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block GRAY_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.GRAY_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block GRAY_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.GRAY_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BLACK_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.BLACK_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BLACK_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.BLACK_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(BLACK_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BLACK_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.BLACK_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BLACK_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.BLACK_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BROWN_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.BROWN_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BROWN_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.BROWN_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(BROWN_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BROWN_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.BROWN_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BROWN_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.BROWN_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block RED_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.RED_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block RED_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.RED_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(RED_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block RED_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.RED_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block RED_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.RED_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_RED).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block ORANGE_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.ORANGE_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block ORANGE_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.ORANGE_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(ORANGE_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block ORANGE_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.ORANGE_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block ORANGE_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.ORANGE_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block YELLOW_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.YELLOW_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block YELLOW_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.YELLOW_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(YELLOW_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block YELLOW_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.YELLOW_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block YELLOW_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.YELLOW_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_YELLOW).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIME_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.LIME_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIME_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.LIME_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(LIME_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIME_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.LIME_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIME_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.LIME_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block GREEN_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.GREEN_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block GREEN_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.GREEN_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(GREEN_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block GREEN_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.GREEN_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block GREEN_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.GREEN_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_GREEN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block CYAN_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.CYAN_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_CYAN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block CYAN_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.CYAN_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(CYAN_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_CYAN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block CYAN_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.CYAN_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_CYAN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block CYAN_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.CYAN_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_CYAN).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIGHT_BLUE_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.LIGHT_BLUE_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(LIGHT_BLUE_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIGHT_BLUE_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block LIGHT_BLUE_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.LIGHT_BLUE_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BLUE_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.BLUE_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BLUE_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.BLUE_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(BLUE_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BLUE_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.BLUE_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block BLUE_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.BLUE_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block PURPLE_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.PURPLE_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_PURPLE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block PURPLE_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.PURPLE_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(PURPLE_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_PURPLE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block PURPLE_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.PURPLE_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_PURPLE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block PURPLE_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.PURPLE_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_PURPLE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block MAGENTA_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_MAGENTA).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block MAGENTA_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(MAGENTA_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_MAGENTA).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block MAGENTA_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_MAGENTA).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block MAGENTA_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_MAGENTA).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block PINK_TERRACOTTA_BRICKS = regBlock(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.TERRACOTTA_PINK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block PINK_TERRACOTTA_BRICK_STAIRS = regBlock(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_STAIRS,
-            properties -> new StairBlock(PINK_TERRACOTTA_BRICKS.defaultBlockState(),properties
-                    .mapColor(MapColor.TERRACOTTA_PINK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block PINK_TERRACOTTA_BRICK_SLAB = regBlock(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_SLAB,
-            properties -> new SlabBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_PINK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    Block PINK_TERRACOTTA_BRICK_WALL = regBlock(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_WALL,
-            properties -> new WallBlock(properties
-                    .mapColor(MapColor.TERRACOTTA_PINK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25F, 4.2F)));
-    
-    Block CRACKED_RED_NETHER_BRICKS = regBlock(ChiseledBlockItemIds.CRACKED_RED_NETHER_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.NETHER).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
-    Block RED_NETHER_BRICK_FENCE = regBlock(ChiseledBlockItemIds.RED_NETHER_BRICK_FENCE,
-            properties -> new FenceBlock(properties
-                    .mapColor(MapColor.NETHER).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
-    Block CHISELED_RED_NETHER_BRICKS = regBlock(ChiseledBlockItemIds.CHISELED_RED_NETHER_BRICKS,
-            properties -> new Block(properties
-                    .mapColor(MapColor.NETHER).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    Block CUT_CINNABAR_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_CINNABAR_BRICKS, Blocks.CINNABAR_BRICKS);
+    Block CUT_CINNABAR_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_CINNABAR_BRICK_STAIRS, CUT_CINNABAR_BRICKS, Blocks.CINNABAR_BRICK_STAIRS);
+    Block CUT_CINNABAR_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_CINNABAR_BRICK_SLAB, Blocks.CINNABAR_BRICK_SLAB);
+    Block CINNABAR_TILES = regBasicBlock(ChiseledBlockItemIds.CINNABAR_TILES, Blocks.CINNABAR_BRICKS);
+    Block CINNABAR_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.CINNABAR_TILE_STAIRS, CINNABAR_TILES, Blocks.CINNABAR_BRICK_STAIRS);
+    Block CINNABAR_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.CINNABAR_TILE_SLAB, Blocks.CINNABAR_BRICK_SLAB);
+    Block CINNABAR_TILE_WALL = regBasicWall(ChiseledBlockItemIds.CINNABAR_TILE_WALL, Blocks.CINNABAR_BRICK_WALL);
+
+    Block CUT_SULFUR_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_SULFUR_BRICKS, Blocks.SULFUR_BRICKS);
+    Block CUT_SULFUR_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_SULFUR_BRICK_STAIRS, CUT_SULFUR_BRICKS, Blocks.SULFUR_BRICK_STAIRS);
+    Block CUT_SULFUR_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_SULFUR_BRICK_SLAB, Blocks.SULFUR_BRICK_SLAB);
+    Block SULFUR_TILES = regBasicBlock(ChiseledBlockItemIds.SULFUR_TILES, Blocks.SULFUR_BRICKS);
+    Block SULFUR_TILE_STAIRS = regBasicStairs(ChiseledBlockItemIds.SULFUR_TILE_STAIRS, SULFUR_TILES, Blocks.SULFUR_BRICK_STAIRS);
+    Block SULFUR_TILE_SLAB = regBasicSlab(ChiseledBlockItemIds.SULFUR_TILE_SLAB, Blocks.SULFUR_BRICK_SLAB);
+    Block SULFUR_TILE_WALL = regBasicWall(ChiseledBlockItemIds.SULFUR_TILE_WALL, Blocks.SULFUR_BRICK_WALL);
+
+    Block PRISMARINE_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.PRISMARINE_BRICK_WALL, Blocks.PRISMARINE_BRICKS);
+    Block CUT_PRISMARINE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICKS);
+    Block CUT_PRISMARINE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_PRISMARINE_BRICK_STAIRS, CUT_PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICK_STAIRS);
+    Block CUT_PRISMARINE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_PRISMARINE_BRICK_SLAB, Blocks.PRISMARINE_BRICK_SLAB);
+
+    Block DARK_PRISMARINE_WALL = regBasicWall(ChiseledBlockItemIds.DARK_PRISMARINE_WALL, Blocks.DARK_PRISMARINE);
+    Block DARK_PRISMARINE_BRICKS = regBasicBlock(ChiseledBlockItemIds.DARK_PRISMARINE_BRICKS, Blocks.DARK_PRISMARINE);
+    Block DARK_PRISMARINE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.DARK_PRISMARINE_BRICK_STAIRS, DARK_PRISMARINE_BRICKS, Blocks.DARK_PRISMARINE_STAIRS);
+    Block DARK_PRISMARINE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.DARK_PRISMARINE_BRICK_SLAB, Blocks.DARK_PRISMARINE_SLAB);
+    Block DARK_PRISMARINE_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.DARK_PRISMARINE_BRICK_WALL, DARK_PRISMARINE_WALL);
+    Block CUT_DARK_PRISMARINE_BRICKS = regBasicBlock(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICKS, Blocks.DARK_PRISMARINE);
+    Block CUT_DARK_PRISMARINE_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICK_STAIRS, CUT_DARK_PRISMARINE_BRICKS, Blocks.DARK_PRISMARINE_STAIRS);
+    Block CUT_DARK_PRISMARINE_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICK_SLAB, Blocks.DARK_PRISMARINE_SLAB);
+
+    Block TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.TERRACOTTA_BRICKS, Blocks.TERRACOTTA);
+    Block TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.TERRACOTTA);
+    Block TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).strength(1.75F, 4.2F));
+    Block TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.TERRACOTTA_BRICK_WALL, Blocks.TERRACOTTA);
+    Block WHITE_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.white());
+    Block WHITE_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.white());
+    Block WHITE_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.white()).strength(1.75F, 4.2F));
+    Block WHITE_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.WHITE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.white());
+    Block LIGHT_GRAY_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.lightGray());
+    Block LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.lightGray());
+    Block LIGHT_GRAY_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.lightGray()).strength(1.75F, 4.2F));
+    Block LIGHT_GRAY_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.LIGHT_GRAY_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.lightGray());
+    Block GRAY_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.GRAY_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.gray());
+    Block GRAY_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.GRAY_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.gray());
+    Block GRAY_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.GRAY_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.gray()).strength(1.75F, 4.2F));
+    Block GRAY_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.GRAY_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.gray());
+    Block BLACK_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.BLACK_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.black());
+    Block BLACK_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.BLACK_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.black());
+    Block BLACK_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.BLACK_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.black()).strength(1.75F, 4.2F));
+    Block BLACK_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.BLACK_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.black());
+    Block BROWN_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.BROWN_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.brown());
+    Block BROWN_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.BROWN_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.brown());
+    Block BROWN_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.BROWN_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.brown()).strength(1.75F, 4.2F));
+    Block BROWN_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.BROWN_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.brown());
+    Block RED_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.RED_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.red());
+    Block RED_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.RED_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.red());
+    Block RED_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.RED_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.red()).strength(1.75F, 4.2F));
+    Block RED_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.RED_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.red());
+    Block ORANGE_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.ORANGE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.orange());
+    Block ORANGE_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.ORANGE_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.orange());
+    Block ORANGE_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.ORANGE_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.orange()).strength(1.75F, 4.2F));
+    Block ORANGE_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.ORANGE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.orange());
+    Block YELLOW_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.YELLOW_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.yellow());
+    Block YELLOW_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.YELLOW_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.yellow());
+    Block YELLOW_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.YELLOW_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.yellow()).strength(1.75F, 4.2F));
+    Block YELLOW_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.YELLOW_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.yellow());
+    Block LIME_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.LIME_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.lime());
+    Block LIME_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.LIME_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.lime());
+    Block LIME_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.LIME_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.lime()).strength(1.75F, 4.2F));
+    Block LIME_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.LIME_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.lime());
+    Block GREEN_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.GREEN_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.green());
+    Block GREEN_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.GREEN_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.green());
+    Block GREEN_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.GREEN_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.green()).strength(1.75F, 4.2F));
+    Block GREEN_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.GREEN_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.green());
+    Block CYAN_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.CYAN_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.cyan());
+    Block CYAN_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.CYAN_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.cyan());
+    Block CYAN_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.CYAN_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.cyan()).strength(1.75F, 4.2F));
+    Block CYAN_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.CYAN_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.cyan());
+    Block LIGHT_BLUE_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.LIGHT_BLUE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.lightBlue());
+    Block LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.lightBlue());
+    Block LIGHT_BLUE_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.lightBlue()).strength(1.75F, 4.2F));
+    Block LIGHT_BLUE_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.LIGHT_BLUE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.lightBlue());
+    Block BLUE_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.BLUE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.blue());
+    Block BLUE_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.BLUE_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.blue());
+    Block BLUE_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.BLUE_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.blue()).strength(1.75F, 4.2F));
+    Block BLUE_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.BLUE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.blue());
+    Block PURPLE_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.PURPLE_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.purple());
+    Block PURPLE_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.PURPLE_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.purple());
+    Block PURPLE_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.PURPLE_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.purple()).strength(1.75F, 4.2F));
+    Block PURPLE_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.PURPLE_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.purple());
+    Block MAGENTA_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.magenta());
+    Block MAGENTA_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.magenta());
+    Block MAGENTA_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.magenta()).strength(1.75F, 4.2F));
+    Block MAGENTA_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.magenta());
+    Block PINK_TERRACOTTA_BRICKS = regBasicBlock(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.pink());
+    Block PINK_TERRACOTTA_BRICK_STAIRS = regBasicStairs(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_STAIRS, TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.pink());
+    Block PINK_TERRACOTTA_BRICK_SLAB = regBasicSlab(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_SLAB, BlockBehaviour.Properties.ofFullCopy(Blocks.DYED_TERRACOTTA.pink()).strength(1.75F, 4.2F));
+    Block PINK_TERRACOTTA_BRICK_WALL = regBasicWall(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_WALL, Blocks.DYED_TERRACOTTA.pink());
+
+    Block CRACKED_RED_NETHER_BRICKS = regBasicBlock(ChiseledBlockItemIds.CRACKED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICKS);
+    Block RED_NETHER_BRICK_FENCE = regBasicFence(ChiseledBlockItemIds.RED_NETHER_BRICK_FENCE, Blocks.NETHER_BRICK_FENCE);
+    Block CHISELED_RED_NETHER_BRICKS = regBasicBlock(ChiseledBlockItemIds.CHISELED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICKS);
 
     Block SMOOTH_BASALT_STAIRS = regBlock(ChiseledBlockItemIds.SMOOTH_BASALT_STAIRS,
             properties -> new StairBlock(Blocks.SMOOTH_BASALT.defaultBlockState(),properties

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_chiseled_polished_blackstone": {
+    "has_polished_blackstone_brick_slab": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_chiseled_polished_blackstone"
+      "has_polished_blackstone_brick_slab"
     ]
   ],
   "rewards": {

@@ -3,11 +3,10 @@ package net.hyper.chiseled.registry;
 import net.hyper.chiseled.refrence.ChiseledBlockItemIds;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.*;
 
 import static net.hyper.silliestlib.utils.SilliestLibRegUtils.*;
 
-public interface ChiseledBlockItems {
+public interface ChiseledItems {
     Item STONE_WALL = regSimpleBlockItem(ChiseledBlockItemIds.STONE_WALL, ChiseledBlocks.STONE_WALL);
     Item POLISHED_STONE = regSimpleBlockItem(ChiseledBlockItemIds.POLISHED_STONE, ChiseledBlocks.POLISHED_STONE);
     Item POLISHED_STONE_STAIRS = regSimpleBlockItem(ChiseledBlockItemIds.POLISHED_STONE_STAIRS, ChiseledBlocks.POLISHED_STONE_STAIRS);
@@ -355,7 +354,7 @@ public interface ChiseledBlockItems {
     Item CUT_AMETHYST_BRICK_STAIRS = regSimpleBlockItem(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_STAIRS, ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS);
     Item CUT_AMETHYST_BRICK_SLAB = regSimpleBlockItem(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_SLAB, ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB);
 
-    Item NETHERITE_STAIRS = regBlockItem(ChiseledBlockItemIds.NETHERITE_STAIRS, properties -> new BlockItem(ChiseledBlocks.NETHERITE_STAIRS,properties.fireResistant()));
+    Item NETHERITE_STAIRS = regBlockItem(ChiseledBlockItemIds.NETHERITE_STAIRS, properties -> new BlockItem(ChiseledBlocks.NETHERITE_STAIRS, properties.fireResistant()));
 
     static void init() {}
 }

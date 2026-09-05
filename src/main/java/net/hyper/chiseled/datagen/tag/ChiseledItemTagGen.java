@@ -1,4 +1,4 @@
-package net.hyper.chiseled.datagen;
+package net.hyper.chiseled.datagen.tag;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;

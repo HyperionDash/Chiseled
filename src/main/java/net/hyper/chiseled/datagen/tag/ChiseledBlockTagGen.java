@@ -1,10 +1,8 @@
-package net.hyper.chiseled.datagen;
+package net.hyper.chiseled.datagen.tag;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
-import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.hyper.chiseled.refrence.ChiseledBlockItemIds;
-import net.hyper.chiseled.registry.ChiseledBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.references.BlockItemIds;
 import net.minecraft.tags.BlockTags;

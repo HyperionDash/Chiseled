@@ -1,6 +1,5 @@
 package net.hyper.chiseled.block;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -13,13 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class AmethystSlabBlock extends SlabBlock {
-    public static final MapCodec<AmethystSlabBlock> CODEC = simpleCodec(AmethystSlabBlock::new);
-
-    public MapCodec<AmethystSlabBlock> codec() {
-        return CODEC;
-    }
-
-    public AmethystSlabBlock(final BlockBehaviour.Properties properties) {
+    public AmethystSlabBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
@@ -28,6 +21,5 @@ public class AmethystSlabBlock extends SlabBlock {
             BlockPos hitPos = hitResult.getBlockPos();
             level.playSound((Entity)null, hitPos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0F, 0.5F + level.getRandom().nextFloat() * 1.2F);
         }
-
     }
 }

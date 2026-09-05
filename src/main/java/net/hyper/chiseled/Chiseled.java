@@ -24,7 +24,7 @@ public class Chiseled implements ModInitializer {
 		SilliestLib.init(MOD_ID);
 
 		ChiseledBlocks.init();
-		ChiseledBlockItems.init();
+		ChiseledItems.init();
 		ChiseledCreativeModeTabs.init();
 
 		LOGGER.info("Chiseling Bricks");

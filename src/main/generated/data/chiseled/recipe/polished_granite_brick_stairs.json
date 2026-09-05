@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "chiseled:polished_granite_bricks"
+    "#": "minecraft:polished_granite"
   },
   "pattern": [
     "#  ",

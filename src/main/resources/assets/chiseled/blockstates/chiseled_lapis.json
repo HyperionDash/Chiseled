@@ -1,0 +1,45 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "chiseled:block/chiseled_lapis1"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis2"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis3"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis4"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis5"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis6"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis7"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis8"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis9"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis10"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis11"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis12"
+      },
+      {
+        "model": "chiseled:block/chiseled_lapis13"
+      }
+    ]
+  }
+}

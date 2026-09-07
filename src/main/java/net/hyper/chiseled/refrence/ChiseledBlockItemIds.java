@@ -353,4 +353,5 @@ public interface ChiseledBlockItemIds {
     BlockItemId CUT_AMETHYST_BRICK_SLAB = createBlockItemId("cut_amethyst_brick_slab");
 
     BlockItemId NETHERITE_STAIRS = createBlockItemId("netherite_stairs");
+    BlockItemId CHISELED_LAPIS = createBlockItemId("chiseled_lapis");
 }

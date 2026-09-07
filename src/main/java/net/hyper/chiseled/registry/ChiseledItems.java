@@ -355,6 +355,7 @@ public interface ChiseledItems {
     Item CUT_AMETHYST_BRICK_SLAB = regSimpleBlockItem(ChiseledBlockItemIds.CUT_AMETHYST_BRICK_SLAB, ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB);
 
     Item NETHERITE_STAIRS = regBlockItem(ChiseledBlockItemIds.NETHERITE_STAIRS, properties -> new BlockItem(ChiseledBlocks.NETHERITE_STAIRS, properties.fireResistant()));
+    Item CHISELED_LAPIS = regSimpleBlockItem(ChiseledBlockItemIds.CHISELED_LAPIS, ChiseledBlocks.CHISELED_LAPIS);
 
     static void init() {}
 }

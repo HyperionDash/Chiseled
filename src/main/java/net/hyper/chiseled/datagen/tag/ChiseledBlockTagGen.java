@@ -322,6 +322,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.END_STONE_TILE_STAIRS)
                 .add(ChiseledBlockItemIds.END_STONE_TILE_SLAB)
                 .add(ChiseledBlockItemIds.END_STONE_TILE_WALL)
+                .add(ChiseledBlockItemIds.CHISELED_LAPIS)
                 .add(ChiseledBlockItemIds.QUARTZ_WALL)
                 .add(ChiseledBlockItemIds.SMOOTH_QUARTZ_WALL)
                 .add(ChiseledBlockItemIds.QUARTZ_BRICK_STAIRS)
@@ -344,6 +345,8 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
 
         builder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ChiseledBlockItemIds.NETHERITE_STAIRS);
+        builder(BlockTags.NEEDS_STONE_TOOL)
+                .add(ChiseledBlockItemIds.CHISELED_LAPIS);
 
         builder(BlockTags.STONE_BRICKS)
                 .add(ChiseledBlockItemIds.POLISHED_STONE)

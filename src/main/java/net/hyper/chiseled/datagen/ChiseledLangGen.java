@@ -360,6 +360,7 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB, "Cut Amethyst Brick Slab");
 
         translationBuilder.add(ChiseledBlocks.NETHERITE_STAIRS, "Netherite Stairs");
+        translationBuilder.add(ChiseledBlocks.CHISELED_LAPIS, "Chiseled Lapis");
 
         translationBuilder.add("advancements.chiseled.swaggiest_stairs_ever.title", "Swaggiest Stairs Ever");
         translationBuilder.add("advancements.chiseled.swaggiest_stairs_ever.description", "Craft Netherite Stairs");

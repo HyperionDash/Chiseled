@@ -362,5 +362,6 @@ public class ChiseledBlockLootTableGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB));
 
         dropSelf(ChiseledBlocks.NETHERITE_STAIRS);
+        dropSelf(ChiseledBlocks.CHISELED_LAPIS);
     }
 }

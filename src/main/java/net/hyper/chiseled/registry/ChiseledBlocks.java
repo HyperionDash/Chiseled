@@ -518,5 +518,7 @@ public interface ChiseledBlocks {
             properties -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(),properties
                     .mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops().strength(50.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
 
+    Block CHISELED_LAPIS = regBasicBlock(ChiseledBlockItemIds.CHISELED_LAPIS, Blocks.LAPIS_BLOCK);
+
     static void init() {}
 }

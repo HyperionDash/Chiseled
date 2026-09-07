@@ -271,6 +271,8 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.END_STONE_TILE_SLAB);
                         entries.accept(ChiseledItems.END_STONE_TILE_WALL);
 
+                        entries.accept(ChiseledItems.CHISELED_LAPIS);
+
                         entries.accept(ChiseledItems.QUARTZ_WALL);
                         entries.accept(ChiseledItems.SMOOTH_QUARTZ_WALL);
                         entries.accept(ChiseledItems.QUARTZ_BRICK_STAIRS);
@@ -623,6 +625,8 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.END_STONE_TILE_STAIRS,
                     ChiseledItems.END_STONE_TILE_SLAB,
                     ChiseledItems.END_STONE_TILE_WALL);
+
+            entries.insertAfter(Items.LAPIS_BLOCK, ChiseledItems.CHISELED_LAPIS);
 
             entries.insertAfter(Items.NETHERITE_BLOCK, Items.QUARTZ_BLOCK,
                     Items.QUARTZ_STAIRS,

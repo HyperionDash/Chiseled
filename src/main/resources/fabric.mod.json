@@ -29,5 +29,12 @@
 		"java": ">=25",
 		"fabric-api": "*",
 		"silliestlib": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.com/invite/5Tmsw388ah"
+			}
+		}
 	}
 }

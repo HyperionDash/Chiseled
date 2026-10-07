@@ -58,8 +58,8 @@ java {
 jar {
 	inputs.property "projectName", project.name
 
-	from("LICENSE") {
-		rename { "${it}_${project.name}"}
+	from("mod_license") {
+		rename { "LICENSE_${project.name}"}
 	}
 }
 

@@ -3,8 +3,7 @@ package net.hyper.chiseled;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.hyper.chiseled.datagen.*;
-import net.hyper.chiseled.datagen.tag.ChiseledBlockTagGen;
-import net.hyper.chiseled.datagen.tag.ChiseledItemTagGen;
+import net.hyper.chiseled.datagen.tag.*;
 
 public class ChiseledDataGenerator implements DataGeneratorEntrypoint {
 	@Override

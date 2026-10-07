@@ -12,7 +12,7 @@
 		"sources": "https://github.com/HyperionDash/Chiseled",
 		"issues":  "https://github.com/HyperionDash/Chiseled/issues"
 	},
-		"license": "ARR",
+		"license": "Silliest License",
 	"icon": "assets/chiseled/icon.png",
 	"environment": "*",
 	"entrypoints": {

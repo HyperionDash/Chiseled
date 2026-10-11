@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cut_mud_bricks": {
+    "has_packed_mud_slab": {
       "conditions": {
         "items": [
           {
-            "items": "chiseled:polished_mud"
+            "items": "chiseled:packed_mud_slab"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:cut_mud_bricks"
+        "recipes": "chiseled:cut_mud_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cut_mud_bricks"
+      "has_packed_mud_slab"
     ]
   ],
   "rewards": {

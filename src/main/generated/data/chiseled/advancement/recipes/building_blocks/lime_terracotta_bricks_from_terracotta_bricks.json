@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lime_terracotta_bricks": {
+    "has_terracotta_bricks": {
       "conditions": {
         "items": [
           {
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:lime_terracotta_bricks_from_terracotta_bricks"
+        "recipes": "chiseled:lime_terracotta_bricks_from_terracotta_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lime_terracotta_bricks"
+      "has_terracotta_bricks"
     ]
   ],
   "rewards": {

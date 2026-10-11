@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:smooth_quartz_wall_from_smooth_quartz_stonecutting"
+        "recipes": "chiseled:smooth_quartz_wall_from_smooth_quartz_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:polished_andesite_tiles"
+        "recipes": "chiseled:polished_andesite_tiles"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

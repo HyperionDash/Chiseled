@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "chiseled:polished_mud_slab"
+    "#": "chiseled:packed_mud_slab"
   },
   "pattern": [
     "#",

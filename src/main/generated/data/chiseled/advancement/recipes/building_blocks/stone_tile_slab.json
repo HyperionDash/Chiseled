@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:stone_tile_slab"
+        "recipes": "chiseled:stone_tile_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

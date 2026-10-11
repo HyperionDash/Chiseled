@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "minecraft:prismarine_slab"
+    "#": "chiseled:polished_prismarine_slab"
   },
   "pattern": [
     "#",

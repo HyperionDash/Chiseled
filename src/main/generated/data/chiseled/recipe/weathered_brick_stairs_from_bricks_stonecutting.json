@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:bricks",
+  "result": {
+    "id": "chiseled:weathered_brick_stairs"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "chiseled:block/weathered_bricks",
+    "side": "chiseled:block/weathered_bricks",
+    "top": "chiseled:block/weathered_bricks"
+  }
+}

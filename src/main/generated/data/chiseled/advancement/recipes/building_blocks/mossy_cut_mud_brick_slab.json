@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:mossy_cut_mud_brick_slab"
+        "recipes": "chiseled:mossy_cut_mud_brick_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

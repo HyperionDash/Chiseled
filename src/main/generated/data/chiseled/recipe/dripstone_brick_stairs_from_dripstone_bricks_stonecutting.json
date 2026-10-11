@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "chiseled:dripstone_bricks",
-  "result": {
-    "id": "chiseled:dripstone_brick_stairs"
-  }
-}

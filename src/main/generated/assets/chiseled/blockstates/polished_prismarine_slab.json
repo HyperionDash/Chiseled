@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/polished_prismarine_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/polished_prismarine"
+    },
+    "type=top": {
+      "model": "chiseled:block/polished_prismarine_slab_top"
+    }
+  }
+}

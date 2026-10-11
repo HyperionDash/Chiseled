@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "chiseled:block/polished_calcite",
-    "side": "chiseled:block/polished_calcite",
-    "top": "chiseled:block/polished_calcite"
-  }
-}

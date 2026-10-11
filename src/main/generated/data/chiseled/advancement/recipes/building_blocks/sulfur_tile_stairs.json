@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sulfur_tile_stairs": {
+    "has_sulfur_tiles": {
       "conditions": {
         "items": [
           {
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:sulfur_tile_stairs"
+        "recipes": "chiseled:sulfur_tile_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sulfur_tile_stairs"
+      "has_sulfur_tiles"
     ]
   ],
   "rewards": {

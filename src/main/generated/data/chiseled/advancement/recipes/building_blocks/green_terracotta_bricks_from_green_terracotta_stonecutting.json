@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:green_terracotta_bricks_from_green_terracotta_stonecutting"
+        "recipes": "chiseled:green_terracotta_bricks_from_green_terracotta_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

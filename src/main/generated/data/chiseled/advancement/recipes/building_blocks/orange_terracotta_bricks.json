@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_orange_terracotta_bricks": {
+    "has_orange_terracotta": {
       "conditions": {
         "items": [
           {
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:orange_terracotta_bricks"
+        "recipes": "chiseled:orange_terracotta_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_orange_terracotta_bricks"
+      "has_orange_terracotta"
     ]
   ],
   "rewards": {

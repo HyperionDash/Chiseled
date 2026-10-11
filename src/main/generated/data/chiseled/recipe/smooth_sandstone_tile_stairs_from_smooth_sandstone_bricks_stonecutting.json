@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:smooth_sandstone_bricks",
+  "result": {
+    "id": "chiseled:smooth_sandstone_tile_stairs"
+  }
+}

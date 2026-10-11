@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "chiseled:block/weathered_brick_slab"
+    },
+    "type=double": {
+      "model": "chiseled:block/weathered_bricks"
+    },
+    "type=top": {
+      "model": "chiseled:block/weathered_brick_slab_top"
+    }
+  }
+}

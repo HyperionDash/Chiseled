@@ -1,9 +1,10 @@
 {
   "values": [
     "chiseled:polished_stone",
+    "chiseled:stone_pillar",
     "chiseled:cut_stone_bricks",
-    "chiseled:mossy_cut_stone_bricks",
     "chiseled:cracked_cut_stone_bricks",
+    "chiseled:mossy_cut_stone_bricks",
     "chiseled:stone_tiles",
     "chiseled:cracked_stone_tiles",
     "chiseled:mossy_stone_tiles"

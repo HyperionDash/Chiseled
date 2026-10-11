@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:green_terracotta_brick_wall"
+        "recipes": "chiseled:green_terracotta_brick_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

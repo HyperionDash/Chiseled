@@ -3,361 +3,243 @@ package net.hyper.chiseled.datagen;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.hyper.chiseled.registry.ChiseledBlocks;
-import net.hyper.silliestlib.utils.SilliestLibDataUtils;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TextureSlot;
+import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.resources.model.sprite.Material;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import org.jspecify.annotations.NonNull;
+
+import static net.hyper.silliestlib.utils.SilliestLibDataUtils.*;
+import static net.minecraft.client.data.models.BlockModelGenerators.plainVariant;
 
 public class ChiseledModelGen extends FabricModelProvider {
     public ChiseledModelGen(FabricPackOutput output) {
         super(output);
     }
 
-    @Override
-    public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.STONE_WALL, Blocks.STONE, blockModelGenerators);
-        var polishedStonePool = blockModelGenerators.family(ChiseledBlocks.POLISHED_STONE);
-        polishedStonePool.stairs(ChiseledBlocks.POLISHED_STONE_STAIRS);
-        polishedStonePool.slab(ChiseledBlocks.POLISHED_STONE_SLAB);
-        polishedStonePool.wall(ChiseledBlocks.POLISHED_STONE_WALL);
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE, blockModelGenerators);
-        var cutStoneBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_STONE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS);
-        cutStoneBrickPool.stairs(ChiseledBlocks.CUT_STONE_BRICK_STAIRS);
-        cutStoneBrickPool.slab(ChiseledBlocks.CUT_STONE_BRICK_SLAB);
-        var mossyCutStoneBrickPool = blockModelGenerators.family(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS);
-        mossyCutStoneBrickPool.stairs(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS);
-        mossyCutStoneBrickPool.slab(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB);
-        var stoneTilePool = blockModelGenerators.family(ChiseledBlocks.STONE_TILES);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_STONE_TILES);
-        stoneTilePool.stairs(ChiseledBlocks.STONE_TILE_STAIRS);
-        stoneTilePool.slab(ChiseledBlocks.STONE_TILE_SLAB);
-        stoneTilePool.wall(ChiseledBlocks.STONE_TILE_WALL);
-        var mossyStoneTilePool = blockModelGenerators.family(ChiseledBlocks.MOSSY_STONE_TILES);
-        mossyStoneTilePool.stairs(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS);
-        mossyStoneTilePool.slab(ChiseledBlocks.MOSSY_STONE_TILE_SLAB);
-        mossyStoneTilePool.wall(ChiseledBlocks.MOSSY_STONE_TILE_WALL);
-
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, blockModelGenerators);
-        var polishedGraniteBrickPool = blockModelGenerators.family(ChiseledBlocks.POLISHED_GRANITE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_GRANITE_BRICKS);
-        polishedGraniteBrickPool.stairs(ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS);
-        polishedGraniteBrickPool.slab(ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB);
-        polishedGraniteBrickPool.wall(ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL);
-        var cutPolishedGraniteBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_GRANITE_BRICKS);
-        cutPolishedGraniteBrickPool.stairs(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_STAIRS);
-        cutPolishedGraniteBrickPool.slab(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_SLAB);
-        var polishedGraniteTilePool = blockModelGenerators.family(ChiseledBlocks.POLISHED_GRANITE_TILES);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_GRANITE_TILES);
-        polishedGraniteTilePool.stairs(ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS);
-        polishedGraniteTilePool.slab(ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB);
-        polishedGraniteTilePool.wall(ChiseledBlocks.POLISHED_GRANITE_TILE_WALL);
-
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE, blockModelGenerators);
-        var polishedDioriteBrickPool = blockModelGenerators.family(ChiseledBlocks.POLISHED_DIORITE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_DIORITE_BRICKS);
-        polishedDioriteBrickPool.stairs(ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS);
-        polishedDioriteBrickPool.slab(ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB);
-        polishedDioriteBrickPool.wall(ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL);
-        var cutPolishedDioriteBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_DIORITE_BRICKS);
-        cutPolishedDioriteBrickPool.stairs(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_STAIRS);
-        cutPolishedDioriteBrickPool.slab(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_SLAB);
-        var polishedDioriteTilePool = blockModelGenerators.family(ChiseledBlocks.POLISHED_DIORITE_TILES);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_DIORITE_TILES);
-        polishedDioriteTilePool.stairs(ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS);
-        polishedDioriteTilePool.slab(ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB);
-        polishedDioriteTilePool.wall(ChiseledBlocks.POLISHED_DIORITE_TILE_WALL);
-
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE, blockModelGenerators);
-        var polishedAndesiteBrickPool = blockModelGenerators.family(ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_ANDESITE_BRICKS);
-        polishedAndesiteBrickPool.stairs(ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS);
-        polishedAndesiteBrickPool.slab(ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB);
-        polishedAndesiteBrickPool.wall(ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL);
-        var cutPolishedAndesiteBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_ANDESITE_BRICKS);
-        cutPolishedAndesiteBrickPool.stairs(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_STAIRS);
-        cutPolishedAndesiteBrickPool.slab(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_SLAB);
-        var polishedAndesiteTilePool = blockModelGenerators.family(ChiseledBlocks.POLISHED_ANDESITE_TILES);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_ANDESITE_TILES);
-        polishedAndesiteTilePool.stairs(ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS);
-        polishedAndesiteTilePool.slab(ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB);
-        polishedAndesiteTilePool.wall(ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL);
-
-        var cutDeepslateBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_DEEPSLATE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_DEEPSLATE_BRICKS);
-        cutDeepslateBrickPool.stairs(ChiseledBlocks.CUT_DEEPSLATE_BRICK_STAIRS);
-        cutDeepslateBrickPool.slab(ChiseledBlocks.CUT_DEEPSLATE_BRICK_SLAB);
-
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.CALCITE_STAIRS, Blocks.CALCITE, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneSlab(ChiseledBlocks.CALCITE_SLAB, Blocks.CALCITE, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.CALCITE_WALL, Blocks.CALCITE, blockModelGenerators);
-        var polishedCalcitePool = blockModelGenerators.family(ChiseledBlocks.POLISHED_CALCITE);
-        polishedCalcitePool.stairs(ChiseledBlocks.POLISHED_CALCITE_STAIRS);
-        polishedCalcitePool.slab(ChiseledBlocks.POLISHED_CALCITE_SLAB);
-        polishedCalcitePool.wall(ChiseledBlocks.POLISHED_CALCITE_WALL);
-        var calciteBrickPool = blockModelGenerators.family(ChiseledBlocks.CALCITE_BRICKS);
-        calciteBrickPool.stairs(ChiseledBlocks.CALCITE_BRICK_STAIRS);
-        calciteBrickPool.slab(ChiseledBlocks.CALCITE_BRICK_SLAB);
-        calciteBrickPool.wall(ChiseledBlocks.CALCITE_BRICK_WALL);
-        var cutCalciteBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_CALCITE_BRICKS);
-        cutCalciteBrickPool.stairs(ChiseledBlocks.CUT_CALCITE_BRICK_STAIRS);
-        cutCalciteBrickPool.slab(ChiseledBlocks.CUT_CALCITE_BRICK_SLAB);
-        var calciteTilePool = blockModelGenerators.family(ChiseledBlocks.CALCITE_TILES);
-        calciteTilePool.stairs(ChiseledBlocks.CALCITE_TILE_STAIRS);
-        calciteTilePool.slab(ChiseledBlocks.CALCITE_TILE_SLAB);
-        calciteTilePool.wall(ChiseledBlocks.CALCITE_TILE_WALL);
-
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneSlab(ChiseledBlocks.DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.DRIPSTONE_WALL, Blocks.DRIPSTONE_BLOCK, blockModelGenerators);
-        var polishedDripstonePool = blockModelGenerators.family(ChiseledBlocks.POLISHED_DRIPSTONE);
-        polishedDripstonePool.stairs(ChiseledBlocks.POLISHED_DRIPSTONE_STAIRS);
-        polishedDripstonePool.slab(ChiseledBlocks.POLISHED_DRIPSTONE_SLAB);
-        polishedDripstonePool.wall(ChiseledBlocks.POLISHED_DRIPSTONE_WALL);
-        var dripstoneBrickPool = blockModelGenerators.family(ChiseledBlocks.DRIPSTONE_BRICKS);
-        dripstoneBrickPool.stairs(ChiseledBlocks.DRIPSTONE_BRICK_STAIRS);
-        dripstoneBrickPool.slab(ChiseledBlocks.DRIPSTONE_BRICK_SLAB);
-        dripstoneBrickPool.wall(ChiseledBlocks.DRIPSTONE_BRICK_WALL);
-        var cutDripstoneBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_DRIPSTONE_BRICKS);
-        cutDripstoneBrickPool.stairs(ChiseledBlocks.CUT_DRIPSTONE_BRICK_STAIRS);
-        cutDripstoneBrickPool.slab(ChiseledBlocks.CUT_DRIPSTONE_BRICK_SLAB);
-        var dripstoneTilePool = blockModelGenerators.family(ChiseledBlocks.DRIPSTONE_TILES);
-        dripstoneTilePool.stairs(ChiseledBlocks.DRIPSTONE_TILE_STAIRS);
-        dripstoneTilePool.slab(ChiseledBlocks.DRIPSTONE_TILE_SLAB);
-        dripstoneTilePool.wall(ChiseledBlocks.DRIPSTONE_TILE_WALL);
-
-        var mixedBrickPool = blockModelGenerators.family(ChiseledBlocks.MIXED_BRICKS);
-        mixedBrickPool.stairs(ChiseledBlocks.MIXED_BRICK_STAIRS);
-        mixedBrickPool.slab(ChiseledBlocks.MIXED_BRICK_SLAB);
-        mixedBrickPool.wall(ChiseledBlocks.MIXED_BRICK_WALL);
-        var mossyBrickPool = blockModelGenerators.family(ChiseledBlocks.MOSSY_BRICKS);
-        mossyBrickPool.stairs(ChiseledBlocks.MOSSY_BRICK_STAIRS);
-        mossyBrickPool.slab(ChiseledBlocks.MOSSY_BRICK_SLAB);
-        mossyBrickPool.wall(ChiseledBlocks.MOSSY_BRICK_WALL);
-
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.PACKED_MUD_STAIRS, Blocks.PACKED_MUD, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneSlab(ChiseledBlocks.PACKED_MUD_SLAB, Blocks.PACKED_MUD, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.PACKED_MUD_WALL, Blocks.PACKED_MUD, blockModelGenerators);
-        var polishedMudPool = blockModelGenerators.family(ChiseledBlocks.POLISHED_MUD);
-        polishedMudPool.stairs(ChiseledBlocks.POLISHED_MUD_STAIRS);
-        polishedMudPool.slab(ChiseledBlocks.POLISHED_MUD_SLAB);
-        polishedMudPool.wall(ChiseledBlocks.POLISHED_MUD_WALL);
-        var mossyMudBrickPool = blockModelGenerators.family(ChiseledBlocks.MOSSY_MUD_BRICKS);
-        mossyMudBrickPool.stairs(ChiseledBlocks.MOSSY_MUD_BRICK_STAIRS);
-        mossyMudBrickPool.slab(ChiseledBlocks.MOSSY_MUD_BRICK_SLAB);
-        mossyMudBrickPool.wall(ChiseledBlocks.MOSSY_MUD_BRICK_WALL);
-        var cutMudBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_MUD_BRICKS);
-        cutMudBrickPool.stairs(ChiseledBlocks.CUT_MUD_BRICK_STAIRS);
-        cutMudBrickPool.slab(ChiseledBlocks.CUT_MUD_BRICK_SLAB);
-        var mossyCutMudBrickPool = blockModelGenerators.family(ChiseledBlocks.MOSSY_CUT_MUD_BRICKS);
-        mossyCutMudBrickPool.stairs(ChiseledBlocks.MOSSY_CUT_MUD_BRICK_STAIRS);
-        mossyCutMudBrickPool.slab(ChiseledBlocks.MOSSY_CUT_MUD_BRICK_SLAB);
-        var mudTilePool = blockModelGenerators.family(ChiseledBlocks.MUD_TILES);
-        mudTilePool.stairs(ChiseledBlocks.MUD_TILE_STAIRS);
-        mudTilePool.slab(ChiseledBlocks.MUD_TILE_SLAB);
-        mudTilePool.wall(ChiseledBlocks.MUD_TILE_WALL);
-        var mossyMudTilePool = blockModelGenerators.family(ChiseledBlocks.MOSSY_MUD_TILES);
-        mossyMudTilePool.stairs(ChiseledBlocks.MOSSY_MUD_TILE_STAIRS);
-        mossyMudTilePool.slab(ChiseledBlocks.MOSSY_MUD_TILE_SLAB);
-        mossyMudTilePool.wall(ChiseledBlocks.MOSSY_MUD_TILE_WALL);
-        
-        var sandstoneBrickPool = blockModelGenerators.family(ChiseledBlocks.SANDSTONE_BRICKS);
-        sandstoneBrickPool.stairs(ChiseledBlocks.SANDSTONE_BRICK_STAIRS);
-        sandstoneBrickPool.slab(ChiseledBlocks.SANDSTONE_BRICK_SLAB);
-        sandstoneBrickPool.wall(ChiseledBlocks.SANDSTONE_BRICK_WALL);
-        var cutSandstoneBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_SANDSTONE_BRICKS);
-        cutSandstoneBrickPool.stairs(ChiseledBlocks.CUT_SANDSTONE_BRICK_STAIRS);
-        cutSandstoneBrickPool.slab(ChiseledBlocks.CUT_SANDSTONE_BRICK_SLAB);
-        var sandstoneTilePool = blockModelGenerators.family(ChiseledBlocks.SANDSTONE_TILES);
-        sandstoneTilePool.stairs(ChiseledBlocks.SANDSTONE_TILE_STAIRS);
-        sandstoneTilePool.slab(ChiseledBlocks.SANDSTONE_TILE_SLAB);
-        sandstoneTilePool.wall(ChiseledBlocks.SANDSTONE_TILE_WALL);
-
-        var redSandstoneBrickPool = blockModelGenerators.family(ChiseledBlocks.RED_SANDSTONE_BRICKS);
-        redSandstoneBrickPool.stairs(ChiseledBlocks.RED_SANDSTONE_BRICK_STAIRS);
-        redSandstoneBrickPool.slab(ChiseledBlocks.RED_SANDSTONE_BRICK_SLAB);
-        redSandstoneBrickPool.wall(ChiseledBlocks.RED_SANDSTONE_BRICK_WALL);
-        var cutRedSandstoneBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_RED_SANDSTONE_BRICKS);
-        cutRedSandstoneBrickPool.stairs(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_STAIRS);
-        cutRedSandstoneBrickPool.slab(ChiseledBlocks.CUT_RED_SANDSTONE_BRICK_SLAB);
-        var redSandstoneTilePool = blockModelGenerators.family(ChiseledBlocks.RED_SANDSTONE_TILES);
-        redSandstoneTilePool.stairs(ChiseledBlocks.RED_SANDSTONE_TILE_STAIRS);
-        redSandstoneTilePool.slab(ChiseledBlocks.RED_SANDSTONE_TILE_SLAB);
-        redSandstoneTilePool.wall(ChiseledBlocks.RED_SANDSTONE_TILE_WALL);
-
-        var cutCinnabarBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_CINNABAR_BRICKS);
-        cutCinnabarBrickPool.stairs(ChiseledBlocks.CUT_CINNABAR_BRICK_STAIRS);
-        cutCinnabarBrickPool.slab(ChiseledBlocks.CUT_CINNABAR_BRICK_SLAB);
-        var cinnabarTilePool = blockModelGenerators.family(ChiseledBlocks.CINNABAR_TILES);
-        cinnabarTilePool.stairs(ChiseledBlocks.CINNABAR_TILE_STAIRS);
-        cinnabarTilePool.slab(ChiseledBlocks.CINNABAR_TILE_SLAB);
-        cinnabarTilePool.wall(ChiseledBlocks.CINNABAR_TILE_WALL);
-
-        var cutSulfurBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_SULFUR_BRICKS);
-        cutSulfurBrickPool.stairs(ChiseledBlocks.CUT_SULFUR_BRICK_STAIRS);
-        cutSulfurBrickPool.slab(ChiseledBlocks.CUT_SULFUR_BRICK_SLAB);
-        var sulfurTilePool = blockModelGenerators.family(ChiseledBlocks.SULFUR_TILES);
-        sulfurTilePool.stairs(ChiseledBlocks.SULFUR_TILE_STAIRS);
-        sulfurTilePool.slab(ChiseledBlocks.SULFUR_TILE_SLAB);
-        sulfurTilePool.wall(ChiseledBlocks.SULFUR_TILE_WALL);
-
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.PRISMARINE_BRICK_WALL, Blocks.PRISMARINE_BRICKS, blockModelGenerators);
-        var cutPrismarineBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_PRISMARINE_BRICKS);
-        cutPrismarineBrickPool.stairs(ChiseledBlocks.CUT_PRISMARINE_BRICK_STAIRS);
-        cutPrismarineBrickPool.slab(ChiseledBlocks.CUT_PRISMARINE_BRICK_SLAB);
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.DARK_PRISMARINE_WALL, Blocks.DARK_PRISMARINE, blockModelGenerators);
-        var darkPrismarineBrickPool = blockModelGenerators.family(ChiseledBlocks.DARK_PRISMARINE_BRICKS);
-        darkPrismarineBrickPool.stairs(ChiseledBlocks.DARK_PRISMARINE_BRICK_STAIRS);
-        darkPrismarineBrickPool.slab(ChiseledBlocks.DARK_PRISMARINE_BRICK_SLAB);
-        darkPrismarineBrickPool.wall(ChiseledBlocks.DARK_PRISMARINE_BRICK_WALL);
-        var cutDarkPrismarineBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICKS);
-        cutDarkPrismarineBrickPool.stairs(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS);
-        cutDarkPrismarineBrickPool.slab(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB);
-
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.NETHERITE_STAIRS, Blocks.NETHERITE_BLOCK, blockModelGenerators);
-
-        var terracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.TERRACOTTA_BRICKS);
-        terracottaBrickPool.stairs(ChiseledBlocks.TERRACOTTA_BRICK_STAIRS);
-        terracottaBrickPool.slab(ChiseledBlocks.TERRACOTTA_BRICK_SLAB);
-        terracottaBrickPool.wall(ChiseledBlocks.TERRACOTTA_BRICK_WALL);
-        var whiteTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.WHITE_TERRACOTTA_BRICKS);
-        whiteTerracottaBrickPool.stairs(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS);
-        whiteTerracottaBrickPool.slab(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_SLAB);
-        whiteTerracottaBrickPool.wall(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_WALL);
-        var lightGrayTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS);
-        lightGrayTerracottaBrickPool.stairs(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS);
-        lightGrayTerracottaBrickPool.slab(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB);
-        lightGrayTerracottaBrickPool.wall(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL);
-        var grayTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.GRAY_TERRACOTTA_BRICKS);
-        grayTerracottaBrickPool.stairs(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS);
-        grayTerracottaBrickPool.slab(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_SLAB);
-        grayTerracottaBrickPool.wall(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_WALL);
-        var blackTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.BLACK_TERRACOTTA_BRICKS);
-        blackTerracottaBrickPool.stairs(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS);
-        blackTerracottaBrickPool.slab(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_SLAB);
-        blackTerracottaBrickPool.wall(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_WALL);
-        var brownTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.BROWN_TERRACOTTA_BRICKS);
-        brownTerracottaBrickPool.stairs(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS);
-        brownTerracottaBrickPool.slab(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_SLAB);
-        brownTerracottaBrickPool.wall(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_WALL);
-        var redTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.RED_TERRACOTTA_BRICKS);
-        redTerracottaBrickPool.stairs(ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS);
-        redTerracottaBrickPool.slab(ChiseledBlocks.RED_TERRACOTTA_BRICK_SLAB);
-        redTerracottaBrickPool.wall(ChiseledBlocks.RED_TERRACOTTA_BRICK_WALL);
-        var orangeTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS);
-        orangeTerracottaBrickPool.stairs(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS);
-        orangeTerracottaBrickPool.slab(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_SLAB);
-        orangeTerracottaBrickPool.wall(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_WALL);
-        var yellowTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS);
-        yellowTerracottaBrickPool.stairs(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS);
-        yellowTerracottaBrickPool.slab(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_SLAB);
-        yellowTerracottaBrickPool.wall(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_WALL);
-        var limeTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.LIME_TERRACOTTA_BRICKS);
-        limeTerracottaBrickPool.stairs(ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS);
-        limeTerracottaBrickPool.slab(ChiseledBlocks.LIME_TERRACOTTA_BRICK_SLAB);
-        limeTerracottaBrickPool.wall(ChiseledBlocks.LIME_TERRACOTTA_BRICK_WALL);
-        var greenTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.GREEN_TERRACOTTA_BRICKS);
-        greenTerracottaBrickPool.stairs(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS);
-        greenTerracottaBrickPool.slab(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_SLAB);
-        greenTerracottaBrickPool.wall(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_WALL);
-        var cyanTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.CYAN_TERRACOTTA_BRICKS);
-        cyanTerracottaBrickPool.stairs(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS);
-        cyanTerracottaBrickPool.slab(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_SLAB);
-        cyanTerracottaBrickPool.wall(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_WALL);
-        var lightBlueTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS);
-        lightBlueTerracottaBrickPool.stairs(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS);
-        lightBlueTerracottaBrickPool.slab(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB);
-        lightBlueTerracottaBrickPool.wall(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL);
-        var blueTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.BLUE_TERRACOTTA_BRICKS);
-        blueTerracottaBrickPool.stairs(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS);
-        blueTerracottaBrickPool.slab(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB);
-        blueTerracottaBrickPool.wall(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL);
-        var purpleTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS);
-        purpleTerracottaBrickPool.stairs(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS);
-        purpleTerracottaBrickPool.slab(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB);
-        purpleTerracottaBrickPool.wall(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL);
-        var magentaTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS);
-        magentaTerracottaBrickPool.stairs(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS);
-        magentaTerracottaBrickPool.slab(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB);
-        magentaTerracottaBrickPool.wall(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL);
-        var pinkTerracottaBrickPool = blockModelGenerators.family(ChiseledBlocks.PINK_TERRACOTTA_BRICKS);
-        pinkTerracottaBrickPool.stairs(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS);
-        pinkTerracottaBrickPool.slab(ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB);
-        pinkTerracottaBrickPool.wall(ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL);
-
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_RED_NETHER_BRICKS);
-        SilliestLibDataUtils.createStandaloneFence(ChiseledBlocks.RED_NETHER_BRICK_FENCE, Blocks.RED_NETHER_BRICKS, blockModelGenerators);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CHISELED_RED_NETHER_BRICKS);
-
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.SMOOTH_BASALT_STAIRS, Blocks.SMOOTH_BASALT, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneSlab(ChiseledBlocks.SMOOTH_BASALT_SLAB, Blocks.SMOOTH_BASALT, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.SMOOTH_BASALT_WALL, Blocks.SMOOTH_BASALT, blockModelGenerators);
-        var basaltBrickPool = blockModelGenerators.family(ChiseledBlocks.BASALT_BRICKS);
-        basaltBrickPool.stairs(ChiseledBlocks.BASALT_BRICK_STAIRS);
-        basaltBrickPool.slab(ChiseledBlocks.BASALT_BRICK_SLAB);
-        basaltBrickPool.wall(ChiseledBlocks.BASALT_BRICK_WALL);
-        var cuBasaltBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_BASALT_BRICKS);
-        cuBasaltBrickPool.stairs(ChiseledBlocks.CUT_BASALT_BRICK_STAIRS);
-        cuBasaltBrickPool.slab(ChiseledBlocks.CUT_BASALT_BRICK_SLAB);
-        var basaltTilePool = blockModelGenerators.family(ChiseledBlocks.BASALT_TILES);
-        basaltTilePool.stairs(ChiseledBlocks.BASALT_TILE_STAIRS);
-        basaltTilePool.slab(ChiseledBlocks.BASALT_TILE_SLAB);
-        basaltTilePool.wall(ChiseledBlocks.BASALT_TILE_WALL);
-
-        var cutPolishedBlackstoneBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS);
-        cutPolishedBlackstoneBrickPool.stairs(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_STAIRS);
-        cutPolishedBlackstoneBrickPool.slab(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_SLAB);
-        var polishedBlackstoneTilePool = blockModelGenerators.family(ChiseledBlocks.POLISHED_BLACKSTONE_TILES);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_BLACKSTONE_TILES);
-        polishedBlackstoneTilePool.stairs(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_STAIRS);
-        polishedBlackstoneTilePool.slab(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB);
-        polishedBlackstoneTilePool.wall(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL);
-
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.END_STONE_STAIRS, Blocks.END_STONE, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneSlab(ChiseledBlocks.END_STONE_SLAB, Blocks.END_STONE, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.END_STONE_WALL, Blocks.END_STONE, blockModelGenerators);
-        var polishedEndStonePool = blockModelGenerators.family(ChiseledBlocks.POLISHED_END_STONE);
-        polishedEndStonePool.stairs(ChiseledBlocks.POLISHED_END_STONE_STAIRS);
-        polishedEndStonePool.slab(ChiseledBlocks.POLISHED_END_STONE_SLAB);
-        polishedEndStonePool.wall(ChiseledBlocks.POLISHED_END_STONE_WALL);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_END_STONE_BRICKS);
-        var cutEndStoneBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_END_STONE_BRICKS);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_END_STONE_BRICKS);
-        cutEndStoneBrickPool.stairs(ChiseledBlocks.CUT_END_STONE_BRICK_STAIRS);
-        cutEndStoneBrickPool.slab(ChiseledBlocks.CUT_END_STONE_BRICK_SLAB);
-        var endStoneTilePool = blockModelGenerators.family(ChiseledBlocks.END_STONE_TILES);
-        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_END_STONE_TILES);
-        endStoneTilePool.stairs(ChiseledBlocks.END_STONE_TILE_STAIRS);
-        endStoneTilePool.slab(ChiseledBlocks.END_STONE_TILE_SLAB);
-        endStoneTilePool.wall(ChiseledBlocks.END_STONE_TILE_WALL);
-
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneSlab(ChiseledBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS, blockModelGenerators);
-        var cutQuartzBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_QUARTZ_BRICKS);
-        cutQuartzBrickPool.stairs(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS);
-        cutQuartzBrickPool.slab(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB);
-        var quartzTilePool = blockModelGenerators.family(ChiseledBlocks.QUARTZ_TILES);
-        quartzTilePool.stairs(ChiseledBlocks.QUARTZ_TILE_STAIRS);
-        quartzTilePool.slab(ChiseledBlocks.QUARTZ_TILE_SLAB);
-        quartzTilePool.wall(ChiseledBlocks.QUARTZ_TILE_WALL);
-
-        SilliestLibDataUtils.createStandaloneStairs(ChiseledBlocks.AMETHYST_STAIRS, Blocks.AMETHYST_BLOCK, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneSlab(ChiseledBlocks.AMETHYST_SLAB, Blocks.AMETHYST_BLOCK, blockModelGenerators);
-        SilliestLibDataUtils.createStandaloneWall(ChiseledBlocks.AMETHYST_WALL, Blocks.AMETHYST_BLOCK, blockModelGenerators);
-        var amethystBrickPool = blockModelGenerators.family(ChiseledBlocks.AMETHYST_BRICKS);
-        amethystBrickPool.stairs(ChiseledBlocks.AMETHYST_BRICK_STAIRS);
-        amethystBrickPool.slab(ChiseledBlocks.AMETHYST_BRICK_SLAB);
-        amethystBrickPool.wall(ChiseledBlocks.AMETHYST_BRICK_WALL);
-        var cutAmethystBrickPool = blockModelGenerators.family(ChiseledBlocks.CUT_AMETHYST_BRICKS);
-        cutAmethystBrickPool.stairs(ChiseledBlocks.CUT_AMETHYST_BRICK_STAIRS);
-        cutAmethystBrickPool.slab(ChiseledBlocks.CUT_AMETHYST_BRICK_SLAB);
+    static void createStandaloneWallWithCustomMaterial(Block block, Material texture, BlockModelGenerators blockModelGenerators) {
+        final TextureMapping textureMapping = (new TextureMapping()).put(TextureSlot.ALL, texture);
+        final Identifier wallPost = ModelTemplates.WALL_POST.create(block, textureMapping, blockModelGenerators.modelOutput);
+        final Identifier wallSide = ModelTemplates.WALL_LOW_SIDE.create(block, textureMapping, blockModelGenerators.modelOutput);
+        final Identifier wallSideTall = ModelTemplates.WALL_TALL_SIDE.create(block, textureMapping, blockModelGenerators.modelOutput);
+        final Identifier wallInventory = ModelTemplates.WALL_INVENTORY.create(block, textureMapping, blockModelGenerators.modelOutput);
+        blockModelGenerators.blockStateOutput.accept(
+                BlockModelGenerators.createWall(block,
+                        plainVariant(wallPost),
+                        plainVariant(wallSide),
+                        plainVariant(wallSideTall)));
+        blockModelGenerators.registerSimpleItemModel(block, wallInventory);
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerators itemModelGenerators) {}
+    public void generateBlockStateModels(@NonNull BlockModelGenerators blockModelGenerators) {
+        createStandaloneWall(ChiseledBlocks.STONE_WALL, Blocks.STONE, blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_STONE).stairs(ChiseledBlocks.POLISHED_STONE_STAIRS).slab(ChiseledBlocks.POLISHED_STONE_SLAB).wall(ChiseledBlocks.POLISHED_STONE_WALL);
+        blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.STONE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
+        blockModelGenerators.family(ChiseledBlocks.CUT_STONE_BRICKS).stairs(ChiseledBlocks.CUT_STONE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_STONE_BRICK_SLAB);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_STONE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.MOSSY_CUT_STONE_BRICKS).stairs(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_STAIRS).slab(ChiseledBlocks.MOSSY_CUT_STONE_BRICK_SLAB);
+        blockModelGenerators.family(ChiseledBlocks.STONE_TILES).stairs(ChiseledBlocks.STONE_TILE_STAIRS).slab(ChiseledBlocks.STONE_TILE_SLAB).wall(ChiseledBlocks.STONE_TILE_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_STONE_TILES);
+        blockModelGenerators.family(ChiseledBlocks.MOSSY_STONE_TILES).stairs(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS).slab(ChiseledBlocks.MOSSY_STONE_TILE_SLAB).wall(ChiseledBlocks.MOSSY_STONE_TILE_WALL);
+
+        createStandaloneWall(ChiseledBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, blockModelGenerators);
+        blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.POLISHED_GRANITE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_GRANITE_BRICKS).stairs(ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS).slab(ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB).wall(ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_GRANITE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICKS).stairs(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_POLISHED_GRANITE_BRICK_SLAB);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_GRANITE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_GRANITE_TILES).stairs(ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS).slab(ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB).wall(ChiseledBlocks.POLISHED_GRANITE_TILE_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_GRANITE_TILES);
+
+        createStandaloneWall(ChiseledBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE, blockModelGenerators);
+        blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.POLISHED_DIORITE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_DIORITE_BRICKS).stairs(ChiseledBlocks.POLISHED_DIORITE_BRICK_STAIRS).slab(ChiseledBlocks.POLISHED_DIORITE_BRICK_SLAB).wall(ChiseledBlocks.POLISHED_DIORITE_BRICK_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_DIORITE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICKS).stairs(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_POLISHED_DIORITE_BRICK_SLAB);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_DIORITE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_DIORITE_TILES).stairs(ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS).slab(ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB).wall(ChiseledBlocks.POLISHED_DIORITE_TILE_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_DIORITE_TILES);
+
+        createStandaloneWall(ChiseledBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE, blockModelGenerators);
+        blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.POLISHED_ANDESITE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_ANDESITE_BRICKS).stairs(ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS).slab(ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB).wall(ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_ANDESITE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICKS).stairs(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_POLISHED_ANDESITE_BRICK_SLAB);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_ANDESITE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_ANDESITE_TILES).stairs(ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS).slab(ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB).wall(ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_ANDESITE_TILES);
+
+        blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.DEEPSLATE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
+        blockModelGenerators.family(ChiseledBlocks.CUT_DEEPSLATE_BRICKS).stairs(ChiseledBlocks.CUT_DEEPSLATE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_DEEPSLATE_BRICK_SLAB);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_DEEPSLATE_BRICKS);
+
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.WEATHERED_BRICKS).stairs(ChiseledBlocks.WEATHERED_BRICK_STAIRS).slab(ChiseledBlocks.WEATHERED_BRICK_SLAB).wall(ChiseledBlocks.WEATHERED_BRICK_WALL);
+        blockModelGenerators.family(ChiseledBlocks.MOSSY_BRICKS).stairs(ChiseledBlocks.MOSSY_BRICK_STAIRS).slab(ChiseledBlocks.MOSSY_BRICK_SLAB).wall(ChiseledBlocks.MOSSY_BRICK_WALL);
+
+        createStandaloneStairs(ChiseledBlocks.PACKED_MUD_STAIRS, Blocks.PACKED_MUD, blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.PACKED_MUD_SLAB, Blocks.PACKED_MUD, blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.PACKED_MUD_WALL, Blocks.PACKED_MUD, blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.MOSSY_MUD_BRICKS).stairs(ChiseledBlocks.MOSSY_MUD_BRICK_STAIRS).slab(ChiseledBlocks.MOSSY_MUD_BRICK_SLAB).wall(ChiseledBlocks.MOSSY_MUD_BRICK_WALL);
+        blockModelGenerators.family(ChiseledBlocks.CUT_MUD_BRICKS).stairs(ChiseledBlocks.CUT_MUD_BRICK_STAIRS).slab(ChiseledBlocks.CUT_MUD_BRICK_SLAB);
+        blockModelGenerators.family(ChiseledBlocks.MOSSY_CUT_MUD_BRICKS).stairs(ChiseledBlocks.MOSSY_CUT_MUD_BRICK_STAIRS).slab(ChiseledBlocks.MOSSY_CUT_MUD_BRICK_SLAB);
+        blockModelGenerators.family(ChiseledBlocks.MUD_TILES).stairs(ChiseledBlocks.MUD_TILE_STAIRS).slab(ChiseledBlocks.MUD_TILE_SLAB).wall(ChiseledBlocks.MUD_TILE_WALL);
+        blockModelGenerators.family(ChiseledBlocks.MOSSY_MUD_TILES).stairs(ChiseledBlocks.MOSSY_MUD_TILE_STAIRS).slab(ChiseledBlocks.MOSSY_MUD_TILE_SLAB).wall(ChiseledBlocks.MOSSY_MUD_TILE_WALL);
+
+        createStandaloneWallWithCustomMaterial(ChiseledBlocks.SMOOTH_SANDSTONE_WALL, TextureMapping.getBlockTexture(Blocks.SANDSTONE, "_top"), blockModelGenerators);
+        blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.SMOOTH_SANDSTONE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
+        blockModelGenerators.family(ChiseledBlocks.SMOOTH_SANDSTONE_BRICKS).stairs(ChiseledBlocks.SMOOTH_SANDSTONE_BRICK_STAIRS).slab(ChiseledBlocks.SMOOTH_SANDSTONE_BRICK_SLAB).wall(ChiseledBlocks.SMOOTH_SANDSTONE_BRICK_WALL);
+        blockModelGenerators.family(ChiseledBlocks.CUT_SMOOTH_SANDSTONE_BRICKS).stairs(ChiseledBlocks.CUT_SMOOTH_SANDSTONE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_SMOOTH_SANDSTONE_BRICK_SLAB);
+        blockModelGenerators.family(ChiseledBlocks.SMOOTH_SANDSTONE_TILES).stairs(ChiseledBlocks.SMOOTH_SANDSTONE_TILE_STAIRS).slab(ChiseledBlocks.SMOOTH_SANDSTONE_TILE_SLAB).wall(ChiseledBlocks.SMOOTH_SANDSTONE_TILE_WALL);
+        createStandaloneWallWithCustomMaterial(ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL, TextureMapping.getBlockTexture(Blocks.RED_SANDSTONE, "_top"), blockModelGenerators);
+        blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.SMOOTH_RED_SANDSTONE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
+        blockModelGenerators.family(ChiseledBlocks.SMOOTH_RED_SANDSTONE_BRICKS).stairs(ChiseledBlocks.SMOOTH_RED_SANDSTONE_BRICK_STAIRS).slab(ChiseledBlocks.SMOOTH_RED_SANDSTONE_BRICK_SLAB).wall(ChiseledBlocks.SMOOTH_RED_SANDSTONE_BRICK_WALL);
+        blockModelGenerators.family(ChiseledBlocks.CUT_SMOOTH_RED_SANDSTONE_BRICKS).stairs(ChiseledBlocks.CUT_SMOOTH_RED_SANDSTONE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_SMOOTH_RED_SANDSTONE_BRICK_SLAB);
+        blockModelGenerators.family(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILES).stairs(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_STAIRS).slab(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_SLAB).wall(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_WALL);
+
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CINNABAR_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.CUT_CINNABAR_BRICKS).stairs(ChiseledBlocks.CUT_CINNABAR_BRICK_STAIRS).slab(ChiseledBlocks.CUT_CINNABAR_BRICK_SLAB);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_CINNABAR_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.CINNABAR_TILES).stairs(ChiseledBlocks.CINNABAR_TILE_STAIRS).slab(ChiseledBlocks.CINNABAR_TILE_SLAB).wall(ChiseledBlocks.CINNABAR_TILE_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CINNABAR_TILES);
+
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_SULFUR_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.CUT_SULFUR_BRICKS).stairs(ChiseledBlocks.CUT_SULFUR_BRICK_STAIRS).slab(ChiseledBlocks.CUT_SULFUR_BRICK_SLAB);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_SULFUR_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.SULFUR_TILES).stairs(ChiseledBlocks.SULFUR_TILE_STAIRS).slab(ChiseledBlocks.SULFUR_TILE_SLAB).wall(ChiseledBlocks.SULFUR_TILE_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_SULFUR_TILES);
+
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_PRISMARINE).stairs(ChiseledBlocks.POLISHED_PRISMARINE_STAIRS).slab(ChiseledBlocks.POLISHED_PRISMARINE_SLAB).wall(ChiseledBlocks.POLISHED_PRISMARINE_WALL);
+        createStandaloneWall(ChiseledBlocks.PRISMARINE_BRICK_WALL, Blocks.PRISMARINE_BRICKS, blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.CUT_PRISMARINE_BRICKS).stairs(ChiseledBlocks.CUT_PRISMARINE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_PRISMARINE_BRICK_SLAB);
+
+        createStandaloneWall(ChiseledBlocks.DARK_PRISMARINE_WALL, Blocks.DARK_PRISMARINE, blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_DARK_PRISMARINE).stairs(ChiseledBlocks.POLISHED_DARK_PRISMARINE_STAIRS).slab(ChiseledBlocks.POLISHED_DARK_PRISMARINE_SLAB).wall(ChiseledBlocks.POLISHED_DARK_PRISMARINE_WALL);
+        blockModelGenerators.family(ChiseledBlocks.DARK_PRISMARINE_BRICKS).stairs(ChiseledBlocks.DARK_PRISMARINE_BRICK_STAIRS).slab(ChiseledBlocks.DARK_PRISMARINE_BRICK_SLAB).wall(ChiseledBlocks.DARK_PRISMARINE_BRICK_WALL);
+        blockModelGenerators.family(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICKS).stairs(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB);
+
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_RED_NETHER_BRICKS);
+        createStandaloneFence(ChiseledBlocks.RED_NETHER_BRICK_FENCE, Blocks.RED_NETHER_BRICKS, blockModelGenerators);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CHISELED_RED_NETHER_BRICKS);
+
+        blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.POLISHED_BLACKSTONE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
+        blockModelGenerators.family(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICKS).stairs(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_SLAB);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_BLACKSTONE_TILES).stairs(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_STAIRS).slab(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB).wall(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_BLACKSTONE_TILES);
+
+        createStandaloneStairs(ChiseledBlocks.END_STONE_STAIRS, Blocks.END_STONE, blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.END_STONE_SLAB, Blocks.END_STONE, blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.END_STONE_WALL, Blocks.END_STONE, blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.POLISHED_END_STONE).stairs(ChiseledBlocks.POLISHED_END_STONE_STAIRS).slab(ChiseledBlocks.POLISHED_END_STONE_SLAB).wall(ChiseledBlocks.POLISHED_END_STONE_WALL);
+        blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.END_STONE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_END_STONE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.CUT_END_STONE_BRICKS).stairs(ChiseledBlocks.CUT_END_STONE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_END_STONE_BRICK_SLAB);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_END_STONE_BRICKS);
+        blockModelGenerators.family(ChiseledBlocks.END_STONE_TILES).stairs(ChiseledBlocks.END_STONE_TILE_STAIRS).slab(ChiseledBlocks.END_STONE_TILE_SLAB).wall(ChiseledBlocks.END_STONE_TILE_WALL);
+        blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_END_STONE_TILES);
+
+        createStandaloneWallWithCustomMaterial(ChiseledBlocks.QUARTZ_WALL, TextureMapping.getBlockTexture(Blocks.QUARTZ_BLOCK, "_side"), blockModelGenerators);
+        createStandaloneWallWithCustomMaterial(ChiseledBlocks.SMOOTH_QUARTZ_WALL, TextureMapping.getBlockTexture(Blocks.QUARTZ_BLOCK, "_bottom"), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS, blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS, blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS, blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.CUT_QUARTZ_BRICKS).stairs(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS).slab(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB);
+        blockModelGenerators.family(ChiseledBlocks.QUARTZ_TILES).stairs(ChiseledBlocks.QUARTZ_TILE_STAIRS).slab(ChiseledBlocks.QUARTZ_TILE_SLAB).wall(ChiseledBlocks.QUARTZ_TILE_WALL);
+
+        createStandaloneStairs(ChiseledBlocks.TERRACOTTA_STAIRS, Blocks.TERRACOTTA, blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.TERRACOTTA_SLAB, Blocks.TERRACOTTA, blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.TERRACOTTA_WALL, Blocks.TERRACOTTA, blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.TERRACOTTA_BRICKS).stairs(ChiseledBlocks.TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.WHITE_CONCRETE_WALL, Blocks.CONCRETE.white(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.WHITE_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.white(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.WHITE_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.white(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.WHITE_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.white(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.WHITE_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.WHITE_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.LIGHT_GRAY_CONCRETE_WALL, Blocks.CONCRETE.lightGray(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.lightGray(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.lightGray(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.lightGray(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.GRAY_CONCRETE_WALL, Blocks.CONCRETE.gray(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.GRAY_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.gray(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.GRAY_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.gray(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.GRAY_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.gray(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.GRAY_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.GRAY_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.BLACK_CONCRETE_WALL, Blocks.CONCRETE.black(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.BLACK_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.black(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.BLACK_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.black(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.BLACK_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.black(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.BLACK_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.BLACK_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.BROWN_CONCRETE_WALL, Blocks.CONCRETE.brown(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.BROWN_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.brown(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.BROWN_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.brown(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.BROWN_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.brown(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.BROWN_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.BROWN_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.RED_CONCRETE_WALL, Blocks.CONCRETE.red(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.RED_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.red(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.RED_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.red(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.RED_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.red(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.RED_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.RED_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.RED_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.RED_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.ORANGE_CONCRETE_WALL, Blocks.CONCRETE.orange(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.ORANGE_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.orange(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.ORANGE_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.orange(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.ORANGE_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.orange(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.ORANGE_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.ORANGE_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.YELLOW_CONCRETE_WALL, Blocks.CONCRETE.yellow(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.YELLOW_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.yellow(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.YELLOW_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.yellow(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.YELLOW_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.yellow(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.YELLOW_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.YELLOW_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.LIME_CONCRETE_WALL, Blocks.CONCRETE.lime(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.LIME_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.lime(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.LIME_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.lime(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.LIME_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.lime(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.LIME_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.LIME_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.LIME_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.LIME_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.GREEN_CONCRETE_WALL, Blocks.CONCRETE.green(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.GREEN_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.green(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.GREEN_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.green(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.GREEN_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.green(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.GREEN_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.GREEN_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.CYAN_CONCRETE_WALL, Blocks.CONCRETE.cyan(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.CYAN_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.cyan(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.CYAN_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.cyan(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.CYAN_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.cyan(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.CYAN_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.CYAN_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.LIGHT_BLUE_CONCRETE_WALL, Blocks.CONCRETE.lightBlue(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.lightBlue(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.lightBlue(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.lightBlue(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.BLUE_CONCRETE_WALL, Blocks.CONCRETE.blue(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.BLUE_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.blue(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.BLUE_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.blue(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.BLUE_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.blue(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.BLUE_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.BLUE_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.PURPLE_CONCRETE_WALL, Blocks.CONCRETE.purple(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.PURPLE_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.purple(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.PURPLE_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.purple(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.PURPLE_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.purple(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.PURPLE_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.PURPLE_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.MAGENTA_CONCRETE_WALL, Blocks.CONCRETE.magenta(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.MAGENTA_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.magenta(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.MAGENTA_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.magenta(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.MAGENTA_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.magenta(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.MAGENTA_TERRACOTTA_BRICK_WALL);
+        createStandaloneWall(ChiseledBlocks.PINK_CONCRETE_WALL, Blocks.CONCRETE.pink(), blockModelGenerators);
+        createStandaloneStairs(ChiseledBlocks.PINK_TERRACOTTA_STAIRS, Blocks.DYED_TERRACOTTA.pink(), blockModelGenerators);
+        createStandaloneSlab(ChiseledBlocks.PINK_TERRACOTTA_SLAB, Blocks.DYED_TERRACOTTA.pink(), blockModelGenerators);
+        createStandaloneWall(ChiseledBlocks.PINK_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.pink(), blockModelGenerators);
+        blockModelGenerators.family(ChiseledBlocks.PINK_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL);
+    }
+
+    @Override
+    public void generateItemModels(@NonNull ItemModelGenerators itemModelGenerators) {}
 }

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "chiseled:polished_stone",
+  "result": {
+    "id": "chiseled:stone_pillar"
+  }
+}

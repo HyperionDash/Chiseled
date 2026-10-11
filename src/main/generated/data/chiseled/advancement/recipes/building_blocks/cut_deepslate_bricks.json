@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cut_deepslate_bricks": {
+    "has_polished_deepslate_slab": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:polished_deepslate"
+            "items": "minecraft:polished_deepslate_slab"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:cut_deepslate_bricks"
+        "recipes": "chiseled:cut_deepslate_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cut_deepslate_bricks"
+      "has_polished_deepslate_slab"
     ]
   ],
   "rewards": {

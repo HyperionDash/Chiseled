@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_black_terracotta_bricks": {
+    "has_black_terracotta": {
       "conditions": {
         "items": [
           {
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:black_terracotta_bricks"
+        "recipes": "chiseled:black_terracotta_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_black_terracotta_bricks"
+      "has_black_terracotta"
     ]
   ],
   "rewards": {

@@ -2,6 +2,7 @@
   "parent": "silliestlib:block/custom_wall_post",
   "textures": {
     "side": "minecraft:block/sandstone",
-    "top": "minecraft:block/sandstone_top"
+    "top": "minecraft:block/sandstone_top",
+    "down": "minecraft:block/sandstone_bottom"
   }
 }

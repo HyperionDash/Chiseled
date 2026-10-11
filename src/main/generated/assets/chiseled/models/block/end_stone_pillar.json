@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "chiseled:block/end_stone_pillar_top",
+    "side": "chiseled:block/end_stone_pillar_side"
+  }
+}

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:mossy_stone_tiles_from_moss"
+        "recipes": "chiseled:mossy_stone_tiles_from_moss"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

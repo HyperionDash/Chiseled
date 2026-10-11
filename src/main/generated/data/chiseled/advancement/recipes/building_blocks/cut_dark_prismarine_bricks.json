@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cut_dark_prismarine_bricks": {
+    "has_polished_dark_prismarine_slab": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:dark_prismarine"
+            "items": "chiseled:polished_dark_prismarine_slab"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:cut_dark_prismarine_bricks"
+        "recipes": "chiseled:cut_dark_prismarine_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cut_dark_prismarine_bricks"
+      "has_polished_dark_prismarine_slab"
     ]
   ],
   "rewards": {

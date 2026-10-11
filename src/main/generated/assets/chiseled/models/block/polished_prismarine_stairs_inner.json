@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "chiseled:block/polished_prismarine",
+    "side": "chiseled:block/polished_prismarine",
+    "top": "chiseled:block/polished_prismarine"
+  }
+}

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:cut_prismarine_bricks_from_prismarine_stonecutting"
+        "recipes": "chiseled:cut_prismarine_bricks_from_prismarine_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

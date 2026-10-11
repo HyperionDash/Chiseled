@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:packed_mud_slab"
+        "recipes": "chiseled:packed_mud_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

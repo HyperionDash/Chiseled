@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_red_terracotta_brick_stairs": {
+    "has_red_terracotta_bricks": {
       "conditions": {
         "items": [
           {
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:red_terracotta_brick_stairs"
+        "recipes": "chiseled:red_terracotta_brick_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_red_terracotta_brick_stairs"
+      "has_red_terracotta_bricks"
     ]
   ],
   "rewards": {

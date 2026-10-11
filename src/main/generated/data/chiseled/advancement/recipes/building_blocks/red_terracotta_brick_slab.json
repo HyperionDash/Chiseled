@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:red_terracotta_brick_slab"
+        "recipes": "chiseled:red_terracotta_brick_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

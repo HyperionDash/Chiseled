@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:calcite",
-  "result": {
-    "id": "chiseled:polished_calcite_wall"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "chiseled:red_sandstone_bricks",
-  "result": {
-    "id": "chiseled:red_sandstone_tile_stairs"
-  }
-}

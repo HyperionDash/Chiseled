@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:polished_diorite_pillar"
+        "recipes": "chiseled:polished_diorite_pillar"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -3,11 +3,11 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:white_terracotta_brick_stairs"
+        "recipes": "chiseled:white_terracotta_brick_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_white_terracotta_brick_stairs": {
+    "has_white_terracotta_bricks": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_white_terracotta_brick_stairs"
+      "has_white_terracotta_bricks"
     ]
   ],
   "rewards": {

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mud_tile_stairs": {
+    "has_mud_tiles": {
       "conditions": {
         "items": [
           {
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:mud_tile_stairs"
+        "recipes": "chiseled:mud_tile_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mud_tile_stairs"
+      "has_mud_tiles"
     ]
   ],
   "rewards": {

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "chiseled:block/smooth_sandstone_bricks",
+    "side": "chiseled:block/smooth_sandstone_bricks",
+    "top": "chiseled:block/smooth_sandstone_bricks"
+  }
+}

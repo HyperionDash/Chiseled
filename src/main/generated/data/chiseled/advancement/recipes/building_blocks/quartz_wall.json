@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:quartz_wall"
+        "recipes": "chiseled:quartz_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

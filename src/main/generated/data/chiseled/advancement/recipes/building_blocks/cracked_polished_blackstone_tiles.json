@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:cracked_polished_blackstone_tiles"
+        "recipes": "chiseled:cracked_polished_blackstone_tiles"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:stone_tile_stairs_from_stone_bricks_stonecutting"
+        "recipes": "chiseled:stone_tile_stairs_from_stone_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

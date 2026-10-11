@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:black_terracotta_brick_slab_from_black_terracotta_stonecutting"
+        "recipes": "chiseled:black_terracotta_brick_slab_from_black_terracotta_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

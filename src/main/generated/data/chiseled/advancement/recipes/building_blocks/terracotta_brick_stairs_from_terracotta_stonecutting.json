@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:terracotta_brick_stairs_from_terracotta_stonecutting"
+        "recipes": "chiseled:terracotta_brick_stairs_from_terracotta_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

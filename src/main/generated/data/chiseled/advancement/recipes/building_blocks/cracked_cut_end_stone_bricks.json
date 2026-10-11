@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:cracked_cut_end_stone_bricks"
+        "recipes": "chiseled:cracked_cut_end_stone_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

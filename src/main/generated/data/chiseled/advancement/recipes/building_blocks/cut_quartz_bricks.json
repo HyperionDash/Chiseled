@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cut_quartz_bricks": {
+    "has_smooth_quartz_slab": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:smooth_quartz"
+            "items": "minecraft:smooth_quartz_slab"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:cut_quartz_bricks"
+        "recipes": "chiseled:cut_quartz_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cut_quartz_bricks"
+      "has_smooth_quartz_slab"
     ]
   ],
   "rewards": {

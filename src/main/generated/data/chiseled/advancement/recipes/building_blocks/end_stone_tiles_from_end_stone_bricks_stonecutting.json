@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:end_stone_tiles_from_end_stone_bricks_stonecutting"
+        "recipes": "chiseled:end_stone_tiles_from_end_stone_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

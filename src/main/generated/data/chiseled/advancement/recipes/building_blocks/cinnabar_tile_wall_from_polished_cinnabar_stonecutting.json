@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "chiseled:cinnabar_tile_wall_from_polished_cinnabar_stonecutting"
+        "recipes": "chiseled:cinnabar_tile_wall_from_polished_cinnabar_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

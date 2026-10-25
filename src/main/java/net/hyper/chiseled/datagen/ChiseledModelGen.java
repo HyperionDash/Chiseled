@@ -18,10 +18,15 @@ import org.jspecify.annotations.NonNull;
 import static net.hyper.silliestlib.utils.SilliestLibDataUtils.*;
 import static net.minecraft.client.data.models.BlockModelGenerators.plainVariant;
 
+//oh no IT GOT MORE EVIL and so did the rest
+//this creates the models probably very important
+
 public class ChiseledModelGen extends FabricModelProvider {
     public ChiseledModelGen(FabricPackOutput output) {
         super(output);
     }
+
+    //makes custom block model I think?
 
     static void createStandaloneWallWithCustomMaterial(Block block, Material texture, BlockModelGenerators blockModelGenerators) {
         final TextureMapping textureMapping = (new TextureMapping()).put(TextureSlot.ALL, texture);
@@ -38,7 +43,13 @@ public class ChiseledModelGen extends FabricModelProvider {
     }
 
     @Override
+
+    //generates models and block sates
+
     public void generateBlockStateModels(@NonNull BlockModelGenerators blockModelGenerators) {
+
+        //stone
+
         createStandaloneWall(ChiseledBlocks.STONE_WALL, Blocks.STONE, blockModelGenerators);
         blockModelGenerators.family(ChiseledBlocks.POLISHED_STONE).stairs(ChiseledBlocks.POLISHED_STONE_STAIRS).slab(ChiseledBlocks.POLISHED_STONE_SLAB).wall(ChiseledBlocks.POLISHED_STONE_WALL);
         blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.STONE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
@@ -49,6 +60,8 @@ public class ChiseledModelGen extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_STONE_TILES);
         blockModelGenerators.family(ChiseledBlocks.MOSSY_STONE_TILES).stairs(ChiseledBlocks.MOSSY_STONE_TILE_STAIRS).slab(ChiseledBlocks.MOSSY_STONE_TILE_SLAB).wall(ChiseledBlocks.MOSSY_STONE_TILE_WALL);
 
+        //granite
+
         createStandaloneWall(ChiseledBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, blockModelGenerators);
         blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.POLISHED_GRANITE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
         blockModelGenerators.family(ChiseledBlocks.POLISHED_GRANITE_BRICKS).stairs(ChiseledBlocks.POLISHED_GRANITE_BRICK_STAIRS).slab(ChiseledBlocks.POLISHED_GRANITE_BRICK_SLAB).wall(ChiseledBlocks.POLISHED_GRANITE_BRICK_WALL);
@@ -57,6 +70,8 @@ public class ChiseledModelGen extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_GRANITE_BRICKS);
         blockModelGenerators.family(ChiseledBlocks.POLISHED_GRANITE_TILES).stairs(ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS).slab(ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB).wall(ChiseledBlocks.POLISHED_GRANITE_TILE_WALL);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_GRANITE_TILES);
+
+        //diorite
 
         createStandaloneWall(ChiseledBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE, blockModelGenerators);
         blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.POLISHED_DIORITE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
@@ -67,6 +82,8 @@ public class ChiseledModelGen extends FabricModelProvider {
         blockModelGenerators.family(ChiseledBlocks.POLISHED_DIORITE_TILES).stairs(ChiseledBlocks.POLISHED_DIORITE_TILE_STAIRS).slab(ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB).wall(ChiseledBlocks.POLISHED_DIORITE_TILE_WALL);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_DIORITE_TILES);
 
+        //andesite
+
         createStandaloneWall(ChiseledBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE, blockModelGenerators);
         blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.POLISHED_ANDESITE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
         blockModelGenerators.family(ChiseledBlocks.POLISHED_ANDESITE_BRICKS).stairs(ChiseledBlocks.POLISHED_ANDESITE_BRICK_STAIRS).slab(ChiseledBlocks.POLISHED_ANDESITE_BRICK_SLAB).wall(ChiseledBlocks.POLISHED_ANDESITE_BRICK_WALL);
@@ -76,13 +93,19 @@ public class ChiseledModelGen extends FabricModelProvider {
         blockModelGenerators.family(ChiseledBlocks.POLISHED_ANDESITE_TILES).stairs(ChiseledBlocks.POLISHED_ANDESITE_TILE_STAIRS).slab(ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB).wall(ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_ANDESITE_TILES);
 
+        //deepslate
+
         blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.DEEPSLATE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
         blockModelGenerators.family(ChiseledBlocks.CUT_DEEPSLATE_BRICKS).stairs(ChiseledBlocks.CUT_DEEPSLATE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_DEEPSLATE_BRICK_SLAB);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_DEEPSLATE_BRICKS);
 
+        //bricks
+
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_BRICKS);
         blockModelGenerators.family(ChiseledBlocks.WEATHERED_BRICKS).stairs(ChiseledBlocks.WEATHERED_BRICK_STAIRS).slab(ChiseledBlocks.WEATHERED_BRICK_SLAB).wall(ChiseledBlocks.WEATHERED_BRICK_WALL);
         blockModelGenerators.family(ChiseledBlocks.MOSSY_BRICKS).stairs(ChiseledBlocks.MOSSY_BRICK_STAIRS).slab(ChiseledBlocks.MOSSY_BRICK_SLAB).wall(ChiseledBlocks.MOSSY_BRICK_WALL);
+
+        //mud
 
         createStandaloneStairs(ChiseledBlocks.PACKED_MUD_STAIRS, Blocks.PACKED_MUD, blockModelGenerators);
         createStandaloneSlab(ChiseledBlocks.PACKED_MUD_SLAB, Blocks.PACKED_MUD, blockModelGenerators);
@@ -92,6 +115,8 @@ public class ChiseledModelGen extends FabricModelProvider {
         blockModelGenerators.family(ChiseledBlocks.MOSSY_CUT_MUD_BRICKS).stairs(ChiseledBlocks.MOSSY_CUT_MUD_BRICK_STAIRS).slab(ChiseledBlocks.MOSSY_CUT_MUD_BRICK_SLAB);
         blockModelGenerators.family(ChiseledBlocks.MUD_TILES).stairs(ChiseledBlocks.MUD_TILE_STAIRS).slab(ChiseledBlocks.MUD_TILE_SLAB).wall(ChiseledBlocks.MUD_TILE_WALL);
         blockModelGenerators.family(ChiseledBlocks.MOSSY_MUD_TILES).stairs(ChiseledBlocks.MOSSY_MUD_TILE_STAIRS).slab(ChiseledBlocks.MOSSY_MUD_TILE_SLAB).wall(ChiseledBlocks.MOSSY_MUD_TILE_WALL);
+
+        //sandstone
 
         createStandaloneWallWithCustomMaterial(ChiseledBlocks.SMOOTH_SANDSTONE_WALL, TextureMapping.getBlockTexture(Blocks.SANDSTONE, "_top"), blockModelGenerators);
         blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.SMOOTH_SANDSTONE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
@@ -104,11 +129,15 @@ public class ChiseledModelGen extends FabricModelProvider {
         blockModelGenerators.family(ChiseledBlocks.CUT_SMOOTH_RED_SANDSTONE_BRICKS).stairs(ChiseledBlocks.CUT_SMOOTH_RED_SANDSTONE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_SMOOTH_RED_SANDSTONE_BRICK_SLAB);
         blockModelGenerators.family(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILES).stairs(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_STAIRS).slab(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_SLAB).wall(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_WALL);
 
+        //cinnabar
+
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CINNABAR_BRICKS);
         blockModelGenerators.family(ChiseledBlocks.CUT_CINNABAR_BRICKS).stairs(ChiseledBlocks.CUT_CINNABAR_BRICK_STAIRS).slab(ChiseledBlocks.CUT_CINNABAR_BRICK_SLAB);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_CINNABAR_BRICKS);
         blockModelGenerators.family(ChiseledBlocks.CINNABAR_TILES).stairs(ChiseledBlocks.CINNABAR_TILE_STAIRS).slab(ChiseledBlocks.CINNABAR_TILE_SLAB).wall(ChiseledBlocks.CINNABAR_TILE_WALL);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CINNABAR_TILES);
+
+        //sulfur
 
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_SULFUR_BRICKS);
         blockModelGenerators.family(ChiseledBlocks.CUT_SULFUR_BRICKS).stairs(ChiseledBlocks.CUT_SULFUR_BRICK_STAIRS).slab(ChiseledBlocks.CUT_SULFUR_BRICK_SLAB);
@@ -116,24 +145,34 @@ public class ChiseledModelGen extends FabricModelProvider {
         blockModelGenerators.family(ChiseledBlocks.SULFUR_TILES).stairs(ChiseledBlocks.SULFUR_TILE_STAIRS).slab(ChiseledBlocks.SULFUR_TILE_SLAB).wall(ChiseledBlocks.SULFUR_TILE_WALL);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_SULFUR_TILES);
 
+        //prismarine
+
         blockModelGenerators.family(ChiseledBlocks.POLISHED_PRISMARINE).stairs(ChiseledBlocks.POLISHED_PRISMARINE_STAIRS).slab(ChiseledBlocks.POLISHED_PRISMARINE_SLAB).wall(ChiseledBlocks.POLISHED_PRISMARINE_WALL);
         createStandaloneWall(ChiseledBlocks.PRISMARINE_BRICK_WALL, Blocks.PRISMARINE_BRICKS, blockModelGenerators);
         blockModelGenerators.family(ChiseledBlocks.CUT_PRISMARINE_BRICKS).stairs(ChiseledBlocks.CUT_PRISMARINE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_PRISMARINE_BRICK_SLAB);
+
+        //dark prismarine
 
         createStandaloneWall(ChiseledBlocks.DARK_PRISMARINE_WALL, Blocks.DARK_PRISMARINE, blockModelGenerators);
         blockModelGenerators.family(ChiseledBlocks.POLISHED_DARK_PRISMARINE).stairs(ChiseledBlocks.POLISHED_DARK_PRISMARINE_STAIRS).slab(ChiseledBlocks.POLISHED_DARK_PRISMARINE_SLAB).wall(ChiseledBlocks.POLISHED_DARK_PRISMARINE_WALL);
         blockModelGenerators.family(ChiseledBlocks.DARK_PRISMARINE_BRICKS).stairs(ChiseledBlocks.DARK_PRISMARINE_BRICK_STAIRS).slab(ChiseledBlocks.DARK_PRISMARINE_BRICK_SLAB).wall(ChiseledBlocks.DARK_PRISMARINE_BRICK_WALL);
         blockModelGenerators.family(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICKS).stairs(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB);
 
+        //red nether bricks
+
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_RED_NETHER_BRICKS);
         createStandaloneFence(ChiseledBlocks.RED_NETHER_BRICK_FENCE, Blocks.RED_NETHER_BRICKS, blockModelGenerators);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CHISELED_RED_NETHER_BRICKS);
+
+        //blackstone
 
         blockModelGenerators.createRotatedPillarWithHorizontalVariant(ChiseledBlocks.POLISHED_BLACKSTONE_PILLAR, TexturedModel.COLUMN, TexturedModel.COLUMN_HORIZONTAL);
         blockModelGenerators.family(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICKS).stairs(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_STAIRS).slab(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICK_SLAB);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS);
         blockModelGenerators.family(ChiseledBlocks.POLISHED_BLACKSTONE_TILES).stairs(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_STAIRS).slab(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB).wall(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_POLISHED_BLACKSTONE_TILES);
+
+        //end stone
 
         createStandaloneStairs(ChiseledBlocks.END_STONE_STAIRS, Blocks.END_STONE, blockModelGenerators);
         createStandaloneSlab(ChiseledBlocks.END_STONE_SLAB, Blocks.END_STONE, blockModelGenerators);
@@ -146,6 +185,8 @@ public class ChiseledModelGen extends FabricModelProvider {
         blockModelGenerators.family(ChiseledBlocks.END_STONE_TILES).stairs(ChiseledBlocks.END_STONE_TILE_STAIRS).slab(ChiseledBlocks.END_STONE_TILE_SLAB).wall(ChiseledBlocks.END_STONE_TILE_WALL);
         blockModelGenerators.createTrivialCube(ChiseledBlocks.CRACKED_END_STONE_TILES);
 
+        //quartz
+
         createStandaloneWallWithCustomMaterial(ChiseledBlocks.QUARTZ_WALL, TextureMapping.getBlockTexture(Blocks.QUARTZ_BLOCK, "_side"), blockModelGenerators);
         createStandaloneWallWithCustomMaterial(ChiseledBlocks.SMOOTH_QUARTZ_WALL, TextureMapping.getBlockTexture(Blocks.QUARTZ_BLOCK, "_bottom"), blockModelGenerators);
         createStandaloneStairs(ChiseledBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS, blockModelGenerators);
@@ -153,6 +194,8 @@ public class ChiseledModelGen extends FabricModelProvider {
         createStandaloneWall(ChiseledBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS, blockModelGenerators);
         blockModelGenerators.family(ChiseledBlocks.CUT_QUARTZ_BRICKS).stairs(ChiseledBlocks.CUT_QUARTZ_BRICK_STAIRS).slab(ChiseledBlocks.CUT_QUARTZ_BRICK_SLAB);
         blockModelGenerators.family(ChiseledBlocks.QUARTZ_TILES).stairs(ChiseledBlocks.QUARTZ_TILE_STAIRS).slab(ChiseledBlocks.QUARTZ_TILE_SLAB).wall(ChiseledBlocks.QUARTZ_TILE_WALL);
+
+        //terracotta
 
         createStandaloneStairs(ChiseledBlocks.TERRACOTTA_STAIRS, Blocks.TERRACOTTA, blockModelGenerators);
         createStandaloneSlab(ChiseledBlocks.TERRACOTTA_SLAB, Blocks.TERRACOTTA, blockModelGenerators);
@@ -239,6 +282,8 @@ public class ChiseledModelGen extends FabricModelProvider {
         createStandaloneWall(ChiseledBlocks.PINK_TERRACOTTA_WALL, Blocks.DYED_TERRACOTTA.pink(), blockModelGenerators);
         blockModelGenerators.family(ChiseledBlocks.PINK_TERRACOTTA_BRICKS).stairs(ChiseledBlocks.PINK_TERRACOTTA_BRICK_STAIRS).slab(ChiseledBlocks.PINK_TERRACOTTA_BRICK_SLAB).wall(ChiseledBlocks.PINK_TERRACOTTA_BRICK_WALL);
     }
+
+    //strange evil piece of required code
 
     @Override
     public void generateItemModels(@NonNull ItemModelGenerators itemModelGenerators) {}

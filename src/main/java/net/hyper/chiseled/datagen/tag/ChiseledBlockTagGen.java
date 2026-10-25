@@ -17,7 +17,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NonNull Provider registries) {
-        // Adds blocks to the "minecraft:mineable/pickaxe" block tag (the "minecraft:walls" block tag is added my default, so don't add walls here)
+        // Adds blocks to the "minecraft:mineable/pickaxe" block tag (the "minecraft:walls" block tag is added by default, so don't add walls here)
         builder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ChiseledBlockItemIds.POLISHED_STONE)
                 .add(ChiseledBlockItemIds.POLISHED_STONE_STAIRS)

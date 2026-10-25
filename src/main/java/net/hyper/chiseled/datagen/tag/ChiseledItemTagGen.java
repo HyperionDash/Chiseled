@@ -12,6 +12,8 @@ import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
+// I am nicknaming lines 17-20 (everything between @override and the import section) the "evil code" it will appear at the top of alot these
+
 public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
     public ChiseledItemTagGen(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
         super(output, registryLookupFuture);
@@ -19,6 +21,9 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NonNull Provider registries) {
+
+        // adds stairs item tag
+
         builder(TagKey.create(Registries.ITEM, Identifier.withDefaultNamespace("stairs")))
                 .add(ChiseledBlockItemIds.POLISHED_STONE_STAIRS)
                 .add(ChiseledBlockItemIds.CUT_STONE_BRICK_STAIRS)
@@ -99,6 +104,9 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_STAIRS)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_STAIRS);
+
+        // adds slabs item tag
+
         builder(TagKey.create(Registries.ITEM, Identifier.withDefaultNamespace("slabs")))
                 .add(ChiseledBlockItemIds.POLISHED_STONE_SLAB)
                 .add(ChiseledBlockItemIds.CUT_STONE_BRICK_SLAB)
@@ -179,6 +187,9 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.MAGENTA_TERRACOTTA_BRICK_SLAB)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_SLAB)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_SLAB);
+
+        //adds walls item tag
+
         builder(ItemTags.WALLS)
                 .add(ChiseledBlockItemIds.STONE_WALL)
                 .add(ChiseledBlockItemIds.POLISHED_STONE_WALL)
@@ -271,6 +282,8 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_WALL)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_WALL);
 
+        //adds stone bricks item tag
+
         builder(ItemTags.STONE_BRICKS)
                 .add(ChiseledBlockItemIds.POLISHED_STONE)
                 .add(ChiseledBlockItemIds.STONE_PILLAR)
@@ -280,6 +293,8 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.STONE_TILES)
                 .add(ChiseledBlockItemIds.CRACKED_STONE_TILES)
                 .add(ChiseledBlockItemIds.MOSSY_STONE_TILES);
+
+        //adds sulfur cube archetype slow bouny
 
         builder(ItemTags.SULFUR_CUBE_ARCHETYPE_SLOW_BOUNCY)
                 .add(ChiseledBlockItemIds.POLISHED_STONE)

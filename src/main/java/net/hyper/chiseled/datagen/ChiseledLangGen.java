@@ -8,6 +8,9 @@ import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
+//oh look the evil code is back
+//this one names the items very good yes
+
 public class ChiseledLangGen extends FabricLanguageProvider {
     public ChiseledLangGen(FabricPackOutput packOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(packOutput, registryLookup);
@@ -15,6 +18,9 @@ public class ChiseledLangGen extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(HolderLookup.@NonNull Provider registryLookup, @NonNull TranslationBuilder translationBuilder) {
+
+        //puts the items in the creative tab
+
         translationBuilder.add("itemGroup.chiseled.chiseled", "Chiseled");
         translationBuilder.add("pack.chiseled.data_overrides", "Data Overrides");
         translationBuilder.add("chiseled.midnightconfig.title", "Chiseled");
@@ -24,6 +30,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add("chiseled.midnightconfig.crackableBricks.tooltip", "Allows you to crack Bricks into their Cracked variants with a Pickaxe.\n§cRequires Reload.");
         translationBuilder.add("chiseled.midnightconfig.crackableAmethyst", "§7→ Crackable Amethyst");
         translationBuilder.add("chiseled.midnightconfig.crackableAmethyst.tooltip", "Allows you to crack Amethyst into Budding Amethyst with a Pickaxe.\n§cRequires Reload.");
+
+        //stone
 
         translationBuilder.add(ChiseledBlocks.STONE_WALL, "Stone Wall");
         translationBuilder.add(ChiseledBlocks.POLISHED_STONE, "Polished Stone");
@@ -48,6 +56,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.MOSSY_STONE_TILE_SLAB, "Mossy Stone Tile Slab");
         translationBuilder.add(ChiseledBlocks.MOSSY_STONE_TILE_WALL, "Mossy Stone Tile Wall");
 
+        //granite
+
         translationBuilder.add(ChiseledBlocks.POLISHED_GRANITE_WALL, "Polished Granite Wall");
         translationBuilder.add(ChiseledBlocks.POLISHED_GRANITE_PILLAR, "Polished Granite Pillar");
         translationBuilder.add(ChiseledBlocks.POLISHED_GRANITE_BRICKS, "Polished Granite Bricks");
@@ -64,6 +74,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.POLISHED_GRANITE_TILE_STAIRS, "Polished Granite Tile Stairs");
         translationBuilder.add(ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB, "Polished Granite Tile Slab");
         translationBuilder.add(ChiseledBlocks.POLISHED_GRANITE_TILE_WALL, "Polished Granite Tile Wall");
+
+        //diorite
 
         translationBuilder.add(ChiseledBlocks.POLISHED_DIORITE_WALL, "Polished Diorite Wall");
         translationBuilder.add(ChiseledBlocks.POLISHED_DIORITE_PILLAR, "Polished Diorite Pillar");
@@ -82,6 +94,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB, "Polished Diorite Tile Slab");
         translationBuilder.add(ChiseledBlocks.POLISHED_DIORITE_TILE_WALL, "Polished Diorite Tile Wall");
 
+        //andesite
+
         translationBuilder.add(ChiseledBlocks.POLISHED_ANDESITE_WALL, "Polished Andesite Wall");
         translationBuilder.add(ChiseledBlocks.POLISHED_ANDESITE_PILLAR, "Polished Andesite Pillar");
         translationBuilder.add(ChiseledBlocks.POLISHED_ANDESITE_BRICKS, "Polished Andesite Bricks");
@@ -99,11 +113,15 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB, "Polished Andesite Tile Slab");
         translationBuilder.add(ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL, "Polished Andesite Tile Wall");
 
+        //deepslate
+
         translationBuilder.add(ChiseledBlocks.DEEPSLATE_PILLAR, "Deepslate Pillar");
         translationBuilder.add(ChiseledBlocks.CUT_DEEPSLATE_BRICKS, "Cut Deepslate Bricks");
         translationBuilder.add(ChiseledBlocks.CRACKED_CUT_DEEPSLATE_BRICKS, "Cracked Cut Deepslate Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_DEEPSLATE_BRICK_STAIRS, "Cut Deepslate Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_DEEPSLATE_BRICK_SLAB, "Cut Deepslate Brick Slab");
+
+        //bricks
 
         translationBuilder.add(ChiseledBlocks.CRACKED_BRICKS, "Cracked Bricks");
         translationBuilder.add(ChiseledBlocks.WEATHERED_BRICKS, "Weathered Bricks");
@@ -114,6 +132,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.MOSSY_BRICK_STAIRS, "Mossy Brick Stairs");
         translationBuilder.add(ChiseledBlocks.MOSSY_BRICK_SLAB, "Mossy Brick Slab");
         translationBuilder.add(ChiseledBlocks.MOSSY_BRICK_WALL, "Mossy Brick Wall");
+
+        //mud
 
         translationBuilder.add(ChiseledBlocks.PACKED_MUD_STAIRS, "Packed Mud Stairs");
         translationBuilder.add(ChiseledBlocks.PACKED_MUD_SLAB, "Packed Mud Slab");
@@ -136,6 +156,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.MOSSY_MUD_TILE_STAIRS, "Mossy Mud Tile Stairs");
         translationBuilder.add(ChiseledBlocks.MOSSY_MUD_TILE_SLAB, "Mossy Mud Tile Slab");
         translationBuilder.add(ChiseledBlocks.MOSSY_MUD_TILE_WALL, "Mossy Mud Tile Wall");
+
+        //sandstone
 
         translationBuilder.add(ChiseledBlocks.SMOOTH_SANDSTONE_WALL, "Smooth Sandstone Wall");
         translationBuilder.add(ChiseledBlocks.SMOOTH_SANDSTONE_PILLAR, "Smooth Sandstone Pillar");
@@ -164,6 +186,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_SLAB, "Smooth Red Sandstone Tile Slab");
         translationBuilder.add(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_WALL, "Smooth Red Sandstone Tile Wall");
 
+        //cinnabar
+
         translationBuilder.add(ChiseledBlocks.CRACKED_CINNABAR_BRICKS, "Cracked Cinnabar Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_CINNABAR_BRICKS, "Cut Cinnabar Bricks");
         translationBuilder.add(ChiseledBlocks.CRACKED_CUT_CINNABAR_BRICKS, "Cracked Cut Cinnabar Bricks");
@@ -174,6 +198,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.CINNABAR_TILE_STAIRS, "Cinnabar Tile Stairs");
         translationBuilder.add(ChiseledBlocks.CINNABAR_TILE_SLAB, "Cinnabar Tile Slab");
         translationBuilder.add(ChiseledBlocks.CINNABAR_TILE_WALL, "Cinnabar Tile Wall");
+
+        //sulfur
 
         translationBuilder.add(ChiseledBlocks.CRACKED_SULFUR_BRICKS, "Cracked Sulfur Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_SULFUR_BRICKS, "Cut Sulfur Bricks");
@@ -186,6 +212,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.SULFUR_TILE_SLAB, "Sulfur Tile Slab");
         translationBuilder.add(ChiseledBlocks.SULFUR_TILE_WALL, "Sulfur Tile Wall");
 
+        //prismarine
+
         translationBuilder.add(ChiseledBlocks.POLISHED_PRISMARINE, "Polished Prismarine");
         translationBuilder.add(ChiseledBlocks.POLISHED_PRISMARINE_STAIRS, "Polished Prismarine Stairs");
         translationBuilder.add(ChiseledBlocks.POLISHED_PRISMARINE_SLAB, "Polished Prismarine Slab");
@@ -194,6 +222,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.CUT_PRISMARINE_BRICKS, "Cut Prismarine Bricks");
         translationBuilder.add(ChiseledBlocks.CUT_PRISMARINE_BRICK_STAIRS, "Cut Prismarine Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_PRISMARINE_BRICK_SLAB, "Cut Prismarine Brick Slab");
+
+        //dark prismarine
 
         translationBuilder.add(ChiseledBlocks.DARK_PRISMARINE_WALL, "Dark Prismarine Wall");
         translationBuilder.add(ChiseledBlocks.POLISHED_DARK_PRISMARINE, "Polished Dark Prismarine");
@@ -208,9 +238,13 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS, "Cut Dark Prismarine Brick Stairs");
         translationBuilder.add(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB, "Cut Dark Prismarine Brick Slab");
 
+        //red nether brick
+
         translationBuilder.add(ChiseledBlocks.CRACKED_RED_NETHER_BRICKS, "Cracked Red Nether Bricks");
         translationBuilder.add(ChiseledBlocks.RED_NETHER_BRICK_FENCE, "Red Nether Brick Fence");
         translationBuilder.add(ChiseledBlocks.CHISELED_RED_NETHER_BRICKS, "Chiseled Red Nether Bricks");
+
+        //blackstone
 
         translationBuilder.add(ChiseledBlocks.POLISHED_BLACKSTONE_PILLAR, "Polished Blackstone Pillar");
         translationBuilder.add(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICKS, "Cut Polished Blackstone Bricks");
@@ -222,6 +256,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_STAIRS, "Polished Blackstone Tile Stairs");
         translationBuilder.add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB, "Polished Blackstone Tile Slab");
         translationBuilder.add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL, "Polished Blackstone Tile Wall");
+
+        //end stone
 
         translationBuilder.add(ChiseledBlocks.END_STONE_STAIRS, "End Stone Stairs");
         translationBuilder.add(ChiseledBlocks.END_STONE_SLAB, "End Stone Slab");
@@ -242,6 +278,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.END_STONE_TILE_SLAB, "End Stone Tile Slab");
         translationBuilder.add(ChiseledBlocks.END_STONE_TILE_WALL, "End Stone Tile Wall");
 
+        //quartz
+
         translationBuilder.add(ChiseledBlocks.QUARTZ_WALL, "Quartz Wall");
         translationBuilder.add(ChiseledBlocks.SMOOTH_QUARTZ_WALL, "Smooth Quartz Wall");
         translationBuilder.add(ChiseledBlocks.QUARTZ_BRICK_STAIRS, "Quartz Brick Stairs");
@@ -254,6 +292,8 @@ public class ChiseledLangGen extends FabricLanguageProvider {
         translationBuilder.add(ChiseledBlocks.QUARTZ_TILE_STAIRS, "Quartz Tile Stairs");
         translationBuilder.add(ChiseledBlocks.QUARTZ_TILE_SLAB, "Quartz Tile Slab");
         translationBuilder.add(ChiseledBlocks.QUARTZ_TILE_WALL, "Quartz Tile Wall");
+
+        //terracotta
 
         translationBuilder.add(ChiseledBlocks.TERRACOTTA_STAIRS, "Terracotta Stairs");
         translationBuilder.add(ChiseledBlocks.TERRACOTTA_SLAB, "Terracotta Slab");

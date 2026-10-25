@@ -4,16 +4,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.hyper.chiseled.reference.ChiseledBlockItemIds;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.tags.BlockItemTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
-// I am nicknaming lines 17-20 (everything between @override and the import section) the "evil code" it will appear at the top of alot these
-
+// DataGenerator for Item Tags
 public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
     public ChiseledItemTagGen(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
         super(output, registryLookupFuture);
@@ -21,10 +18,8 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NonNull Provider registries) {
-
-        // adds stairs item tag
-
-        builder(TagKey.create(Registries.ITEM, Identifier.withDefaultNamespace("stairs")))
+        // Adds items to the "minecraft:stairs" item tag
+        builder(BlockItemTags.STAIRS.item())
                 .add(ChiseledBlockItemIds.POLISHED_STONE_STAIRS)
                 .add(ChiseledBlockItemIds.CUT_STONE_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.MOSSY_CUT_STONE_BRICK_STAIRS)
@@ -105,9 +100,8 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_STAIRS)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_STAIRS);
 
-        // adds slabs item tag
-
-        builder(TagKey.create(Registries.ITEM, Identifier.withDefaultNamespace("slabs")))
+        // Adds items to the "minecraft:slabs" item tag
+        builder(BlockItemTags.SLABS.item())
                 .add(ChiseledBlockItemIds.POLISHED_STONE_SLAB)
                 .add(ChiseledBlockItemIds.CUT_STONE_BRICK_SLAB)
                 .add(ChiseledBlockItemIds.MOSSY_CUT_STONE_BRICK_SLAB)
@@ -188,8 +182,7 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_SLAB)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_SLAB);
 
-        //adds walls item tag
-
+        // Adds items to the "minecraft:walls" item tag
         builder(ItemTags.WALLS)
                 .add(ChiseledBlockItemIds.STONE_WALL)
                 .add(ChiseledBlockItemIds.POLISHED_STONE_WALL)
@@ -282,8 +275,7 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_WALL)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_WALL);
 
-        //adds stone bricks item tag
-
+        // Adds items to the "minecraft:stone_bricks" item tag
         builder(ItemTags.STONE_BRICKS)
                 .add(ChiseledBlockItemIds.POLISHED_STONE)
                 .add(ChiseledBlockItemIds.STONE_PILLAR)
@@ -294,8 +286,7 @@ public class ChiseledItemTagGen extends FabricTagsProvider.ItemTagsProvider {
                 .add(ChiseledBlockItemIds.CRACKED_STONE_TILES)
                 .add(ChiseledBlockItemIds.MOSSY_STONE_TILES);
 
-        //adds sulfur cube archetype slow bouny
-
+        // Adds items to the "minecraft:sulfur_cube_archetype/slow_bouncy" item tag
         builder(ItemTags.SULFUR_CUBE_ARCHETYPE_SLOW_BOUNCY)
                 .add(ChiseledBlockItemIds.POLISHED_STONE)
                 .add(ChiseledBlockItemIds.STONE_PILLAR)

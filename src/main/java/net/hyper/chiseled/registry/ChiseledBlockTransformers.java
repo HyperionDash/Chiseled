@@ -16,6 +16,7 @@ import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 public interface ChiseledBlockTransformers {
     ResourceKey<BlockTransformer> CRACKING = ResourceKey.create(Registries.BLOCK_TRANSFORMER, Chiseled.id("cracking"));
 
+    // Methods for Config-Toggled a BlockTransformer
     static void addCrackingTransformer(Block block, Block crackedBlock) {
         addCrackingTransformer(block, crackedBlock, SoundEvents.STONE_BREAK);
     }

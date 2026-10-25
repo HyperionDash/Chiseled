@@ -9,6 +9,7 @@ import net.minecraft.world.phys.AABB;
 import static net.hyper.silliestlib.utils.SilliestLibRegUtils.regBlock;
 
 public interface ChiseledBlocks {
+    // Copy+Paste from the vanilla "Blocks" class as its private and icba making an access-widener for a single method
     BlockBehaviour.StateArgumentPredicate<AABB> NEAR_PLANE_INTERSECTS_OUTLINE = (state, _, blockPos, nearPlaneBox) -> {
         for(AABB outlineBox : state.getOcclusionShape().toAabbs()) {
             if (outlineBox.move(blockPos).intersects(nearPlaneBox)) {
@@ -18,6 +19,8 @@ public interface ChiseledBlocks {
 
         return false;
     };
+
+    // Methods for easier Block Registration
     static Block regSimpleBlock(BlockItemId id, BlockBehaviour.Properties blockProperties) {
         return regBlock(id, _ -> new Block(blockProperties.setId(id.block())));
     }
@@ -37,6 +40,7 @@ public interface ChiseledBlocks {
         return regBlock(id, _ -> new RotatedPillarBlock(blockProperties.setId(id.block())));
     }
 
+    // Stone Blocks
     Block STONE_WALL = regWall(ChiseledBlockItemIds.STONE_WALL, Blocks.STONE.properties());
     Block POLISHED_STONE = regSimpleBlock(ChiseledBlockItemIds.POLISHED_STONE, Blocks.STONE_BRICKS.properties());
     Block POLISHED_STONE_STAIRS = regStairs(ChiseledBlockItemIds.POLISHED_STONE_STAIRS, POLISHED_STONE, Blocks.STONE_BRICK_STAIRS.properties());
@@ -60,6 +64,7 @@ public interface ChiseledBlocks {
     Block MOSSY_STONE_TILE_SLAB = regSlab(ChiseledBlockItemIds.MOSSY_STONE_TILE_SLAB, Blocks.MOSSY_STONE_BRICK_SLAB.properties());
     Block MOSSY_STONE_TILE_WALL = regWall(ChiseledBlockItemIds.MOSSY_STONE_TILE_WALL, Blocks.MOSSY_STONE_BRICK_WALL.properties());
 
+    // Granite Blocks
     Block POLISHED_GRANITE_WALL = regWall(ChiseledBlockItemIds.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE.properties());
     Block POLISHED_GRANITE_PILLAR = regRotatedPillar(ChiseledBlockItemIds.POLISHED_GRANITE_PILLAR, Blocks.POLISHED_GRANITE.properties());
     Block POLISHED_GRANITE_BRICKS = regSimpleBlock(ChiseledBlockItemIds.POLISHED_GRANITE_BRICKS, Blocks.POLISHED_GRANITE.properties());
@@ -77,6 +82,7 @@ public interface ChiseledBlocks {
     Block POLISHED_GRANITE_TILE_SLAB = regSlab(ChiseledBlockItemIds.POLISHED_GRANITE_TILE_SLAB, Blocks.POLISHED_GRANITE_SLAB.properties());
     Block POLISHED_GRANITE_TILE_WALL = regWall(ChiseledBlockItemIds.POLISHED_GRANITE_TILE_WALL, POLISHED_GRANITE_WALL.properties());
 
+    // Diorite Blocks
     Block POLISHED_DIORITE_WALL = regWall(ChiseledBlockItemIds.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE.properties());
     Block POLISHED_DIORITE_PILLAR = regRotatedPillar(ChiseledBlockItemIds.POLISHED_DIORITE_PILLAR, Blocks.POLISHED_DIORITE.properties());
     Block POLISHED_DIORITE_BRICKS = regSimpleBlock(ChiseledBlockItemIds.POLISHED_DIORITE_BRICKS, Blocks.POLISHED_DIORITE.properties());
@@ -94,6 +100,7 @@ public interface ChiseledBlocks {
     Block POLISHED_DIORITE_TILE_SLAB = regSlab(ChiseledBlockItemIds.POLISHED_DIORITE_TILE_SLAB, Blocks.POLISHED_DIORITE_SLAB.properties());
     Block POLISHED_DIORITE_TILE_WALL = regWall(ChiseledBlockItemIds.POLISHED_DIORITE_TILE_WALL, POLISHED_DIORITE_WALL.properties());
 
+    // Andesite Blocks
     Block POLISHED_ANDESITE_WALL = regWall(ChiseledBlockItemIds.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE.properties());
     Block POLISHED_ANDESITE_PILLAR = regRotatedPillar(ChiseledBlockItemIds.POLISHED_ANDESITE_PILLAR, Blocks.POLISHED_ANDESITE.properties());
     Block POLISHED_ANDESITE_BRICKS = regSimpleBlock(ChiseledBlockItemIds.POLISHED_ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE.properties());
@@ -111,12 +118,14 @@ public interface ChiseledBlocks {
     Block POLISHED_ANDESITE_TILE_SLAB = regSlab(ChiseledBlockItemIds.POLISHED_ANDESITE_TILE_SLAB, Blocks.POLISHED_ANDESITE_SLAB.properties());
     Block POLISHED_ANDESITE_TILE_WALL = regWall(ChiseledBlockItemIds.POLISHED_ANDESITE_TILE_WALL, POLISHED_ANDESITE_WALL.properties());
 
+    // Deepslate Blocks
     Block DEEPSLATE_PILLAR = regRotatedPillar(ChiseledBlockItemIds.DEEPSLATE_PILLAR, Blocks.POLISHED_DEEPSLATE.properties());
     Block CUT_DEEPSLATE_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CUT_DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICKS.properties());
     Block CRACKED_CUT_DEEPSLATE_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CRACKED_CUT_DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICKS.properties());
     Block CUT_DEEPSLATE_BRICK_STAIRS = regStairs(ChiseledBlockItemIds.CUT_DEEPSLATE_BRICK_STAIRS, CUT_DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICK_STAIRS.properties());
     Block CUT_DEEPSLATE_BRICK_SLAB = regSlab(ChiseledBlockItemIds.CUT_DEEPSLATE_BRICK_SLAB, Blocks.DEEPSLATE_BRICK_SLAB.properties());
 
+    // Brick Blocks
     Block CRACKED_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CRACKED_BRICKS, Blocks.BRICKS.properties());
     Block WEATHERED_BRICKS = regSimpleBlock(ChiseledBlockItemIds.WEATHERED_BRICKS, Blocks.BRICKS.properties());
     Block WEATHERED_BRICK_STAIRS = regStairs(ChiseledBlockItemIds.WEATHERED_BRICK_STAIRS, WEATHERED_BRICKS, Blocks.BRICK_STAIRS.properties());
@@ -127,6 +136,7 @@ public interface ChiseledBlocks {
     Block MOSSY_BRICK_SLAB = regSlab(ChiseledBlockItemIds.MOSSY_BRICK_SLAB, Blocks.BRICK_SLAB.properties());
     Block MOSSY_BRICK_WALL = regWall(ChiseledBlockItemIds.MOSSY_BRICK_WALL, Blocks.BRICK_WALL.properties());
 
+    // Packed Mud Blocks
     Block PACKED_MUD_STAIRS = regStairs(ChiseledBlockItemIds.PACKED_MUD_STAIRS, Blocks.PACKED_MUD, Blocks.PACKED_MUD.properties());
     Block PACKED_MUD_SLAB = regSlab(ChiseledBlockItemIds.PACKED_MUD_SLAB, Blocks.PACKED_MUD.properties());
     Block PACKED_MUD_WALL = regWall(ChiseledBlockItemIds.PACKED_MUD_WALL, Blocks.PACKED_MUD.properties());
@@ -149,6 +159,7 @@ public interface ChiseledBlocks {
     Block MOSSY_MUD_TILE_SLAB = regSlab(ChiseledBlockItemIds.MOSSY_MUD_TILE_SLAB, Blocks.MUD_BRICK_SLAB.properties());
     Block MOSSY_MUD_TILE_WALL = regWall(ChiseledBlockItemIds.MOSSY_MUD_TILE_WALL, Blocks.MUD_BRICK_WALL.properties());
 
+    // Sandstone Blocks
     Block SMOOTH_SANDSTONE_WALL = regWall(ChiseledBlockItemIds.SMOOTH_SANDSTONE_WALL, Blocks.SMOOTH_SANDSTONE.properties());
     Block SMOOTH_SANDSTONE_PILLAR = regRotatedPillar(ChiseledBlockItemIds.SMOOTH_SANDSTONE_PILLAR, Blocks.SMOOTH_SANDSTONE.properties());
     Block SMOOTH_SANDSTONE_BRICKS = regSimpleBlock(ChiseledBlockItemIds.SMOOTH_SANDSTONE_BRICKS, Blocks.SMOOTH_SANDSTONE.properties());
@@ -162,6 +173,8 @@ public interface ChiseledBlocks {
     Block SMOOTH_SANDSTONE_TILE_STAIRS = regStairs(ChiseledBlockItemIds.SMOOTH_SANDSTONE_TILE_STAIRS, SMOOTH_SANDSTONE_TILES, Blocks.SMOOTH_SANDSTONE_STAIRS.properties());
     Block SMOOTH_SANDSTONE_TILE_SLAB = regSlab(ChiseledBlockItemIds.SMOOTH_SANDSTONE_TILE_SLAB, Blocks.SMOOTH_SANDSTONE_SLAB.properties());
     Block SMOOTH_SANDSTONE_TILE_WALL = regWall(ChiseledBlockItemIds.SMOOTH_SANDSTONE_TILE_WALL, SMOOTH_SANDSTONE_WALL.properties());
+
+    // Red Sandstone Blocks
     Block SMOOTH_RED_SANDSTONE_WALL = regWall(ChiseledBlockItemIds.SMOOTH_RED_SANDSTONE_WALL, Blocks.SMOOTH_RED_SANDSTONE.properties());
     Block SMOOTH_RED_SANDSTONE_PILLAR = regRotatedPillar(ChiseledBlockItemIds.SMOOTH_RED_SANDSTONE_PILLAR, Blocks.SMOOTH_RED_SANDSTONE.properties());
     Block SMOOTH_RED_SANDSTONE_BRICKS = regSimpleBlock(ChiseledBlockItemIds.SMOOTH_RED_SANDSTONE_BRICKS, Blocks.SMOOTH_RED_SANDSTONE.properties());
@@ -176,6 +189,7 @@ public interface ChiseledBlocks {
     Block SMOOTH_RED_SANDSTONE_TILE_SLAB = regSlab(ChiseledBlockItemIds.SMOOTH_RED_SANDSTONE_TILE_SLAB, Blocks.SMOOTH_RED_SANDSTONE_SLAB.properties());
     Block SMOOTH_RED_SANDSTONE_TILE_WALL = regWall(ChiseledBlockItemIds.SMOOTH_RED_SANDSTONE_TILE_WALL, SMOOTH_RED_SANDSTONE_WALL.properties());
 
+    // Cinnabar Blocks
     Block CRACKED_CINNABAR_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CRACKED_CINNABAR_BRICKS, Blocks.CINNABAR_BRICKS.properties());
     Block CUT_CINNABAR_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CUT_CINNABAR_BRICKS, Blocks.CINNABAR_BRICKS.properties());
     Block CRACKED_CUT_CINNABAR_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CRACKED_CUT_CINNABAR_BRICKS, Blocks.CINNABAR_BRICKS.properties());
@@ -187,6 +201,7 @@ public interface ChiseledBlocks {
     Block CINNABAR_TILE_SLAB = regSlab(ChiseledBlockItemIds.CINNABAR_TILE_SLAB, Blocks.CINNABAR_BRICK_SLAB.properties());
     Block CINNABAR_TILE_WALL = regWall(ChiseledBlockItemIds.CINNABAR_TILE_WALL, Blocks.CINNABAR_BRICK_WALL.properties());
 
+    // Sulfur Blocks
     Block CRACKED_SULFUR_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CRACKED_SULFUR_BRICKS, Blocks.SULFUR_BRICKS.properties());
     Block CUT_SULFUR_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CUT_SULFUR_BRICKS, Blocks.SULFUR_BRICKS.properties());
     Block CRACKED_CUT_SULFUR_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CRACKED_CUT_SULFUR_BRICKS, Blocks.SULFUR_BRICKS.properties());
@@ -198,6 +213,7 @@ public interface ChiseledBlocks {
     Block SULFUR_TILE_SLAB = regSlab(ChiseledBlockItemIds.SULFUR_TILE_SLAB, Blocks.SULFUR_BRICK_SLAB.properties());
     Block SULFUR_TILE_WALL = regWall(ChiseledBlockItemIds.SULFUR_TILE_WALL, Blocks.SULFUR_BRICK_WALL.properties());
 
+    // Prismarine Blocks
     Block POLISHED_PRISMARINE = regSimpleBlock(ChiseledBlockItemIds.POLISHED_PRISMARINE, Blocks.PRISMARINE_BRICKS.properties());
     Block POLISHED_PRISMARINE_STAIRS = regStairs(ChiseledBlockItemIds.POLISHED_PRISMARINE_STAIRS, POLISHED_PRISMARINE, Blocks.PRISMARINE_BRICK_STAIRS.properties());
     Block POLISHED_PRISMARINE_SLAB = regSlab(ChiseledBlockItemIds.POLISHED_PRISMARINE_SLAB, Blocks.PRISMARINE_BRICK_SLAB.properties());
@@ -207,6 +223,7 @@ public interface ChiseledBlocks {
     Block CUT_PRISMARINE_BRICK_STAIRS = regStairs(ChiseledBlockItemIds.CUT_PRISMARINE_BRICK_STAIRS, CUT_PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICK_STAIRS.properties());
     Block CUT_PRISMARINE_BRICK_SLAB = regSlab(ChiseledBlockItemIds.CUT_PRISMARINE_BRICK_SLAB, Blocks.PRISMARINE_BRICK_SLAB.properties());
 
+    // Dark Prismarine Blocks
     Block DARK_PRISMARINE_WALL = regWall(ChiseledBlockItemIds.DARK_PRISMARINE_WALL, Blocks.PRISMARINE_BRICKS.properties());
     Block POLISHED_DARK_PRISMARINE = regSimpleBlock(ChiseledBlockItemIds.POLISHED_DARK_PRISMARINE, Blocks.PRISMARINE_BRICKS.properties());
     Block POLISHED_DARK_PRISMARINE_STAIRS = regStairs(ChiseledBlockItemIds.POLISHED_DARK_PRISMARINE_STAIRS, POLISHED_DARK_PRISMARINE, Blocks.PRISMARINE_BRICK_STAIRS.properties());
@@ -220,10 +237,12 @@ public interface ChiseledBlocks {
     Block CUT_DARK_PRISMARINE_BRICK_STAIRS = regStairs(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICK_STAIRS, CUT_DARK_PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICK_STAIRS.properties());
     Block CUT_DARK_PRISMARINE_BRICK_SLAB = regSlab(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICK_SLAB, Blocks.PRISMARINE_BRICK_SLAB.properties());
 
+    // Red Nether Brick Blocks
     Block CRACKED_RED_NETHER_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CRACKED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICKS.properties());
     Block RED_NETHER_BRICK_FENCE = regFence(ChiseledBlockItemIds.RED_NETHER_BRICK_FENCE, Blocks.NETHER_BRICK_FENCE.properties());
     Block CHISELED_RED_NETHER_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CHISELED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICKS.properties());
 
+    // Blackstone Blocks
     Block POLISHED_BLACKSTONE_PILLAR = regRotatedPillar(ChiseledBlockItemIds.POLISHED_BLACKSTONE_PILLAR, Blocks.POLISHED_BLACKSTONE_BRICKS.properties());
     Block CUT_POLISHED_BLACKSTONE_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CUT_POLISHED_BLACKSTONE_BRICKS, Blocks.POLISHED_BLACKSTONE_BRICKS.properties());
     Block CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS = regSimpleBlock(ChiseledBlockItemIds.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS, Blocks.POLISHED_BLACKSTONE_BRICKS.properties());
@@ -235,6 +254,7 @@ public interface ChiseledBlocks {
     Block POLISHED_BLACKSTONE_TILE_SLAB = regSlab(ChiseledBlockItemIds.POLISHED_BLACKSTONE_TILE_SLAB, Blocks.POLISHED_BLACKSTONE_BRICK_SLAB.properties());
     Block POLISHED_BLACKSTONE_TILE_WALL = regWall(ChiseledBlockItemIds.POLISHED_BLACKSTONE_TILE_WALL, Blocks.POLISHED_BLACKSTONE_BRICK_WALL.properties());
 
+    // End Stone Blocks
     Block END_STONE_STAIRS = regStairs(ChiseledBlockItemIds.END_STONE_STAIRS, Blocks.END_STONE, Blocks.END_STONE.properties());
     Block END_STONE_SLAB = regSlab(ChiseledBlockItemIds.END_STONE_SLAB, Blocks.END_STONE.properties());
     Block END_STONE_WALL = regWall(ChiseledBlockItemIds.END_STONE_WALL, Blocks.END_STONE.properties());
@@ -254,6 +274,7 @@ public interface ChiseledBlocks {
     Block END_STONE_TILE_SLAB = regSlab(ChiseledBlockItemIds.END_STONE_TILE_SLAB, Blocks.END_STONE_BRICK_SLAB.properties());
     Block END_STONE_TILE_WALL = regWall(ChiseledBlockItemIds.END_STONE_TILE_WALL, Blocks.END_STONE_BRICK_WALL.properties());
 
+    // Quartz Blocks
     Block QUARTZ_WALL = regWall(ChiseledBlockItemIds.QUARTZ_WALL, Blocks.QUARTZ_BLOCK.properties());
     Block SMOOTH_QUARTZ_WALL = regWall(ChiseledBlockItemIds.SMOOTH_QUARTZ_WALL, Blocks.SMOOTH_QUARTZ.properties());
     Block QUARTZ_BRICK_STAIRS = regStairs(ChiseledBlockItemIds.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS, Blocks.QUARTZ_BRICKS.properties());
@@ -267,6 +288,7 @@ public interface ChiseledBlocks {
     Block QUARTZ_TILE_SLAB = regSlab(ChiseledBlockItemIds.QUARTZ_TILE_SLAB, Blocks.QUARTZ_BRICKS.properties());
     Block QUARTZ_TILE_WALL = regWall(ChiseledBlockItemIds.QUARTZ_TILE_WALL, Blocks.QUARTZ_BRICKS.properties());
 
+    // Terracotta Blocks
     Block TERRACOTTA_STAIRS = regStairs(ChiseledBlockItemIds.TERRACOTTA_STAIRS, Blocks.TERRACOTTA, Blocks.TERRACOTTA.properties());
     Block TERRACOTTA_SLAB = regSlab(ChiseledBlockItemIds.TERRACOTTA_SLAB, Blocks.TERRACOTTA.properties());
     Block TERRACOTTA_WALL = regWall(ChiseledBlockItemIds.TERRACOTTA_WALL, Blocks.TERRACOTTA.properties());

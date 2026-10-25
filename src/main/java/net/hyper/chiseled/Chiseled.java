@@ -14,6 +14,7 @@ import net.minecraft.resources.Identifier;
 
 import org.slf4j.LoggerFactory;
 
+// Main Entrypoint
 public class Chiseled implements ModInitializer {
 	public static final String MOD_ID = "chiseled";
 	public static Identifier id(String path) {

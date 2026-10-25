@@ -7,9 +7,7 @@ import net.minecraft.core.HolderLookup;
 
 import java.util.concurrent.CompletableFuture;
 
-// oh look its the evil code again
-// determines what blocks are in loot tables
-
+// DataGenerator for Block loot
 public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
     public ChiseledBlockLootGen(FabricPackOutput packOutput, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(packOutput, registriesFuture);
@@ -17,9 +15,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
 
     @Override
     public void generate() {
-
-        //stone
-
+        // Stone Block loot
         dropSelf(ChiseledBlocks.STONE_WALL);
         dropSelf(ChiseledBlocks.POLISHED_STONE);
         dropSelf(ChiseledBlocks.POLISHED_STONE_STAIRS);
@@ -43,8 +39,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.MOSSY_STONE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.MOSSY_STONE_TILE_SLAB));
         dropSelf(ChiseledBlocks.MOSSY_STONE_TILE_WALL);
 
-        //granite
-
+        // Granite Block loot
         dropSelf(ChiseledBlocks.POLISHED_GRANITE_WALL);
         dropSelf(ChiseledBlocks.POLISHED_GRANITE_PILLAR);
         dropSelf(ChiseledBlocks.POLISHED_GRANITE_BRICKS);
@@ -62,8 +57,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.POLISHED_GRANITE_TILE_SLAB));
         dropSelf(ChiseledBlocks.POLISHED_GRANITE_TILE_WALL);
 
-        //diorite
-
+        // Diorite Block loot
         dropSelf(ChiseledBlocks.POLISHED_DIORITE_WALL);
         dropSelf(ChiseledBlocks.POLISHED_DIORITE_PILLAR);
         dropSelf(ChiseledBlocks.POLISHED_DIORITE_BRICKS);
@@ -81,8 +75,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.POLISHED_DIORITE_TILE_SLAB));
         dropSelf(ChiseledBlocks.POLISHED_DIORITE_TILE_WALL);
 
-        //andesite
-
+        // Andesite Block loot
         dropSelf(ChiseledBlocks.POLISHED_ANDESITE_WALL);
         dropSelf(ChiseledBlocks.POLISHED_ANDESITE_PILLAR);
         dropSelf(ChiseledBlocks.POLISHED_ANDESITE_BRICKS);
@@ -100,16 +93,14 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.POLISHED_ANDESITE_TILE_SLAB));
         dropSelf(ChiseledBlocks.POLISHED_ANDESITE_TILE_WALL);
 
-        //deepslate
-
+        // Deepslate Block loot
         dropSelf(ChiseledBlocks.DEEPSLATE_PILLAR);
         dropSelf(ChiseledBlocks.CUT_DEEPSLATE_BRICKS);
         dropSelf(ChiseledBlocks.CRACKED_CUT_DEEPSLATE_BRICKS);
         dropSelf(ChiseledBlocks.CUT_DEEPSLATE_BRICK_STAIRS);
         add(ChiseledBlocks.CUT_DEEPSLATE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_DEEPSLATE_BRICK_SLAB));
 
-        //brick
-
+        // Brick Block loot
         dropSelf(ChiseledBlocks.CRACKED_BRICKS);
         dropSelf(ChiseledBlocks.WEATHERED_BRICKS);
         dropSelf(ChiseledBlocks.WEATHERED_BRICK_STAIRS);
@@ -120,8 +111,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.MOSSY_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.MOSSY_BRICK_SLAB));
         dropSelf(ChiseledBlocks.MOSSY_BRICK_WALL);
 
-        //mud
-
+        // Packed Mud Block loot
         dropSelf(ChiseledBlocks.PACKED_MUD_STAIRS);
         add(ChiseledBlocks.PACKED_MUD_SLAB, createSlabItemTable(ChiseledBlocks.PACKED_MUD_SLAB));
         dropSelf(ChiseledBlocks.PACKED_MUD_WALL);
@@ -144,8 +134,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.MOSSY_MUD_TILE_SLAB, createSlabItemTable(ChiseledBlocks.MOSSY_MUD_TILE_SLAB));
         dropSelf(ChiseledBlocks.MOSSY_MUD_TILE_WALL);
 
-        //sandstone
-
+        // Sandstone Block loot
         dropSelf(ChiseledBlocks.SMOOTH_SANDSTONE_WALL);
         dropSelf(ChiseledBlocks.SMOOTH_SANDSTONE_PILLAR);
         dropSelf(ChiseledBlocks.SMOOTH_SANDSTONE_BRICKS);
@@ -159,6 +148,8 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.SMOOTH_SANDSTONE_TILE_STAIRS);
         add(ChiseledBlocks.SMOOTH_SANDSTONE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.SMOOTH_SANDSTONE_TILE_SLAB));
         dropSelf(ChiseledBlocks.SMOOTH_SANDSTONE_TILE_WALL);
+
+        // Red Sandstone Block loot
         dropSelf(ChiseledBlocks.SMOOTH_RED_SANDSTONE_WALL);
         dropSelf(ChiseledBlocks.SMOOTH_RED_SANDSTONE_PILLAR);
         dropSelf(ChiseledBlocks.SMOOTH_RED_SANDSTONE_BRICKS);
@@ -173,8 +164,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_SLAB));
         dropSelf(ChiseledBlocks.SMOOTH_RED_SANDSTONE_TILE_WALL);
 
-        //cinnabar
-
+        // Cinnabar Block loot
         dropSelf(ChiseledBlocks.CRACKED_CINNABAR_BRICKS);
         dropSelf(ChiseledBlocks.CUT_CINNABAR_BRICKS);
         dropSelf(ChiseledBlocks.CRACKED_CUT_CINNABAR_BRICKS);
@@ -186,8 +176,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.CINNABAR_TILE_SLAB, createSlabItemTable(ChiseledBlocks.CINNABAR_TILE_SLAB));
         dropSelf(ChiseledBlocks.CINNABAR_TILE_WALL);
 
-        //sulfur
-
+        // Sulfur Block loot
         dropSelf(ChiseledBlocks.CRACKED_SULFUR_BRICKS);
         dropSelf(ChiseledBlocks.CUT_SULFUR_BRICKS);
         dropSelf(ChiseledBlocks.CRACKED_CUT_SULFUR_BRICKS);
@@ -199,8 +188,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.SULFUR_TILE_SLAB, createSlabItemTable(ChiseledBlocks.SULFUR_TILE_SLAB));
         dropSelf(ChiseledBlocks.SULFUR_TILE_WALL);
 
-        //prismarine
-
+        // Prismarine Block loot
         dropSelf(ChiseledBlocks.POLISHED_PRISMARINE);
         dropSelf(ChiseledBlocks.POLISHED_PRISMARINE_STAIRS);
         add(ChiseledBlocks.POLISHED_PRISMARINE_SLAB, createSlabItemTable(ChiseledBlocks.POLISHED_PRISMARINE_SLAB));
@@ -210,8 +198,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.CUT_PRISMARINE_BRICK_STAIRS);
         add(ChiseledBlocks.CUT_PRISMARINE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_PRISMARINE_BRICK_SLAB));
 
-        //dark prismarine
-
+        // Dark Prismarine Block loot
         dropSelf(ChiseledBlocks.DARK_PRISMARINE_WALL);
         dropSelf(ChiseledBlocks.POLISHED_DARK_PRISMARINE);
         dropSelf(ChiseledBlocks.POLISHED_DARK_PRISMARINE_STAIRS);
@@ -225,14 +212,12 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         dropSelf(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_STAIRS);
         add(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB, createSlabItemTable(ChiseledBlocks.CUT_DARK_PRISMARINE_BRICK_SLAB));
 
-        //red nether bricks
-
+        // Red Nether Brick Block loot
         dropSelf(ChiseledBlocks.CRACKED_RED_NETHER_BRICKS);
         dropSelf(ChiseledBlocks.RED_NETHER_BRICK_FENCE);
         dropSelf(ChiseledBlocks.CHISELED_RED_NETHER_BRICKS);
 
-        //blackstone
-
+        // Blackstone Block loot
         dropSelf(ChiseledBlocks.POLISHED_BLACKSTONE_PILLAR);
         dropSelf(ChiseledBlocks.CUT_POLISHED_BLACKSTONE_BRICKS);
         dropSelf(ChiseledBlocks.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS);
@@ -244,8 +229,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_SLAB));
         dropSelf(ChiseledBlocks.POLISHED_BLACKSTONE_TILE_WALL);
 
-        //end stone
-
+        // End Stone Block loot
         dropSelf(ChiseledBlocks.END_STONE_STAIRS);
         add(ChiseledBlocks.END_STONE_SLAB, createSlabItemTable(ChiseledBlocks.END_STONE_SLAB));
         dropSelf(ChiseledBlocks.END_STONE_WALL);
@@ -265,8 +249,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.END_STONE_TILE_SLAB, createSlabItemTable(ChiseledBlocks.END_STONE_TILE_SLAB));
         dropSelf(ChiseledBlocks.END_STONE_TILE_WALL);
 
-        //quartz
-
+        // Quartz Block loot
         dropSelf(ChiseledBlocks.QUARTZ_WALL);
         dropSelf(ChiseledBlocks.SMOOTH_QUARTZ_WALL);
         dropSelf(ChiseledBlocks.QUARTZ_BRICK_STAIRS);
@@ -280,8 +263,7 @@ public class ChiseledBlockLootGen extends FabricBlockLootSubProvider {
         add(ChiseledBlocks.QUARTZ_TILE_SLAB, createSlabItemTable(ChiseledBlocks.QUARTZ_TILE_SLAB));
         dropSelf(ChiseledBlocks.QUARTZ_TILE_WALL);
 
-        //terracotta
-
+        // Terracotta Block loot
         dropSelf(ChiseledBlocks.TERRACOTTA_STAIRS);
         add(ChiseledBlocks.TERRACOTTA_SLAB, createSlabItemTable(ChiseledBlocks.TERRACOTTA_SLAB));
         dropSelf(ChiseledBlocks.TERRACOTTA_WALL);

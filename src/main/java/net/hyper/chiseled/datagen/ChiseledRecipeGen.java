@@ -16,8 +16,7 @@ import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
-//return of the evil code
-
+// DataGenerator for Recipes
 @SuppressWarnings("SameParameterValue")
 public class ChiseledRecipeGen extends FabricRecipeProvider {
     public ChiseledRecipeGen(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
@@ -27,70 +26,51 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
     @Override
     protected @NonNull RecipeProvider createRecipeProvider(HolderLookup.@NonNull Provider registries, @NonNull BootstrapContext<Recipe<?>> recipes, @NonNull BootstrapContext<Advancement> advancements) {
         return new RecipeProvider(recipes, advancements) {
+            // Methods for easier Recipe Generation
 
-            //this part defines recipes by block type
-
-
-            //recipes for bricks, polished block and tiles.
-
+            // Used for Polished Blocks, Bricks and Tiles
             void brickRecipes(Item craftingOutput, Item craftingInput, Item... stonecutterInputs) {
                 shaped(RecipeCategory.BUILDING_BLOCKS, craftingOutput,4).pattern("##").pattern("##").define('#', craftingInput).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output);
                 stonecuttingRecipes(craftingOutput, stonecutterInputs);
             }
-
-            //cut bricks recipes
-
+            // Used for Cut Bricks
             void cutBrickRecipes(Item craftingOutput, Item craftingInput, Item... stonecutterInputs) {
                 shaped(RecipeCategory.BUILDING_BLOCKS, craftingOutput).pattern("#").pattern("#").define('#', craftingInput).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output);
                 stonecuttingRecipes(craftingOutput, stonecutterInputs);
             }
-
-            //stair recipes
-
+            // Used for Stairs
             void stairRecipes(Item craftingOutput, Item craftingInput, Item... stonecutterInputs) {
                 stairBuilder(craftingOutput, Ingredient.of(craftingInput)).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output);
                 stonecuttingRecipes(craftingOutput, stonecutterInputs);
             }
-
-            //slab recipes
-
+            // Used for Slabs
             void slabRecipes(Item craftingOutput, Item craftingInput, Item... stonecutterInputs) {
                 slab(RecipeCategory.BUILDING_BLOCKS, craftingOutput, craftingInput);
                 stonecuttingRecipes(2, craftingOutput, stonecutterInputs);
             }
-
-            //wall recipes
-
+            // Used for Walls
             void wallRecipes(Item craftingOutput, Item craftingInput, Item... stonecutterInputs) {
                 wall(RecipeCategory.BUILDING_BLOCKS, craftingOutput, craftingInput);
                 stonecuttingRecipes(craftingOutput, stonecutterInputs);
             }
-
-            //pillar recipes
-
+            // Used for Pillars
             void pillarRecipes(Item craftingOutput, Item craftingInput, Item... stonecutterInputs) {
                 shaped(RecipeCategory.BUILDING_BLOCKS, craftingOutput, 2).pattern("#").pattern("#").define('#', craftingInput).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output);
                 stonecuttingRecipes(craftingOutput, stonecutterInputs);
             }
-
-            //mossy block recipes
-
+            // Used for Mossy blocks
             void mossyRecipes(Item craftingOutput, Item craftingInput) {
                 shapeless(RecipeCategory.BUILDING_BLOCKS, craftingOutput).requires(craftingInput).requires(Items.MOSS_BLOCK).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output, getItemName(craftingOutput)+"_from_moss");
                 shapeless(RecipeCategory.BUILDING_BLOCKS, craftingOutput).requires(craftingInput).requires(Items.VINE).unlockedBy(getHasName(craftingInput), has(craftingInput)).save(output, getItemName(craftingOutput)+"_from_vine");
             }
-
-            //stonecutting recipes
-
+            // Used for Stonecutting Recipes with multiple inputs
             void stonecuttingRecipes(int count, Item output, Item... inputs) {
                 for (Item input : inputs) stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, output, input, count);
             }
             void stonecuttingRecipes(Item output, Item... inputs) {
                 stonecuttingRecipes(1, output, inputs);
             }
-
-            //terracotta recipes
-
+            // Used for Dyed Terracotta Bricks
             void dyedTerracottaBricks(Item terracottaBricks, Item terracotta, Item dye) {
                 brickRecipes(terracottaBricks, terracotta, terracotta);
                 shaped(RecipeCategory.BUILDING_BLOCKS, terracottaBricks, 8).pattern("###").pattern("#0#").pattern("###").define('#', ChiseledItems.TERRACOTTA_BRICKS).define('0', dye).unlockedBy(getHasName(ChiseledItems.TERRACOTTA_BRICKS), has(ChiseledItems.TERRACOTTA_BRICKS)).save(output, getItemName(terracottaBricks) + "_from_" + getItemName(ChiseledItems.TERRACOTTA_BRICKS));
@@ -98,11 +78,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
 
             @Override
             public void buildRecipes() {
-
-                //list of recipes by materiel
-
-                //stone
-
+                // Stone Recipes
                 wallRecipes(ChiseledItems.STONE_WALL, Items.STONE, Items.STONE);
                 brickRecipes(ChiseledItems.POLISHED_STONE, Items.STONE, Items.STONE);
                 stairRecipes(ChiseledItems.POLISHED_STONE_STAIRS, ChiseledItems.POLISHED_STONE, Items.STONE, ChiseledItems.POLISHED_STONE);
@@ -130,8 +106,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.MOSSY_STONE_TILE_SLAB, ChiseledItems.MOSSY_STONE_TILES, ChiseledItems.MOSSY_STONE_TILES);
                 wallRecipes(ChiseledItems.MOSSY_STONE_TILE_WALL, ChiseledItems.MOSSY_STONE_TILES, ChiseledItems.MOSSY_STONE_TILES);
 
-                //granite
-
+                // Granite Recipes
                 wallRecipes(ChiseledItems.POLISHED_GRANITE_WALL, Items.POLISHED_GRANITE, Items.GRANITE, Items.POLISHED_GRANITE);
                 pillarRecipes(ChiseledItems.POLISHED_GRANITE_PILLAR, Items.POLISHED_GRANITE, Items.GRANITE, Items.POLISHED_GRANITE);
                 brickRecipes(ChiseledItems.POLISHED_GRANITE_BRICKS, Items.POLISHED_GRANITE, Items.GRANITE, Items.POLISHED_GRANITE);
@@ -149,8 +124,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.POLISHED_GRANITE_TILE_SLAB, ChiseledItems.POLISHED_GRANITE_TILES, Items.GRANITE, Items.POLISHED_GRANITE, ChiseledItems.POLISHED_GRANITE_BRICKS, ChiseledItems.POLISHED_GRANITE_TILES);
                 wallRecipes(ChiseledItems.POLISHED_GRANITE_TILE_WALL, ChiseledItems.POLISHED_GRANITE_TILES, Items.GRANITE, Items.POLISHED_GRANITE, ChiseledItems.POLISHED_GRANITE_BRICKS, ChiseledItems.POLISHED_GRANITE_TILES);
 
-                //diorite
-
+                // Diorite Recipes
                 wallRecipes(ChiseledItems.POLISHED_DIORITE_WALL, Items.POLISHED_DIORITE, Items.DIORITE, Items.POLISHED_DIORITE);
                 pillarRecipes(ChiseledItems.POLISHED_DIORITE_PILLAR, Items.POLISHED_DIORITE, Items.DIORITE, Items.POLISHED_DIORITE);
                 brickRecipes(ChiseledItems.POLISHED_DIORITE_BRICKS, Items.POLISHED_DIORITE, Items.DIORITE, Items.POLISHED_DIORITE);
@@ -168,8 +142,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.POLISHED_DIORITE_TILE_SLAB, ChiseledItems.POLISHED_DIORITE_TILES, Items.DIORITE, Items.POLISHED_DIORITE, ChiseledItems.POLISHED_DIORITE_BRICKS, ChiseledItems.POLISHED_DIORITE_TILES);
                 wallRecipes(ChiseledItems.POLISHED_DIORITE_TILE_WALL, ChiseledItems.POLISHED_DIORITE_TILES, Items.DIORITE, Items.POLISHED_DIORITE, ChiseledItems.POLISHED_DIORITE_BRICKS, ChiseledItems.POLISHED_DIORITE_TILES);
 
-                //andesite
-
+                // Andesite Recipes
                 wallRecipes(ChiseledItems.POLISHED_ANDESITE_WALL, Items.POLISHED_ANDESITE, Items.ANDESITE, Items.POLISHED_ANDESITE);
                 pillarRecipes(ChiseledItems.POLISHED_ANDESITE_PILLAR, Items.POLISHED_ANDESITE, Items.ANDESITE, Items.POLISHED_ANDESITE);
                 brickRecipes(ChiseledItems.POLISHED_ANDESITE_BRICKS, Items.POLISHED_ANDESITE, Items.ANDESITE, Items.POLISHED_ANDESITE);
@@ -187,16 +160,14 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.POLISHED_ANDESITE_TILE_SLAB, ChiseledItems.POLISHED_ANDESITE_TILES, Items.ANDESITE, Items.POLISHED_ANDESITE, ChiseledItems.POLISHED_ANDESITE_BRICKS, ChiseledItems.POLISHED_ANDESITE_TILES);
                 wallRecipes(ChiseledItems.POLISHED_ANDESITE_TILE_WALL, ChiseledItems.POLISHED_ANDESITE_TILES, Items.ANDESITE, Items.POLISHED_ANDESITE, ChiseledItems.POLISHED_ANDESITE_BRICKS, ChiseledItems.POLISHED_ANDESITE_TILES);
 
-                //deepslate
-
+                // Deepslate Recipes
                 pillarRecipes(ChiseledItems.DEEPSLATE_PILLAR, Items.POLISHED_DEEPSLATE, Items.DEEPSLATE, Items.COBBLED_DEEPSLATE, Items.POLISHED_DEEPSLATE);
                 cutBrickRecipes(ChiseledItems.CUT_DEEPSLATE_BRICKS, Items.POLISHED_DEEPSLATE_SLAB, Items.DEEPSLATE, Items.COBBLED_DEEPSLATE, Items.POLISHED_DEEPSLATE);
                 smeltingResultFromBase(ChiseledItems.CRACKED_CUT_DEEPSLATE_BRICKS, ChiseledItems.CUT_DEEPSLATE_BRICKS);
                 stairRecipes(ChiseledItems.CUT_DEEPSLATE_BRICK_STAIRS, ChiseledItems.CUT_DEEPSLATE_BRICKS, Items.DEEPSLATE, Items.COBBLED_DEEPSLATE, Items.POLISHED_DEEPSLATE, ChiseledItems.CUT_DEEPSLATE_BRICKS);
                 slabRecipes(ChiseledItems.CUT_DEEPSLATE_BRICK_SLAB, ChiseledItems.CUT_DEEPSLATE_BRICKS, Items.DEEPSLATE, Items.COBBLED_DEEPSLATE, Items.POLISHED_DEEPSLATE, ChiseledItems.CUT_DEEPSLATE_BRICKS);
 
-                //bricks
-
+                // Brick Recipes
                 smeltingResultFromBase(ChiseledItems.CRACKED_BRICKS, Items.BRICKS);
                 brickRecipes(ChiseledItems.WEATHERED_BRICKS, Items.BRICKS, Items.BRICKS);
                 stairRecipes(ChiseledItems.WEATHERED_BRICK_STAIRS, ChiseledItems.WEATHERED_BRICKS, ChiseledItems.WEATHERED_BRICKS, Items.BRICKS);
@@ -207,8 +178,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.MOSSY_BRICK_SLAB, ChiseledItems.MOSSY_BRICKS, ChiseledItems.MOSSY_BRICKS);
                 wallRecipes(ChiseledItems.MOSSY_BRICK_WALL, ChiseledItems.MOSSY_BRICKS, ChiseledItems.MOSSY_BRICKS);
 
-                //mud
-
+                // Packed Mud Recipes
                 stairRecipes(ChiseledItems.PACKED_MUD_STAIRS, Items.PACKED_MUD);
                 slabRecipes(ChiseledItems.PACKED_MUD_SLAB, Items.PACKED_MUD);
                 wallRecipes(ChiseledItems.PACKED_MUD_WALL, Items.PACKED_MUD);
@@ -231,8 +201,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.MOSSY_MUD_TILE_SLAB, ChiseledItems.MOSSY_MUD_TILES, ChiseledItems.MOSSY_MUD_TILES);
                 wallRecipes(ChiseledItems.MOSSY_MUD_TILE_WALL, ChiseledItems.MOSSY_MUD_TILES, ChiseledItems.MOSSY_MUD_TILES);
 
-                //sandstone
-
+                // Sandstone Recipes
                 wallRecipes(ChiseledItems.SMOOTH_SANDSTONE_WALL, Items.SMOOTH_SANDSTONE, Items.SANDSTONE, Items.SMOOTH_SANDSTONE);
                 pillarRecipes(ChiseledItems.SMOOTH_SANDSTONE_PILLAR, Items.SMOOTH_SANDSTONE, Items.SANDSTONE, Items.SMOOTH_SANDSTONE);
                 brickRecipes(ChiseledItems.SMOOTH_SANDSTONE_BRICKS, Items.SMOOTH_SANDSTONE, Items.SANDSTONE, Items.SMOOTH_SANDSTONE);
@@ -246,6 +215,8 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 stairRecipes(ChiseledItems.SMOOTH_SANDSTONE_TILE_STAIRS, ChiseledItems.SMOOTH_SANDSTONE_TILES, Items.SANDSTONE, Items.SMOOTH_SANDSTONE, ChiseledItems.SMOOTH_SANDSTONE_BRICKS, ChiseledItems.SMOOTH_SANDSTONE_TILES);
                 slabRecipes(ChiseledItems.SMOOTH_SANDSTONE_TILE_SLAB, ChiseledItems.SMOOTH_SANDSTONE_TILES, Items.SANDSTONE, Items.SMOOTH_SANDSTONE, ChiseledItems.SMOOTH_SANDSTONE_BRICKS, ChiseledItems.SMOOTH_SANDSTONE_TILES);
                 wallRecipes(ChiseledItems.SMOOTH_SANDSTONE_TILE_WALL, ChiseledItems.SMOOTH_SANDSTONE_TILES, Items.SANDSTONE, Items.SMOOTH_SANDSTONE, ChiseledItems.SMOOTH_SANDSTONE_BRICKS, ChiseledItems.SMOOTH_SANDSTONE_TILES);
+
+                // Red Sandstone Recipes
                 wallRecipes(ChiseledItems.SMOOTH_RED_SANDSTONE_WALL, Items.SMOOTH_RED_SANDSTONE, Items.RED_SANDSTONE, Items.SMOOTH_RED_SANDSTONE);
                 pillarRecipes(ChiseledItems.SMOOTH_RED_SANDSTONE_PILLAR, Items.SMOOTH_RED_SANDSTONE, Items.RED_SANDSTONE, Items.SMOOTH_RED_SANDSTONE);
                 brickRecipes(ChiseledItems.SMOOTH_RED_SANDSTONE_BRICKS, Items.SMOOTH_RED_SANDSTONE, Items.RED_SANDSTONE, Items.SMOOTH_RED_SANDSTONE);
@@ -260,8 +231,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.SMOOTH_RED_SANDSTONE_TILE_SLAB, ChiseledItems.SMOOTH_RED_SANDSTONE_TILES, Items.RED_SANDSTONE, Items.SMOOTH_RED_SANDSTONE, ChiseledItems.SMOOTH_RED_SANDSTONE_BRICKS, ChiseledItems.SMOOTH_RED_SANDSTONE_TILES);
                 wallRecipes(ChiseledItems.SMOOTH_RED_SANDSTONE_TILE_WALL, ChiseledItems.SMOOTH_RED_SANDSTONE_TILES, Items.RED_SANDSTONE, Items.SMOOTH_RED_SANDSTONE, ChiseledItems.SMOOTH_RED_SANDSTONE_BRICKS, ChiseledItems.SMOOTH_RED_SANDSTONE_TILES);
 
-                //cinnabar
-
+                // Cinnabar Recipes
                 smeltingResultFromBase(ChiseledItems.CRACKED_CINNABAR_BRICKS, Items.CINNABAR_BRICKS);
                 cutBrickRecipes(ChiseledItems.CUT_CINNABAR_BRICKS, Items.POLISHED_CINNABAR_SLAB, Items.CINNABAR, Items.POLISHED_CINNABAR);
                 smeltingResultFromBase(ChiseledItems.CRACKED_CUT_CINNABAR_BRICKS, ChiseledItems.CUT_CINNABAR_BRICKS);
@@ -273,8 +243,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.CINNABAR_TILE_SLAB, ChiseledItems.CINNABAR_TILES, Items.CINNABAR, Items.POLISHED_CINNABAR, Items.CINNABAR_BRICKS, ChiseledItems.CINNABAR_TILES);
                 wallRecipes(ChiseledItems.CINNABAR_TILE_WALL, ChiseledItems.CINNABAR_TILES, Items.CINNABAR, Items.POLISHED_CINNABAR, Items.CINNABAR_BRICKS, ChiseledItems.CINNABAR_TILES);
 
-                //sulfur
-
+                // Sulfur Recipes
                 smeltingResultFromBase(ChiseledItems.CRACKED_SULFUR_BRICKS, Items.SULFUR_BRICKS);
                 cutBrickRecipes(ChiseledItems.CUT_SULFUR_BRICKS, Items.POLISHED_SULFUR_SLAB, Items.SULFUR, Items.POLISHED_SULFUR);
                 smeltingResultFromBase(ChiseledItems.CRACKED_CUT_SULFUR_BRICKS, ChiseledItems.CUT_SULFUR_BRICKS);
@@ -286,8 +255,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.SULFUR_TILE_SLAB, ChiseledItems.SULFUR_TILES, Items.SULFUR, Items.POLISHED_SULFUR, Items.SULFUR_BRICKS, ChiseledItems.SULFUR_TILES);
                 wallRecipes(ChiseledItems.SULFUR_TILE_WALL, ChiseledItems.SULFUR_TILES, Items.SULFUR, Items.POLISHED_SULFUR, Items.SULFUR_BRICKS, ChiseledItems.SULFUR_TILES);
 
-                //prismarine
-
+                // Prismarine Recipes
                 brickRecipes(ChiseledItems.POLISHED_PRISMARINE, Items.PRISMARINE, Items.PRISMARINE);
                 stairRecipes(ChiseledItems.POLISHED_PRISMARINE_STAIRS, ChiseledItems.POLISHED_PRISMARINE, Items.PRISMARINE, ChiseledItems.POLISHED_PRISMARINE);
                 slabRecipes(ChiseledItems.POLISHED_PRISMARINE_SLAB, ChiseledItems.POLISHED_PRISMARINE, Items.PRISMARINE, ChiseledItems.POLISHED_PRISMARINE);
@@ -300,8 +268,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 stairRecipes(ChiseledItems.CUT_PRISMARINE_BRICK_STAIRS, ChiseledItems.CUT_PRISMARINE_BRICKS, Items.PRISMARINE, ChiseledItems.POLISHED_PRISMARINE, ChiseledItems.CUT_PRISMARINE_BRICKS);
                 slabRecipes(ChiseledItems.CUT_PRISMARINE_BRICK_SLAB, ChiseledItems.CUT_PRISMARINE_BRICKS, Items.PRISMARINE, ChiseledItems.POLISHED_PRISMARINE, ChiseledItems.CUT_PRISMARINE_BRICKS);
 
-                //dark prismarine
-
+                // Dark Prismarine Recipes
                 wallRecipes(ChiseledItems.DARK_PRISMARINE_WALL, Items.DARK_PRISMARINE, Items.DARK_PRISMARINE);
                 brickRecipes(ChiseledItems.POLISHED_DARK_PRISMARINE, Items.DARK_PRISMARINE, Items.DARK_PRISMARINE);
                 stairRecipes(ChiseledItems.POLISHED_DARK_PRISMARINE_STAIRS, ChiseledItems.POLISHED_DARK_PRISMARINE, Items.DARK_PRISMARINE, ChiseledItems.POLISHED_DARK_PRISMARINE);
@@ -315,8 +282,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 stairRecipes(ChiseledItems.CUT_DARK_PRISMARINE_BRICK_STAIRS, ChiseledItems.CUT_DARK_PRISMARINE_BRICKS, Items.DARK_PRISMARINE, ChiseledItems.POLISHED_DARK_PRISMARINE, ChiseledItems.CUT_DARK_PRISMARINE_BRICKS);
                 slabRecipes(ChiseledItems.CUT_DARK_PRISMARINE_BRICK_SLAB, ChiseledItems.CUT_DARK_PRISMARINE_BRICKS, Items.DARK_PRISMARINE, ChiseledItems.POLISHED_DARK_PRISMARINE, ChiseledItems.CUT_DARK_PRISMARINE_BRICKS);
 
-                //red nether bricks
-
+                // Red Nether Brick Recipes
                 smeltingResultFromBase(ChiseledItems.CRACKED_RED_NETHER_BRICKS, Items.RED_NETHER_BRICKS);
                 shaped(RecipeCategory.BUILDING_BLOCKS, ChiseledItems.RED_NETHER_BRICK_FENCE, 6)
                         .pattern("#0#")
@@ -327,8 +293,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                         .save(output);
                 pillarRecipes(ChiseledItems.CHISELED_RED_NETHER_BRICKS, Items.RED_NETHER_BRICK_SLAB, Items.RED_NETHER_BRICKS);
 
-                //blackstone
-
+                // Blackstone Recipes
                 pillarRecipes(ChiseledItems.POLISHED_BLACKSTONE_PILLAR, Items.POLISHED_BLACKSTONE, Items.BLACKSTONE, Items.POLISHED_BLACKSTONE);
                 stonecuttingRecipes(Items.CHISELED_POLISHED_BLACKSTONE, Items.POLISHED_BLACKSTONE_BRICKS);
                 cutBrickRecipes(ChiseledItems.CUT_POLISHED_BLACKSTONE_BRICKS, Items.POLISHED_BLACKSTONE_SLAB, Items.BLACKSTONE, Items.POLISHED_BLACKSTONE);
@@ -341,8 +306,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.POLISHED_BLACKSTONE_TILE_SLAB, ChiseledItems.POLISHED_BLACKSTONE_TILES, Items.BLACKSTONE, Items.POLISHED_BLACKSTONE, Items.POLISHED_BLACKSTONE_BRICKS, ChiseledItems.POLISHED_BLACKSTONE_TILES);
                 wallRecipes(ChiseledItems.POLISHED_BLACKSTONE_TILE_WALL, ChiseledItems.POLISHED_BLACKSTONE_TILES, Items.BLACKSTONE, Items.POLISHED_BLACKSTONE, Items.POLISHED_BLACKSTONE_BRICKS, ChiseledItems.POLISHED_BLACKSTONE_TILES);
 
-                //end stone
-
+                // End Stone Recipes
                 stairRecipes(ChiseledItems.END_STONE_STAIRS, Items.END_STONE, Items.END_STONE);
                 slabRecipes(ChiseledItems.END_STONE_SLAB, Items.END_STONE, Items.END_STONE);
                 wallRecipes(ChiseledItems.END_STONE_WALL, Items.END_STONE, Items.END_STONE);
@@ -366,8 +330,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.END_STONE_TILE_SLAB, ChiseledItems.END_STONE_TILES, Items.END_STONE, ChiseledItems.POLISHED_END_STONE, Items.END_STONE_BRICKS, ChiseledItems.END_STONE_TILES);
                 wallRecipes(ChiseledItems.END_STONE_TILE_WALL, ChiseledItems.END_STONE_TILES, Items.END_STONE, ChiseledItems.POLISHED_END_STONE, Items.END_STONE_BRICKS, ChiseledItems.END_STONE_TILES);
 
-                //quartz
-
+                // Quartz Recipes
                 wallRecipes(ChiseledItems.QUARTZ_WALL, Items.QUARTZ_BLOCK, Items.QUARTZ_BLOCK);
                 wallRecipes(ChiseledItems.SMOOTH_QUARTZ_WALL, Items.SMOOTH_QUARTZ, Items.SMOOTH_QUARTZ);
                 stairRecipes(ChiseledItems.QUARTZ_BRICK_STAIRS, Items.QUARTZ_BRICKS, Items.SMOOTH_QUARTZ, Items.QUARTZ_BRICKS);
@@ -381,8 +344,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 slabRecipes(ChiseledItems.QUARTZ_TILE_SLAB, ChiseledItems.QUARTZ_TILES, Items.SMOOTH_QUARTZ, Items.QUARTZ_BRICKS, ChiseledItems.QUARTZ_TILES);
                 wallRecipes(ChiseledItems.QUARTZ_TILE_WALL, ChiseledItems.QUARTZ_TILES, Items.SMOOTH_QUARTZ, Items.QUARTZ_BRICKS, ChiseledItems.QUARTZ_TILES);
 
-                //terracotta
-
+                // Terracotta Recipes
                 stairRecipes(ChiseledItems.TERRACOTTA_STAIRS, Items.TERRACOTTA, Items.TERRACOTTA);
                 slabRecipes(ChiseledItems.TERRACOTTA_SLAB, Items.TERRACOTTA, Items.TERRACOTTA);
                 wallRecipes(ChiseledItems.TERRACOTTA_WALL, Items.TERRACOTTA, Items.TERRACOTTA);

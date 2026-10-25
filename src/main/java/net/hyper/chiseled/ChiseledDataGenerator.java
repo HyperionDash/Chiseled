@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.hyper.chiseled.datagen.*;
 import net.hyper.chiseled.datagen.tag.*;
 
+// DataGenerator Entrypoint
 public class ChiseledDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {

@@ -5,6 +5,7 @@ import net.minecraft.references.BlockItemId;
 import static net.hyper.silliestlib.utils.SilliestLibRegUtils.createBlockItemId;
 
 public interface ChiseledBlockItemIds {
+    // Stone BlockItemIds
     BlockItemId STONE_WALL = createBlockItemId("stone_wall");
     BlockItemId POLISHED_STONE = createBlockItemId("polished_stone");
     BlockItemId POLISHED_STONE_STAIRS = createBlockItemId("polished_stone_stairs");
@@ -28,6 +29,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId MOSSY_STONE_TILE_SLAB = createBlockItemId("mossy_stone_tile_slab");
     BlockItemId MOSSY_STONE_TILE_WALL = createBlockItemId("mossy_stone_tile_wall");
 
+    // Granite BlockItemIds
     BlockItemId POLISHED_GRANITE_WALL = createBlockItemId("polished_granite_wall");
     BlockItemId POLISHED_GRANITE_PILLAR = createBlockItemId("polished_granite_pillar");
     BlockItemId POLISHED_GRANITE_BRICKS = createBlockItemId("polished_granite_bricks");
@@ -45,6 +47,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId POLISHED_GRANITE_TILE_SLAB = createBlockItemId("polished_granite_tile_slab");
     BlockItemId POLISHED_GRANITE_TILE_WALL = createBlockItemId("polished_granite_tile_wall");
 
+    // Diorite BlockItemIds
     BlockItemId POLISHED_DIORITE_WALL = createBlockItemId("polished_diorite_wall");
     BlockItemId POLISHED_DIORITE_PILLAR = createBlockItemId("polished_diorite_pillar");
     BlockItemId POLISHED_DIORITE_BRICKS = createBlockItemId("polished_diorite_bricks");
@@ -62,6 +65,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId POLISHED_DIORITE_TILE_SLAB = createBlockItemId("polished_diorite_tile_slab");
     BlockItemId POLISHED_DIORITE_TILE_WALL = createBlockItemId("polished_diorite_tile_wall");
 
+    // Andesite BlockItemIds
     BlockItemId POLISHED_ANDESITE_WALL = createBlockItemId("polished_andesite_wall");
     BlockItemId POLISHED_ANDESITE_PILLAR = createBlockItemId("polished_andesite_pillar");
     BlockItemId POLISHED_ANDESITE_BRICKS = createBlockItemId("polished_andesite_bricks");
@@ -79,12 +83,14 @@ public interface ChiseledBlockItemIds {
     BlockItemId POLISHED_ANDESITE_TILE_SLAB = createBlockItemId("polished_andesite_tile_slab");
     BlockItemId POLISHED_ANDESITE_TILE_WALL = createBlockItemId("polished_andesite_tile_wall");
 
+    // Deepslate BlockItemIds
     BlockItemId DEEPSLATE_PILLAR = createBlockItemId("deepslate_pillar");
     BlockItemId CUT_DEEPSLATE_BRICKS = createBlockItemId("cut_deepslate_bricks");
     BlockItemId CRACKED_CUT_DEEPSLATE_BRICKS = createBlockItemId("cracked_cut_deepslate_bricks");
     BlockItemId CUT_DEEPSLATE_BRICK_STAIRS = createBlockItemId("cut_deepslate_brick_stairs");
     BlockItemId CUT_DEEPSLATE_BRICK_SLAB = createBlockItemId("cut_deepslate_brick_slab");
 
+    // Brick BlockItemIds
     BlockItemId CRACKED_BRICKS = createBlockItemId("cracked_bricks");
     BlockItemId WEATHERED_BRICKS = createBlockItemId("weathered_bricks");
     BlockItemId WEATHERED_BRICK_STAIRS = createBlockItemId("weathered_brick_stairs");
@@ -95,6 +101,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId MOSSY_BRICK_SLAB = createBlockItemId("mossy_brick_slab");
     BlockItemId MOSSY_BRICK_WALL = createBlockItemId("mossy_brick_wall");
 
+    // Packed Mud BlockItemIds
     BlockItemId PACKED_MUD_STAIRS = createBlockItemId("packed_mud_stairs");
     BlockItemId PACKED_MUD_SLAB = createBlockItemId("packed_mud_slab");
     BlockItemId PACKED_MUD_WALL = createBlockItemId("packed_mud_wall");
@@ -117,6 +124,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId MOSSY_MUD_TILE_SLAB = createBlockItemId("mossy_mud_tile_slab");
     BlockItemId MOSSY_MUD_TILE_WALL = createBlockItemId("mossy_mud_tile_wall");
 
+    // Sandstone BlockItemIds
     BlockItemId SMOOTH_SANDSTONE_WALL = createBlockItemId("smooth_sandstone_wall");
     BlockItemId SMOOTH_SANDSTONE_PILLAR = createBlockItemId("smooth_sandstone_pillar");
     BlockItemId SMOOTH_SANDSTONE_BRICKS = createBlockItemId("smooth_sandstone_bricks");
@@ -131,6 +139,8 @@ public interface ChiseledBlockItemIds {
     BlockItemId SMOOTH_SANDSTONE_TILE_SLAB = createBlockItemId("smooth_sandstone_tile_slab");
     BlockItemId SMOOTH_SANDSTONE_TILE_WALL = createBlockItemId("smooth_sandstone_tile_wall");
     BlockItemId SMOOTH_RED_SANDSTONE_WALL = createBlockItemId("smooth_red_sandstone_wall");
+
+    // Red Sandstone BlockItemIds
     BlockItemId SMOOTH_RED_SANDSTONE_PILLAR = createBlockItemId("smooth_red_sandstone_pillar");
     BlockItemId SMOOTH_RED_SANDSTONE_BRICKS = createBlockItemId("smooth_red_sandstone_bricks");
     BlockItemId SMOOTH_RED_SANDSTONE_BRICK_STAIRS = createBlockItemId("smooth_red_sandstone_brick_stairs");
@@ -144,6 +154,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId SMOOTH_RED_SANDSTONE_TILE_SLAB = createBlockItemId("smooth_red_sandstone_tile_slab");
     BlockItemId SMOOTH_RED_SANDSTONE_TILE_WALL = createBlockItemId("smooth_red_sandstone_tile_wall");
 
+    // Cinnabar BlockItemIds
     BlockItemId CRACKED_CINNABAR_BRICKS = createBlockItemId("cracked_cinnabar_bricks");
     BlockItemId CUT_CINNABAR_BRICKS = createBlockItemId("cut_cinnabar_bricks");
     BlockItemId CRACKED_CUT_CINNABAR_BRICKS = createBlockItemId("cracked_cut_cinnabar_bricks");
@@ -154,7 +165,8 @@ public interface ChiseledBlockItemIds {
     BlockItemId CINNABAR_TILE_STAIRS = createBlockItemId("cinnabar_tile_stairs");
     BlockItemId CINNABAR_TILE_SLAB = createBlockItemId("cinnabar_tile_slab");
     BlockItemId CINNABAR_TILE_WALL = createBlockItemId("cinnabar_tile_wall");
-    
+
+    // Sulfur BlockItemIds
     BlockItemId CRACKED_SULFUR_BRICKS = createBlockItemId("cracked_sulfur_bricks");
     BlockItemId CUT_SULFUR_BRICKS = createBlockItemId("cut_sulfur_bricks");
     BlockItemId CRACKED_CUT_SULFUR_BRICKS = createBlockItemId("cracked_cut_sulfur_bricks");
@@ -166,6 +178,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId SULFUR_TILE_SLAB = createBlockItemId("sulfur_tile_slab");
     BlockItemId SULFUR_TILE_WALL = createBlockItemId("sulfur_tile_wall");
 
+    // Prismarine BlockItemIds
     BlockItemId POLISHED_PRISMARINE = createBlockItemId("polished_prismarine");
     BlockItemId POLISHED_PRISMARINE_STAIRS = createBlockItemId("polished_prismarine_stairs");
     BlockItemId POLISHED_PRISMARINE_SLAB = createBlockItemId("polished_prismarine_slab");
@@ -175,6 +188,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId CUT_PRISMARINE_BRICK_STAIRS = createBlockItemId("cut_prismarine_brick_stairs");
     BlockItemId CUT_PRISMARINE_BRICK_SLAB = createBlockItemId("cut_prismarine_brick_slab");
 
+    // Dark Prismarine BlockItemIds
     BlockItemId DARK_PRISMARINE_WALL = createBlockItemId("dark_prismarine_wall");
     BlockItemId POLISHED_DARK_PRISMARINE = createBlockItemId("polished_dark_prismarine");
     BlockItemId POLISHED_DARK_PRISMARINE_STAIRS = createBlockItemId("polished_dark_prismarine_stairs");
@@ -188,10 +202,12 @@ public interface ChiseledBlockItemIds {
     BlockItemId CUT_DARK_PRISMARINE_BRICK_STAIRS = createBlockItemId("cut_dark_prismarine_brick_stairs");
     BlockItemId CUT_DARK_PRISMARINE_BRICK_SLAB = createBlockItemId("cut_dark_prismarine_brick_slab");
 
+    // Red Nether Brick BlockItemIds
     BlockItemId CRACKED_RED_NETHER_BRICKS = createBlockItemId("cracked_red_nether_bricks");
     BlockItemId RED_NETHER_BRICK_FENCE = createBlockItemId("red_nether_brick_fence");
     BlockItemId CHISELED_RED_NETHER_BRICKS = createBlockItemId("chiseled_red_nether_bricks");
 
+    // Blackstone BlockItemIds
     BlockItemId POLISHED_BLACKSTONE_PILLAR = createBlockItemId("polished_blackstone_pillar");
     BlockItemId CUT_POLISHED_BLACKSTONE_BRICKS = createBlockItemId("cut_polished_blackstone_bricks");
     BlockItemId CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS = createBlockItemId("cracked_cut_polished_blackstone_bricks");
@@ -203,6 +219,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId POLISHED_BLACKSTONE_TILE_SLAB = createBlockItemId("polished_blackstone_tile_slab");
     BlockItemId POLISHED_BLACKSTONE_TILE_WALL = createBlockItemId("polished_blackstone_tile_wall");
 
+    // End Stone BlockItemIds
     BlockItemId END_STONE_STAIRS = createBlockItemId("end_stone_stairs");
     BlockItemId END_STONE_SLAB = createBlockItemId("end_stone_slab");
     BlockItemId END_STONE_WALL = createBlockItemId("end_stone_wall");
@@ -222,6 +239,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId END_STONE_TILE_SLAB = createBlockItemId("end_stone_tile_slab");
     BlockItemId END_STONE_TILE_WALL = createBlockItemId("end_stone_tile_wall");
 
+    // Quartz BlockItemIds
     BlockItemId QUARTZ_WALL = createBlockItemId("quartz_wall");
     BlockItemId SMOOTH_QUARTZ_WALL = createBlockItemId("smooth_quartz_wall");
     BlockItemId QUARTZ_BRICK_STAIRS = createBlockItemId("quartz_brick_stairs");
@@ -235,6 +253,7 @@ public interface ChiseledBlockItemIds {
     BlockItemId QUARTZ_TILE_SLAB = createBlockItemId("quartz_tile_slab");
     BlockItemId QUARTZ_TILE_WALL = createBlockItemId("quartz_tile_wall");
 
+    // Terracotta BlockItemIds
     BlockItemId TERRACOTTA_STAIRS = createBlockItemId("terracotta_stairs");
     BlockItemId TERRACOTTA_SLAB = createBlockItemId("terracotta_slab");
     BlockItemId TERRACOTTA_WALL = createBlockItemId("terracotta_wall");

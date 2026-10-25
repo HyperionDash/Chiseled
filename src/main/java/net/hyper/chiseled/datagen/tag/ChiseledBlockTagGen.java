@@ -9,9 +9,7 @@ import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
-// this code is mysteroius and evil but it works (its also really fucking evil)
-// on close inspection minecrafts source is really fucking bad
-
+// DataGenerator for Block Tags
 public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
     public ChiseledBlockTagGen(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
         super(output, registryLookupFuture);
@@ -19,9 +17,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NonNull Provider registries) {
-
-        // adds mineable with pickaxe block tag
-
+        // Adds blocks to the "minecraft:mineable/pickaxe" block tag (the "minecraft:walls" block tag is added my default, so don't add walls here)
         builder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ChiseledBlockItemIds.POLISHED_STONE)
                 .add(ChiseledBlockItemIds.POLISHED_STONE_STAIRS)
@@ -283,8 +279,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_STAIRS)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_SLAB);
 
-        // adds stairs block tag
-
+        // Adds blocks to the "minecraft:stairs" block tag
         builder(BlockTags.STAIRS)
                 .add(ChiseledBlockItemIds.POLISHED_STONE_STAIRS)
                 .add(ChiseledBlockItemIds.CUT_STONE_BRICK_STAIRS)
@@ -366,8 +361,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_STAIRS)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_STAIRS);
 
-        // adds slab block tag
-
+        // Adds blocks to the "minecraft:slabs" block tag
         builder(BlockTags.SLABS)
                 .add(ChiseledBlockItemIds.POLISHED_STONE_SLAB)
                 .add(ChiseledBlockItemIds.CUT_STONE_BRICK_SLAB)
@@ -449,8 +443,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_SLAB)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_SLAB);
 
-        // adds walls block tag
-
+        // Adds blocks to the "minecraft:walls" block tag
         builder(BlockTags.WALLS)
                 .add(ChiseledBlockItemIds.STONE_WALL)
                 .add(ChiseledBlockItemIds.POLISHED_STONE_WALL)
@@ -543,13 +536,11 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_WALL)
                 .add(ChiseledBlockItemIds.PINK_TERRACOTTA_BRICK_WALL);
 
-        // singular fence
-
+        // Adds blocks to the "minecraft:fences" block tag
         builder(BlockTags.FENCES)
                 .add(ChiseledBlockItemIds.RED_NETHER_BRICK_FENCE);
 
-        // adds stone bricks block tag
-
+        // Adds blocks to the "minecraft:stone_bricks" block tag
         builder(BlockTags.STONE_BRICKS)
                 .add(ChiseledBlockItemIds.POLISHED_STONE)
                 .add(ChiseledBlockItemIds.STONE_PILLAR)
@@ -560,8 +551,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.CRACKED_STONE_TILES)
                 .add(ChiseledBlockItemIds.MOSSY_STONE_TILES);
 
-        // adds conduit effect blocks block tag
-
+        // Adds blocks to the "minecraft:conduit_effect_block" block tag
         builder(BlockTags.CONDUIT_EFFECT_BLOCK)
                 .add(ChiseledBlockItemIds.POLISHED_PRISMARINE)
                 .add(ChiseledBlockItemIds.CUT_PRISMARINE_BRICKS)
@@ -569,8 +559,7 @@ public class ChiseledBlockTagGen extends FabricTagsProvider.BlockTagsProvider {
                 .add(ChiseledBlockItemIds.CUT_DARK_PRISMARINE_BRICKS)
                 .add(ChiseledBlockItemIds.DARK_PRISMARINE_BRICKS);
 
-        // fixes mob AI because minecraft is retarted
-
+        // Adds blocks to the "minecraft:blocks_motion_no_leaves" block tag
         builder(BlockTags.BLOCKS_MOTION_NO_LEAVES)
                 .add(ChiseledBlockItemIds.POLISHED_GRANITE_BRICKS)
                 .add(ChiseledBlockItemIds.CRACKED_POLISHED_GRANITE_BRICKS)

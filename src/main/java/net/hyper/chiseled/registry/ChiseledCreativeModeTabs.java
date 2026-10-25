@@ -12,10 +12,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
 public interface ChiseledCreativeModeTabs {
+    // CreativeModeTab for Chiseled Blocks
     CreativeModeTab CHISELED = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Chiseled.id("chiseled"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ChiseledItems.POLISHED_STONE))
                     .title(Component.translatable("itemGroup.chiseled.chiseled"))
                     .displayItems((_, entries) -> {
+                        // Stone Additions
                         entries.accept(ChiseledItems.STONE_WALL);
                         entries.accept(ChiseledItems.POLISHED_STONE);
                         entries.accept(ChiseledItems.POLISHED_STONE_STAIRS);
@@ -39,6 +41,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.MOSSY_STONE_TILE_SLAB);
                         entries.accept(ChiseledItems.MOSSY_STONE_TILE_WALL);
 
+                        // Granite Additions
                         entries.accept(ChiseledItems.POLISHED_GRANITE_WALL);
                         entries.accept(ChiseledItems.POLISHED_GRANITE_PILLAR);
                         entries.accept(ChiseledItems.POLISHED_GRANITE_BRICKS);
@@ -56,6 +59,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.POLISHED_GRANITE_TILE_SLAB);
                         entries.accept(ChiseledItems.POLISHED_GRANITE_TILE_WALL);
 
+                        // Diorite Additions
                         entries.accept(ChiseledItems.POLISHED_DIORITE_WALL);
                         entries.accept(ChiseledItems.POLISHED_DIORITE_PILLAR);
                         entries.accept(ChiseledItems.POLISHED_DIORITE_BRICKS);
@@ -73,6 +77,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.POLISHED_DIORITE_TILE_SLAB);
                         entries.accept(ChiseledItems.POLISHED_DIORITE_TILE_WALL);
 
+                        // Andesite Additions
                         entries.accept(ChiseledItems.POLISHED_ANDESITE_WALL);
                         entries.accept(ChiseledItems.POLISHED_ANDESITE_PILLAR);
                         entries.accept(ChiseledItems.POLISHED_ANDESITE_BRICKS);
@@ -90,12 +95,14 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.POLISHED_ANDESITE_TILE_SLAB);
                         entries.accept(ChiseledItems.POLISHED_ANDESITE_TILE_WALL);
 
+                        // Deepslate Additions
                         entries.accept(ChiseledItems.DEEPSLATE_PILLAR);
                         entries.accept(ChiseledItems.CUT_DEEPSLATE_BRICKS);
                         entries.accept(ChiseledItems.CRACKED_CUT_DEEPSLATE_BRICKS);
                         entries.accept(ChiseledItems.CUT_DEEPSLATE_BRICK_STAIRS);
                         entries.accept(ChiseledItems.CUT_DEEPSLATE_BRICK_SLAB);
-                        
+
+                        // Brick Additions
                         entries.accept(ChiseledItems.CRACKED_BRICKS);
                         entries.accept(ChiseledItems.WEATHERED_BRICKS);
                         entries.accept(ChiseledItems.WEATHERED_BRICK_STAIRS);
@@ -106,6 +113,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.MOSSY_BRICK_SLAB);
                         entries.accept(ChiseledItems.MOSSY_BRICK_WALL);
 
+                        // Packed Mud Additions
                         entries.accept(ChiseledItems.PACKED_MUD_STAIRS);
                         entries.accept(ChiseledItems.PACKED_MUD_SLAB);
                         entries.accept(ChiseledItems.PACKED_MUD_WALL);
@@ -128,6 +136,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.MOSSY_MUD_TILE_SLAB);
                         entries.accept(ChiseledItems.MOSSY_MUD_TILE_WALL);
 
+                        // Sandstone Additions
                         entries.accept(ChiseledItems.SMOOTH_SANDSTONE_WALL);
                         entries.accept(ChiseledItems.SMOOTH_SANDSTONE_PILLAR);
                         entries.accept(ChiseledItems.SMOOTH_SANDSTONE_BRICKS);
@@ -141,6 +150,8 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.SMOOTH_SANDSTONE_TILE_STAIRS);
                         entries.accept(ChiseledItems.SMOOTH_SANDSTONE_TILE_SLAB);
                         entries.accept(ChiseledItems.SMOOTH_SANDSTONE_TILE_WALL);
+
+                        // Red Sandstone Additions
                         entries.accept(ChiseledItems.SMOOTH_RED_SANDSTONE_WALL);
                         entries.accept(ChiseledItems.SMOOTH_RED_SANDSTONE_PILLAR);
                         entries.accept(ChiseledItems.SMOOTH_RED_SANDSTONE_BRICKS);
@@ -155,6 +166,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.SMOOTH_RED_SANDSTONE_TILE_SLAB);
                         entries.accept(ChiseledItems.SMOOTH_RED_SANDSTONE_TILE_WALL);
 
+                        // Cinnabar Additions
                         entries.accept(ChiseledItems.CRACKED_CINNABAR_BRICKS);
                         entries.accept(ChiseledItems.CUT_CINNABAR_BRICKS);
                         entries.accept(ChiseledItems.CRACKED_CUT_CINNABAR_BRICKS);
@@ -166,6 +178,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.CINNABAR_TILE_SLAB);
                         entries.accept(ChiseledItems.CINNABAR_TILE_WALL);
 
+                        // Sulfur Additions
                         entries.accept(ChiseledItems.CRACKED_SULFUR_BRICKS);
                         entries.accept(ChiseledItems.CUT_SULFUR_BRICKS);
                         entries.accept(ChiseledItems.CRACKED_CUT_SULFUR_BRICKS);
@@ -177,6 +190,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.SULFUR_TILE_SLAB);
                         entries.accept(ChiseledItems.SULFUR_TILE_WALL);
 
+                        // Prismarine Additions
                         entries.accept(ChiseledItems.POLISHED_PRISMARINE);
                         entries.accept(ChiseledItems.POLISHED_PRISMARINE_STAIRS);
                         entries.accept(ChiseledItems.POLISHED_PRISMARINE_SLAB);
@@ -186,6 +200,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.CUT_PRISMARINE_BRICK_STAIRS);
                         entries.accept(ChiseledItems.CUT_PRISMARINE_BRICK_SLAB);
 
+                        // Dark Prismarine Additions
                         entries.accept(ChiseledItems.DARK_PRISMARINE_WALL);
                         entries.accept(ChiseledItems.POLISHED_DARK_PRISMARINE);
                         entries.accept(ChiseledItems.POLISHED_DARK_PRISMARINE_STAIRS);
@@ -199,10 +214,12 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.CUT_DARK_PRISMARINE_BRICK_STAIRS);
                         entries.accept(ChiseledItems.CUT_DARK_PRISMARINE_BRICK_SLAB);
 
+                        // Red Nether Brick Additions
                         entries.accept(ChiseledItems.CRACKED_RED_NETHER_BRICKS);
                         entries.accept(ChiseledItems.RED_NETHER_BRICK_FENCE);
                         entries.accept(ChiseledItems.CHISELED_RED_NETHER_BRICKS);
 
+                        // Blackstone Additions
                         entries.accept(ChiseledItems.POLISHED_BLACKSTONE_PILLAR);
                         entries.accept(ChiseledItems.CUT_POLISHED_BLACKSTONE_BRICKS);
                         entries.accept(ChiseledItems.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS);
@@ -214,6 +231,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.POLISHED_BLACKSTONE_TILE_SLAB);
                         entries.accept(ChiseledItems.POLISHED_BLACKSTONE_TILE_WALL);
 
+                        // End Stone Additions
                         entries.accept(ChiseledItems.END_STONE_STAIRS);
                         entries.accept(ChiseledItems.END_STONE_SLAB);
                         entries.accept(ChiseledItems.END_STONE_WALL);
@@ -233,6 +251,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.END_STONE_TILE_SLAB);
                         entries.accept(ChiseledItems.END_STONE_TILE_WALL);
 
+                        // Quartz Additions
                         entries.accept(ChiseledItems.QUARTZ_WALL);
                         entries.accept(ChiseledItems.SMOOTH_QUARTZ_WALL);
                         entries.accept(ChiseledItems.QUARTZ_BRICK_STAIRS);
@@ -246,6 +265,7 @@ public interface ChiseledCreativeModeTabs {
                         entries.accept(ChiseledItems.QUARTZ_TILE_SLAB);
                         entries.accept(ChiseledItems.QUARTZ_TILE_WALL);
 
+                        // Terracotta Additions
                         entries.accept(ChiseledItems.TERRACOTTA_STAIRS);
                         entries.accept(ChiseledItems.TERRACOTTA_SLAB);
                         entries.accept(ChiseledItems.TERRACOTTA_WALL);
@@ -384,7 +404,9 @@ public interface ChiseledCreativeModeTabs {
                     }).build());
 
     static void init() {
+        // Adds Chiseled Blocks to the vanilla CreativeModeTabs
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
+            // Stone Additions
             entries.insertAfter(Items.STONE_SLAB, ChiseledItems.STONE_WALL);
             entries.insertAfter(Items.SMOOTH_STONE_SLAB, ChiseledItems.POLISHED_STONE,
                     ChiseledItems.POLISHED_STONE_STAIRS,
@@ -408,6 +430,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.MOSSY_STONE_TILE_SLAB,
                     ChiseledItems.MOSSY_STONE_TILE_WALL);
 
+            // Granite Additions
             entries.insertAfter(Items.POLISHED_GRANITE_SLAB, ChiseledItems.POLISHED_GRANITE_WALL,
                     ChiseledItems.POLISHED_GRANITE_PILLAR,
                     ChiseledItems.POLISHED_GRANITE_BRICKS,
@@ -425,6 +448,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.POLISHED_GRANITE_TILE_SLAB,
                     ChiseledItems.POLISHED_GRANITE_TILE_WALL);
 
+            // Diorite Additions
             entries.insertAfter(Items.POLISHED_DIORITE_SLAB, ChiseledItems.POLISHED_DIORITE_WALL,
                     ChiseledItems.POLISHED_DIORITE_PILLAR,
                     ChiseledItems.POLISHED_DIORITE_BRICKS,
@@ -442,6 +466,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.POLISHED_DIORITE_TILE_SLAB,
                     ChiseledItems.POLISHED_DIORITE_TILE_WALL);
 
+            // Andesite Additions
             entries.insertAfter(Items.POLISHED_ANDESITE_SLAB, ChiseledItems.POLISHED_ANDESITE_WALL,
                     ChiseledItems.POLISHED_ANDESITE_PILLAR,
                     ChiseledItems.POLISHED_ANDESITE_BRICKS,
@@ -459,12 +484,14 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.POLISHED_ANDESITE_TILE_SLAB,
                     ChiseledItems.POLISHED_ANDESITE_TILE_WALL);
 
+            // Deepslate Additions
             entries.insertAfter(Items.POLISHED_DEEPSLATE_WALL, ChiseledItems.DEEPSLATE_PILLAR);
             entries.insertAfter(Items.DEEPSLATE_BRICK_WALL, ChiseledItems.CUT_DEEPSLATE_BRICKS,
                     ChiseledItems.CRACKED_CUT_DEEPSLATE_BRICKS,
                     ChiseledItems.CUT_DEEPSLATE_BRICK_STAIRS,
                     ChiseledItems.CUT_DEEPSLATE_BRICK_SLAB);
 
+            // Brick Additions
             entries.insertAfter(Items.BRICKS, ChiseledItems.CRACKED_BRICKS);
             entries.insertAfter(Items.BRICK_WALL, ChiseledItems.WEATHERED_BRICKS,
                     ChiseledItems.WEATHERED_BRICK_STAIRS,
@@ -475,6 +502,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.MOSSY_BRICK_SLAB,
                     ChiseledItems.MOSSY_BRICK_WALL);
 
+            // Packed Mud Additions
             entries.insertAfter(Items.PACKED_MUD, ChiseledItems.PACKED_MUD_STAIRS,
                     ChiseledItems.PACKED_MUD_SLAB,
                     ChiseledItems.PACKED_MUD_WALL);
@@ -497,6 +525,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.MOSSY_MUD_TILE_SLAB,
                     ChiseledItems.MOSSY_MUD_TILE_WALL);
 
+            // Sandstone Additions
             entries.insertAfter(Items.SMOOTH_SANDSTONE_SLAB, ChiseledItems.SMOOTH_SANDSTONE_WALL,
                     ChiseledItems.SMOOTH_SANDSTONE_PILLAR);
             entries.insertAfter(Items.CUT_STANDSTONE_SLAB, ChiseledItems.SMOOTH_SANDSTONE_BRICKS,
@@ -510,6 +539,8 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.SMOOTH_SANDSTONE_TILE_STAIRS,
                     ChiseledItems.SMOOTH_SANDSTONE_TILE_SLAB,
                     ChiseledItems.SMOOTH_SANDSTONE_TILE_WALL);
+
+            // Red Sandstone Additions
             entries.insertAfter(Items.SMOOTH_RED_SANDSTONE_SLAB, ChiseledItems.SMOOTH_RED_SANDSTONE_WALL,
                     ChiseledItems.SMOOTH_RED_SANDSTONE_PILLAR);
             entries.insertAfter(Items.CUT_RED_SANDSTONE_SLAB, ChiseledItems.SMOOTH_RED_SANDSTONE_BRICKS,
@@ -524,6 +555,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.SMOOTH_RED_SANDSTONE_TILE_SLAB,
                     ChiseledItems.SMOOTH_RED_SANDSTONE_TILE_WALL);
 
+            // Cinnabar Additions
             entries.insertAfter(Items.CINNABAR_BRICKS, ChiseledItems.CRACKED_CINNABAR_BRICKS);
             entries.insertAfter(Items.CINNABAR_BRICK_WALL, ChiseledItems.CUT_CINNABAR_BRICKS,
                     ChiseledItems.CRACKED_CUT_CINNABAR_BRICKS,
@@ -535,6 +567,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.CINNABAR_TILE_SLAB,
                     ChiseledItems.CINNABAR_TILE_WALL);
 
+            // Sulfur Additions
             entries.insertAfter(Items.SULFUR_BRICKS, ChiseledItems.CRACKED_SULFUR_BRICKS);
             entries.insertAfter(Items.SULFUR_BRICK_WALL, ChiseledItems.CUT_SULFUR_BRICKS,
                     ChiseledItems.CRACKED_CUT_SULFUR_BRICKS,
@@ -546,6 +579,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.SULFUR_TILE_SLAB,
                     ChiseledItems.SULFUR_TILE_WALL);
 
+            // Prismarine Additions
             entries.insertAfter(Items.PRISMARINE_WALL, ChiseledItems.POLISHED_PRISMARINE,
                     ChiseledItems.POLISHED_PRISMARINE_STAIRS,
                     ChiseledItems.POLISHED_PRISMARINE_SLAB,
@@ -555,6 +589,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.CUT_PRISMARINE_BRICK_STAIRS,
                     ChiseledItems.CUT_PRISMARINE_BRICK_SLAB);
 
+            // Dark Prismarine Additions
             entries.insertAfter(Items.DARK_PRISMARINE_SLAB, ChiseledItems.DARK_PRISMARINE_WALL,
                     ChiseledItems.POLISHED_DARK_PRISMARINE,
                     ChiseledItems.POLISHED_DARK_PRISMARINE_STAIRS,
@@ -568,10 +603,12 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.CUT_DARK_PRISMARINE_BRICK_STAIRS,
                     ChiseledItems.CUT_DARK_PRISMARINE_BRICK_SLAB);
 
+            // Red Nether Brick Additions
             entries.insertAfter(Items.RED_NETHER_BRICKS, ChiseledItems.CRACKED_RED_NETHER_BRICKS);
             entries.insertAfter(Items.RED_NETHER_BRICK_WALL, ChiseledItems.RED_NETHER_BRICK_FENCE,
                     ChiseledItems.CHISELED_RED_NETHER_BRICKS);
 
+            // Blackstone Additions
             entries.insertAfter(Items.POLISHED_BLACKSTONE_BUTTON, ChiseledItems.POLISHED_BLACKSTONE_PILLAR);
             entries.insertAfter(Items.POLISHED_BLACKSTONE_BRICK_WALL, ChiseledItems.CUT_POLISHED_BLACKSTONE_BRICKS,
                     ChiseledItems.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS,
@@ -583,6 +620,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.POLISHED_BLACKSTONE_TILE_SLAB,
                     ChiseledItems.POLISHED_BLACKSTONE_TILE_WALL);
 
+            // End Stone Additions
             entries.insertAfter(Items.END_STONE, ChiseledItems.END_STONE_STAIRS,
                     ChiseledItems.END_STONE_SLAB,
                     ChiseledItems.END_STONE_WALL,
@@ -602,6 +640,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.END_STONE_TILE_SLAB,
                     ChiseledItems.END_STONE_TILE_WALL);
 
+            // Quartz Additions
             entries.insertAfter(Items.QUARTZ_BLOCK, Items.QUARTZ_STAIRS,
                     Items.QUARTZ_SLAB,
                     ChiseledItems.QUARTZ_WALL,
@@ -624,6 +663,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.QUARTZ_TILE_WALL);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {
+            // Terracotta Additions
             entries.insertAfter(Items.DYED_TERRACOTTA.pink(),
                     ChiseledItems.TERRACOTTA_STAIRS,
                     ChiseledItems.WHITE_TERRACOTTA_STAIRS,

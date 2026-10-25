@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Item.Properties.class)
 public class ItemPropertiesMixin {
-    /// Mixin into the `.pickaxe()` item property to add the `chiseled:cracking` BlockTransformer
+    // Mixin into the ".pickaxe()" item property to add the "chiseled:cracking" BlockTransformer
     @Inject(method = "pickaxe", at = @At("HEAD"))
     private void chiseled$addCrackingTransformer(ToolMaterial material, float attackDamageBaseline, float attackSpeedBaseline, CallbackInfoReturnable<Item.Properties> cir) {
         ((Item.Properties) (Object) this).delayedComponent(DataComponents.BLOCK_TRANSFORMER, context -> context.getOrThrow(ChiseledBlockTransformers.CRACKING));

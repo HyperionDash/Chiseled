@@ -11,7 +11,6 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-@SuppressWarnings("unused")
 public interface ChiseledCreativeModeTabs {
     CreativeModeTab CHISELED = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Chiseled.id("chiseled"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ChiseledItems.POLISHED_STONE))
@@ -642,6 +641,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.BLUE_TERRACOTTA_STAIRS,
                     ChiseledItems.PURPLE_TERRACOTTA_STAIRS,
                     ChiseledItems.MAGENTA_TERRACOTTA_STAIRS,
+                    ChiseledItems.PINK_TERRACOTTA_STAIRS,
                     ChiseledItems.TERRACOTTA_SLAB,
                     ChiseledItems.WHITE_TERRACOTTA_SLAB,
                     ChiseledItems.LIGHT_GRAY_TERRACOTTA_SLAB,
@@ -658,6 +658,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.BLUE_TERRACOTTA_SLAB,
                     ChiseledItems.PURPLE_TERRACOTTA_SLAB,
                     ChiseledItems.MAGENTA_TERRACOTTA_SLAB,
+                    ChiseledItems.PINK_TERRACOTTA_SLAB,
                     ChiseledItems.TERRACOTTA_WALL,
                     ChiseledItems.WHITE_TERRACOTTA_WALL,
                     ChiseledItems.LIGHT_GRAY_TERRACOTTA_WALL,
@@ -674,6 +675,7 @@ public interface ChiseledCreativeModeTabs {
                     ChiseledItems.BLUE_TERRACOTTA_WALL,
                     ChiseledItems.PURPLE_TERRACOTTA_WALL,
                     ChiseledItems.MAGENTA_TERRACOTTA_WALL,
+                    ChiseledItems.PINK_TERRACOTTA_WALL,
                     ChiseledItems.TERRACOTTA_BRICKS,
                     ChiseledItems.WHITE_TERRACOTTA_BRICKS,
                     ChiseledItems.LIGHT_GRAY_TERRACOTTA_BRICKS,

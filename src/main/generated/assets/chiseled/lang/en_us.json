@@ -348,6 +348,13 @@
   "block.chiseled.yellow_terracotta_slab": "Yellow Terracotta Slab",
   "block.chiseled.yellow_terracotta_stairs": "Yellow Terracotta Stairs",
   "block.chiseled.yellow_terracotta_wall": "Yellow Terracotta Wall",
+  "chiseled.midnightconfig.crackableAmethyst": "§7→ Crackable Amethyst",
+  "chiseled.midnightconfig.crackableAmethyst.tooltip": "Allows you to crack Amethyst into Budding Amethyst with a Pickaxe.\n§cRequires Reload.",
+  "chiseled.midnightconfig.crackableBlocks": "Crackable Blocks",
+  "chiseled.midnightconfig.crackableBlocks.tooltip": "Allows you to crack blocks with a Pickaxe.\n§cRequires Reload.",
+  "chiseled.midnightconfig.crackableBricks": "§7→ Crackable Bricks",
+  "chiseled.midnightconfig.crackableBricks.tooltip": "Allows you to crack Bricks into their Cracked variants with a Pickaxe.\n§cRequires Reload.",
+  "chiseled.midnightconfig.title": "Chiseled",
   "itemGroup.chiseled.chiseled": "Chiseled",
   "pack.chiseled.data_overrides": "Data Overrides"
 }

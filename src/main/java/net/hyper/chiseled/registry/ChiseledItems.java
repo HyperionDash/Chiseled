@@ -1,6 +1,6 @@
 package net.hyper.chiseled.registry;
 
-import net.hyper.chiseled.refrence.ChiseledBlockItemIds;
+import net.hyper.chiseled.reference.ChiseledBlockItemIds;
 import net.minecraft.world.item.Item;
 
 import static net.hyper.silliestlib.utils.SilliestLibRegUtils.regSimpleBlockItem;

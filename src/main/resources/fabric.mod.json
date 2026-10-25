@@ -19,12 +19,18 @@
 		"main": [
 			"net.hyper.chiseled.Chiseled"
 		],
+		"modmenu": [
+			"net.hyper.chiseled.config.ChiseledModMenu"
+		],
 		"fabric-datagen": [
 			"net.hyper.chiseled.ChiseledDataGenerator"
 		]
 	},
+	"mixins": [
+		"chiseled.mixins.json"
+	],
 	"depends": {
-		"fabricloader": ">=0.19.5",
+		"fabricloader": "*",
 		"minecraft": ">=26.3",
 		"java": ">=25",
 		"fabric-api": "*",

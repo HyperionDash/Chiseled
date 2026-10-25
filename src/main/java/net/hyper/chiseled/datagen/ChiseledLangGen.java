@@ -17,6 +17,13 @@ public class ChiseledLangGen extends FabricLanguageProvider {
     public void generateTranslations(HolderLookup.@NonNull Provider registryLookup, @NonNull TranslationBuilder translationBuilder) {
         translationBuilder.add("itemGroup.chiseled.chiseled", "Chiseled");
         translationBuilder.add("pack.chiseled.data_overrides", "Data Overrides");
+        translationBuilder.add("chiseled.midnightconfig.title", "Chiseled");
+        translationBuilder.add("chiseled.midnightconfig.crackableBlocks", "Crackable Blocks");
+        translationBuilder.add("chiseled.midnightconfig.crackableBlocks.tooltip", "Allows you to crack blocks with a Pickaxe.\n§cRequires Reload.");
+        translationBuilder.add("chiseled.midnightconfig.crackableBricks", "§7→ Crackable Bricks");
+        translationBuilder.add("chiseled.midnightconfig.crackableBricks.tooltip", "Allows you to crack Bricks into their Cracked variants with a Pickaxe.\n§cRequires Reload.");
+        translationBuilder.add("chiseled.midnightconfig.crackableAmethyst", "§7→ Crackable Amethyst");
+        translationBuilder.add("chiseled.midnightconfig.crackableAmethyst.tooltip", "Allows you to crack Amethyst into Budding Amethyst with a Pickaxe.\n§cRequires Reload.");
 
         translationBuilder.add(ChiseledBlocks.STONE_WALL, "Stone Wall");
         translationBuilder.add(ChiseledBlocks.POLISHED_STONE, "Polished Stone");

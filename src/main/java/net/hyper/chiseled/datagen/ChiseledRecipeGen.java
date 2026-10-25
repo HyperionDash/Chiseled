@@ -267,6 +267,7 @@ public class ChiseledRecipeGen extends FabricRecipeProvider {
                 pillarRecipes(ChiseledItems.CHISELED_RED_NETHER_BRICKS, Items.RED_NETHER_BRICK_SLAB, Items.RED_NETHER_BRICKS);
 
                 pillarRecipes(ChiseledItems.POLISHED_BLACKSTONE_PILLAR, Items.POLISHED_BLACKSTONE, Items.BLACKSTONE, Items.POLISHED_BLACKSTONE);
+                stonecuttingRecipes(Items.CHISELED_POLISHED_BLACKSTONE, Items.POLISHED_BLACKSTONE_BRICKS);
                 cutBrickRecipes(ChiseledItems.CUT_POLISHED_BLACKSTONE_BRICKS, Items.POLISHED_BLACKSTONE_SLAB, Items.BLACKSTONE, Items.POLISHED_BLACKSTONE);
                 smeltingResultFromBase(ChiseledItems.CRACKED_CUT_POLISHED_BLACKSTONE_BRICKS, ChiseledItems.CUT_POLISHED_BLACKSTONE_BRICKS);
                 stairRecipes(ChiseledItems.CUT_POLISHED_BLACKSTONE_BRICK_STAIRS, ChiseledItems.CUT_POLISHED_BLACKSTONE_BRICKS, Items.BLACKSTONE, Items.POLISHED_BLACKSTONE, ChiseledItems.CUT_POLISHED_BLACKSTONE_BRICKS);

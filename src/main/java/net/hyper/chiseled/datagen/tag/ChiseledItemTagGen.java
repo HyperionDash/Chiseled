@@ -2,7 +2,7 @@ package net.hyper.chiseled.datagen.tag;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
-import net.hyper.chiseled.refrence.ChiseledBlockItemIds;
+import net.hyper.chiseled.reference.ChiseledBlockItemIds;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;

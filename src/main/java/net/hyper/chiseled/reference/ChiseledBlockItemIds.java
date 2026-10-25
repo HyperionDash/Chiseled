@@ -1,4 +1,4 @@
-package net.hyper.chiseled.refrence;
+package net.hyper.chiseled.reference;
 
 import net.minecraft.references.BlockItemId;
 
